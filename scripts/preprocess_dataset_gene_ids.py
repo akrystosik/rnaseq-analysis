@@ -26,6 +26,15 @@ import glob
 import json
 from typing import Dict, List, Set, Tuple, Optional
 
+
+def ensure_string_columns(df):
+    """Convert categorical columns to strings to avoid comparison issues."""
+    for col in df.columns:
+        if pd.api.types.is_categorical_dtype(df[col]):
+            logger.debug(f"Converting categorical column {col} to string")
+            df[col] = df[col].astype(str)
+    return df
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
