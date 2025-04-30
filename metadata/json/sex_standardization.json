@@ -1,0 +1,23 @@
+{
+    "1": "male",
+    "male": "male",
+    "m": "male",
+    "Male": "male",
+    "MALE": "male",
+    "M": "male",
+    
+    "2": "female",
+    "female": "female",
+    "f": "female",
+    "Female": "female",
+    "FEMALE": "female",
+    "F": "female",
+    
+    "0": "unknown",
+    "unknown": "unknown",
+    "u": "unknown",
+    "Unknown": "unknown",
+    "UNKNOWN": "unknown",
+    "U": "unknown",
+    "nan": "unknown"
+  }

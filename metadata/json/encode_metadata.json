@@ -1,0 +1,202 @@
+{
+  "data_type": "RNA-seq",
+  "platform": "Illumina",
+  "reference_genome": "GRCh38",
+  "harmonized_reference_genome": "hg38",
+  "gencode_version": "v29",
+  "harmonized_gencode_version": "v24",
+  "genome_info": {
+    "genome_version": "GRCh38",
+    "confidence": "high",
+    "notes": "ENCODE data standards use GRCh38 reference genome"
+  },
+  "rna_seq_protocol": {
+    "protocol_type": "RNA-seq mixed",
+    "protocol_confidence": "high",
+    "selection_method": "Variable - includes polyA plus RNA-seq and total RNA-seq",
+    "sequencing_platform": "Illumina (various models including HiSeq 2000 and Genome Analyzer IIx)",
+    "read_configuration": "paired-end",
+    "strand_specificity": "Strand-specific (reverse)"
+  },
+  "assay_ontology": "EFO:0009922",
+  "obs_columns": {
+    "data_type": "RNA-seq",
+    "assay_ontology": "EFO:0009922",
+    "species": "human",
+    "species_ontology": "NCBITaxon:9606"
+  },
+  "metadata_source": {
+    "citation": "ENCODE Project Consortium",
+    "url": "https://www.encodeproject.org/data-standards/reference-sequences/",
+    "notes": "ENCODE project uses GRCh38 with GENCODE v29 annotations. For standardization purposes, these have been harmonized to hg38 reference genome and GENCODE v24 annotations."
+  },
+  "dataset_info": {
+    "project": "ENCODE",
+    "cell_lines": {
+      "A549": {
+        "description": "Human lung carcinoma cell line",
+        "tissue": "lung",
+        "disease": "adenocarcinoma",
+        "cell_type": "epithelial",
+        "sex": "male",
+        "organism": "human",
+        "age": "58",
+        "ethnicity": "European",
+        "subject_id": "ENCDO451RUA",
+        "geo_id": "SAMN05733878",
+        "nucleic_acid_type": "polyadenylated mRNA",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0002048",
+          "cell_type_id": "CL:0000066"
+        }
+      },
+      "K562": {
+        "description": "Human chronic myelogenous leukemia cell line",
+        "tissue": "bone marrow",
+        "disease": "chronic myelogenous leukemia",
+        "cell_type": "lymphoblast",
+        "sex": "female",
+        "age": "53",
+        "organism": "human",
+        "ethnicity": "unknown",
+        "subject_id": "ENCDO000AAL",
+        "geo_id": "SAMN04284550",
+        "nucleic_acid_type": "RNA",
+        "assay": "RNA-seq (total RNA-seq)",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0002371",
+          "cell_type_id": "CL:0000945"
+        }
+      },
+      "HepG2": {
+        "description": "Human liver hepatocellular carcinoma cell line",
+        "tissue": "liver",
+        "disease": "hepatocellular carcinoma",
+        "cell_type": "epithelial",
+        "sex": "male",
+        "organism": "human",
+        "age": "15",
+        "ethnicity": "European",
+        "subject_id": "ENCDO886MPB",
+        "geo_id": "SAMN04284581",
+        "nucleic_acid_type": "RNA",
+        "assay": "RNA-seq (total RNA-seq)",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0002107",
+          "cell_type_id": "CL:0000066"
+        }
+      },
+      "GM23248": {
+        "description": "Human skin fibroblast cell line",
+        "tissue": "skin",
+        "disease": "normal",
+        "cell_type": "Fibroblast",
+        "sex": "male",
+        "organism": "human",
+        "age": "53",
+        "ethnicity": "European",
+        "subject_id": "ENCDO467QPX",
+        "geo_id": "SAMN04284514",
+        "nucleic_acid_type": "RNA",
+        "assay": "RNA-seq (total RNA-seq)",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0002097",
+          "cell_type_id": "CL:0000057"
+        }
+      },
+      "Caki2": {
+        "description": "Human kidney clear cell carcinoma cell line",
+        "tissue": "kidney",
+        "disease": "clear cell renal cell carcinoma",
+        "cell_type": "epithelial",
+        "sex": "male",
+        "organism": "human",
+        "age": "69",
+        "ethnicity": "European",
+        "subject_id": "ENCDO869AAI",
+        "geo_id": "SAMN04284635",
+        "nucleic_acid_type": "RNA",
+        "assay": "RNA-seq (total RNA-seq)",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0002113",
+          "cell_type_id": "CL:0000066"
+        }
+      },
+      "NCI-H460": {
+        "description": "Human lung large cell carcinoma cell line",
+        "tissue": "lung",
+        "disease": "large cell lung carcinoma",
+        "cell_type": "epithelial",
+        "sex": "male",
+        "organism": "human",
+        "age": "",
+        "ethnicity": "unknown",
+        "subject_id": "ENCDO105AAA",
+        "geo_id": "SAMN07791353",
+        "nucleic_acid_type": "RNA",
+        "assay": "RNA-seq (total RNA-seq)",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0002048",
+          "cell_type_id": "CL:0000066"
+        }
+      },
+      "Panc1": {
+        "description": "Human pancreatic ductal carcinoma cell line",
+        "tissue": "pancreas",
+        "disease": "pancreatic carcinoma",
+        "cell_type": "ductal cell",
+        "sex": "male",
+        "organism": "human",
+        "age": "56",
+        "ethnicity": "European",
+        "subject_id": "ENCDO845WKR",
+        "geo_id": "SAMN05733879",
+        "nucleic_acid_type": "RNA",
+        "assay": "RNA-seq (total RNA-seq)",
+        "depletion": "rRNA",
+        "size_range": ">200",
+        "strand_specificity": "Strand-specific (reverse)",
+        "cell_type_info": {
+          "anatomical_entity_id": "UBERON:0001264",
+          "cell_type_id": "CL:0000068"
+        }
+      }
+    },
+    "data_repository": [
+      {
+        "name": "ENCODE Project",
+        "url": "https://www.encodeproject.org/"
+      }
+    ]
+  },
+  "cell_type_info": {
+    "has_cell_type_data": true,
+    "cell_line_mapping": {
+      "A549": {"anatomical_entity_id": "UBERON:0002048", "cell_type_id": "CL:0000066"},
+      "K562": {"anatomical_entity_id": "UBERON:0002371", "cell_type_id": "CL:0000945"},
+      "HepG2": {"anatomical_entity_id": "UBERON:0002107", "cell_type_id": "CL:0000066"},
+      "GM23248": {"anatomical_entity_id": "UBERON:0002097", "cell_type_id": "CL:0000057"},
+      "Caki2": {"anatomical_entity_id": "UBERON:0002113", "cell_type_id": "CL:0000066"},
+      "NCI-H460": {"anatomical_entity_id": "UBERON:0002048", "cell_type_id": "CL:0000066"},
+      "Panc1": {"anatomical_entity_id": "UBERON:0001264", "cell_type_id": "CL:0000068"}
+    }
+  }
+}

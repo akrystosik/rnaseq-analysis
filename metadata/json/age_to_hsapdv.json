@@ -1,0 +1,23 @@
+
+  {
+    "infant": "HsapDv:0000083",
+    "child": "HsapDv:0000084",
+    "juvenile": "HsapDv:0000085",
+    "adolescent": "HsapDv:0000086",
+    "adult": "HsapDv:0000087",
+    "elderly": "HsapDv:0000088",
+    "0-2": "HsapDv:0000083",
+    "3-11": "HsapDv:0000084",
+    "12-14": "HsapDv:0000085",
+    "15-19": "HsapDv:0000086",
+    "20-65": "HsapDv:0000087",
+    "66+": "HsapDv:0000088",
+    "fetal": "HsapDv:0000081",
+    "newborn": "HsapDv:0000082",
+    "prenatal": "HsapDv:0000081",
+    "15": "HsapDv:0000086",
+    "53": "HsapDv:0000087",
+    "56": "HsapDv:0000087",
+    "58": "HsapDv:0000087",
+    "69": "HsapDv:0000087"
+  }

@@ -1,0 +1,16 @@
+{
+    "RNA-seq": "EFO:0002768",
+    "total RNA-seq": "EFO:0008896",
+    "polyA RNA-seq": "EFO:0008771",
+    "microarray": "EFO:0002772",
+    "CAGE": "EFO:0007045",
+    "ChIP-seq": "EFO:0002692",
+    "ATAC-seq": "EFO:0007045",
+    "DNase-seq": "EFO:0004428",
+    "methylation array": "EFO:0002759",
+    "single-cell RNA-seq": "EFO:0010550",
+    "bulk RNA-seq": "EFO:0008896",
+    "polyA_plus": "EFO:0008771",
+    "polyA_minus": "EFO:0008896",
+    "total": "EFO:0008896"
+  }

@@ -1,0 +1,8 @@
+{
+    "human": "NCBITaxon:9606",
+    "Homo sapiens": "NCBITaxon:9606",
+    "mouse": "NCBITaxon:10090",
+    "Mus musculus": "NCBITaxon:10090",
+    "rat": "NCBITaxon:10116",
+    "Rattus norvegicus": "NCBITaxon:10116"
+  }
