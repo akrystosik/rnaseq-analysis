@@ -1,0 +1,21 @@
+# Large data files
+*.h5ad
+*.gct.gz
+*.tsv
+*.csv.gz
+
+# Log files
+logs/*
+
+# Temporary directories
+/temp/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS specific files
+.DS_Store
+Thumbs.db

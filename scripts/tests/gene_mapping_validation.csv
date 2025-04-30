@@ -1,0 +1,6 @@
+Dataset,Total Genes,Original Genes,Genes with Symbols,% Matched to Original,% Mapped to GENCODE,% Symbol Mismatches
+adni,17991,17991,17991,100.0,100.0,0.0
+encode,65586,93749,65586,100.0,90.11221907114323,0.0
+entex,67151,93749,67151,100.0,90.17587228782892,0.0
+gtex,58988,59033,0,100.0,92.82226893605478,N/A
+mage,19428,19428,19428,100.0,100.0,0.0

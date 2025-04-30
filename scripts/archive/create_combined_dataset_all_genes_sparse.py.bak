@@ -1,0 +1,337 @@
+#!/usr/bin/env python3
+"""
+Create Combined RNA-seq Dataset - Including All Genes (Sparse Matrix Version)
+
+This script creates a combined AnnData object from individual standardized datasets,
+including all genes from all datasets (not just common genes).
+Uses sparse matrices to efficiently represent missing genes with null values.
+"""
+
+import os
+import sys
+import logging
+import time
+import pandas as pd
+import numpy as np
+import anndata as ad
+from pathlib import Path
+import scipy.sparse as sp
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger('combine_datasets')
+
+# Define paths
+DATA_DIR = Path("/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/standardized_data")
+OUTPUT_FILE = Path("/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/standardized_data/combined_all_genes_standardized.h5ad")
+
+def load_dataset(file_path):
+    """Load a single dataset from an h5ad file."""
+    logger.info(f"Loading dataset from {file_path}")
+    start_time = time.time()
+    try:
+        adata = ad.read_h5ad(file_path)
+        load_time = time.time() - start_time
+        logger.info(f"Loaded dataset with {adata.n_obs} samples and {adata.n_vars} genes in {load_time:.2f}s")
+        return adata
+    except Exception as e:
+        logger.error(f"Error loading dataset: {e}")
+        return None
+
+def find_all_genes(datasets):
+    """Find all unique genes across all datasets."""
+    if not datasets:
+        return set()
+    
+    # Collect genes from all datasets
+    all_genes = set()
+    for adata in datasets:
+        all_genes.update(set(adata.var_names))
+    
+    logger.info(f"Found {len(all_genes)} unique genes across all datasets")
+    return all_genes
+
+def ensure_string_cols(df):
+    """
+    Ensure all columns with object, category, or string dtypes are properly converted to strings.
+    This prevents issues with h5py/h5ad saving.
+    """
+    for col in df.columns:
+        col_dtype = df[col].dtype
+        if pd.api.types.is_object_dtype(col_dtype) or pd.api.types.is_categorical_dtype(col_dtype) or pd.api.types.is_string_dtype(col_dtype):
+            # Convert to string, handling NA values properly
+            df[col] = df[col].astype(str).replace('nan', '').replace('None', '')
+    return df
+
+def combine_datasets_sparse(datasets, dataset_names):
+    """
+    Combine multiple datasets into a single AnnData object, including all genes.
+    Uses sparse matrices to efficiently represent missing genes.
+    """
+    if not datasets:
+        logger.error("No datasets to combine")
+        return None
+    
+    # Find all unique genes
+    all_genes = find_all_genes(datasets)
+    if not all_genes:
+        logger.error("No genes found across datasets")
+        return None
+    
+    # Convert all_genes set to sorted list for consistent ordering
+    all_genes = sorted(list(all_genes))
+    
+    # Create a dictionary to track which genes are in which datasets
+    gene_presence = {gene: [] for gene in all_genes}
+    for i, adata in enumerate(datasets):
+        for gene in adata.var_names:
+            if gene in gene_presence:
+                gene_presence[gene].append(dataset_names[i])
+    
+    # Initialize merged metadata
+    logger.info("Initializing merged gene metadata")
+    var_df = pd.DataFrame(index=all_genes)
+    var_df['gene_id'] = var_df.index
+    var_df['present_in_datasets'] = [','.join(gene_presence.get(gene, [])) for gene in all_genes]
+    
+    # Add gene annotation columns from all datasets
+    annotation_fields = set()
+    for adata in datasets:
+        annotation_fields.update(adata.var.columns)
+    
+    if 'gene_id' in annotation_fields:
+        annotation_fields.remove('gene_id')
+    
+    # Initialize all fields
+    for field in annotation_fields:
+        var_df[field] = ''
+    
+    # Fill annotation fields from datasets
+    for adata in datasets:
+        for gene in adata.var_names:
+            if gene in var_df.index:
+                for field in adata.var.columns:
+                    if field in var_df.columns and (pd.isna(var_df.loc[gene, field]) or var_df.loc[gene, field] == ''):
+                        try:
+                            val = adata.var.loc[gene, field]
+                            if not pd.isna(val) and val != '':
+                                var_df.loc[gene, field] = val
+                        except Exception as e:
+                            logger.warning(f"Error copying {field} for {gene}: {e}")
+    
+    # Create observation metadata
+    logger.info("Creating merged observation metadata")
+    obs_rows = []
+    gene_indices = {gene: idx for idx, gene in enumerate(all_genes)}
+    sample_counter = 0
+    sample_dataset_mapping = {}  # Maps (dataset, original_index) to new index
+    
+    # Count total samples
+    total_samples = sum(adata.n_obs for adata in datasets)
+    
+    # Prepare for sparse matrix construction
+    row_indices = []
+    col_indices = []
+    values = []
+    
+    # Process each dataset
+    for dataset_idx, (adata, name) in enumerate(zip(datasets, dataset_names)):
+        logger.info(f"Processing {name} dataset with {adata.n_obs} samples")
+        
+        # Create mapping from this dataset's genes to all_genes indices
+        dataset_gene_indices = {
+            gene: gene_indices[gene] for gene in adata.var_names if gene in gene_indices
+        }
+        
+        # Process each sample in this dataset
+        for sample_idx in range(adata.n_obs):
+            if sample_idx % 100 == 0 and sample_idx > 0:
+                logger.info(f"  Processed {sample_idx}/{adata.n_obs} samples from {name}")
+            
+            # Add this sample's data to sparse matrix coordinates
+            sample_vector = adata[sample_idx].X
+            if sp.issparse(sample_vector):
+                # If the dataset is already sparse
+                sample_vector = sample_vector.tocsr()
+                for gene_idx_in_dataset, value in zip(*sp.find(sample_vector)):
+                    orig_gene = adata.var_names[gene_idx_in_dataset]
+                    if orig_gene in dataset_gene_indices:
+                        combined_gene_idx = dataset_gene_indices[orig_gene]
+                        row_indices.append(sample_counter)
+                        col_indices.append(combined_gene_idx)
+                        values.append(value)
+            else:
+                # If the dataset is dense
+                for gene_idx_in_dataset, orig_gene in enumerate(adata.var_names):
+                    if orig_gene in dataset_gene_indices:
+                        value = sample_vector[0, gene_idx_in_dataset] if sample_vector.ndim > 1 else sample_vector[gene_idx_in_dataset]
+                        if value != 0:  # Only store non-zero values
+                            combined_gene_idx = dataset_gene_indices[orig_gene]
+                            row_indices.append(sample_counter)
+                            col_indices.append(combined_gene_idx)
+                            values.append(value)
+            
+            # Add sample metadata
+            sample_metadata = dict(adata.obs.iloc[sample_idx])
+            sample_metadata['source_dataset'] = name
+            sample_metadata['original_index'] = str(adata.obs.index[sample_idx])
+            sample_metadata['combined_index'] = str(sample_counter)
+            
+            # Convert any non-string values to strings to avoid dtype issues
+            for key, val in list(sample_metadata.items()):
+                if isinstance(val, (pd.Series, pd.Index, np.ndarray)):
+                    sample_metadata[key] = str(val)
+                elif pd.isna(val):
+                    sample_metadata[key] = ''
+            
+            obs_rows.append(sample_metadata)
+            
+            # Update mapping
+            sample_dataset_mapping[(name, str(adata.obs.index[sample_idx]))] = sample_counter
+            sample_counter += 1
+    
+    # Create sparse matrix
+    logger.info("Creating sparse expression matrix")
+    expr_matrix = sp.csr_matrix(
+        (values, (row_indices, col_indices)), 
+        shape=(total_samples, len(all_genes))
+    )
+    
+    # Create observation DataFrame
+    obs_df = pd.DataFrame(obs_rows)
+    
+    # Ensure all string/object columns are properly converted to avoid h5py issues
+    obs_df = ensure_string_cols(obs_df)
+    var_df = ensure_string_cols(var_df)
+    
+    # Create the combined AnnData object
+    logger.info(f"Creating combined AnnData object with {expr_matrix.shape[0]} samples and {expr_matrix.shape[1]} genes")
+    combined_adata = ad.AnnData(X=expr_matrix, obs=obs_df, var=var_df)
+    
+    # Add dataset information to uns
+    combined_adata.uns['dataset_info'] = {
+        'source': 'combined',
+        'included_datasets': dataset_names,
+        'sample_counts': {name: int(adata.n_obs) for name, adata in zip(dataset_names, datasets)},
+        'creation_date': pd.Timestamp.now().strftime('%Y-%m-%d'),
+        'total_genes': int(len(all_genes)),
+        'all_genes_included': True,
+        'sparse_matrix': True
+    }
+    
+    # Add gene statistics
+    gene_counts = {name: int(adata.n_vars) for name, adata in zip(dataset_names, datasets)}
+    combined_adata.uns['gene_counts'] = gene_counts
+    
+    # Add dataset overlap stats
+    dataset_overlap = {}
+    for i, name1 in enumerate(dataset_names):
+        for j, name2 in enumerate(dataset_names):
+            if i < j:  # Only calculate each pair once
+                genes1 = set(datasets[i].var_names)
+                genes2 = set(datasets[j].var_names)
+                common = genes1.intersection(genes2)
+                dataset_overlap[f"{name1}_vs_{name2}"] = {
+                    'common_genes': int(len(common)),
+                    'percent_of_first': float(round(len(common) / len(genes1) * 100, 2)),
+                    'percent_of_second': float(round(len(common) / len(genes2) * 100, 2))
+                }
+    combined_adata.uns['dataset_overlap'] = dataset_overlap
+    
+    # Add sparsity statistics
+    nonzero_count = expr_matrix.count_nonzero()
+    total_elements = expr_matrix.shape[0] * expr_matrix.shape[1]
+    sparsity = 1.0 - (nonzero_count / total_elements)
+    combined_adata.uns['sparsity_stats'] = {
+        'nonzero_elements': int(nonzero_count),
+        'total_elements': int(total_elements),
+        'sparsity': float(sparsity),
+        'memory_efficiency_factor': float(total_elements / nonzero_count) if nonzero_count > 0 else float('inf')
+    }
+    
+    # Add harmonized reference information
+    combined_adata.uns['harmonized_reference_genome'] = 'hg38'
+    combined_adata.uns['harmonized_gencode_version'] = '24'
+    
+    return combined_adata
+
+def main():
+    # Start timing
+    start_time = time.time()
+    
+    # Find datasets
+    dataset_files = {
+        'adni': DATA_DIR / 'adni_standardized_v2.h5ad',
+        'encode': DATA_DIR / 'encode_standardized_v2.h5ad',
+        'entex': DATA_DIR / 'entex_standardized_v2.h5ad',
+        'mage': DATA_DIR / 'mage_standardized_v2.h5ad',
+        'gtex': DATA_DIR / 'gtex_standardized_v2.h5ad' 
+    }
+    
+    # Load each dataset
+    datasets = []
+    dataset_names = []
+    
+    for name, file_path in dataset_files.items():
+        if file_path.exists():
+            adata = load_dataset(file_path)
+            if adata is not None:
+                datasets.append(adata)
+                dataset_names.append(name)
+        else:
+            logger.warning(f"Dataset file not found: {file_path}")
+    
+    if not datasets:
+        logger.error("No datasets loaded")
+        return 1
+    
+    # Combine datasets
+    logger.info(f"Combining {len(datasets)} datasets with all genes using sparse matrices")
+    combined = combine_datasets_sparse(datasets, dataset_names)
+    
+    if combined is None:
+        logger.error("Failed to combine datasets")
+        return 1
+    
+    # Save combined dataset
+    logger.info(f"Saving combined dataset with {combined.n_obs} samples and {combined.n_vars} genes to {OUTPUT_FILE}")
+    try:
+        # Convert any non-string values in uns to strings to avoid h5py issues
+        for key in list(combined.uns.keys()):
+            if isinstance(combined.uns[key], dict):
+                for subkey in list(combined.uns[key].keys()):
+                    if not isinstance(combined.uns[key][subkey], (str, int, float, bool, list, dict)) or combined.uns[key][subkey] is None:
+                        combined.uns[key][subkey] = str(combined.uns[key][subkey])
+        
+        combined.write_h5ad(OUTPUT_FILE)
+        logger.info("Successfully saved combined dataset")
+    except Exception as e:
+        logger.error(f"Error saving combined dataset: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        return 1
+    
+    # Log total processing time
+    total_time = time.time() - start_time
+    logger.info(f"Total processing time: {total_time:.2f} seconds")
+    
+    # Print dataset summary
+    logger.info("Combined dataset summary:")
+    logger.info(f"  Total samples: {combined.n_obs}")
+    logger.info(f"  Total genes: {combined.n_vars}")
+    logger.info(f"  Sparsity: {combined.uns['sparsity_stats']['sparsity']:.2%}")
+    logger.info(f"  Memory efficiency factor: {combined.uns['sparsity_stats']['memory_efficiency_factor']:.1f}x")
+    logger.info("  Samples per dataset:")
+    for name, count in combined.uns['dataset_info']['sample_counts'].items():
+        logger.info(f"    {name}: {count}")
+    logger.info("  Genes per dataset:")
+    for name, count in combined.uns['gene_counts'].items():
+        logger.info(f"    {name}: {count}")
+    
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

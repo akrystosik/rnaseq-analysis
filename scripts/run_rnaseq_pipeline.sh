@@ -26,6 +26,22 @@ log_message() {
 }
 
 # Function to run a command with logging
+
+# Function to safely save AnnData files
+save_anndata_safely() {
+    local input_file="$1"
+    local output_file="$2"
+    
+    if [ -f "$input_file" ]; then
+        log_message "Using save wrapper to safely save AnnData: $output_file"
+        python "${SCRIPTS_DIR}/anndata_save_wrapper.py" "$input_file" "$output_file"
+        return $?
+    else
+        log_message "Error: Input file not found: $input_file"
+        return 1
+    fi
+}
+
 run_command() {
     log_message "Running: $1"
     eval "$1" 2>&1 | tee -a "$LOG_FILE"
@@ -59,10 +75,13 @@ else
     log_message "Will continue without this mapping, which may affect ENCODE gene ID mapping quality."
 fi
 
+
+# Create temp directory for intermediate files
+mkdir -p "${OUTPUT_DIR}/temp"
 # Step 1: Initial Data Conversion (existing)
 log_message "=== Stage 1: Initial Data Conversion ==="
 run_command "python ${SCRIPTS_DIR}/standardize_datasets.py \\
-    --encode-dir \"${BASE_DIR}/encode/raw_data\" \\
+    --encode-dir \"${BASE_DIR}/encode/raw_data/cell_lines\" \\
     --encode-entex-dir \"${BASE_DIR}/encode/entex\" \\
     --entex-metadata-file \"${BASE_DIR}/encode/metadata/entex_metadata.json\" \\
     --gtex-file \"${BASE_DIR}/gtex/raw_data/gene_tpm/GTEx_Analysis_v10_RNASeQCv2.4.2_gene_tpm.gct.gz\" \\
@@ -77,6 +96,21 @@ if [ $? -eq 0 ]; then
 else
     log_message "Stage 1 failed. Check the log file for details."
     exit 1
+fi
+
+
+# Use save wrapper to properly save AnnData files
+if [ -f "${OUTPUT_DIR}/temp/encode_standardized_v1.h5ad" ]; then
+    save_anndata_safely "${OUTPUT_DIR}/temp/encode_standardized_v1.h5ad" "${OUTPUT_DIR}/encode_standardized_v1.h5ad"
+fi
+if [ -f "${OUTPUT_DIR}/temp/gtex_standardized_v1.h5ad" ]; then
+    save_anndata_safely "${OUTPUT_DIR}/temp/gtex_standardized_v1.h5ad" "${OUTPUT_DIR}/gtex_standardized_v1.h5ad"
+fi
+if [ -f "${OUTPUT_DIR}/temp/mage_standardized_v1.h5ad" ]; then
+    save_anndata_safely "${OUTPUT_DIR}/temp/mage_standardized_v1.h5ad" "${OUTPUT_DIR}/mage_standardized_v1.h5ad"
+fi
+if [ -f "${OUTPUT_DIR}/temp/adni_standardized_v1.h5ad" ]; then
+    save_anndata_safely "${OUTPUT_DIR}/temp/adni_standardized_v1.h5ad" "${OUTPUT_DIR}/adni_standardized_v1.h5ad"
 fi
 
 # Step 1.5: Generate Gene ID Reference Mapping with Entrez mapping
@@ -153,6 +187,24 @@ else
     log_message "Dataset Preprocessing failed. Check the log file for details."
     exit 1
 fi
+
+
+# Fix placeholder gene IDs in preprocessed datasets
+log_message "=== Step 2.6: Fixing placeholder gene IDs in preprocessed datasets ==="
+for dataset in encode gtex mage adni; do
+    preprocessed_file="${PREPROCESSED_DIR}/${dataset}_standardized_preprocessed.h5ad"
+    if [ -f "$preprocessed_file" ]; then
+        log_message "Fixing placeholder IDs in ${dataset} dataset"
+        run_command "python ${SCRIPTS_DIR}/fix_placeholder_ids.py $preprocessed_file $preprocessed_file.fixed"
+        if [ $? -eq 0 ]; then
+            # Replace the original file with the fixed file
+            mv "$preprocessed_file.fixed" "$preprocessed_file"
+            log_message "Placeholder IDs fixed in ${dataset} dataset"
+        else
+            log_message "Warning: Failed to fix placeholder IDs in ${dataset} dataset"
+        fi
+    fi
+done
 
 # Step 2.6: Analyze ENCODE mapping quality
 log_message "=== Stage 2.6: Analyzing ENCODE Gene Mapping Quality ==="

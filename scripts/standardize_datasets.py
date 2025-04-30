@@ -116,6 +116,27 @@ def get_encode_cell_info(metadata_dir=None):
 
 
 def create_standard_anndata(data_df, obs_df, var_df, dataset_info):
+    # Ensure all obs columns can be properly saved
+    for col in obs_df.columns:
+        if obs_df[col].dtype.name not in ["category", "string", "object"]:
+            logger.debug(f"Converting obs column {col} to string")
+            obs_df[col] = obs_df[col].astype(str)
+
+    # Ensure all var columns can be properly saved
+    for col in var_df.columns:
+        if var_df[col].dtype.name not in ["category", "string", "object"]:
+            logger.debug(f"Converting var column {col} to string")
+            var_df[col] = var_df[col].astype(str)
+
+    # Convert all dictionary values to strings
+    safe_dataset_info = {}
+    for key, value in dataset_info.items():
+        if isinstance(value, dict):
+            safe_dataset_info[key] = {k: str(v) if v is not None else "" for k, v in value.items()}
+        elif value is None:
+            safe_dataset_info[key] = ""
+        else:
+            safe_dataset_info[key] = str(value)
     """
     Create standardized AnnData object with consistent structure.
     Now with enhanced metadata including ontology mappings and validation.
@@ -223,6 +244,67 @@ def create_standard_anndata(data_df, obs_df, var_df, dataset_info):
 
 
 def save_anndata(adata, file_path):
+    """Save AnnData object to file with validation."""
+    try:
+        # Validate before saving
+        if adata.var.shape[1] == 0:
+            logger.error("Cannot save AnnData: var DataFrame is empty!")
+            return False
+
+        # Check for index/column name conflicts and fix them
+        if adata.obs.index.name is not None and adata.obs.index.name in adata.obs.columns:
+            logger.warning(
+                f"Fixing index/column name conflict: Renaming column '{adata.obs.index.name}' to 'original_{adata.obs.index.name}'"
+            )
+            adata.obs = adata.obs.rename(
+                columns={adata.obs.index.name: f"original_{adata.obs.index.name}"}
+            )
+
+        if adata.var.index.name is not None and adata.var.index.name in adata.var.columns:
+            logger.warning(
+                f"Fixing index/column name conflict: Renaming column '{adata.var.index.name}' to 'original_{adata.var.index.name}'"
+            )
+            adata.var = adata.var.rename(
+                columns={adata.var.index.name: f"original_{adata.var.index.name}"}
+            )
+
+        # Convert all values in uns to serializable types
+        safe_uns = {}
+        for key, value in adata.uns.items():
+            if isinstance(value, dict):
+                safe_uns[key] = {k: str(v) if v is not None else "" for k, v in value.items()}
+            elif value is None:
+                safe_uns[key] = ""
+            else:
+                safe_uns[key] = str(value)
+
+        # Store original uns
+        original_uns = adata.uns.copy()
+        
+        # Replace with safe uns for saving
+        adata.uns = safe_uns
+
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        # Save the AnnData object
+        adata.write_h5ad(file_path)
+        
+        # Restore original uns
+        adata.uns = original_uns
+
+        # Verify successful save by loading
+        test_load = ad.read_h5ad(file_path)
+        logger.info(
+            f"Verification: Saved AnnData loaded with var shape={test_load.var.shape}, obs shape={test_load.obs.shape}"
+        )
+
+        logger.info(f"Saved AnnData to {file_path}")
+        return True
+
+    except Exception as e:
+        logger.error(f"Error saving AnnData: {e}")
+        return False
     """Save AnnData object to file with validation."""
     try:
         # Validate before saving

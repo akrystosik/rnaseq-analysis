@@ -1,0 +1,272 @@
+#!/usr/bin/env python3
+"""
+Complete Tissue to UBERON Mapping File
+
+This script completes the tissue_to_uberon.csv file with mappings
+for all tissues found in the datasets.
+"""
+
+import os
+import pandas as pd
+import logging
+from pathlib import Path
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger('tissue_mapping')
+
+# Known mappings for tissues to UBERON
+TISSUE_TO_UBERON = {
+    # Blood-related tissues
+    'Whole Blood': 'UBERON:0000178',
+    'blood': 'UBERON:0000178',
+    'Blood': 'UBERON:0000178',
+    'PBMC': 'UBERON:0000178',  # Peripheral Blood Mononuclear Cells
+    'pbmc': 'UBERON:0000178',
+    'Peripheral blood': 'UBERON:0000178',
+    'peripheral blood': 'UBERON:0000178',
+    'whole blood': 'UBERON:0000178',
+    'lymphoblast': 'CL:0000542',  # Cell Ontology term for lymphoblast
+    
+    # Adipose tissues
+    'Adipose - Subcutaneous': 'UBERON:0002190',
+    'adipose - subcutaneous': 'UBERON:0002190',
+    'Adipose - Visceral (Omentum)': 'UBERON:0016529',
+    'adipose - visceral (omentum)': 'UBERON:0016529',
+    
+    # Adrenal tissues
+    'Adrenal Gland': 'UBERON:0002369',
+    'adrenal gland': 'UBERON:0002369',
+    'Adrenal': 'UBERON:0002369',
+    'adrenal': 'UBERON:0002369',
+    
+    # Arterial tissues
+    'Artery - Aorta': 'UBERON:0000947',
+    'artery - aorta': 'UBERON:0000947',
+    'Artery - Coronary': 'UBERON:0001621',
+    'artery - coronary': 'UBERON:0001621',
+    'Artery - Tibial': 'UBERON:0007610',
+    'artery - tibial': 'UBERON:0007610',
+    
+    # Urinary tissues
+    'Bladder': 'UBERON:0001255',
+    'bladder': 'UBERON:0001255',
+    
+    # Bone-related tissues
+    'Bone Marrow': 'UBERON:0002371',
+    'bone marrow': 'UBERON:0002371',
+    
+    # Brain tissues
+    'Brain': 'UBERON:0000955',
+    'brain': 'UBERON:0000955',
+    'Brain - Amygdala': 'UBERON:0001876',
+    'brain - amygdala': 'UBERON:0001876',
+    'Brain - Anterior cingulate cortex (BA24)': 'UBERON:0009835',
+    'brain - anterior cingulate cortex (ba24)': 'UBERON:0009835',
+    'Brain - Caudate (basal ganglia)': 'UBERON:0001873',
+    'brain - caudate (basal ganglia)': 'UBERON:0001873',
+    'Brain - Cerebellar Hemisphere': 'UBERON:0002245',
+    'brain - cerebellar hemisphere': 'UBERON:0002245',
+    'Brain - Cerebellum': 'UBERON:0002037',
+    'brain - cerebellum': 'UBERON:0002037',
+    'Brain - Cortex': 'UBERON:0000956',
+    'brain - cortex': 'UBERON:0000956',
+    'Brain - Frontal Cortex (BA9)': 'UBERON:0013529',
+    'brain - frontal cortex (ba9)': 'UBERON:0013529',
+    'Brain - Hippocampus': 'UBERON:0002310',
+    'brain - hippocampus': 'UBERON:0002310',
+    'Brain - Hypothalamus': 'UBERON:0001898',
+    'brain - hypothalamus': 'UBERON:0001898',
+    'Brain - Nucleus accumbens (basal ganglia)': 'UBERON:0001882',
+    'brain - nucleus accumbens (basal ganglia)': 'UBERON:0001882',
+    'Brain - Putamen (basal ganglia)': 'UBERON:0001874',
+    'brain - putamen (basal ganglia)': 'UBERON:0001874',
+    'Brain - Spinal cord (cervical c-1)': 'UBERON:0002726',
+    'brain - spinal cord (cervical c-1)': 'UBERON:0002726',
+    'Brain - Substantia nigra': 'UBERON:0002038',
+    'brain - substantia nigra': 'UBERON:0002038',
+    
+    # Breast tissue
+    'Breast - Mammary Tissue': 'UBERON:0001911',
+    'breast - mammary tissue': 'UBERON:0001911',
+    
+    # Cell types
+    'Cells - Cultured fibroblasts': 'CL:0000057',
+    'cells - cultured fibroblasts': 'CL:0000057',
+    'Cells - EBV-transformed lymphocytes': 'CL:0000542',
+    'cells - ebv-transformed lymphocytes': 'CL:0000542',
+    
+    # Cervix tissues
+    'Cervix - Ectocervix': 'UBERON:0012249',
+    'cervix - ectocervix': 'UBERON:0012249',
+    'Cervix - Endocervix': 'UBERON:0000458',
+    'cervix - endocervix': 'UBERON:0000458',
+    
+    # Colon tissues
+    'Colon': 'UBERON:0001155',
+    'colon': 'UBERON:0001155',
+    'Colon - Sigmoid': 'UBERON:0001159',
+    'colon - sigmoid': 'UBERON:0001159',
+    'Colon - Transverse': 'UBERON:0001157',
+    'colon - transverse': 'UBERON:0001157',
+    
+    # Esophagus tissues
+    'Esophagus - Gastroesophageal Junction': 'UBERON:0007650',
+    'esophagus - gastroesophageal junction': 'UBERON:0007650',
+    'Esophagus - Mucosa': 'UBERON:0002469',
+    'esophagus - mucosa': 'UBERON:0002469',
+    'Esophagus - Muscularis': 'UBERON:0004648',
+    'esophagus - muscularis': 'UBERON:0004648',
+    
+    # Reproductive tissues
+    'Fallopian Tube': 'UBERON:0003889',
+    'fallopian tube': 'UBERON:0003889',
+    
+    # Heart tissues
+    'Heart - Atrial Appendage': 'UBERON:0006631',
+    'heart - atrial appendage': 'UBERON:0006631',
+    'Heart - Left Ventricle': 'UBERON:0002084',
+    'heart - left ventricle': 'UBERON:0002084',
+    
+    # Kidney tissues
+    'Kidney': 'UBERON:0002113',
+    'kidney': 'UBERON:0002113',
+    'Kidney - Cortex': 'UBERON:0001225',
+    'kidney - cortex': 'UBERON:0001225',
+    'Kidney - Medulla': 'UBERON:0000362',
+    'kidney - medulla': 'UBERON:0000362',
+    
+    # Liver
+    'Liver': 'UBERON:0002107',
+    'liver': 'UBERON:0002107',
+    
+    # Lung
+    'Lung': 'UBERON:0002048',
+    'lung': 'UBERON:0002048',
+    
+    # Muscle tissues
+    'Muscle': 'UBERON:0002385',
+    'muscle': 'UBERON:0002385',
+    'Muscle - Skeletal': 'UBERON:0001134',
+    'muscle - skeletal': 'UBERON:0001134',
+    
+    # Nerve
+    'Nerve - Tibial': 'UBERON:0001323',
+    'nerve - tibial': 'UBERON:0001323',
+    
+    # Reproductive organs
+    'Ovary': 'UBERON:0000992',
+    'ovary': 'UBERON:0000992',
+    
+    # Pancreas
+    'Pancreas': 'UBERON:0001264',
+    'pancreas': 'UBERON:0001264',
+    
+    # Pituitary
+    'Pituitary': 'UBERON:0000007',
+    'pituitary': 'UBERON:0000007',
+    
+    # Prostate
+    'Prostate': 'UBERON:0002367',
+    'prostate': 'UBERON:0002367',
+    
+    # Skin tissues
+    'Skin': 'UBERON:0002097',
+    'skin': 'UBERON:0002097',
+    'Skin - Not Sun Exposed (Suprapubic)': 'UBERON:0036151',
+    'skin - not sun exposed (suprapubic)': 'UBERON:0036151',
+    'Skin - Sun Exposed (Lower leg)': 'UBERON:0036149',
+    'skin - sun exposed (lower leg)': 'UBERON:0036149',
+    
+    # Small intestine
+    'Small Intestine - Terminal Ileum': 'UBERON:0001211',
+    'small intestine - terminal ileum': 'UBERON:0001211',
+    
+    # Spleen
+    'Spleen': 'UBERON:0002106',
+    'spleen': 'UBERON:0002106',
+    
+    # Stomach
+    'Stomach': 'UBERON:0000945',
+    'stomach': 'UBERON:0000945',
+    
+    # Testis
+    'Testis': 'UBERON:0000473',
+    'testis': 'UBERON:0000473',
+    
+    # Thyroid
+    'Thyroid': 'UBERON:0002046',
+    'thyroid': 'UBERON:0002046',
+    
+    # Uterus
+    'Uterus': 'UBERON:0000995',
+    'uterus': 'UBERON:0000995',
+    
+    # Vagina
+    'Vagina': 'UBERON:0000996',
+    'vagina': 'UBERON:0000996',
+    
+    # Salivary gland
+    'Minor Salivary Gland': 'UBERON:0001830',
+    'minor salivary gland': 'UBERON:0001830',
+}
+
+def update_mapping_file(input_file, output_file):
+    """
+    Update the mapping file with more complete UBERON mappings.
+    
+    Args:
+        input_file: Input CSV file with existing tissue names
+        output_file: Output CSV file with updated mappings
+    """
+    # Load the existing mapping file
+    df = pd.read_csv(input_file)
+    
+    # Keep track of how many mappings we add
+    original_mapping_count = df['ontology_id'].notna().sum()
+    
+    # Update mappings for each tissue
+    for i, row in df.iterrows():
+        tissue_name = row['tissue_name']
+        
+        # Skip if already has a mapping
+        if pd.notna(row['ontology_id']) and row['ontology_id'] != '':
+            continue
+            
+        # Look up the tissue in our mapping dictionary
+        if tissue_name in TISSUE_TO_UBERON:
+            df.loc[i, 'ontology_id'] = TISSUE_TO_UBERON[tissue_name]
+            df.loc[i, 'confidence'] = 'high'
+            df.loc[i, 'source'] = 'built-in'
+    
+    # Count how many mappings we have now
+    new_mapping_count = df['ontology_id'].notna().sum()
+    total_tissues = len(df)
+    
+    logger.info(f"Original mappings: {original_mapping_count}/{total_tissues} tissues ({original_mapping_count/total_tissues*100:.1f}%)")
+    logger.info(f"Updated mappings: {new_mapping_count}/{total_tissues} tissues ({new_mapping_count/total_tissues*100:.1f}%)")
+    logger.info(f"Added {new_mapping_count - original_mapping_count} new mappings")
+    
+    # Save the updated mapping file
+    df.to_csv(output_file, index=False)
+    logger.info(f"Saved updated mapping file to {output_file}")
+    
+    return df
+
+def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Complete tissue to UBERON mapping file")
+    parser.add_argument("--input-file", required=True, help="Input CSV file with existing mappings")
+    parser.add_argument("--output-file", required=True, help="Output CSV file with updated mappings")
+    
+    args = parser.parse_args()
+    
+    # Update the mapping file
+    update_mapping_file(args.input_file, args.output_file)
+
+if __name__ == "__main__":
+    main()

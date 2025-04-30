@@ -230,13 +230,15 @@ def preprocess_encode_dataset(adata: ad.AnnData, numeric_to_ensembl: Dict[str, s
         # Try reference mapping as last resort
         elif str(original_id).isdigit() and str(original_id) in numeric_to_ensembl:
             ensembl_id = numeric_to_ensembl[str(original_id)]
-            if not ensembl_id.startswith('PLACEHOLDER_'):
-                mapping_source = 'reference_mapping'
+            # Skip placeholder IDs and keep original numeric ID
+            if ensembl_id.startswith('PLACEHOLDER_'):
+                # Use original ID as Ensembl ID to avoid empty values
+                ensembl_id = f"ENTREZ:{str(original_id)}"
+                mapping_source = 'entrez_id'
                 mapped_from_reference += 1
             else:
-                ensembl_id = ''  # Don't use placeholders
-                mapping_source = 'unmapped'
-                unmapped_count += 1
+                mapping_source = 'reference_mapping'
+                mapped_from_reference += 1
         else:
             mapping_source = 'unmapped'
             unmapped_count += 1
@@ -266,6 +268,15 @@ def preprocess_encode_dataset(adata: ad.AnnData, numeric_to_ensembl: Dict[str, s
     
     # Create new var DataFrame
     new_var = pd.DataFrame(var_columns)
+    
+    # Fix gene_id column to use ensembl_id (or ENTREZ: id) instead of sequential index
+    for i, row in new_var.iterrows():
+        if row['ensembl_id']:
+            # Use the ensembl_id as the gene_id
+            new_var.at[i, 'gene_id'] = row['ensembl_id']
+        elif row['original_gene_id'].startswith('gSpikein'):
+            # For spike-in controls, use the original ID
+            new_var.at[i, 'gene_id'] = row['original_gene_id']
     
     # Calculate mapping statistics
     mapped_count = mapped_from_encode + mapped_from_enhanced + mapped_from_reference + spikein_count
@@ -389,6 +400,15 @@ def preprocess_entex_dataset(adata: ad.AnnData, numeric_to_ensembl: Dict[str, st
     
     # Create new var DataFrame
     new_var = pd.DataFrame(var_columns)
+    
+    # Fix gene_id column to use ensembl_id (or ENTREZ: id) instead of sequential index
+    for i, row in new_var.iterrows():
+        if row['ensembl_id']:
+            # Use the ensembl_id as the gene_id
+            new_var.at[i, 'gene_id'] = row['ensembl_id']
+        elif row['original_gene_id'].startswith('gSpikein'):
+            # For spike-in controls, use the original ID
+            new_var.at[i, 'gene_id'] = row['original_gene_id']
     
     # Calculate mapping statistics
     mapped_count = sum(1 for x in var_columns['ensembl_id'] if x and not x.startswith('PLACEHOLDER_'))

@@ -1,0 +1,882 @@
+#!/usr/bin/env python3
+"""
+Optimized Gene Expression Query Module
+
+This module provides high-performance functions for retrieving gene expression data
+across multiple datasets. The implementation focuses on efficient indexing and caching
+to support high-volume queries during model training.
+
+Main functions:
+- load_expression_data: Load and index expression data for fast access
+- get_gene_expression: Retrieve expression for specific genes, donors, and tissues
+- get_gene_expression_matrix: Get expression data as a matrix for multiple genes/samples
+"""
+
+import os
+import time
+import logging
+import numpy as np
+import pandas as pd
+import anndata as ad
+from pathlib import Path
+from typing import Dict, List, Union, Tuple, Set, Optional
+from functools import lru_cache
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger('gene_expression')
+
+# Define paths
+DEFAULT_DATA_DIR = Path("/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/standardized_data")
+COMBINED_DATA_FILE = Path("/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/standardized_data/combined_standardized.h5ad")
+
+# Global cache for loaded datasets
+_DATASET_CACHE = {}
+_GENE_INDEX_CACHE = {}
+_DONOR_INDEX_CACHE = {}
+_TISSUE_INDEX_CACHE = {}
+_SYMBOL_TO_ENSEMBL_CACHE = {}
+
+class ExpressionDataLoader:
+    """
+    Efficient loader and indexer for gene expression data.
+    
+    This class handles loading, indexing, and caching of gene expression data
+    to provide optimized access for repeated queries.
+    """
+    
+    def __init__(self, data_dir: Union[str, Path] = DEFAULT_DATA_DIR):
+        """
+        Initialize the data loader.
+        
+        Args:
+            data_dir: Directory containing standardized h5ad files
+        """
+        self.data_dir = Path(data_dir)
+        self.datasets = {}
+        self.gene_indices = {}
+        self.symbol_indices = {}
+        self.donor_indices = {}
+        self.tissue_indices = {}
+        self.loaded_datasets = set()
+
+    def get_gene_expression(self, 
+                        dataset_name: str, 
+                        gene: str, 
+                        donor: Optional[str] = None, 
+                        tissue: Optional[str] = None,
+                        sample_selection_method: str = 'first') -> Dict[str, float]:
+        """
+        Get expression values for a specific gene with filters.
+        
+        Args:
+            dataset_name: Name of the dataset
+            gene: Gene symbol or Ensembl ID
+            donor: Donor ID to filter by (optional)
+            tissue: Tissue to filter by (optional)
+            sample_selection_method: Method to select representative sample
+            
+        Returns:
+            Dictionary with expression statistics or empty dict if not found
+        """
+        # Load dataset if not already loaded
+        if dataset_name not in self.datasets:
+            self.load_dataset(dataset_name)
+        
+        # Return empty result if dataset couldn't be loaded
+        if dataset_name not in self.datasets:
+            return {}
+        
+        adata = self.datasets[dataset_name]
+        
+        # Resolve gene ID 
+        gene_id = gene
+        if not gene_id.startswith('ENSG'):
+            # Implement gene symbol lookup if needed
+            pass
+        
+        # Get gene index
+        gene_idx = None
+        for i, var_name in enumerate(adata.var_names):
+            if var_name == gene_id:
+                gene_idx = i
+                break
+        
+        if gene_idx is None:
+            logger.warning(f"Gene '{gene_id}' not found in dataset '{dataset_name}'")
+            return {}
+        
+        # Extract expression values
+        if isinstance(adata.X, np.ndarray):
+            # Dense matrix
+            expr_values = adata.X[:, gene_idx]
+        else:
+            # Sparse matrix
+            expr_values = adata.X[:, gene_idx].toarray().flatten()
+        
+        # Calculate statistics
+        result = {
+            'gene_id': gene_id,
+            'mean_expression': float(np.mean(expr_values)),
+            'median_expression': float(np.median(expr_values)),
+            'min_expression': float(np.min(expr_values)),
+            'max_expression': float(np.max(expr_values)),
+            'std_expression': float(np.std(expr_values)),
+            'sample_count': len(expr_values)
+        }
+        
+        return result
+
+    def load_file_directly(self, dataset_name: str, file_path: Union[str, Path]) -> Optional[ad.AnnData]:
+        """
+        Load a dataset directly from a file path.
+        
+        Args:
+            dataset_name: Name to assign to the dataset
+            file_path: Path to the h5ad file
+        
+        Returns:
+            AnnData object or None if dataset couldn't be loaded
+        """
+        file_path = Path(file_path)
+        if not file_path.exists():
+            logger.error(f"File not found: {file_path}")
+            return None
+        
+        # Check if already loaded
+        if dataset_name in self.datasets:
+            return self.datasets[dataset_name]
+        
+        # Load the dataset
+        start_time = time.time()
+        try:
+            logger.info(f"Loading {dataset_name} dataset from {file_path}")
+            adata = ad.read_h5ad(file_path)
+            load_time = time.time() - start_time
+            logger.info(f"Loaded {dataset_name} with {adata.shape[0]} samples and {adata.shape[1]} genes in {load_time:.2f}s")
+            
+            # Store in cache
+            self.datasets[dataset_name] = adata
+            self.loaded_datasets.add(dataset_name)
+            
+            # Build indices
+            self._build_indices(dataset_name, adata)
+            
+            return adata
+        
+        except Exception as e:
+            logger.error(f"Error loading file {file_path}: {e}")
+            return None
+        
+    def find_h5ad_files(self) -> Dict[str, Path]:
+        """Find all h5ad files in the data directory."""
+        h5ad_files = {}
+        for file_path in self.data_dir.glob("*.h5ad"):
+            dataset_name = file_path.stem.replace('_standardized', '')
+            h5ad_files[dataset_name] = file_path
+        return h5ad_files
+    
+    def load_dataset(self, dataset_name: str) -> Optional[ad.AnnData]:
+        """
+        Load a specific dataset by name.
+        
+        Args:
+            dataset_name: Name of the dataset (e.g., 'encode', 'gtex', 'entex')
+            
+        Returns:
+            AnnData object or None if dataset couldn't be loaded
+        """
+        # Check if already loaded
+        if dataset_name in self.datasets:
+            return self.datasets[dataset_name]
+        
+        # Find available h5ad files
+        h5ad_files = self.find_h5ad_files()
+        
+        if dataset_name not in h5ad_files:
+            logger.error(f"Dataset '{dataset_name}' not found. Available datasets: {', '.join(h5ad_files.keys())}")
+            return None
+        
+        file_path = h5ad_files[dataset_name]
+        
+        # Load the dataset
+        start_time = time.time()
+        try:
+            logger.info(f"Loading {dataset_name} dataset from {file_path}")
+            adata = ad.read_h5ad(file_path)
+            load_time = time.time() - start_time
+            logger.info(f"Loaded {dataset_name} with {adata.shape[0]} samples and {adata.shape[1]} genes in {load_time:.2f}s")
+            
+            # Store in cache
+            self.datasets[dataset_name] = adata
+            self.loaded_datasets.add(dataset_name)
+            
+            # Build indices
+            self._build_indices(dataset_name, adata)
+            
+            return adata
+        
+        except Exception as e:
+            logger.error(f"Error loading {dataset_name}: {e}")
+            return None
+    
+    def _build_indices(self, dataset_name: str, adata: ad.AnnData) -> None:
+        """
+        Build optimized indices for the dataset.
+        
+        Args:
+            dataset_name: Name of the dataset
+            adata: AnnData object
+        """
+        logger.info(f"Building indices for {dataset_name}")
+        start_time = time.time()
+        
+        # Build gene index (Ensembl ID -> array index)
+        gene_index = {gene_id: i for i, gene_id in enumerate(adata.var_names)}
+        self.gene_indices[dataset_name] = gene_index
+        
+        # Build symbol index if gene symbols are available
+        if 'gene_name' in adata.var.columns:
+            # Handle potential NaN values
+            valid_symbols = adata.var['gene_name'].dropna()
+            symbol_index = {}
+            
+            # Build both exact and case-insensitive indices
+            for gene_id, symbol in valid_symbols.items():
+                if symbol not in symbol_index:
+                    symbol_index[symbol] = gene_id
+                
+                # Add lowercase version for case-insensitive lookup
+                symbol_lower = symbol.lower()
+                if symbol_lower not in symbol_index:
+                    symbol_index[symbol_lower] = gene_id
+            
+            self.symbol_indices[dataset_name] = symbol_index
+        
+        # Build donor/subject index
+        subject_col = self._find_subject_column(adata)
+        if subject_col:
+            # Create mapping from donor ID to sample indices
+            donor_index = {}
+            for i, donor_id in enumerate(adata.obs[subject_col]):
+                if donor_id not in donor_index:
+                    donor_index[donor_id] = []
+                donor_index[donor_id].append(i)
+            
+            self.donor_indices[dataset_name] = donor_index
+        
+        # Build tissue index
+        tissue_col = self._find_tissue_column(adata)
+        if tissue_col:
+            # Create mapping from tissue to sample indices
+            tissue_index = {}
+            for i, tissue in enumerate(adata.obs[tissue_col]):
+                if tissue not in tissue_index:
+                    tissue_index[tissue] = []
+                tissue_index[tissue].append(i)
+            
+            # Also create case-insensitive index
+            tissue_lower_index = {}
+            for tissue, indices in tissue_index.items():
+                tissue_lower = tissue.lower()
+                if tissue_lower not in tissue_lower_index:
+                    tissue_lower_index[tissue_lower] = []
+                tissue_lower_index[tissue_lower].extend(indices)
+            
+            self.tissue_indices[dataset_name] = {
+                'exact': tissue_index,
+                'lower': tissue_lower_index
+            }
+        
+        build_time = time.time() - start_time
+        logger.info(f"Built indices for {dataset_name} in {build_time:.2f}s")
+    
+    @staticmethod
+    def _find_subject_column(adata: ad.AnnData) -> Optional[str]:
+        """Find the subject/donor column in the dataset."""
+        subject_columns = ['subject_id', 'donor_id', 'donor', 'SUBJID']
+        
+        for col in subject_columns:
+            if col in adata.obs.columns:
+                return col
+        
+        return None
+    
+    @staticmethod
+    def _find_tissue_column(adata: ad.AnnData) -> Optional[str]:
+        """Find the tissue column in the dataset."""
+        tissue_columns = ['tissue', 'tissue_type', 'tissue_of_origin', 'SMTSD', 'cell_line']
+        
+        for col in tissue_columns:
+            if col in adata.obs.columns:
+                return col
+        
+        return None
+    
+    def get_available_datasets(self) -> List[str]:
+        """Get list of available datasets in the data directory."""
+        return list(self.find_h5ad_files().keys())
+    
+    def get_available_tissues(self, dataset_name: str) -> List[str]:
+        """Get list of available tissues in a dataset."""
+        # Load dataset if not already loaded
+        if dataset_name not in self.datasets:
+            self.load_dataset(dataset_name)
+        
+        # Return empty list if dataset couldn't be loaded
+        if dataset_name not in self.datasets:
+            return []
+        
+        adata = self.datasets[dataset_name]
+        tissue_col = self._find_tissue_column(adata)
+        
+        if not tissue_col:
+            return []
+        
+        return sorted(adata.obs[tissue_col].unique())
+    
+    def get_available_donors(self, dataset_name: str) -> List[str]:
+        """Get list of available donors in a dataset."""
+        # Load dataset if not already loaded
+        if dataset_name not in self.datasets:
+            self.load_dataset(dataset_name)
+        
+        # Return empty list if dataset couldn't be loaded
+        if dataset_name not in self.datasets:
+            return []
+        
+        adata = self.datasets[dataset_name]
+        subject_col = self._find_subject_column(adata)
+        
+        if not subject_col:
+            return []
+        
+        return sorted(adata.obs[subject_col].unique())
+    
+    def select_representative_sample(self, samples, expression_matrix, method='first'):
+        """
+        Select a representative sample when multiple samples exist for the same donor/tissue.
+        
+        Args:
+            samples: List of sample indices
+            expression_matrix: Expression values for these samples
+            method: Selection method ('first', 'random', 'mean')
+            
+        Returns:
+            Selected sample index or aggregated expression value
+        """
+        if len(samples) == 0:
+            return None
+        
+        if len(samples) == 1:
+            return samples[0]
+        
+        # For now, just return the first sample as requested
+        if method == 'first':
+            return samples[0]
+        
+        # Placeholder for future methods
+        elif method == 'random':
+            # Return a random sample
+            import random
+            return random.choice(samples)
+        elif method == 'mean':
+            # This would return the mean expression across samples
+            # Note: This doesn't return a sample index, but rather an aggregated value
+            # Implementation would require changes to the calling code
+            logger.info(f"Mean aggregation not yet implemented, using 'first' method instead")
+            return samples[0]
+        else:
+            logger.warning(f"Unknown sample selection method '{method}', using 'first'")
+            return samples[0]
+
+    def resolve_gene_id(self, dataset_name: str, gene: str) -> Optional[str]:
+        """
+        Resolve a gene identifier (symbol or Ensembl ID) to the correct Ensembl ID.
+        
+        Args:
+            dataset_name: Name of the dataset
+            gene: Gene symbol or Ensembl ID
+            
+        Returns:
+            Ensembl ID or None if gene not found
+        """
+        # Load dataset if not already loaded
+        if dataset_name not in self.datasets:
+            self.load_dataset(dataset_name)
+        
+        # Return None if dataset couldn't be loaded
+        if dataset_name not in self.datasets:
+            return None
+        
+        # Check if this is an Ensembl ID (starts with ENSG)
+        if gene.upper().startswith('ENSG'):
+            # Check if the exact ID exists in the dataset
+            if gene in self.gene_indices[dataset_name]:
+                return gene
+            
+            # Try to find a matching gene ID (without version)
+            base_id = gene.split('.')[0] if '.' in gene else gene
+            for gene_id in self.gene_indices[dataset_name]:
+                if gene_id.startswith(base_id):
+                    return gene_id
+            
+            return None
+        
+        # Check symbol index
+        if dataset_name in self.symbol_indices:
+            symbol_index = self.symbol_indices[dataset_name]
+            
+            # Try exact match
+            if gene in symbol_index:
+                return symbol_index[gene]
+            
+            # Try case-insensitive match
+            gene_lower = gene.lower()
+            if gene_lower in symbol_index:
+                return symbol_index[gene_lower]
+        
+        return None
+    
+    def filter_samples(self, 
+                      dataset_name: str, 
+                      donor: Optional[str] = None, 
+                      tissue: Optional[str] = None,
+                      sample_selection_method: str = 'first') -> List[int]:
+        """
+        Get sample indices matching the specified filters.
+        
+        Args:
+            dataset_name: Name of the dataset
+            donor: Donor ID to filter by (optional)
+            tissue: Tissue to filter by (optional)
+            sample_selection_method: Method to select representative sample ('first', 'random', 'mean')
+            
+        Returns:
+            List of sample indices matching the criteria
+        """
+        # Load dataset if not already loaded
+        if dataset_name not in self.datasets:
+            self.load_dataset(dataset_name)
+        
+        # Return empty list if dataset couldn't be loaded
+        if dataset_name not in self.datasets:
+            return []
+        
+        # Start with all sample indices
+        adata = self.datasets[dataset_name]
+        sample_indices = list(range(adata.shape[0]))
+        
+        # Filter by donor
+        if donor and dataset_name in self.donor_indices:
+            donor_index = self.donor_indices[dataset_name]
+            if donor in donor_index:
+                donor_samples = donor_index[donor]
+                # Intersect with existing sample indices
+                sample_indices = [i for i in sample_indices if i in donor_samples]
+            else:
+                return []  # No matching donor
+        
+        # Filter by tissue
+        if tissue and dataset_name in self.tissue_indices:
+            tissue_indices = self.tissue_indices[dataset_name]
+            
+            # Try exact match first
+            if tissue in tissue_indices['exact']:
+                tissue_samples = tissue_indices['exact'][tissue]
+                # Intersect with existing sample indices
+                sample_indices = [i for i in sample_indices if i in tissue_samples]
+            # Try case-insensitive match
+            elif tissue.lower() in tissue_indices['lower']:
+                tissue_samples = tissue_indices['lower'][tissue.lower()]
+                # Intersect with existing sample indices
+                sample_indices = [i for i in sample_indices if i in tissue_samples]
+            else:
+                # Try partial match
+                matched = False
+                for t, indices in tissue_indices['exact'].items():
+                    if tissue.lower() in t.lower():
+                        tissue_samples = indices
+                        # Intersect with existing sample indices
+                        sample_indices = [i for i in sample_indices if i in tissue_samples]
+                        matched = True
+                        break
+                
+                if not matched:
+                    return []  # No matching tissue
+        
+        # Handle multiple samples per donor/tissue
+        if len(sample_indices) > 1 and sample_selection_method == 'first':
+            logger.info(f"Found {len(sample_indices)} samples, selecting first sample as representative")
+            return [sample_indices[0]]
+        
+        return sample_indices
+
+# Main functions for external use
+
+def load_expression_data(
+    data_dir: Union[str, Path] = DEFAULT_DATA_DIR, 
+    use_combined: bool = True,
+    specific_files: Optional[Dict[str, Union[str, Path]]] = None
+) -> ExpressionDataLoader:
+    """
+    Load expression data and build optimized indices.
+    
+    Args:
+        data_dir: Directory containing standardized h5ad files
+        use_combined: Whether to use the combined dataset if available
+        specific_files: Dict mapping dataset names to file paths for direct loading
+        
+    Returns:
+        ExpressionDataLoader object
+    """
+    loader = ExpressionDataLoader(data_dir)
+    
+    # Load specific files if provided
+    if specific_files:
+        for dataset_name, file_path in specific_files.items():
+            loader.load_file_directly(dataset_name, file_path)
+        return loader
+    
+    # Try to load the combined dataset if requested
+    if use_combined and COMBINED_DATA_FILE.exists():
+        loader.load_file_directly('combined', COMBINED_DATA_FILE)
+        logger.info("Loaded combined dataset with all data")
+    else:
+        # Find available datasets
+        available_datasets = loader.get_available_datasets()
+        logger.info(f"Found {len(available_datasets)} available datasets: {', '.join(available_datasets)}")
+    
+    return loader
+
+@lru_cache(maxsize=1024)
+def get_gene_expression(dataset: str, 
+                       gene: str, 
+                       donor: Optional[str] = None, 
+                       tissue: Optional[str] = None,
+                       sample_selection_method: str = 'first',
+                       data_loader: Optional[ExpressionDataLoader] = None) -> Dict[str, float]:
+    """
+    Get expression values for a specific gene with filters.
+    Uses caching for repeated queries.
+    
+    Args:
+        dataset: Name of the dataset
+        gene: Gene symbol or Ensembl ID
+        donor: Donor ID to filter by (optional)
+        tissue: Tissue to filter by (optional)
+        sample_selection_method: Method to select representative sample ('first', 'random', 'mean')
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        Dictionary with expression statistics or empty dict if not found
+    """
+    # Use the provided data loader or create a new one
+    if data_loader is None:
+        # Check if there's a global instance already
+        if not _DATASET_CACHE:
+            data_loader = load_expression_data()
+        else:
+            # Recreate instance from global cache
+            data_loader = ExpressionDataLoader()
+            data_loader.datasets = _DATASET_CACHE
+            data_loader.gene_indices = _GENE_INDEX_CACHE
+            data_loader.symbol_indices = _SYMBOL_TO_ENSEMBL_CACHE
+            data_loader.donor_indices = _DONOR_INDEX_CACHE
+            data_loader.tissue_indices = _TISSUE_INDEX_CACHE
+            data_loader.loaded_datasets = set(_DATASET_CACHE.keys())
+    
+    # Get expression data with the sample selection method
+    result = data_loader.get_gene_expression(dataset, gene, donor, tissue, sample_selection_method)
+    
+    # Update global cache
+    if not _DATASET_CACHE:
+        _DATASET_CACHE.update(data_loader.datasets)
+        _GENE_INDEX_CACHE.update(data_loader.gene_indices)
+        _SYMBOL_TO_ENSEMBL_CACHE.update(data_loader.symbol_indices)
+        _DONOR_INDEX_CACHE.update(data_loader.donor_indices)
+        _TISSUE_INDEX_CACHE.update(data_loader.tissue_indices)
+    
+    return result
+
+@lru_cache(maxsize=128)
+def get_gene_expression_matrix(dataset: str,
+                              genes: Tuple[str],  # Tuple for hashability
+                              donors: Optional[Tuple[str]] = None,
+                              tissues: Optional[Tuple[str]] = None,
+                              data_loader: Optional[ExpressionDataLoader] = None) -> Tuple[np.ndarray, List[str], List[str]]:
+    """
+    Get expression matrix for multiple genes and samples.
+    
+    Args:
+        dataset: Name of the dataset
+        genes: Tuple of gene symbols or Ensembl IDs
+        donors: Tuple of donor IDs to filter by (optional)
+        tissues: Tuple of tissues to filter by (optional)
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        Tuple of (expression matrix, gene IDs, sample IDs)
+    """
+    # Use the provided data loader or create a new one
+    if data_loader is None:
+        if not _DATASET_CACHE:
+            data_loader = load_expression_data()
+        else:
+            data_loader = ExpressionDataLoader()
+            data_loader.datasets = _DATASET_CACHE
+            data_loader.gene_indices = _GENE_INDEX_CACHE
+            data_loader.symbol_indices = _SYMBOL_TO_ENSEMBL_CACHE
+            data_loader.donor_indices = _DONOR_INDEX_CACHE
+            data_loader.tissue_indices = _TISSUE_INDEX_CACHE
+            data_loader.loaded_datasets = set(_DATASET_CACHE.keys())
+    
+    # Load dataset
+    if dataset not in data_loader.datasets:
+        data_loader.load_dataset(dataset)
+    
+    if dataset not in data_loader.datasets:
+        return np.array([]), [], []
+    
+    adata = data_loader.datasets[dataset]
+    
+    # Resolve gene symbols to Ensembl IDs
+    gene_ids = []
+    gene_indices = []
+    for gene in genes:
+        gene_id = data_loader.resolve_gene_id(dataset, gene)
+        if gene_id and gene_id in data_loader.gene_indices[dataset]:
+            gene_ids.append(gene_id)
+            gene_indices.append(data_loader.gene_indices[dataset][gene_id])
+    
+    if not gene_ids:
+        logger.warning(f"No genes found in dataset '{dataset}'")
+        return np.array([]), [], []
+    
+    # Filter samples
+    sample_indices = []
+    
+    # Convert tuples to lists if needed
+    donors_list = list(donors) if donors else None
+    tissues_list = list(tissues) if tissues else None
+    
+    # If both donors and tissues specified, find samples matching both
+    if donors_list and tissues_list:
+        # Find samples for each donor/tissue combination
+        for donor in donors_list:
+            for tissue in tissues_list:
+                indices = data_loader.filter_samples(dataset, donor, tissue)
+                sample_indices.extend(indices)
+    # If only donors specified
+    elif donors_list:
+        for donor in donors_list:
+            indices = data_loader.filter_samples(dataset, donor)
+            sample_indices.extend(indices)
+    # If only tissues specified
+    elif tissues_list:
+        for tissue in tissues_list:
+            indices = data_loader.filter_samples(dataset, None, tissue)
+            sample_indices.extend(indices)
+    # If neither donors nor tissues specified, use all samples
+    else:
+        sample_indices = list(range(adata.shape[0]))
+    
+    if not sample_indices:
+        logger.warning(f"No samples found matching criteria in dataset '{dataset}'")
+        return np.array([]), [], []
+    
+    # Create expression matrix
+    expr_matrix = np.zeros((len(sample_indices), len(gene_indices)))
+    
+    # Fill the matrix
+    for i, sample_idx in enumerate(sample_indices):
+        for j, gene_idx in enumerate(gene_indices):
+            if isinstance(adata.X, np.ndarray):
+                expr_matrix[i, j] = adata.X[sample_idx, gene_idx]
+            else:
+                expr_matrix[i, j] = adata.X[sample_idx, gene_idx].toarray()[0, 0]
+    
+    # Get sample IDs
+    sample_ids = [str(adata.obs.index[idx]) for idx in sample_indices]
+    
+    return expr_matrix, gene_ids, sample_ids
+
+def get_available_datasets(data_loader: Optional[ExpressionDataLoader] = None) -> List[str]:
+    """
+    Get list of available datasets.
+    
+    Args:
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        List of dataset names
+    """
+    # Use the provided data loader or create a new one
+    if data_loader is None:
+        # Check if there's a global instance already
+        if not _DATASET_CACHE:
+            data_loader = load_expression_data()
+        else:
+            # Recreate instance from global cache
+            data_loader = ExpressionDataLoader()
+            data_loader.loaded_datasets = set(_DATASET_CACHE.keys())
+    
+    return data_loader.get_available_datasets()
+
+def get_available_tissues(dataset: str, data_loader: Optional[ExpressionDataLoader] = None) -> List[str]:
+    """
+    Get list of available tissues in a dataset.
+    
+    Args:
+        dataset: Name of the dataset
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        List of tissue names
+    """
+    # Use the provided data loader or create a new one
+    if data_loader is None:
+        # Check if there's a global instance already
+        if not _DATASET_CACHE:
+            data_loader = load_expression_data()
+        else:
+            # Recreate instance from global cache
+            data_loader = ExpressionDataLoader()
+            data_loader.datasets = _DATASET_CACHE
+            data_loader.loaded_datasets = set(_DATASET_CACHE.keys())
+    
+    return data_loader.get_available_tissues(dataset)
+
+def get_available_donors(dataset: str, data_loader: Optional[ExpressionDataLoader] = None) -> List[str]:
+    """
+    Get list of available donors in a dataset.
+    
+    Args:
+        dataset: Name of the dataset
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        List of donor IDs
+    """
+    # Use the provided data loader or create a new one
+    if data_loader is None:
+        # Check if there's a global instance already
+        if not _DATASET_CACHE:
+            data_loader = load_expression_data()
+        else:
+            # Recreate instance from global cache
+            data_loader = ExpressionDataLoader()
+            data_loader.datasets = _DATASET_CACHE
+            data_loader.loaded_datasets = set(_DATASET_CACHE.keys())
+    
+    return data_loader.get_available_donors(dataset)
+
+def get_tissue_gene_expression(dataset: str, gene: str, tissue: str, 
+                             data_loader: Optional[ExpressionDataLoader] = None) -> Dict:
+    """
+    Get gene expression in a specific tissue.
+    Convenience wrapper around get_gene_expression.
+    
+    Args:
+        dataset: Name of the dataset
+        gene: Gene symbol or Ensembl ID
+        tissue: Tissue name
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        Dictionary with expression statistics
+    """
+    return get_gene_expression(dataset, gene, None, tissue, data_loader=data_loader)
+
+def get_donor_gene_expression(dataset: str, gene: str, donor: str, 
+                            data_loader: Optional[ExpressionDataLoader] = None) -> Dict:
+    """
+    Get gene expression for a specific donor.
+    Convenience wrapper around get_gene_expression.
+    
+    Args:
+        dataset: Name of the dataset
+        gene: Gene symbol or Ensembl ID
+        donor: Donor ID
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        Dictionary with expression statistics
+    """
+    return get_gene_expression(dataset, gene, donor, None, data_loader=data_loader)
+
+def get_all_tissues_gene_expression(gene: str, datasets: Optional[List[str]] = None,
+                                 data_loader: Optional[ExpressionDataLoader] = None) -> Dict:
+    """
+    Get gene expression across all tissues in specified datasets.
+    
+    Args:
+        gene: Gene symbol or Ensembl ID
+        datasets: List of dataset names (if None, uses all available)
+        data_loader: ExpressionDataLoader instance (optional)
+        
+    Returns:
+        Dictionary mapping dataset -> tissue -> expression statistics
+    """
+    # Use the provided data loader or create a new one
+    if data_loader is None:
+        # Check if there's a global instance already
+        if not _DATASET_CACHE:
+            data_loader = load_expression_data()
+        else:
+            # Recreate instance from global cache
+            data_loader = ExpressionDataLoader()
+            data_loader.datasets = _DATASET_CACHE
+            data_loader.gene_indices = _GENE_INDEX_CACHE
+            data_loader.symbol_indices = _SYMBOL_TO_ENSEMBL_CACHE
+            data_loader.donor_indices = _DONOR_INDEX_CACHE
+            data_loader.tissue_indices = _TISSUE_INDEX_CACHE
+            data_loader.loaded_datasets = set(_DATASET_CACHE.keys())
+    
+    # Get available datasets if not specified
+    if not datasets:
+        datasets = data_loader.get_available_datasets()
+    
+    # Collect results for each dataset
+    results = {}
+    for dataset in datasets:
+        # Get available tissues
+        tissues = data_loader.get_available_tissues(dataset)
+        
+        # Get expression in each tissue
+        tissue_results = {}
+        for tissue in tissues:
+            expr = data_loader.get_gene_expression(dataset, gene, None, tissue)
+            if expr:  # Only include if expression data was found
+                tissue_results[tissue] = expr
+        
+        if tissue_results:  # Only include dataset if it has results
+            results[dataset] = tissue_results
+    
+    return results
+
+# Example usage
+if __name__ == "__main__":
+    # Initialize the data loader
+    loader = load_expression_data()
+    
+    # Example 1: Get expression for a specific gene
+    expr = get_gene_expression("entex", "TP53", tissue="lung")
+    print(f"TP53 expression in lung: Mean TPM = {expr.get('mean_expression', 'N/A')}")
+    
+    Example 2: Get expression matrix for multiple genes
+    genes = ("TP53", "BRCA1", "BRCA2")
+    matrix, gene_ids, sample_ids = get_gene_expression_matrix("entex", genes, tissues=("lung", "stomach"))
+    print(f"Expression matrix shape: {matrix.shape}")
+    print(f"Genes: {gene_ids}")
+    print(f"Number of samples: {len(sample_ids)}")
+    
+    # Example 3: Get gene expression across all tissues
+    all_tissues = get_all_tissues_gene_expression("TP53", ["entex"])
+    for dataset, tissues in all_tissues.items():
+        print(f"\n=== {dataset} Dataset ===")
+        for tissue, expr in tissues.items():
+            print(f"{tissue}: Mean TPM = {expr['mean_expression']:.4f}")

@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""
+Export Tissue Mapping to JSON
+
+This script extracts the comprehensive TISSUE_TO_UBERON dictionary from 
+generate_tissue_mapping.py and exports it to a JSON file.
+"""
+
+import os
+import json
+import logging
+from pathlib import Path
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger('export_mapping')
+
+# Import the dictionary directly from the module
+from generate_tissue_mapping import TISSUE_TO_UBERON
+
+def export_mapping_to_json(mapping_dict, output_path):
+    """Export mapping dictionary to JSON file."""
+    try:
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
+        # Write to JSON file
+        with open(output_path, 'w') as f:
+            json.dump(mapping_dict, f, indent=2, sort_keys=True)
+        
+        logger.info(f"Successfully exported {len(mapping_dict)} mappings to {output_path}")
+        return True
+    except Exception as e:
+        logger.error(f"Error exporting mappings: {e}")
+        return False
+
+def main():
+    # Define output path
+    output_path = "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/tissue_to_uberon.json"
+    
+    # Export the mapping
+    success = export_mapping_to_json(TISSUE_TO_UBERON, output_path)
+    
+    if success:
+        # Print summary statistics
+        logger.info(f"Exported {len(TISSUE_TO_UBERON)} tissue-to-UBERON mappings")
+        
+        # Count UBERON vs. other ontologies
+        uberon_count = sum(1 for v in TISSUE_TO_UBERON.values() if v.startswith('UBERON:'))
+        cl_count = sum(1 for v in TISSUE_TO_UBERON.values() if v.startswith('CL:'))
+        other_count = len(TISSUE_TO_UBERON) - uberon_count - cl_count
+        
+        logger.info(f"UBERON terms: {uberon_count}")
+        logger.info(f"Cell Ontology terms: {cl_count}")
+        logger.info(f"Other terms: {other_count}")
+
+if __name__ == "__main__":
+    main()
