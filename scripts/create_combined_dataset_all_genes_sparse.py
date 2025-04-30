@@ -102,14 +102,12 @@ def load_preprocessed_datasets(datasets: Dict[str, str]) -> Dict[str, ad.AnnData
         try:
             adata = sc.read_h5ad(file_path)
             
-            # Check if any samples have 'combined' as their dataset
+            # Ensure all samples have the correct dataset label
             if 'dataset' in adata.obs.columns:
-                combined_samples = sum(adata.obs['dataset'] == 'combined')
-                if combined_samples > 0:
-                    logger.warning(f"Found {combined_samples} samples with 'combined' as their dataset in {dataset_name}")
-                    logger.warning(f"These will be renamed to their source dataset: {dataset_name}")
-                    # Replace 'combined' with the actual dataset name
-                    adata.obs.loc[adata.obs['dataset'] == 'combined', 'dataset'] = dataset_name
+                # Set all samples to the correct dataset name
+                if not (adata.obs['dataset'] == dataset_name).all():
+                    logger.warning(f"Setting all samples in {dataset_name} to have consistent dataset label")
+                    adata.obs['dataset'] = dataset_name
             
             loaded_datasets[dataset_name] = adata
             logger.info(f"Loaded {dataset_name} dataset with {adata.n_obs} samples and {adata.n_vars} genes")
