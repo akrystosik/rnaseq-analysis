@@ -509,13 +509,21 @@ def extract_encode_metadata(file_path, entex_metadata=None, metadata_dir=None):
 
     else:
         # Regular ENCODE cell line processing
-        # Extract cell line from path
+        # Extract cell line from path - improved detection
         path_parts = file_path.split(os.sep)
-        cell_line_dir = [
-            part
-            for part in path_parts
-            if part in encode_cell_info or any(cl in part for cl in encode_cell_info.keys())
-        ]
+        # Check each cell line more thoroughly
+        cell_line_dir = []
+        for part in path_parts:
+            # Check exact match
+            if part in encode_cell_info:
+                cell_line_dir.append(part)
+                continue
+            
+            # Check for cell line as a substring
+            for cl in encode_cell_info.keys():
+                if cl in part:
+                    cell_line_dir.append(part)
+                    break
 
         if cell_line_dir:
             # Handle directories like 'A549_polyA_plus'
@@ -547,6 +555,25 @@ def extract_encode_metadata(file_path, entex_metadata=None, metadata_dir=None):
     # Add standard fields
     metadata["data_type"] = "RNA-seq"
     metadata["expression_unit"] = "TPM"
+    
+    # Ensure tissue is never None/nan for cell lines
+    if "cell_line" in metadata and not metadata.get("tissue"):
+        cell_line = metadata["cell_line"]
+        if cell_line in encode_cell_info and "tissue" in encode_cell_info[cell_line]:
+            metadata["tissue"] = encode_cell_info[cell_line]["tissue"]
+        else:
+            # Fallback mapping for common cell lines
+            fallback_mapping = {
+                "A549": "lung",
+                "HepG2": "liver", 
+                "K562": "blood",
+                "HeLa": "cervix",
+                "IMR-90": "lung",
+                "GM12878": "blood",
+                "H1-hESC": "embryonic stem cell"
+            }
+            if cell_line in fallback_mapping:
+                metadata["tissue"] = fallback_mapping[cell_line]
 
     return metadata
 
