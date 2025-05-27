@@ -1,0 +1,174 @@
+{
+  "timestamp": "2025-05-27T19:19:06.831591",
+  "note": "Ancestry information extracted for partner validation (MAGE excluded as requested)",
+  "datasets": {
+    "ADNI": {
+      "total_samples": 650,
+      "ancestry_fields": {
+        "self_reported_ethnicity": {
+          "counts": {
+            "white": 605,
+            "black or african american": 25,
+            "asian": 9,
+            "multiethnic": 6,
+            "american indian or alaska native": 2,
+            "unknown or not reported": 2,
+            "native hawaiian or other pacific islander": 1,
+            "hispanic or latino": 0,
+            "more than one race": 0,
+            "other": 0,
+            "": 0
+          },
+          "unique_values": 11,
+          "coverage": "100.0%"
+        },
+        "ethnicity_ontology_terms": {
+          "counts": {
+            "HANCESTRO:0005": 605,
+            "HANCESTRO:0010": 25,
+            "HANCESTRO:0014": 9,
+            "multiethnic": 6,
+            "unknown": 2,
+            "HANCESTRO:0004": 2,
+            "HANCESTRO:0027": 1,
+            "HANCESTRO:0008": 0,
+            "HANCESTRO:0023": 0,
+            "HANCESTRO:0018": 0,
+            "HANCESTRO:0028": 0,
+            "": 0
+          },
+          "unique_values": 12,
+          "coverage": "100.0%"
+        },
+        "hispanic_or_latino": {
+          "counts": {
+            "unknown or not reported": 650,
+            "hispanic or latino": 0,
+            "not hispanic or latino": 0,
+            "": 0
+          },
+          "coverage": "100.0%"
+        }
+      },
+      "summary_statistics": {
+        "samples_with_known_ancestry": 648,
+        "percentage_with_known_ancestry": "99.7%",
+        "primary_ancestries": {
+          "white": 605,
+          "black or african american": 25,
+          "asian": 9,
+          "multiethnic": 6,
+          "american indian or alaska native": 2
+        }
+      }
+    },
+    "ENCODE": {
+      "total_samples": 7,
+      "ancestry_fields": {
+        "self_reported_ethnicity": {
+          "counts": {
+            "unknown or not reported": 7,
+            "asian": 0,
+            "american indian or alaska native": 0,
+            "black or african american": 0,
+            "hispanic or latino": 0,
+            "multiethnic": 0,
+            "more than one race": 0,
+            "native hawaiian or other pacific islander": 0,
+            "other": 0,
+            "white": 0,
+            "": 0
+          },
+          "unique_values": 11,
+          "coverage": "100.0%"
+        },
+        "ethnicity_ontology_terms": {
+          "counts": {
+            "unknown": 7,
+            "HANCESTRO:0004": 0,
+            "HANCESTRO:0008": 0,
+            "HANCESTRO:0005": 0,
+            "HANCESTRO:0010": 0,
+            "HANCESTRO:0014": 0,
+            "HANCESTRO:0023": 0,
+            "HANCESTRO:0018": 0,
+            "HANCESTRO:0027": 0,
+            "HANCESTRO:0028": 0,
+            "multiethnic": 0,
+            "": 0
+          },
+          "unique_values": 12,
+          "coverage": "100.0%"
+        },
+        "hispanic_or_latino": {
+          "counts": {
+            "unknown or not reported": 7,
+            "hispanic or latino": 0,
+            "not hispanic or latino": 0,
+            "": 0
+          },
+          "coverage": "100.0%"
+        }
+      },
+      "summary_statistics": {
+        "samples_with_known_ancestry": 0,
+        "percentage_with_known_ancestry": "0%",
+        "note": "No specific ancestry information available (all marked as unknown)"
+      }
+    },
+    "GTEx": {
+      "total_samples": 19616,
+      "ancestry_fields": {
+        "self_reported_ethnicity": {
+          "counts": {
+            "unknown or not reported": 19616,
+            "asian": 0,
+            "american indian or alaska native": 0,
+            "black or african american": 0,
+            "hispanic or latino": 0,
+            "multiethnic": 0,
+            "more than one race": 0,
+            "native hawaiian or other pacific islander": 0,
+            "other": 0,
+            "white": 0,
+            "": 0
+          },
+          "unique_values": 11,
+          "coverage": "100.0%"
+        },
+        "ethnicity_ontology_terms": {
+          "counts": {
+            "unknown": 19616,
+            "HANCESTRO:0004": 0,
+            "HANCESTRO:0008": 0,
+            "HANCESTRO:0005": 0,
+            "HANCESTRO:0010": 0,
+            "HANCESTRO:0014": 0,
+            "HANCESTRO:0023": 0,
+            "HANCESTRO:0018": 0,
+            "HANCESTRO:0027": 0,
+            "HANCESTRO:0028": 0,
+            "multiethnic": 0,
+            "": 0
+          },
+          "unique_values": 12,
+          "coverage": "100.0%"
+        },
+        "hispanic_or_latino": {
+          "counts": {
+            "unknown or not reported": 19616,
+            "hispanic or latino": 0,
+            "not hispanic or latino": 0,
+            "": 0
+          },
+          "coverage": "100.0%"
+        }
+      },
+      "summary_statistics": {
+        "samples_with_known_ancestry": 0,
+        "percentage_with_known_ancestry": "0%",
+        "note": "No specific ancestry information available (all marked as unknown)"
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+# RNA-seq Standardization Pipeline .gitignore
+
+# ========================
+# DATA FILES (EXCLUDE)
+# ========================
+
+# Raw data directories
+**/raw_data/
+**/data/
+**/datasets/
+
+# Generated output directories
+**/standardized_data/
+**/preprocessed_data/
+**/combined_data/
+**/output/
+**/results/
+
+# Specific data file patterns
+*.h5ad
+*.h5
+*.gz
+*.bz2
+*.zip
+*.tar
+*.tgz
+
+# Large tabular data files
+*.tsv
+*.csv
+*.txt
+*.xlsx
+*.xls
+
+# Except for small metadata/config CSVs (keep these)
+!**/metadata/**/*.csv
+!**/config/**/*.csv
+!**/mappings/**/*.csv
+!**/ethnicity_mapping*.csv
+!**/subject_ethnicity*.csv
+
+# GTF and annotation files
+*.gtf
+*.gff
+*.gff3
+
+# ========================
+# LOGS AND TEMPORARY FILES
+# ========================
+
+# Log files
+*.log
+**/logs/
+**/pipeline_runs/
+
+# Temporary directories
+**/temp/
+**/tmp/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.~*
+*~
+
+# ========================
+# CONTROLLED ACCESS DATA
+# ========================
+
+# GTEx controlled access files
+**/phs000424*
+**/GTEx_Subject_Phenotypes*
+**/dbgap*
+
+# ADNI files (may contain PHI)
+**/PTDEMOG*
+**/DXSUM*
+**/adni_demographics*
+
+# Any files with PHI indicators
+**/phi/
+**/protected/
+**/controlled_access/
+
+# ========================
+# NOTEBOOK OUTPUTS
+# ========================
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Jupyter notebook outputs (keep code, remove outputs)
+# Note: We'll keep the partner presentation as-is since it's documentation
+
+# ========================
+# SYSTEM FILES
+# ========================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ========================
+# PYTHON ENVIRONMENT
+# ========================
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Python package files
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ========================
+# ARCHIVE AND DEVELOPMENT
+# ========================
+
+# Archive directories (previous versions)
+**/archive/
+**/old/
+**/deprecated/
+
+# Development and testing
+**/scratch/
+**/test_output/
+**/debug_output/
+**/experiments/
+
+# Backup directories
+**/*_backup_*/
+**/*_bak_*/
+
+# ========================
+# ALLOW ESSENTIAL FILES
+# ========================
+
+# Force include important pipeline files
+!README.md
+!CLAUDE.md
+!VERSION.md
+!*.py
+!*.sh
+!*.md
+!*.yml
+!*.yaml
+!*.json
+
+# Configuration files
+!**/config/
+!**/metadata/json/
+
+# Small reference files
+!**/mappings/
+!**/reference/
+
+# Documentation
+!**/docs/
+!**/*.ipynb
+
+# ========================
+# LARGE OUTPUT PATTERNS
+# ========================
+
+# Any file larger than typical code/config
+# (This is a guideline pattern)
+**/*_output_*
+**/*_results_*
+**/*_analysis_*
+
+# Validation reports (keep small ones, exclude large detailed ones)
+**/validation_reports/detailed_*
+**/validation_reports/gene_overlap_detailed_*
+
+# Partner deliverables (exclude the actual data exports)
+**/partner_deliverables/*.csv
+**/partner_deliverables/*.h5ad
+!**/partner_deliverables/README.md
