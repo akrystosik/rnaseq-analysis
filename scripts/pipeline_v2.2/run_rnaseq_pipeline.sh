@@ -470,7 +470,7 @@ fi
 
 # --- Stage 4.1: Enhanced Validation and Gene Overlap Analysis ---
 log_message "--- Stage 4.1: Enhanced Validation and Gene Overlap Analysis ---"
-run_command "python \"${SCRIPTS_DIR}/analyze_gene_overlap.py\" \
+run_command "python \"${SCRIPTS_DIR}/analysis/analyze_gene_overlap.py\" \
     --preprocessed-dir \"$PREPROCESSED_DIR_H5ADS\" \
     --output-dir \"$VALIDATION_REPORT_DIR\" \
     ${FORCE_FLAG}"
@@ -486,13 +486,13 @@ PARTNER_DELIVERABLES_DIR="${OUTPUT_DIR_H5ADS}/partner_deliverables"
 mkdir -p "$PARTNER_DELIVERABLES_DIR"
 
 # Generate ethnicity mappings
-run_command "python \"${SCRIPTS_DIR}/create_subject_level_ethnicity_mapping.py\" \
+run_command "python \"${SCRIPTS_DIR}/analysis/create_subject_level_ethnicity_mapping.py\" \
     --preprocessed-dir \"$PREPROCESSED_DIR_H5ADS\" \
     --output-dir \"$PARTNER_DELIVERABLES_DIR\" \
     ${FORCE_FLAG}"
 
 # Generate CZI schema compliant mappings
-run_command "python \"${SCRIPTS_DIR}/create_czi_schema_compliant_mapping.py\" \
+run_command "python \"${SCRIPTS_DIR}/analysis/create_czi_schema_compliant_mapping.py\" \
     --preprocessed-dir \"$PREPROCESSED_DIR_H5ADS\" \
     --output-dir \"$PARTNER_DELIVERABLES_DIR\" \
     ${FORCE_FLAG}"

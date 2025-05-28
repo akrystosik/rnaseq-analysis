@@ -1,56 +1,84 @@
 {
-    "data_type": "rna-seq",
-    "platform": "Illumina",
-    "reference_genome": "GRCh38",
-    "harmonized_reference_genome": "hg38",
-    "gencode_version": "v38",
-    "harmonized_gencode_version": "v24",
-    "genome_info": {
-      "genome_version": "GRCh38",
-      "confidence": "high",
-      "notes": "Set from publication data"
-    },
-    "rna_seq_protocol": {
-      "protocol_type": "RNA-seq total",
-      "protocol_confidence": "high",
-      "selection_method": "Lymphoblastoid cell lines (LCLs)",
-      "sequencing_platform": "Illumina",
-      "read_configuration": "paired-end",
-      "strand_specificity": "Not specified"
-    },
-    "microarray_info": null,
+  "label": "MAGE (1000 Genomes LCL) RNA-seq Expression Data (Processed)",
+  "dataset_version": "PRJNA851328", 
+  "version": "1.0",                
+  "gencode_version": "v38",        
+  "harmonized_gencode_version": "v24",
+  "reference_genome": "GRCh38",   
+  "harmonized_reference_genome": "hg38",
+  "doi": [
+    "10.1038/s41588-023-01346-7" 
+  ],
+  "license_terms": {
+    "license_url": "Data derived from 1000 Genomes Project (open access) and available via SRA/Zenodo. Check specific terms if any apply to derived data.",
+    "download_date": "2025-01-01", 
+    "dataset_owner": "Taylor DJ, et al. / 1000 Genomes Project Consortium" 
+  },
+  "data_type": "RNA-seq", 
+  "platform": "Illumina",   
+  "genome_info": {
+    "genome_version": "GRCh38",
+    "confidence": "high",
+    "notes": "Reference genome set from publication data."
+  },
+  "rna_seq_protocol": {
+    "protocol_type": "RNA-seq total", 
+    "protocol_confidence": "medium", 
+    "selection_method": "Lymphoblastoid cell lines (LCLs)",
+    "sequencing_platform": "Illumina",
+    "read_configuration": "paired-end",
+    "strand_specificity": "Not specified" 
+  },
+  "assay_ontology": "EFO:0009922", 
+  "obs_columns": { 
+    "data_type": "RNA-seq", 
     "assay_ontology": "EFO:0009922",
-    "obs_columns": {
-      "data_type": "rna-seq",
-      "assay_ontology": "EFO:0009922"
-    },
-    "metadata_source": {
-      "citation": "Taylor DJ, Chhetri SB, Tassia MG, et al. Sources of gene expression variation in a globally diverse human cohort",
-      "url": "https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA851328",
-      "notes": "RNA-seq data from lymphoblastoid cell lines derived from 731 individuals from the 1000 Genomes Project (1KGP), representing 26 globally-distributed populations across five continental groups"
-    },
-    "dataset_info": {
-      "accession": "PRJNA851328",
-      "sample_size": 731,
-      "library_count": 779,
-      "populations": 26,
-      "continental_groups": 5,
-      "cell_type": "lymphoblastoid cell lines",
-      "data_repository": [
-        {
-          "name": "Sequence Read Archive (SRA)",
-          "accession": "PRJNA851328"
-        },
-        {
-          "name": "Zenodo",
-          "doi": "10.5281/zenodo.10535719"
-        }
-      ]
-    },
-"cell_type_info": {
-  "anatomical_entity_id": "UBERON:0000178",
-  "cell_type_id": "CL:0017006"
-}
-  }
+    "species": "human",
+    "species_ontology": "NCBITaxon:9606",
+    "expression_unit": "TPM",
+    "tissue": "lymphoblast" 
+  },
+  "metadata_source": {
+    "citation": "Taylor DJ, Chhetri SB, Tassia MG, et al. Sources of gene expression variation in a globally diverse human cohort. Nat Genet 55, 750–761 (2023).",
+    "url": "https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA851328",
+    "notes": "RNA-seq data from 1000 Genomes Project LCLs, harmonized to GENCODE v24/hg38."
+  },
 
+  "dataset_info": { 
+    "accession": "PRJNA851328",
+    "sample_size": 731,
+    "library_count": 779,
+    "populations": 26,
+    "continental_groups": 5,
+    "cell_type": "lymphoblastoid cell lines", 
+    "data_repository": [
+      {"name": "Sequence Read Archive (SRA)", "accession": "PRJNA851328"},
+      {"name": "Zenodo", "doi": "10.5281/zenodo.10535719"}
+    ]
+  },
+  "cell_type_info": {
+    "anatomical_entity_id": "UBERON:0000178", 
+    "cell_type_id": "CL:0000542" 
+  },
+    
+  "population_source_column_in_ped": "Population",
+  "pop_to_race_map": {
+    "ACB": "black or african american", "ASW": "black or african american", "ESN": "black or african american", "GWD": "black or african american", "LWK": "black or african american", "MSL": "black or african american", "YRI": "black or african american",
+    "CLM": "multiethnic", "MXL": "multiethnic", "PEL": "multiethnic", "PUR": "multiethnic",
+    "CDX": "asian", "CHB": "asian", "CHS": "asian", "JPT": "asian", "KHV": "asian",
+    "CEU": "white", "FIN": "white", "GBR": "white", "IBS": "white", "TSI": "white",
+    "BEB": "asian", "GIH": "asian", "ITU": "asian", "PJL": "asian", "STU": "asian"
+  },
+  "pop_to_hispanic_map": {
+    "CLM": "hispanic or latino", "MXL": "hispanic or latino", "PEL": "hispanic or latino", "PUR": "hispanic or latino"
+  },
+  "default_race_for_unmapped_pop": "unknown or not reported",
   
+  "extras": [
+    {"key": "data_product_type", "value": "h5ad"},
+    {"key": "dataset_name_long", "value": "MAGE (1000 Genomes LCL) RNA-seq Expression Data (Processed by CZI DNA2Cell Pipeline)"},
+    {"key": "project_description_short", "value": "Processed MAGE RNA-seq TPM data from LCLs, harmonized to GENCODE v24/hg38."},
+    {"key": "assay_label", "value": "RNA-seq"},
+    {"key": "organism_label", "value": "Homo sapiens"}
+  ]
+}

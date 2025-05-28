@@ -1,182 +1,572 @@
 {
+  "label": "ENCODE RNA-seq Expression Data (Processed)",
+  "dataset_version": "Various ENCODE experiments",
+  "version": "1.0",
+  "gencode_version": "v29", 
+  "harmonized_gencode_version": "v24",
+  "reference_genome": "GRCh38", 
+  "harmonized_reference_genome": "hg38",
+  "doi": [
+    "10.1038/s41586-020-2493-4" 
+  ],
+  "license_terms": {
+    "license_url": "https://www.encodeproject.org/about/data-use-policy/",
+    "download_date": "2024-11-01", 
+    "dataset_owner": "ENCODE Project Consortium"
+  },
   "data_type": "RNA-seq",
   "platform": "Illumina",
-  "reference_genome": "GRCh38",
-  "harmonized_reference_genome": "hg38",
-  "gencode_version": "v29",
-  "harmonized_gencode_version": "v24",
   "genome_info": {
-    "genome_version": "GRCh38",
+    "genome_version": "GRCh38", 
     "confidence": "high",
-    "notes": "ENCODE data standards use GRCh38 reference genome"
+    "notes": "ENCODE data standards typically use GRCh38 reference genome."
   },
   "rna_seq_protocol": {
     "protocol_type": "RNA-seq mixed",
-    "protocol_confidence": "high",
+    "protocol_confidence": "medium", 
     "selection_method": "Variable - includes polyA plus RNA-seq and total RNA-seq",
-    "sequencing_platform": "Illumina (various models including HiSeq 2000 and Genome Analyzer IIx)",
-    "read_configuration": "paired-end",
-    "strand_specificity": "Strand-specific (reverse)"
+    "sequencing_platform": "Illumina (various models)",
+    "read_configuration": "Typically paired-end",
+    "strand_specificity": "Typically strand-specific (reverse); based on standard ENCODE processing pipelines." 
   },
-  "assay_ontology": "EFO:0009922",
-  "obs_columns": {
+  "assay_ontology": "EFO:0009922", 
+  "obs_columns": { 
     "data_type": "RNA-seq",
     "assay_ontology": "EFO:0009922",
     "species": "human",
-    "species_ontology": "NCBITaxon:9606"
+    "species_ontology": "NCBITaxon:9606",
+    "expression_unit": "TPM"
   },
   "metadata_source": {
-    "citation": "ENCODE Project Consortium",
-    "url": "https://www.encodeproject.org/data-standards/reference-sequences/",
-    "notes": "ENCODE project uses GRCh38 with GENCODE v29 annotations. For standardization purposes, these have been harmonized to hg38 reference genome and GENCODE v24 annotations."
+    "citation": "ENCODE Project Consortium. (2020). Perspectives on ENCODE. Nature, 583(7818), 699-710.",
+    "url": "https://www.encodeproject.org/",
+    "notes": "ENCODE project data, originally using GRCh38/GENCODE v29, harmonized to GENCODE v24/hg38 for this project. Includes encode cell lines."
   },
+  "extras": [
+    {"key": "data_product_type", "value": "h5ad"},
+    {"key": "dataset_name_long", "value": "ENCODE RNA-seq Expression Data (Encode Cell Lines, Processed by CZI DNA2Cell Pipeline)"},
+    {"key": "project_description_short", "value": "Processed ENCODE RNA-seq TPM data (cell lines), harmonized to GENCODE v24/hg38."},
+    {"key": "assay_label", "value": "RNA-seq"},
+    {"key": "organism_label", "value": "Homo sapiens"}
+  ],
   "dataset_info": {
     "project": "ENCODE",
     "cell_lines": {
       "A549": {
-        "description": "Human lung carcinoma cell line",
+        "description": "Human lung carcinoma cell line derived from a 58 year old European male with lung adenocarcinoma",
         "tissue": "lung",
+        "tissue_ontology": "UBERON:0002048",
         "disease": "adenocarcinoma",
+        "disease_ontology": "MONDO:0004992",
         "cell_type": "epithelial",
+        "cell_ontology": "CL:0000066",
         "sex": "male",
+        "sex_ontology": "PATO:0000384",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
         "age": "58",
+        "age_units": "year",
+        "development_stage": "adult",
+        "development_stage_ontology": "HsapDv:0000087",
         "ethnicity": "European",
-        "subject_id": "ENCDO451RUA",
-        "geo_id": "SAMN05733878",
+        "ethnicity_ontology": "HANCESTRO:0005",
+        "subject_id": "ENCDO000AAZ",
+        "external_ids": [
+          "GEO:SAMN05733878",
+          "Cellosaurus:CVCL_0023"
+        ],
+        "assay": "polyA plus RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0002571",
         "nucleic_acid_type": "polyadenylated mRNA",
+        "nucleic_acid_term_id": "SO:0000871",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0002048",
-          "cell_type_id": "CL:0000066"
+        "strand_specificity": "reverse",
+        "experiment_accession": "ENCSR000CON",
+        "experiment_description": "The libraries contained in this experiment come from the whole cell fraction of independent growths of cell line A549. They are stranded PE76 Illumina GAIIx RNA-Seq libraries from rRNA-depleted Poly-A+ RNA > 200 nucleotides in size.",
+        "experiment_date_released": "2011-10-17",
+        "replication_type": "isogenic",
+        "bio_replicate_count": 2,
+        "file": {
+          "accession": "ENCFF244DNJ",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "GRCh38",
+          "genome_annotation": "V29",
+          "download_url": "https://www.encodeproject.org/files/ENCFF244DNJ/@@download/ENCFF244DNJ.tsv",
+          "biological_replicate": 2,
+          "technical_replicate": "2_1",
+          "date_created": "2021-04-05T23:46:45.413132+00:00"
+        },
+        "pipeline": {
+          "version": "1.2.3",
+          "analysis_id": "ENCAN400RTQ",
+          "title": "Bulk RNA-seq",
+          "accession": "ENCPL862USL",
+          "software": "RSEM",
+          "software_version": "1.2.31",
+          "award_rfas": ["ENCODE4"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0001086",
+          "term_name": "A549",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_0023"],
+          "organ_slims": ["lung"],
+          "cell_slims": ["cancer cell"],
+          "developmental_slims": ["endoderm"],
+          "system_slims": ["respiratory system"],
+          "synonyms": ["A549 cell", "A-549"]
         }
       },
       "K562": {
         "description": "Human chronic myelogenous leukemia cell line",
         "tissue": "bone marrow",
+        "tissue_ontology": "UBERON:0002371",
         "disease": "chronic myelogenous leukemia",
+        "disease_ontology": "MONDO:0005059",
         "cell_type": "lymphoblast",
+        "cell_ontology": "CL:0000945",
         "sex": "female",
-        "age": "53",
+        "sex_ontology": "PATO:0000383",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
+        "age": "53",
+        "age_units": "year",
+        "development_stage": "adult",
+        "development_stage_ontology": "HsapDv:0000087",
         "ethnicity": "unknown",
-        "subject_id": "ENCDO000AAL",
-        "geo_id": "SAMN04284550",
+        "subject_id": "ENCDO000AAD",
+        "external_ids": [
+          "GEO:SAMN04284550",
+          "Cellosaurus:CVCL_0004"
+        ],
+        "assay": "RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0001271",
         "nucleic_acid_type": "RNA",
-        "assay": "RNA-seq (total RNA-seq)",
+        "nucleic_acid_term_id": "SO:0000356",
+        "assay_category": "total RNA-seq",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0002371",
-          "cell_type_id": "CL:0000945"
+        "experiment_accession": "ENCSR000AEL",
+        "replication_type": "isogenic",
+        "bio_replicate_count": 2,
+        "file": {
+          "accession": "ENCFF171FQU",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "GRCh38",
+          "genome_annotation": "V29",
+          "download_url": "https://www.encodeproject.org/files/ENCFF171FQU/@@download/ENCFF171FQU.tsv",
+          "biological_replicate": 2,
+          "technical_replicate": "2_1",
+          "date_created": "2021-04-06T00:00:56.723705+00:00"
+        },
+        "pipeline": {
+          "version": "1.2.3",
+          "analysis_id": "ENCAN653KGT",
+          "title": "Bulk RNA-seq",
+          "accession": "ENCPL862USL",
+          "software": "RSEM",
+          "software_version": "1.2.31",
+          "award_rfas": ["ENCODE4"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0002067",
+          "term_name": "K562",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_0004"],
+          "organ_slims": ["blood", "bodily fluid"],
+          "cell_slims": ["cancer cell", "leukocyte", "hematopoietic cell"],
+          "developmental_slims": ["mesoderm"],
+          "system_slims": ["immune system"],
+          "synonyms": ["K-562", "K-562 cell", "K562 cell"]
         }
       },
       "HepG2": {
         "description": "Human liver hepatocellular carcinoma cell line",
         "tissue": "liver",
+        "tissue_ontology": "UBERON:0002107",
         "disease": "hepatocellular carcinoma",
+        "disease_ontology": "MONDO:0007256",
         "cell_type": "epithelial",
+        "cell_ontology": "CL:0000066",
         "sex": "male",
+        "sex_ontology": "PATO:0000384",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
         "age": "15",
+        "age_units": "year",
+        "development_stage": "juvenile",
+        "development_stage_ontology": "HsapDv:0000082",
         "ethnicity": "European",
-        "subject_id": "ENCDO886MPB",
-        "geo_id": "SAMN04284581",
+        "subject_id": "ENCDO000AAC",
+        "external_ids": [
+          "GEO:SAMN04284581",
+          "Cellosaurus:CVCL_0027"
+        ],
+        "assay": "RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0001271",
         "nucleic_acid_type": "RNA",
-        "assay": "RNA-seq (total RNA-seq)",
+        "nucleic_acid_term_id": "SO:0000356",
+        "assay_category": "total RNA-seq",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0002107",
-          "cell_type_id": "CL:0000066"
+        "experiment_accession": "ENCSR245ATJ",
+        "file": {
+          "accession": "ENCFF863QWG",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "GRCh38",
+          "genome_annotation": "V29",
+          "size": 11067419,
+          "md5sum": "37dee2d5f5a694c1fa014541b0129650",
+          "download_url": "https://www.encodeproject.org/files/ENCFF863QWG/@@download/ENCFF863QWG.tsv",
+          "s3_uri": "s3://encode-public/2020/10/30/432cbe0e-fa24-47bb-9e89-4b082b18066d/ENCFF863QWG.tsv",
+          "azure_uri": "https://datasetencode.blob.core.windows.net/dataset/2020/10/30/432cbe0e-fa24-47bb-9e89-4b082b18066d/ENCFF863QWG.tsv?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D",
+          "biological_replicate": 1,
+          "technical_replicate": "1_1",
+          "date_created": "2020-10-30T18:10:21.474736+00:00",
+          "derived_from": [
+            "/files/ENCFF463TZA/", 
+            "/files/ENCFF285DRD/"
+          ]
+        },
+        "quality_metrics": {
+          "number_of_genes_detected": 13086
+        },
+        "pipeline": {
+          "version": "1.2.1",
+          "analysis_id": "ENCAN711WSR",
+          "title": "Bulk RNA-seq",
+          "accession": "ENCPL862USL",
+          "software": "RSEM",
+          "software_version": "1.2.31",
+          "award_rfas": ["ENCODE4"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0001187",
+          "term_name": "HepG2",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_0027"],
+          "organ_slims": ["liver", "endocrine gland", "epithelium", "exocrine gland"],
+          "cell_slims": ["cancer cell", "epithelial cell"],
+          "developmental_slims": ["endoderm"],
+          "system_slims": ["endocrine system", "digestive system", "exocrine system"],
+          "synonyms": ["HepG2 cell", "Hep-G2"]
         }
       },
       "GM23248": {
         "description": "Human skin fibroblast cell line",
         "tissue": "skin",
+        "tissue_ontology": "UBERON:0002097",
         "disease": "normal",
-        "cell_type": "Fibroblast",
+        "disease_ontology": "PATO:0000461",
+        "cell_type": "fibroblast",
+        "cell_ontology": "CL:0000057",
         "sex": "male",
+        "sex_ontology": "PATO:0000384",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
         "age": "53",
+        "age_units": "year",
+        "development_stage": "adult",
+        "development_stage_ontology": "HsapDv:0000087",
         "ethnicity": "European",
-        "subject_id": "ENCDO467QPX",
-        "geo_id": "SAMN04284514",
+        "subject_id": "ENCDO336AAA",
+        "external_ids": [
+          "Cellosaurus:CVCL_F183"
+        ],
+        "assay": "RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0001271",
         "nucleic_acid_type": "RNA",
-        "assay": "RNA-seq (total RNA-seq)",
+        "nucleic_acid_term_id": "SO:0000356",
+        "assay_category": "total RNA-seq",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0002097",
-          "cell_type_id": "CL:0000057"
+        "experiment_accession": "ENCSR797BPP",
+        "file": {
+          "accession": "ENCFF640FPG",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "hg19",
+          "genome_annotation": "V19",
+          "size": 9517666,
+          "md5sum": "e695262d29249120665fd22334902382",
+          "download_url": "https://www.encodeproject.org/files/ENCFF640FPG/@@download/ENCFF640FPG.tsv",
+          "s3_uri": "s3://encode-public/2015/08/24/c878e6b3-a834-4b72-999f-88dd0fee5708/ENCFF640FPG.tsv",
+          "azure_uri": "https://datasetencode.blob.core.windows.net/dataset/2015/08/24/c878e6b3-a834-4b72-999f-88dd0fee5708/ENCFF640FPG.tsv?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D",
+          "biological_replicate": 2,
+          "technical_replicate": "2_1",
+          "date_created": "2015-08-24T20:14:29.003512+00:00",
+          "derived_from": [
+            "/files/ENCFF791UML/",
+            "/files/ENCFF826ONU/"
+          ]
+        },
+        "quality_metrics": {
+          "Pearson_correlation": 0.9349629,
+          "Spearman_correlation": 0.9384167,
+          "MAD_of_log_ratios": 0.455,
+          "SD_of_log_ratios": 0.718
+        },
+        "pipeline": {
+          "version": "1.2.19",
+          "analysis_id": "ENCAN562HZW",
+          "title": "RNA-seq of long RNAs (paired-end, stranded)",
+          "accession": "ENCPL002LPE",
+          "software": "RSEM",
+          "software_version": "1.2.19",
+          "award_rfas": ["ENCODE3"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0005723",
+          "term_name": "GM23248",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_F183"],
+          "organ_slims": ["limb", "connective tissue", "skin of body"],
+          "cell_slims": ["fibroblast", "connective tissue cell"],
+          "developmental_slims": ["ectoderm"],
+          "system_slims": ["integumental system"],
+          "synonyms": ["GM23248 cell"]
         }
       },
       "Caki2": {
         "description": "Human kidney clear cell carcinoma cell line",
         "tissue": "kidney",
+        "tissue_ontology": "UBERON:0002113",
         "disease": "clear cell renal cell carcinoma",
+        "disease_ontology": "MONDO:0005086",
         "cell_type": "epithelial",
+        "cell_ontology": "CL:0000066",
         "sex": "male",
+        "sex_ontology": "PATO:0000384",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
         "age": "69",
+        "age_units": "year",
+        "development_stage": "adult",
+        "development_stage_ontology": "HsapDv:0000087",
         "ethnicity": "European",
-        "subject_id": "ENCDO869AAI",
-        "geo_id": "SAMN04284635",
+        "subject_id": "ENCDO140IFG",
+        "external_ids": [
+          "Cellosaurus:CVCL_0235"
+        ],
+        "assay": "RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0001271",
         "nucleic_acid_type": "RNA",
-        "assay": "RNA-seq (total RNA-seq)",
+        "nucleic_acid_term_id": "SO:0000356",
+        "assay_category": "total RNA-seq",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0002113",
-          "cell_type_id": "CL:0000066"
+        "experiment_accession": "ENCSR584JXD",
+        "file": {
+          "accession": "ENCFF685WJV",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "GRCh38",
+          "genome_annotation": "V29",
+          "size": 10847316,
+          "md5sum": "5eb62a214db1abc18d83efcbecb94816",
+          "download_url": "https://www.encodeproject.org/files/ENCFF685WJV/@@download/ENCFF685WJV.tsv",
+          "s3_uri": "s3://encode-public/2021/04/17/2a74df90-2900-4a4f-9b5f-3e14300443b6/ENCFF685WJV.tsv",
+          "azure_uri": "https://datasetencode.blob.core.windows.net/dataset/2021/04/17/2a74df90-2900-4a4f-9b5f-3e14300443b6/ENCFF685WJV.tsv?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D",
+          "biological_replicate": 2,
+          "technical_replicate": "2_1",
+          "date_created": "2021-04-17T09:07:21.528692+00:00",
+          "derived_from": [
+            "/files/ENCFF071QWV/",
+            "/files/ENCFF285DRD/"
+          ]
+        },
+        "quality_metrics": {
+          "number_of_genes_detected": 11699,
+          "Pearson_correlation": 0.8834402,
+          "Spearman_correlation": 0.8942174,
+          "MAD_of_log_ratios": 0.66,
+          "SD_of_log_ratios": 1.046
+        },
+        "pipeline": {
+          "version": "1.2.3",
+          "analysis_id": "ENCAN995LNB",
+          "title": "Bulk RNA-seq",
+          "accession": "ENCPL862USL",
+          "software": "RSEM",
+          "software_version": "1.2.31",
+          "award_rfas": ["ENCODE4"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0002150",
+          "term_name": "Caki2",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_0235"],
+          "organ_slims": ["kidney", "epithelium"],
+          "cell_slims": ["cancer cell", "epithelial cell"],
+          "developmental_slims": ["mesoderm"],
+          "system_slims": ["excretory system"],
+          "synonyms": ["Caki-2"]
         }
       },
       "NCI-H460": {
         "description": "Human lung large cell carcinoma cell line",
         "tissue": "lung",
+        "tissue_ontology": "UBERON:0002048",
         "disease": "large cell lung carcinoma",
+        "disease_ontology": "MONDO:0005092",
         "cell_type": "epithelial",
+        "cell_ontology": "CL:0000066",
         "sex": "male",
+        "sex_ontology": "PATO:0000384",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
         "age": "",
+        "age_units": "",
+        "development_stage": "adult",
+        "development_stage_ontology": "HsapDv:0000087",
         "ethnicity": "unknown",
-        "subject_id": "ENCDO105AAA",
-        "geo_id": "SAMN07791353",
+        "subject_id": "ENCDO267PTG",
+        "external_ids": [
+          "Cellosaurus:CVCL_0459"
+        ],
+        "assay": "RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0001271",
         "nucleic_acid_type": "RNA",
-        "assay": "RNA-seq (total RNA-seq)",
+        "nucleic_acid_term_id": "SO:0000356",
+        "assay_category": "total RNA-seq",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0002048",
-          "cell_type_id": "CL:0000066"
+        "experiment_accession": "ENCSR164OCT",
+        "file": {
+          "accession": "ENCFF876SRX",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "GRCh38",
+          "genome_annotation": "V29",
+          "size": 10853793,
+          "md5sum": "010ca18712a353e8eb5179dad8ede71a",
+          "download_url": "https://www.encodeproject.org/files/ENCFF876SRX/@@download/ENCFF876SRX.tsv",
+          "s3_uri": "s3://encode-public/2021/04/17/257eda93-2e5f-464c-a7df-1eecb2e93f70/ENCFF876SRX.tsv",
+          "azure_uri": "https://datasetencode.blob.core.windows.net/dataset/2021/04/17/257eda93-2e5f-464c-a7df-1eecb2e93f70/ENCFF876SRX.tsv?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D",
+          "biological_replicate": 1,
+          "technical_replicate": "1_1",
+          "date_created": "2021-04-17T09:17:41.303339+00:00",
+          "derived_from": [
+            "/files/ENCFF169YJS/",
+            "/files/ENCFF285DRD/"
+          ]
+        },
+        "quality_metrics": {
+          "number_of_genes_detected": 11941,
+          "Pearson_correlation": 0.984119,
+          "Spearman_correlation": 0.9843655,
+          "MAD_of_log_ratios": 0.298,
+          "SD_of_log_ratios": 0.377
+        },
+        "pipeline": {
+          "version": "1.2.3",
+          "analysis_id": "ENCAN187YBG",
+          "title": "Bulk RNA-seq",
+          "accession": "ENCPL862USL",
+          "software": "RSEM",
+          "software_version": "1.2.31",
+          "award_rfas": ["ENCODE4"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0003044",
+          "term_name": "NCI-H460",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_0459"],
+          "organ_slims": ["epithelium", "lung"],
+          "cell_slims": ["cancer cell", "epithelial cell"],
+          "developmental_slims": ["endoderm"],
+          "system_slims": ["respiratory system"],
+          "synonyms": []
         }
       },
       "Panc1": {
         "description": "Human pancreatic ductal carcinoma cell line",
         "tissue": "pancreas",
+        "tissue_ontology": "UBERON:0001264",
         "disease": "pancreatic carcinoma",
+        "disease_ontology": "MONDO:0007256",
         "cell_type": "ductal cell",
+        "cell_ontology": "CL:0000068",
         "sex": "male",
+        "sex_ontology": "PATO:0000384",
         "organism": "human",
+        "organism_ontology": "NCBITaxon:9606",
         "age": "56",
+        "age_units": "year",
+        "development_stage": "adult",
+        "development_stage_ontology": "HsapDv:0000087",
         "ethnicity": "European",
-        "subject_id": "ENCDO845WKR",
-        "geo_id": "SAMN05733879",
+        "subject_id": "ENCDO000ABB",
+        "external_ids": [
+          "Cellosaurus:CVCL_0480"
+        ],
+        "assay": "RNA-seq",
+        "assay_ontology": "EFO:0009922",
+        "assay_term_id": "OBI:0001271",
         "nucleic_acid_type": "RNA",
-        "assay": "RNA-seq (total RNA-seq)",
+        "nucleic_acid_term_id": "SO:0000356",
+        "assay_category": "total RNA-seq",
         "depletion": "rRNA",
+        "depleted_in_term_id": ["SO:0000252"],
         "size_range": ">200",
-        "strand_specificity": "Strand-specific (reverse)",
-        "cell_type_info": {
-          "anatomical_entity_id": "UBERON:0001264",
-          "cell_type_id": "CL:0000068"
+        "experiment_accession": "ENCSR128CYL",
+        "file": {
+          "accession": "ENCFF710IFD",
+          "format": "tsv",
+          "type": "gene quantifications",
+          "assembly": "GRCh38",
+          "genome_annotation": "V29",
+          "size": 11064756,
+          "md5sum": "72c97e2051b2ca81840d0f28b5ffbc9d",
+          "download_url": "https://www.encodeproject.org/files/ENCFF710IFD/@@download/ENCFF710IFD.tsv",
+          "s3_uri": "s3://encode-public/2020/10/30/6aa93aeb-7080-4f73-8e14-7bf4215c24b0/ENCFF710IFD.tsv",
+          "azure_uri": "https://datasetencode.blob.core.windows.net/dataset/2020/10/30/6aa93aeb-7080-4f73-8e14-7bf4215c24b0/ENCFF710IFD.tsv?sv=2019-10-10&si=prod&sr=c&sig=9qSQZo4ggrCNpybBExU8SypuUZV33igI11xw0P7rB3c%3D",
+          "biological_replicate": 1,
+          "technical_replicate": "1_1",
+          "date_created": "2020-10-30T17:48:29.648357+00:00",
+          "derived_from": [
+            "/files/ENCFF285DRD/",
+            "/files/ENCFF227BTT/"
+          ]
+        },
+        "quality_metrics": {
+          "number_of_genes_detected": 13407
+        },
+        "pipeline": {
+          "version": "1.2.1",
+          "analysis_id": "ENCAN061KZF",
+          "title": "Bulk RNA-seq",
+          "accession": "ENCPL862USL",
+          "software": "RSEM",
+          "software_version": "1.2.31",
+          "award_rfas": ["ENCODE4"]
+        },
+        "biosample_ontology": {
+          "term_id": "EFO:0002713",
+          "term_name": "Panc1",
+          "classification": "cell line",
+          "dbxrefs": ["Cellosaurus:CVCL_0480"],
+          "organ_slims": ["pancreas", "epithelium"],
+          "cell_slims": ["cancer cell", "epithelial cell"],
+          "developmental_slims": ["endoderm"],
+          "system_slims": ["endocrine system"],
+          "synonyms": ["PANC-1"]
         }
       }
     },
@@ -186,17 +576,5 @@
         "url": "https://www.encodeproject.org/"
       }
     ]
-  },
-  "cell_type_info": {
-    "has_cell_type_data": true,
-    "cell_line_mapping": {
-      "A549": {"anatomical_entity_id": "UBERON:0002048", "cell_type_id": "CL:0000066"},
-      "K562": {"anatomical_entity_id": "UBERON:0002371", "cell_type_id": "CL:0000945"},
-      "HepG2": {"anatomical_entity_id": "UBERON:0002107", "cell_type_id": "CL:0000066"},
-      "GM23248": {"anatomical_entity_id": "UBERON:0002097", "cell_type_id": "CL:0000057"},
-      "Caki2": {"anatomical_entity_id": "UBERON:0002113", "cell_type_id": "CL:0000066"},
-      "NCI-H460": {"anatomical_entity_id": "UBERON:0002048", "cell_type_id": "CL:0000066"},
-      "Panc1": {"anatomical_entity_id": "UBERON:0001264", "cell_type_id": "CL:0000068"}
-    }
   }
 }

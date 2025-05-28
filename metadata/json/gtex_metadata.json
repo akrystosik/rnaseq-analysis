@@ -1,9 +1,20 @@
 {
-  "dataset_version": "v10",          
-  "gencode_version": "39",          
-  "harmonized_gencode_version": "v24", 
-  "reference_genome": "hg38",        
-  "harmonized_reference_genome": "hg38", 
+  "label": "GTEx v10 RNA-seq Expression Data (Processed)",
+  "dataset_version": "v10",
+  "version": "1.0", 
+  "gencode_version": "39",
+  "harmonized_gencode_version": "v24",
+  "reference_genome": "hg38",
+  "harmonized_reference_genome": "hg38",
+  "doi": [
+    "10.1126/science.aaz1776",
+    "10.1038/nature24277"
+  ],
+  "license_terms": {
+    "license_url": "https://gtexportal.org/home/license",
+    "download_date": "2025-03-10", 
+    "dataset_owner": "GTEx Consortium"
+  },
   "rna_seq_protocol": {
     "protocol_type": "RNA-seq polyA+",
     "protocol_confidence": "high",
@@ -16,13 +27,41 @@
     "data_type": "RNA-seq",
     "assay_ontology": "EFO:0009922",
     "species": "human",
-    "species_ontology": "NCBITaxon:9606"
+    "species_ontology": "NCBITaxon:9606",
+    "expression_unit": "TPM" 
   },
   "metadata_source": {
-    "citation": "GTEx Consortium (2020). The GTEx Consortium atlas of genetic regulatory effects across human tissues",
+    "citation": "GTEx Consortium (2020). The GTEx Consortium atlas of genetic regulatory effects across human tissues. Science.",
     "url": "https://www.science.org/doi/10.1126/science.aaz1776",
-    "notes": "GTEx v8 release uses GENCODE v26 gene annotations on hg38 reference genome. RNA-seq libraries were prepared using the Illumina TruSeq protocol.",
+    "notes": "GTEx v10 data, originally using GENCODE v39, harmonized to GENCODE v24 and hg38 for this project. RNA-seq libraries were prepared using the Illumina TruSeq protocol.",
     "v10_notes": "V10 analysis summary Gencode version: v39 RNA-seq alignment: STAR v2.7.10a Transcript quantification: RSEM v1.3.3 Genotype used for eQTL analysis: WGS",
     "v10_source": "https://gtexportal.org/home/tissueSummaryPage"
-  }
+  },
+
+  "race_source_column": "RACE", 
+  "source_race_to_standard_label_map": {
+    "1": "asian",
+    "2": "black or african american",
+    "3": "white",
+    "4": "american indian or alaska native",
+    "5": "native hawaiian or other pacific islander",
+    "98": "unknown or not reported",
+    "99": "unknown or not reported"
+  },
+  "ethnicity_source_column": "ETHNCTY", 
+  "source_ethnicity_to_standard_label_map": {
+    "1": "hispanic or latino",
+    "2": "not hispanic or latino",
+    "98": "unknown or not reported",
+    "99": "unknown or not reported"
+  },
+
+
+  "extras": [
+    {"key": "data_product_type", "value": "h5ad"},
+    {"key": "dataset_name_long", "value": "GTEx v10 RNA-seq Expression Data (Processed by CZI DNA2Cell Pipeline)"},
+    {"key": "project_description_short", "value": "Processed GTEx v10 RNA-seq TPM data, harmonized to GENCODE v24/hg38."},
+    {"key": "assay_label", "value": "RNA-seq"},
+    {"key": "organism_label", "value": "Homo sapiens"}
+  ]
 }

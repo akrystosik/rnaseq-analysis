@@ -1,0 +1,63 @@
+tissue_name,ontology_id,confidence,source
+adipose - subcutaneous,UBERON:0002190,high,built-in
+adipose - visceral (omentum),UBERON:0016529,high,built-in
+adrenal,UBERON:0002369,high,built-in
+adrenal gland,UBERON:0002369,high,built-in
+artery - aorta,UBERON:0000947,high,built-in
+artery - coronary,UBERON:0001621,high,built-in
+artery - tibial,UBERON:0007610,high,built-in
+bladder,UBERON:0001255,high,built-in
+blood,UBERON:0000178,high,built-in
+bone marrow,UBERON:0002371,high,built-in
+brain - amygdala,UBERON:0001876,high,built-in
+brain - anterior cingulate cortex (ba24),UBERON:0009835,high,built-in
+brain - caudate (basal ganglia),UBERON:0001873,high,built-in
+brain - cerebellar hemisphere,UBERON:0002245,high,built-in
+brain - cerebellum,UBERON:0002037,high,built-in
+brain - cortex,UBERON:0000956,high,built-in
+brain - frontal cortex (ba9),UBERON:0013529,high,built-in
+brain - hippocampus,UBERON:0002310,high,built-in
+brain - hypothalamus,UBERON:0001898,high,built-in
+brain - nucleus accumbens (basal ganglia),UBERON:0001882,high,built-in
+brain - putamen (basal ganglia),UBERON:0001874,high,built-in
+brain - spinal cord (cervical c-1),UBERON:0002726,high,built-in
+brain - substantia nigra,UBERON:0002038,high,built-in
+breast - mammary tissue,UBERON:0001911,high,built-in
+cells - cultured fibroblasts,CL:0000057,high,built-in
+cells - ebv-transformed lymphocytes,CL:0000542,high,built-in
+cervix - ectocervix,UBERON:0012249,high,built-in
+cervix - endocervix,UBERON:0000458,high,built-in
+colon,UBERON:0001155,high,built-in
+colon - sigmoid,UBERON:0001159,high,built-in
+colon - transverse,UBERON:0001157,high,built-in
+esophagus - gastroesophageal junction,UBERON:0007650,high,built-in
+esophagus - mucosa,UBERON:0002469,high,built-in
+esophagus - muscularis,UBERON:0004648,high,built-in
+fallopian tube,UBERON:0003889,high,built-in
+heart - atrial appendage,UBERON:0006631,high,built-in
+heart - left ventricle,UBERON:0002084,high,built-in
+kidney,UBERON:0002113,high,built-in
+kidney - cortex,UBERON:0001225,high,built-in
+kidney - medulla,UBERON:0000362,high,built-in
+liver,UBERON:0002107,high,built-in
+lung,UBERON:0002048,high,built-in
+lymphoblast,CL:0000542,high,built-in
+minor salivary gland,UBERON:0001830,high,built-in
+muscle,UBERON:0002385,high,built-in
+muscle - skeletal,UBERON:0001134,high,built-in
+nerve - tibial,UBERON:0001323,high,built-in
+ovary,UBERON:0000992,high,built-in
+pancreas,UBERON:0001264,high,built-in
+pituitary,UBERON:0000007,high,built-in
+prostate,UBERON:0002367,high,built-in
+skin,UBERON:0002097,high,built-in
+skin - not sun exposed (suprapubic),UBERON:0036151,high,built-in
+skin - sun exposed (lower leg),UBERON:0036149,high,built-in
+small intestine - terminal ileum,UBERON:0001211,high,built-in
+spleen,UBERON:0002106,high,built-in
+stomach,UBERON:0000945,high,built-in
+testis,UBERON:0000473,high,built-in
+thyroid,UBERON:0002046,high,built-in
+uterus,UBERON:0000995,high,built-in
+vagina,UBERON:0000996,high,built-in
+whole blood,UBERON:0000178,high,built-in

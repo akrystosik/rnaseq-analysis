@@ -1,38 +1,75 @@
 {
-  "data_type": "Microarray",
-  "platform": "Affymetrix Human Genome U219 Array",
- 
-  "gencode_version": "",          
-  "harmonized_gencode_version": "v24", 
-  "reference_genome": "hg19",        
+  "label": "ADNI Microarray Blood Expression Data (Processed)",
+  "dataset_version": "ADNI1/GO/2/3 (mixed cohorts)",
+  "version": "1.0", 
+  "gencode_version": "N/A (Microarray Probes)", 
+  "harmonized_gencode_version": "v24",
+  "reference_genome": "hg19 (for original probe design/mapping)", 
   "harmonized_reference_genome": "hg38", 
-
-  "microarray_info": {
-    "platform": "Affymetrix Human Genome U219 Array",
-    "normalization": "Robust multi-chip average normalization",
-    "probe_count": 21150,
-    "confidence": "high",
-    "source": "literature (PMID:33279639)",
-    "notes": "Quantile normalized microarray counts"
+  "doi": [
+    "10.1016/j.jalz.2010.03.008", 
+    "10.1002/alz.20069" 
+  ],
+  "license_terms": {
+    "license_url": "https://adni.loni.usc.edu/data-samples/data-use-agreement/",
+    "download_date": "2025-01-01", 
+    "dataset_owner": "ADNI Principal Investigators / Michael W. Weiner, MD"
   },
-  "assay_ontology": "EFO:0002695",
-  "rna_seq_protocol": {
-    "protocol_type": "Not RNA-seq - Microarray",
-    "protocol_confidence": "high",
-    "selection_method": "Not applicable - Microarray",
-    "sequencing_platform": "Not applicable - Affymetrix Human Genome U219 Array",
-    "read_configuration": "Not applicable - Microarray",
-    "strand_specificity": "Not applicable - Microarray"
+  "data_type": "Microarray", 
+  "platform": "Affymetrix Human Genome U219 Array", 
+  "assay_ontology": "EFO:0002772", 
+  "genome_info": { 
+    "genome_version": "hg38",
+    "confidence": "high",
+    "notes": "Gene expression data harmonized to hg38 coordinates using GENCODE v24 annotations."
+  },
+  "microarray_info": { 
+    "platform_details": "Affymetrix Human Genome U219 Array",
+    "expression_unit_original": "Raw intensity values, typically processed via RMA or similar.",
+    "expression_unit": "quantile normalized microarray counts",
+    "processing_notes": "Original probe-level data processed; gene-level expression values used in this pipeline are quantile normalized and mapped to GENCODE v24 genes."
   },
   "obs_columns": {
     "data_type": "Microarray",
-    "assay_ontology": "EFO:0002695",
+    "assay_ontology": "EFO:0002772",
     "species": "human",
-    "species_ontology": "NCBITaxon:9606"
+    "species_ontology": "NCBITaxon:9606",
+    "expression_unit": "quantile normalized microarray counts", 
+    "tissue": "blood", 
+    "tissue_ontology": "UBERON:0000178" 
   },
   "metadata_source": {
-    "citation": "Kwak et al. (2020). PMID:33279639",
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7541709/",
-    "notes": "Gene expression profiling from peripheral blood samples collected using PAXgene tubes for RNA analysis was performed on the Affymetrix Human Genome U219 Array for ADNI."
-  }
+    "citation": "Petersen RC, Aisen PS, Beckett LA, et al. Alzheimer's Disease Neuroimaging Initiative (ADNI): DRAFT_ADNI_Metadata_Schema_2024_04_25.pdf. Alzheimer's & Dementia. 2010;6(3):205-215.",
+    "url": "https://adni.loni.usc.edu/",
+    "notes": "ADNI microarray data from blood samples. Subject demographics (sex, age, race, ethnicity) are sourced from auxiliary ADNI clinical datasets and merged during processing. Expression data harmonized to GENCODE v24 genes."
+  },
+  
+  "race_source_column": "PTRACCAT",
+  "source_race_to_standard_label_map": {
+    "1": "american indian or alaska native",
+    "2": "asian",
+    "3": "native hawaiian or other pacific islander",
+    "4": "black or african american",
+    "5": "white",
+    "6": "more than one race",
+    "7": "unknown or not reported",
+    "-4": "unknown or not reported"
+  },
+  "ethnicity_source_column": "PTETHCAT",
+  "source_ethnicity_to_standard_label_map": {
+    "1": "hispanic or latino",
+    "2": "not hispanic or latino",
+    "3": "unknown or not reported",
+    "-4": "unknown or not reported"
+  },
+
+
+  "extras": [
+    {"key": "data_product_type", "value": "h5ad"},
+    {"key": "dataset_name_long", "value": "ADNI Microarray Blood Expression Data (Processed by CZI DNA2Cell Pipeline)"},
+    {"key": "project_description_short", "value": "Processed ADNI microarray blood expression data, harmonized to GENCODE v24/hg38."},
+    {"key": "assay_label", "value": "DNA microarray"},
+    {"key": "organism_label", "value": "Homo sapiens"},
+    {"key": "tissue_label", "value": "Blood"}
+  ]
 }
