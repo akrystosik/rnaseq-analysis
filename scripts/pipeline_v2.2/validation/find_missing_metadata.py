@@ -14,7 +14,8 @@ def check_adni_age_data():
     print('🔍 **CHECKING ADNI AGE DATA**')
     print('=' * 30)
 
-    adni_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/adni_standardized_preprocessed.h5ad'
+    # Use dynamic path based on current repo structure
+    adni_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/adni_standardized_preprocessed.h5ad'
     adata_adni = sc.read_h5ad(adni_path)
 
     print(f'ADNI shape: {adata_adni.shape}')
@@ -49,7 +50,8 @@ def check_mage_age_data():
     print('\n🔍 **CHECKING MAGE AGE DATA**')
     print('=' * 30)
 
-    mage_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/mage_standardized_preprocessed.h5ad'
+    # Use dynamic path based on current repo structure
+    mage_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/mage_standardized_preprocessed.h5ad'
     adata_mage = sc.read_h5ad(mage_path)
 
     print(f'MAGE shape: {adata_mage.shape}')
@@ -110,7 +112,8 @@ def check_gtex_sex_integration():
     print(f'Sex distribution: {dict(phenotype_df["sex_mapped"].value_counts())}')
 
     # Load current GTEx dataset
-    gtex_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/gtex_standardized_preprocessed.h5ad'
+    # Use dynamic path based on current repo structure
+    gtex_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/gtex_standardized_preprocessed.h5ad'
     adata_gtex = sc.read_h5ad(gtex_path)
 
     # Check current sex values

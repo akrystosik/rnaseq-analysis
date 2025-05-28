@@ -4,12 +4,18 @@ Create subject-level ethnicity mapping (deduplicated) for partner ancestry repor
 """
 
 import pandas as pd
+import argparse
+from pathlib import Path
 
-def create_subject_level_mapping():
+def create_subject_level_mapping(input_file=None, output_dir=None):
     """Create deduplicated subject-level ethnicity mapping."""
     
+    # Determine input file path
+    if input_file is None:
+        input_file = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/reports/sample_ethnicity_mapping_with_ontology.csv'
+    
     # Load the sample-level mapping
-    df = pd.read_csv('sample_ethnicity_mapping_with_ontology.csv')
+    df = pd.read_csv(input_file)
     
     print(f"📊 Original sample-level data: {len(df):,} entries")
     
@@ -43,7 +49,10 @@ def create_subject_level_mapping():
     subject_df = subject_df.sort_values(['dataset', 'subject_id'])
     
     # Save subject-level mapping
-    output_file = 'subject_ethnicity_mapping_with_ontology.csv'
+    if output_dir:
+        output_file = Path(output_dir) / 'subject_ethnicity_mapping_with_ontology.csv'
+    else:
+        output_file = 'subject_ethnicity_mapping_with_ontology.csv'
     subject_df.to_csv(output_file, index=False)
     
     print(f"✅ Subject-level ethnicity mapping saved to: {output_file}")
@@ -75,5 +84,16 @@ def create_subject_level_mapping():
     
     return output_file
 
+def main():
+    """Main function with argument parsing."""
+    parser = argparse.ArgumentParser(description='Create subject-level ethnicity mapping')
+    parser.add_argument('--preprocessed-dir', help='Preprocessed directory (not used)')
+    parser.add_argument('--output-dir', help='Output directory for results')
+    parser.add_argument('--force', action='store_true', help='Force regeneration')
+    
+    args = parser.parse_args()
+    
+    create_subject_level_mapping(output_dir=args.output_dir)
+
 if __name__ == '__main__':
-    create_subject_level_mapping()
+    main()

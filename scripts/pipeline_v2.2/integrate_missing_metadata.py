@@ -43,7 +43,8 @@ def integrate_gtex_sex_data():
         print(f"  • {sex}: {count:,}")
     
     # Load GTEx dataset
-    gtex_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/gtex_standardized_preprocessed.h5ad'
+    # Use dynamic path based on current repo structure
+    gtex_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/gtex_standardized_preprocessed.h5ad'
     adata = sc.read_h5ad(gtex_path)
     
     # Map sex to samples
@@ -114,7 +115,8 @@ def integrate_adni_age_data():
     print(f"✅ Age data for {len(subject_age_map):,} unique subjects")
     
     # Load ADNI dataset
-    adni_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/adni_standardized_preprocessed.h5ad'
+    # Use dynamic path based on current repo structure
+    adni_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/adni_standardized_preprocessed.h5ad'
     adata = sc.read_h5ad(adni_path)
     
     # Map subject_id to PTID format (e.g., "002_S_0413" -> "002_S_0413")

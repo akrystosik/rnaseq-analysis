@@ -3,6 +3,7 @@
 import scanpy as sc
 import pandas as pd
 import numpy as np
+import argparse
 from pathlib import Path
 
 def map_age_to_hsapdv(age_value):
@@ -41,10 +42,14 @@ def map_age_to_hsapdv(age_value):
     except:
         return ''  # Return empty if can't parse
 
-def update_developmental_stages():
+def update_developmental_stages(preprocessed_dir=None):
     """Update developmental stage ontology mapping for all datasets"""
     
-    data_dir = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137'
+    # Use dynamic path based on current repo structure
+    if preprocessed_dir is None:
+        data_dir = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest'
+    else:
+        data_dir = preprocessed_dir
     dataset_files = {
         'ADNI': 'adni_standardized_preprocessed.h5ad',
         'ENCODE': 'encode_standardized_preprocessed.h5ad', 
@@ -152,5 +157,16 @@ def update_developmental_stages():
     
     return results
 
+def main():
+    """Main function with argument parsing."""
+    parser = argparse.ArgumentParser(description='Map age data to developmental stage ontology')
+    parser.add_argument('--preprocessed-dir', help='Directory with preprocessed h5ad files')
+    parser.add_argument('--force', action='store_true', help='Force regeneration')
+    
+    args = parser.parse_args()
+    
+    results = update_developmental_stages(preprocessed_dir=args.preprocessed_dir)
+    return results
+
 if __name__ == '__main__':
-    results = update_developmental_stages()
+    results = main()

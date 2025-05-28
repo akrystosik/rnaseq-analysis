@@ -3,12 +3,17 @@
 import scanpy as sc
 import pandas as pd
 import numpy as np
+import argparse
 from pathlib import Path
 
-def analyze_gene_overlap():
+def analyze_gene_overlap(preprocessed_dir=None, output_dir=None):
     """Analyze gene overlap between datasets"""
     
-    data_dir = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137'
+    # Use dynamic path based on current repo structure
+    if preprocessed_dir is None:
+        data_dir = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest'
+    else:
+        data_dir = preprocessed_dir
     dataset_files = {
         'ADNI': 'adni_standardized_preprocessed.h5ad',
         'ENCODE': 'encode_standardized_preprocessed.h5ad', 
@@ -121,14 +126,36 @@ def analyze_gene_overlap():
         print(f'  SUM: {sum(len(gs) for gs in gene_sets.values()):,} genes (what validation reports)')
         print(f'  UNIQUE: {len(all_genes):,} genes (actual unique genes)')
         
-        return {
+        results = {
             'individual_counts': {name: len(gs) for name, gs in gene_sets.items()},
             'total_sum': sum(len(gs) for gs in gene_sets.values()),
             'unique_total': len(all_genes),
             'core_genes': len(core_genes),
-            'all_genes': all_genes,
-            'gene_sets': gene_sets
+            'all_genes': list(all_genes),  # Convert set to list for JSON serialization
+            'gene_sets': {name: list(gs) for name, gs in gene_sets.items()}  # Convert sets to lists
         }
+        
+        # Save results if output directory provided
+        if output_dir:
+            import json
+            output_file = Path(output_dir) / 'gene_overlap_analysis.json'
+            with open(output_file, 'w') as f:
+                json.dump(results, f, indent=2)
+            print(f'\n💾 Results saved to: {output_file}')
+        
+        return results
+
+def main():
+    """Main function with argument parsing."""
+    parser = argparse.ArgumentParser(description='Analyze gene overlap between datasets')
+    parser.add_argument('--preprocessed-dir', help='Directory with preprocessed h5ad files')
+    parser.add_argument('--output-dir', help='Output directory for results')
+    parser.add_argument('--force', action='store_true', help='Force regeneration')
+    
+    args = parser.parse_args()
+    
+    results = analyze_gene_overlap(preprocessed_dir=args.preprocessed_dir, output_dir=args.output_dir)
+    return results
 
 if __name__ == '__main__':
-    results = analyze_gene_overlap()
+    results = main()

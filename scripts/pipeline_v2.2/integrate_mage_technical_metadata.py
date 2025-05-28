@@ -6,22 +6,23 @@ This adds valuable technical quality metrics like RIN scores, batch information,
 
 import scanpy as sc
 import pandas as pd
+import argparse
 from pathlib import Path
 
-def integrate_mage_technical_metadata():
+def integrate_mage_technical_metadata(preprocessed_dir, mage_metadata_file):
     """Integrate MAGE technical metadata including RIN scores and batch information."""
     print("🔄 **INTEGRATING MAGE TECHNICAL METADATA**")
     print("=" * 42)
     
     # Load MAGE technical metadata
-    mage_metadata_file = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/mage/sample.metadata.MAGE.v1.0.txt'
     metadata_df = pd.read_csv(mage_metadata_file, sep='\t')
     
     print(f"✅ Loaded MAGE technical metadata: {len(metadata_df):,} samples")
     print(f"   Columns: {list(metadata_df.columns)}")
     
     # Load MAGE dataset
-    mage_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/mage_standardized_preprocessed.h5ad'
+    # Use preprocessed directory path
+    mage_path = Path(preprocessed_dir) / 'mage_standardized_preprocessed.h5ad'
     adata = sc.read_h5ad(mage_path)
     
     print(f"✅ Loaded MAGE dataset: {adata.shape}")
@@ -116,7 +117,15 @@ def integrate_mage_technical_metadata():
 
 def main():
     """Main function."""
-    success = integrate_mage_technical_metadata()
+    parser = argparse.ArgumentParser(description='Integrate MAGE technical metadata')
+    parser.add_argument('--preprocessed-dir', required=True, help='Directory with preprocessed MAGE h5ad file')
+    parser.add_argument('--mage-metadata', required=True, help='Path to MAGE metadata file')
+    parser.add_argument('--mage-population-file', help='Path to MAGE population file (not used in this script)')
+    parser.add_argument('--force', action='store_true', help='Force regeneration')
+    
+    args = parser.parse_args()
+    
+    success = integrate_mage_technical_metadata(args.preprocessed_dir, args.mage_metadata)
     
     if success:
         print("\\n🚀 **NEXT STEPS:**")

@@ -4,7 +4,8 @@ import scanpy as sc
 import pandas as pd
 
 # Load all datasets and check developmental stage ontology coverage
-data_dir = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137'
+# Use dynamic path based on current repo structure
+data_dir = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/standardized_data/latest'
 dataset_files = {
     'ADNI': 'adni_standardized_preprocessed.h5ad',
     'ENCODE': 'encode_standardized_preprocessed.h5ad', 

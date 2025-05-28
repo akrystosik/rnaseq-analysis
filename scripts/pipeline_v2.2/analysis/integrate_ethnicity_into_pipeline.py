@@ -25,7 +25,8 @@ def integrate_ethnicity_mapping():
     print(f"✅ Loaded ethnicity mapping: {len(ethnicity_df):,} subjects")
     
     # Define dataset paths
-    data_dir = Path("/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137")
+    # Use dynamic path based on current repo structure
+    data_dir = Path("/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/standardized_data/latest")
     
     dataset_files = {
         'ADNI': 'adni_standardized_preprocessed.h5ad',

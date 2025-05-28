@@ -4,7 +4,7 @@
 
 # --- Configuration ---
 INPUT_BASE_DIR="/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq"
-OUTPUT_BASE_DIR="/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq"
+OUTPUT_BASE_DIR="/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq"
 
 SCRIPTS_DIR="${INPUT_BASE_DIR}/scripts/pipeline_v2.2" # Scripts are read from input location
 
@@ -374,6 +374,24 @@ else
 fi
 log_message "Stage 2.7 completed."
 
+# --- Update symlinks to current run ---
+log_message "--- Updating symlinks to current run directories ---"
+# Update preprocessed_data/latest symlink
+if [ -L "${OUTPUT_BASE_DIR}/preprocessed_data/latest" ]; then
+    rm "${OUTPUT_BASE_DIR}/preprocessed_data/latest"
+fi
+ln -sf "$(basename "$PREPROCESSED_DIR_H5ADS")" "${OUTPUT_BASE_DIR}/preprocessed_data/latest"
+
+# Update standardized_data/latest symlink  
+if [ -L "${OUTPUT_BASE_DIR}/standardized_data/latest" ]; then
+    rm "${OUTPUT_BASE_DIR}/standardized_data/latest"
+fi
+ln -sf "$(basename "$OUTPUT_DIR_H5ADS")" "${OUTPUT_BASE_DIR}/standardized_data/latest"
+
+log_message "Symlinks updated:"
+log_message "  preprocessed_data/latest -> $(basename "$PREPROCESSED_DIR_H5ADS")"
+log_message "  standardized_data/latest -> $(basename "$OUTPUT_DIR_H5ADS")"
+
 
 # --- Stage 3: Combined Dataset Creation ---
 log_message "--- Stage 3: Creating Combined Dataset (All Genes, Sparse) ---"
@@ -485,13 +503,7 @@ log_message "--- Stage 4.2: Generating Partner Deliverables ---"
 PARTNER_DELIVERABLES_DIR="${OUTPUT_DIR_H5ADS}/partner_deliverables"
 mkdir -p "$PARTNER_DELIVERABLES_DIR"
 
-# Generate ethnicity mappings
-run_command "python \"${SCRIPTS_DIR}/analysis/create_subject_level_ethnicity_mapping.py\" \
-    --preprocessed-dir \"$PREPROCESSED_DIR_H5ADS\" \
-    --output-dir \"$PARTNER_DELIVERABLES_DIR\" \
-    ${FORCE_FLAG}"
-
-# Generate CZI schema compliant mappings
+# Generate CZI schema compliant mappings (includes subject-level deduplication)
 run_command "python \"${SCRIPTS_DIR}/analysis/create_czi_schema_compliant_mapping.py\" \
     --preprocessed-dir \"$PREPROCESSED_DIR_H5ADS\" \
     --output-dir \"$PARTNER_DELIVERABLES_DIR\" \

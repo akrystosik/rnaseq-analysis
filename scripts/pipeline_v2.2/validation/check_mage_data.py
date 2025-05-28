@@ -4,7 +4,8 @@ import scanpy as sc
 import pandas as pd
 
 # Load MAGE dataset
-adata = sc.read_h5ad('/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/mage_standardized_preprocessed.h5ad')
+# Use dynamic path based on current repo structure
+adata = sc.read_h5ad('/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/mage_standardized_preprocessed.h5ad')
 
 print('MAGE Age Data Analysis:')
 print('=' * 30)

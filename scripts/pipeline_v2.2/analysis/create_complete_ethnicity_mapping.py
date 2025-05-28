@@ -79,10 +79,10 @@ def create_complete_ethnicity_mapping():
     gtex_ethnicity_map = load_gtex_phenotype_data()
     
     datasets = {
-        'ADNI': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/adni_standardized_preprocessed.h5ad',
-        'ENCODE': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/encode_standardized_preprocessed.h5ad',
-        'GTEx': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/gtex_standardized_preprocessed.h5ad',
-        'MAGE': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/preprocessed_data/run_20250524_183137/mage_standardized_preprocessed.h5ad'
+        'ADNI': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/adni_standardized_preprocessed.h5ad',
+        'ENCODE': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/encode_standardized_preprocessed.h5ad',
+        'GTEx': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/gtex_standardized_preprocessed.h5ad',
+        'MAGE': '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/latest/mage_standardized_preprocessed.h5ad'
     }
     
     all_mappings = []

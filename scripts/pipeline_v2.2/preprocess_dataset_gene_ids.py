@@ -321,7 +321,7 @@ def preprocess_encode_dataset(adata: ad.AnnData, numeric_to_ensembl: Dict[str, s
     
     # Use the safe save wrapper script
     import subprocess
-    save_script = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/pipeline_v2/anndata_save_wrapper.py'
+    save_script = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/pipeline_v2.2/utilities/anndata_save_wrapper.py'
     temp_save_path = output_file + ".tmp.h5ad"
     try:
         adata.write_h5ad(temp_save_path) # Write temporarily first
