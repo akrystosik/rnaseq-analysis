@@ -509,6 +509,11 @@ run_command "python \"${SCRIPTS_DIR}/analysis/create_czi_schema_compliant_mappin
     --output-dir \"$PARTNER_DELIVERABLES_DIR\" \
     ${FORCE_FLAG}"
 
+# Export ADNI diagnosis data for partner sharing
+log_message "Exporting ADNI diagnosis data..."
+run_command "python \"${SCRIPTS_DIR}/export_adni_diagnosis.py\" \
+    --output-dir \"$PARTNER_DELIVERABLES_DIR\""
+
 if [ $? -eq 0 ]; then
     log_message "Stage 4.2 completed. Partner deliverables in: $PARTNER_DELIVERABLES_DIR"
 else
@@ -535,7 +540,8 @@ log_message "  Gene Mapping Files: ${GENERATED_GENE_MAPPING_RESOURCE_DIR}"
 log_message "  Primary Gene Reference: ${PRIMARY_GENE_ANNOTATION_AND_REF_CSV_GENERATED}"
 log_message "  Validation Report: ${VALIDATION_REPORT_DIR}/validation_report.json"
 log_message "  Gene Overlap Analysis: ${VALIDATION_REPORT_DIR}/gene_overlap_analysis.json"
-log_message "  Subject Ethnicity Mapping: ${OUTPUT_DIR_H5ADS}/partner_deliverables/subject_ethnicity_mapping_with_ontology.csv"
+log_message "  Subject Ethnicity Mapping: ${OUTPUT_DIR_H5ADS}/partner_deliverables/subject_ethnicity_mapping_czi_compliant.csv"
+log_message "  ADNI Diagnosis Export: ${OUTPUT_DIR_H5ADS}/partner_deliverables/adni_diagnosis_export.csv"
 log_message "  CZI Schema Compliant Files: ${OUTPUT_DIR_H5ADS}/partner_deliverables/"
 log_message ""
 log_message "🔬 **OPTIONAL EXTENSIONS**:"
