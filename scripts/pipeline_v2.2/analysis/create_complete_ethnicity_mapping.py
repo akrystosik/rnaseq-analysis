@@ -30,45 +30,44 @@ def load_gtex_phenotype_data():
     clean_content = '\n'.join(data_lines)
     df = pd.read_csv(io.StringIO(clean_content), sep='\t')
     
-    # Load race/ethnicity mappings from ADNI metadata file
+    # Load race/ethnicity mappings from GTEx metadata file (correct for GTEx data!)
     try:
-        adni_metadata_file = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/adni_metadata.json'
-        if os.path.exists(adni_metadata_file):
-            with open(adni_metadata_file, 'r') as f:
-                adni_metadata = json.load(f)
+        gtex_metadata_file = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/gtex_metadata.json'
+        if os.path.exists(gtex_metadata_file):
+            with open(gtex_metadata_file, 'r') as f:
+                gtex_metadata = json.load(f)
                 
-                # Get race mapping from metadata
-                race_mapping_str = adni_metadata.get('source_race_to_standard_label_map', {})
+                # Get race mapping from GTEx metadata
+                race_mapping_str = gtex_metadata.get('source_race_to_standard_label_map', {})
                 race_mapping = {int(k): v for k, v in race_mapping_str.items()}
                 
-                # Get ethnicity mapping from metadata  
-                ethnicity_mapping_str = adni_metadata.get('source_ethnicity_to_standard_label_map', {})
+                # Get ethnicity mapping from GTEx metadata  
+                ethnicity_mapping_str = gtex_metadata.get('source_ethnicity_to_standard_label_map', {})
                 ethnicity_mapping = {int(k): v for k, v in ethnicity_mapping_str.items()}
                 
-                print(f"Loaded ADNI mappings from metadata file: {len(race_mapping)} race codes, {len(ethnicity_mapping)} ethnicity codes")
+                print(f"Loaded GTEx mappings from metadata file: {len(race_mapping)} race codes, {len(ethnicity_mapping)} ethnicity codes")
         else:
-            raise FileNotFoundError("ADNI metadata file not found")
+            raise FileNotFoundError("GTEx metadata file not found")
     except Exception as e:
-        print(f"Warning: Could not load ADNI mappings from metadata file: {e}")
+        print(f"Warning: Could not load GTEx mappings from metadata file: {e}")
         print("Using fallback hardcoded mappings")
         
-        # Fallback hardcoded mappings (based on ADNI data dictionary)
+        # Fallback hardcoded mappings (based on GTEx data dictionary)
         race_mapping = {
-            1: 'american indian or alaska native',
-            2: 'asian',
-            3: 'native hawaiian or other pacific islander', 
-            4: 'black or african american',
-            5: 'white',
-            6: 'more than one race',
-            7: 'unknown or not reported',
-            -4: 'unknown or not reported'
+            1: 'asian',
+            2: 'black or african american',
+            3: 'white',  # CRITICAL FIX: GTEx code 3 = white (not native hawaiian!)
+            4: 'american indian or alaska native',
+            5: 'native hawaiian or other pacific islander',
+            98: 'unknown or not reported',
+            99: 'unknown or not reported'
         }
         
         ethnicity_mapping = {
             1: 'hispanic or latino',
             2: 'not hispanic or latino', 
-            3: 'unknown or not reported',
-            -4: 'unknown or not reported'
+            98: 'unknown or not reported',
+            99: 'unknown or not reported'
         }
     
     # Process the data
