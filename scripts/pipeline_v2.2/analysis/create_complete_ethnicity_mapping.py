@@ -7,6 +7,8 @@ Now includes GTEx controlled-access race/ethnicity data!
 import scanpy as sc
 import pandas as pd
 import gzip
+import json
+import os
 
 def load_gtex_phenotype_data():
     """Load GTEx controlled-access phenotype data with race/ethnicity."""
@@ -28,24 +30,46 @@ def load_gtex_phenotype_data():
     clean_content = '\n'.join(data_lines)
     df = pd.read_csv(io.StringIO(clean_content), sep='\t')
     
-    # Map race codes to standard labels (from data dictionary)
-    race_mapping = {
-        1: 'asian',
-        2: 'black or african american', 
-        3: 'white',
-        4: 'american indian or alaska native',
-        98: 'unknown or not reported',
-        99: 'unknown or not reported'
-    }
-    
-    # Map ethnicity codes
-    ethnicity_mapping = {
-        0: 'not hispanic or latino',
-        1: 'hispanic or latino',
-        97: 'ceph',  # Special CEPH population
-        98: 'unknown or not reported', 
-        99: 'unknown or not reported'
-    }
+    # Load race/ethnicity mappings from ADNI metadata file
+    try:
+        adni_metadata_file = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/adni_metadata.json'
+        if os.path.exists(adni_metadata_file):
+            with open(adni_metadata_file, 'r') as f:
+                adni_metadata = json.load(f)
+                
+                # Get race mapping from metadata
+                race_mapping_str = adni_metadata.get('source_race_to_standard_label_map', {})
+                race_mapping = {int(k): v for k, v in race_mapping_str.items()}
+                
+                # Get ethnicity mapping from metadata  
+                ethnicity_mapping_str = adni_metadata.get('source_ethnicity_to_standard_label_map', {})
+                ethnicity_mapping = {int(k): v for k, v in ethnicity_mapping_str.items()}
+                
+                print(f"Loaded ADNI mappings from metadata file: {len(race_mapping)} race codes, {len(ethnicity_mapping)} ethnicity codes")
+        else:
+            raise FileNotFoundError("ADNI metadata file not found")
+    except Exception as e:
+        print(f"Warning: Could not load ADNI mappings from metadata file: {e}")
+        print("Using fallback hardcoded mappings")
+        
+        # Fallback hardcoded mappings (based on ADNI data dictionary)
+        race_mapping = {
+            1: 'american indian or alaska native',
+            2: 'asian',
+            3: 'native hawaiian or other pacific islander', 
+            4: 'black or african american',
+            5: 'white',
+            6: 'more than one race',
+            7: 'unknown or not reported',
+            -4: 'unknown or not reported'
+        }
+        
+        ethnicity_mapping = {
+            1: 'hispanic or latino',
+            2: 'not hispanic or latino', 
+            3: 'unknown or not reported',
+            -4: 'unknown or not reported'
+        }
     
     # Process the data
     gtex_ethnicity = {}
@@ -102,48 +126,98 @@ def create_complete_ethnicity_mapping():
         else:
             sample_ids = adata.obs.index
         
-        # Get ethnicity information - ENHANCED LOGIC
+        # Get ethnicity information and preserve original data - ENHANCED LOGIC
+        original_data = []
+        
         if dataset_name == 'ENCODE':
             # For ENCODE, use the raw 'ethnicity' column which has actual data
             if 'ethnicity' in adata.obs.columns:
-                ethnicity = adata.obs['ethnicity'].copy()
-                ethnicity = ethnicity.replace('European', 'white')
+                original_ethnicity = adata.obs['ethnicity'].copy()
+                ethnicity = original_ethnicity.replace('European', 'white')
+                original_data = original_ethnicity.tolist()
                 print(f"  ENCODE: Using raw 'ethnicity' column")
             else:
                 ethnicity = ['unknown'] * len(adata.obs)
+                original_data = ['unknown'] * len(adata.obs)
                 
         elif dataset_name == 'GTEx':
             # For GTEx, use the controlled-access phenotype data
             ethnicity_list = []
+            original_data_list = []
             matched_count = 0
             for sample_id in sample_ids:
                 # Extract subject ID from sample ID (format: GTEX-XXXXX-...)
                 if isinstance(sample_id, str) and sample_id.startswith('GTEX-'):
                     subject_id = sample_id.split('-')[0] + '-' + sample_id.split('-')[1]  # GTEX-XXXXX
                     if subject_id in gtex_ethnicity_map:
-                        ethnicity_list.append(gtex_ethnicity_map[subject_id])
+                        mapped_ethnicity = gtex_ethnicity_map[subject_id]
+                        ethnicity_list.append(mapped_ethnicity)
+                        # For GTEx, the original data is the race/ethnicity codes that were mapped
+                        original_data_list.append(mapped_ethnicity)  # This is already the processed form
                         matched_count += 1
                     else:
                         ethnicity_list.append('unknown or not reported')
+                        original_data_list.append('unknown or not reported')
                 else:
                     ethnicity_list.append('unknown or not reported')
+                    original_data_list.append('unknown or not reported')
             
             ethnicity = ethnicity_list
+            original_data = original_data_list
             print(f"  GTEx: Matched {matched_count:,}/{len(adata.obs):,} samples to controlled-access data")
             
+        elif dataset_name == 'MAGE':
+            # For MAGE, use proper population code mapping from metadata
+            # Load MAGE metadata for population mappings
+            try:
+                mage_metadata_file = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/mage_metadata.json'
+                with open(mage_metadata_file, 'r') as f:
+                    mage_metadata = json.load(f)
+                    pop_to_race_map = mage_metadata.get('pop_to_race_map', {})
+                    print(f"  MAGE: Loaded {len(pop_to_race_map)} population mappings from metadata")
+            except Exception as e:
+                print(f"  MAGE: Warning - could not load metadata: {e}, using fallback")
+                pop_to_race_map = {}
+            
+            # Preserve original population codes
+            if 'population_code_1000g' in adata.obs.columns:
+                original_data = adata.obs['population_code_1000g'].tolist()
+                print(f"  MAGE: Found population_code_1000g for original data")
+                
+                # Map population codes to specific ethnicities using metadata
+                ethnicity_list = []
+                for pop_code in original_data:
+                    if pop_code in pop_to_race_map:
+                        ethnicity_list.append(pop_to_race_map[pop_code])
+                    else:
+                        ethnicity_list.append('unknown or not reported')
+                ethnicity = ethnicity_list
+                
+            else:
+                print(f"  MAGE: No population_code_1000g found, checking other columns")
+                # Fall back to other available data
+                if 'self_reported_ethnicity' in adata.obs.columns:
+                    original_data = adata.obs['self_reported_ethnicity'].tolist()
+                    ethnicity = adata.obs['self_reported_ethnicity']
+                else:
+                    original_data = ['unknown'] * len(adata.obs)
+                    ethnicity = ['unknown'] * len(adata.obs)
         else:
-            # For other datasets (ADNI, MAGE), use processed ethnicity
+            # For other datasets (ADNI), preserve original if available
             if 'self_reported_ethnicity' in adata.obs.columns:
                 ethnicity = adata.obs['self_reported_ethnicity']
+                original_data = ethnicity.tolist()  # For ADNI, this is likely already the original
             else:
                 ethnicity = ['unknown'] * len(adata.obs)
+                original_data = ['unknown'] * len(adata.obs)
         
-        # Create mappings for this dataset
-        for sample_id, eth in zip(sample_ids, ethnicity):
+        # Create mappings for this dataset with original data preserved
+        for sample_id, eth, orig in zip(sample_ids, ethnicity, original_data):
             all_mappings.append({
                 'sample_id': str(sample_id),
                 'dataset': dataset_name,
-                'ethnicity': str(eth)
+                'ethnicity': str(eth),
+                'original_ethnicity_race_population_data': str(orig)
             })
         
         print(f"  Added {len(adata.obs):,} samples from {dataset_name}")

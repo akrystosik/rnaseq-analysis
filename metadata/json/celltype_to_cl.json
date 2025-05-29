@@ -1,0 +1,231 @@
+{
+  "description": "Mapping of cell type/cell line names to Cell Ontology (CL) terms",
+  "version": "1.0",
+  "created_date": "2025-01-23",
+  "source": "Cell Ontology (CL) - https://bioportal.bioontology.org/ontologies/CL",
+  "notes": "Manual curation based on ENCODE cell lines and MAGE lymphoblastoid cell lines",
+  
+  "mappings": {
+    "_comment_encode_cell_lines": "ENCODE cell lines",
+    "A549": {
+      "cl_term_id": "CL:0000183",
+      "cl_term_name": "epithelial cell of lung",
+      "cell_line_name": "A549",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "A549 is a lung adenocarcinoma epithelial cell line"
+    },
+    "a549": {
+      "cl_term_id": "CL:0000183",
+      "cl_term_name": "epithelial cell of lung", 
+      "cell_line_name": "A549",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "Case-insensitive mapping for A549"
+    },
+    "Caki2": {
+      "cl_term_id": "CL:0000066",
+      "cl_term_name": "epithelial cell",
+      "cell_line_name": "Caki-2",
+      "source": "ENCODE", 
+      "confidence": "medium",
+      "notes": "Caki-2 is a renal carcinoma epithelial cell line"
+    },
+    "caki2": {
+      "cl_term_id": "CL:0000066",
+      "cl_term_name": "epithelial cell",
+      "cell_line_name": "Caki-2",
+      "source": "ENCODE",
+      "confidence": "medium",
+      "notes": "Case-insensitive mapping for Caki-2"
+    },
+    "GM23248": {
+      "cl_term_id": "CL:0000542",
+      "cl_term_name": "lymphoblast",
+      "cell_line_name": "GM23248",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "GM23248 is a lymphoblastoid cell line"
+    },
+    "gm23248": {
+      "cl_term_id": "CL:0000542",
+      "cl_term_name": "lymphoblast",
+      "cell_line_name": "GM23248", 
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "Case-insensitive mapping for GM23248"
+    },
+    "HepG2": {
+      "cl_term_id": "CL:0000182",
+      "cl_term_name": "hepatocyte",
+      "cell_line_name": "HepG2",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "HepG2 is a hepatocellular carcinoma cell line"
+    },
+    "hepg2": {
+      "cl_term_id": "CL:0000182",
+      "cl_term_name": "hepatocyte",
+      "cell_line_name": "HepG2",
+      "source": "ENCODE",
+      "confidence": "high", 
+      "notes": "Case-insensitive mapping for HepG2"
+    },
+    "K562": {
+      "cl_term_id": "CL:0000765",
+      "cl_term_name": "erythroleukemic cell",
+      "cell_line_name": "K562",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "K562 is a chronic myelogenous leukemia cell line"
+    },
+    "k562": {
+      "cl_term_id": "CL:0000765",
+      "cl_term_name": "erythroleukemic cell",
+      "cell_line_name": "K562",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "Case-insensitive mapping for K562"
+    },
+    "NCI-H460": {
+      "cl_term_id": "CL:0000183",
+      "cl_term_name": "epithelial cell of lung",
+      "cell_line_name": "NCI-H460",
+      "source": "ENCODE",
+      "confidence": "high",
+      "notes": "NCI-H460 is a lung carcinoma epithelial cell line"
+    },
+    "nci-h460": {
+      "cl_term_id": "CL:0000183",
+      "cl_term_name": "epithelial cell of lung",
+      "cell_line_name": "NCI-H460",
+      "source": "ENCODE", 
+      "confidence": "high",
+      "notes": "Case-insensitive mapping for NCI-H460"
+    },
+    "Panc1": {
+      "cl_term_id": "CL:0000066",
+      "cl_term_name": "epithelial cell",
+      "cell_line_name": "Panc-1", 
+      "source": "ENCODE",
+      "confidence": "medium",
+      "notes": "Panc-1 is a pancreatic carcinoma epithelial cell line"
+    },
+    "panc1": {
+      "cl_term_id": "CL:0000066", 
+      "cl_term_name": "epithelial cell",
+      "cell_line_name": "Panc-1",
+      "source": "ENCODE",
+      "confidence": "medium",
+      "notes": "Case-insensitive mapping for Panc-1"
+    },
+    
+    "_comment_mage_lcl": "MAGE lymphoblastoid cell lines",
+    "lymphoblast": {
+      "cl_term_id": "CL:0000542",
+      "cl_term_name": "lymphoblast",
+      "cell_line_name": "lymphoblastoid cell line",
+      "source": "MAGE",
+      "confidence": "high", 
+      "notes": "General mapping for MAGE lymphoblastoid cell lines"
+    },
+    "lymphoblastoid": {
+      "cl_term_id": "CL:0000542",
+      "cl_term_name": "lymphoblast",
+      "cell_line_name": "lymphoblastoid cell line",
+      "source": "MAGE",
+      "confidence": "high",
+      "notes": "General mapping for MAGE lymphoblastoid cell lines"
+    },
+    "lymphoblastoid cell line": {
+      "cl_term_id": "CL:0000542",
+      "cl_term_name": "lymphoblast", 
+      "cell_line_name": "lymphoblastoid cell line",
+      "source": "MAGE",
+      "confidence": "high",
+      "notes": "Full term mapping for MAGE lymphoblastoid cell lines"
+    },
+    "lcl": {
+      "cl_term_id": "CL:0000542",
+      "cl_term_name": "lymphoblast",
+      "cell_line_name": "lymphoblastoid cell line",
+      "source": "MAGE",
+      "confidence": "high", 
+      "notes": "Abbreviation mapping for lymphoblastoid cell lines"
+    },
+    
+    "_comment_gtex_single_cell": "GTEx single-cell types (common cell types)",
+    "hepatocyte": {
+      "cl_term_id": "CL:0000182",
+      "cl_term_name": "hepatocyte",
+      "cell_line_name": "hepatocyte",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "Liver hepatocyte cells"
+    },
+    "cardiomyocyte": {
+      "cl_term_id": "CL:0000746",
+      "cl_term_name": "cardiac muscle cell",
+      "cell_line_name": "cardiomyocyte",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "Heart muscle cells"
+    },
+    "fibroblast": {
+      "cl_term_id": "CL:0000057",
+      "cl_term_name": "fibroblast",
+      "cell_line_name": "fibroblast",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "Connective tissue fibroblasts"
+    },
+    "endothelial": {
+      "cl_term_id": "CL:0000115",
+      "cl_term_name": "endothelial cell",
+      "cell_line_name": "endothelial cell",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "Blood vessel endothelial cells"
+    },
+    "t cell": {
+      "cl_term_id": "CL:0000084",
+      "cl_term_name": "T cell",
+      "cell_line_name": "T cell",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "T lymphocyte cells"
+    },
+    "b cell": {
+      "cl_term_id": "CL:0000236",
+      "cl_term_name": "B cell",
+      "cell_line_name": "B cell",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "B lymphocyte cells"
+    },
+    "macrophage": {
+      "cl_term_id": "CL:0000235",
+      "cl_term_name": "macrophage",
+      "cell_line_name": "macrophage",
+      "source": "GTEx_scRNA",
+      "confidence": "high",
+      "notes": "Tissue macrophage cells"
+    },
+    "epithelial": {
+      "cl_term_id": "CL:0000066",
+      "cl_term_name": "epithelial cell",
+      "cell_line_name": "epithelial cell",
+      "source": "GTEx_scRNA",
+      "confidence": "medium",
+      "notes": "General epithelial cells"
+    },
+    "unknown": {
+      "cl_term_id": "unknown",
+      "cl_term_name": "unknown",
+      "cell_line_name": "unknown",
+      "source": "fallback",
+      "confidence": "low",
+      "notes": "Fallback mapping for unknown cell types"
+    }
+  }
+}

@@ -51,8 +51,11 @@ def create_czi_compliant_mapping(input_file=None, output_dir=None):
         'ethnicity': 'ethnicity_label_for_reference'
     })
     
-    # Reorder columns to match expected schema format
-    czi_df = czi_df[['subject_id', 'dataset', 'self_reported_ethnicity_ontology_term_id', 'ethnicity_label_for_reference']]
+    # Reorder columns to match expected schema format, preserving original data if available
+    if 'original_ethnicity_race_population_data' in czi_df.columns:
+        czi_df = czi_df[['subject_id', 'dataset', 'self_reported_ethnicity_ontology_term_id', 'ethnicity_label_for_reference', 'original_ethnicity_race_population_data']]
+    else:
+        czi_df = czi_df[['subject_id', 'dataset', 'self_reported_ethnicity_ontology_term_id', 'ethnicity_label_for_reference']]
     
     # Save CZI compliant version
     if output_dir:

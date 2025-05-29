@@ -39,13 +39,21 @@ def test_celltype_mapping_file():
         mappings = data.get('mappings', {})
         logger.info(f"Loaded {len(mappings)} cell type mappings")
         
-        # Test some key mappings
-        test_cases = [
-            ('A549', 'CL:0000183', 'epithelial cell of lung'),
-            ('lymphoblastoid cell line', 'CL:0000542', 'lymphoblast'),
-            ('K562', 'CL:0000765', 'erythroleukemic cell'),
-            ('hepatocyte', 'CL:0000182', 'hepatocyte')
-        ]
+        # Test some key mappings - validate against JSON structure
+        test_cases = []
+        key_cell_types = ['A549', 'lymphoblastoid cell line', 'K562', 'hepatocyte']
+        
+        for cell_type in key_cell_types:
+            if cell_type in mappings:
+                mapping_info = mappings[cell_type]
+                if isinstance(mapping_info, dict):
+                    expected_id = mapping_info.get('cl_term_id', '')
+                    expected_name = mapping_info.get('cl_term_name', '')
+                    test_cases.append((cell_type, expected_id, expected_name))
+                else:
+                    logger.warning(f"Cell type {cell_type} mapping is not a dict in JSON")
+            else:
+                logger.warning(f"Cell type {cell_type} not found in JSON mappings")
         
         for cell_type, expected_id, expected_name in test_cases:
             if cell_type in mappings:

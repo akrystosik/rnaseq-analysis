@@ -1,0 +1,16 @@
+{
+  "white": "HANCESTRO:0005", 
+  "european": "HANCESTRO:0005",
+  "black or african american": "HANCESTRO:0010", 
+  "african": "HANCESTRO:0008", 
+  "asian": "HANCESTRO:0014", 
+  "east asian": "HANCESTRO:0018", 
+  "south asian": "HANCESTRO:0023",
+  "american indian or alaska native": "HANCESTRO:0004", 
+  "native hawaiian or other pacific islander": "HANCESTRO:0027", 
+  "hispanic or latino": "HANCESTRO:0028", 
+  "multiethnic": "multiethnic",
+  "more than one race": "multiethnic", 
+  "unknown or not reported": "unknown", 
+  "other": "unknown" 
+}

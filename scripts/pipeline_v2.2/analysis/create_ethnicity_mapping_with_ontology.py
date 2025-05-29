@@ -32,8 +32,11 @@ def create_ethnicity_mapping_with_ontology():
         # Set unmapped to 'unknown'
         df['hancestro_term'] = df['hancestro_term'].fillna('unknown')
     
-    # Reorder columns for better readability
-    df = df[['sample_id', 'dataset', 'ethnicity', 'hancestro_term']]
+    # Reorder columns for better readability, preserving original data if available
+    if 'original_ethnicity_race_population_data' in df.columns:
+        df = df[['sample_id', 'dataset', 'ethnicity', 'hancestro_term', 'original_ethnicity_race_population_data']]
+    else:
+        df = df[['sample_id', 'dataset', 'ethnicity', 'hancestro_term']]
     
     # Save enhanced mapping
     output_file = 'sample_ethnicity_mapping_with_ontology.csv'

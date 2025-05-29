@@ -21,16 +21,33 @@ def final_validation():
     dataset_summary['ontology_coverage'] = (dataset_summary['with_ontology'] / dataset_summary['total_subjects'] * 100).round(1)
     print(dataset_summary.to_string())
 
-    # HANCESTRO term validation
+    # HANCESTRO term validation - Load from metadata file
     print('\n=== HANCESTRO TERM DETAILS ===')
-    hancestro_terms = {
-        'HANCESTRO:0004': 'American Indian or Alaska Native',
-        'HANCESTRO:0005': 'European', 
-        'HANCESTRO:0010': 'African American or Afro-Caribbean',
-        'HANCESTRO:0014': 'East Asian',
-        'HANCESTRO:0027': 'Native Hawaiian or Other Pacific Islander',
-        'HANCESTRO:0028': 'Hispanic or Latino'
-    }
+    
+    # Load HANCESTRO mapping from metadata file
+    import json
+    import os
+    
+    metadata_path = '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/ethnicity_to_hancestro.json'
+    hancestro_terms = {}
+    
+    if os.path.exists(metadata_path):
+        with open(metadata_path, 'r') as f:
+            ethnicity_mapping = json.load(f)
+            # Extract the reverse mapping (HANCESTRO ID -> label)
+            for ethnicity_label, hancestro_id in ethnicity_mapping.items():
+                if hancestro_id.startswith('HANCESTRO:'):
+                    hancestro_terms[hancestro_id] = ethnicity_label
+    else:
+        # Fallback if file doesn't exist
+        hancestro_terms = {
+            'HANCESTRO:0004': 'American Indian or Alaska Native',
+            'HANCESTRO:0005': 'European', 
+            'HANCESTRO:0010': 'African American or Afro-Caribbean',
+            'HANCESTRO:0014': 'East Asian',
+            'HANCESTRO:0027': 'Native Hawaiian or Other Pacific Islander',
+            'HANCESTRO:0028': 'Hispanic or Latino'
+        }
 
     terms_in_data = df['self_reported_ethnicity_ontology_term_id'].value_counts()
     print('HANCESTRO terms used (with official labels):')
