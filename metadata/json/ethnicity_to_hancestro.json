@@ -12,5 +12,6 @@
   "multiethnic": "multiethnic",
   "more than one race": "multiethnic", 
   "unknown or not reported": "unknown", 
+  "unknown": "unknown",
   "other": "unknown" 
 }

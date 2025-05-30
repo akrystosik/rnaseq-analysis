@@ -221,8 +221,18 @@ def create_complete_ethnicity_mapping():
         
         print(f"  Added {len(adata.obs):,} samples from {dataset_name}")
     
-    # Create DataFrame and save to CSV
+    # Create DataFrame and normalize ethnicity categories
     df = pd.DataFrame(all_mappings)
+    
+    # Normalize ethnicity categories for consistency
+    print(f"\n🔧 Normalizing ethnicity categories...")
+    
+    # Count changes made
+    unknown_consolidated = (df['ethnicity'] == 'unknown').sum()
+    if unknown_consolidated > 0:
+        df.loc[df['ethnicity'] == 'unknown', 'ethnicity'] = 'unknown or not reported'
+        print(f"  Consolidated {unknown_consolidated:,} 'unknown' → 'unknown or not reported'")
+    
     df = df.sort_values(['dataset', 'sample_id'])
     
     output_file = 'sample_ethnicity_mapping_complete.csv'

@@ -65,9 +65,9 @@
   "pop_to_race_map": {
     "ACB": "black or african american", "ASW": "black or african american", "ESN": "black or african american", "GWD": "black or african american", "LWK": "black or african american", "MSL": "black or african american", "YRI": "black or african american",
     "CLM": "hispanic or latino", "MXL": "hispanic or latino", "PEL": "hispanic or latino", "PUR": "hispanic or latino",
-    "CDX": "east asian", "CHB": "east asian", "CHS": "east asian", "JPT": "east asian", "KHV": "east asian",
+    "CDX": "asian", "CHB": "asian", "CHS": "asian", "JPT": "asian", "KHV": "asian",
     "CEU": "white", "FIN": "white", "GBR": "white", "IBS": "white", "TSI": "white",
-    "BEB": "south asian", "GIH": "south asian", "ITU": "south asian", "PJL": "south asian", "STU": "south asian"
+    "BEB": "asian", "GIH": "asian", "ITU": "asian", "PJL": "asian", "STU": "asian"
   },
   "pop_to_hispanic_map": {
     "CLM": "hispanic or latino", "MXL": "hispanic or latino", "PEL": "hispanic or latino", "PUR": "hispanic or latino"
