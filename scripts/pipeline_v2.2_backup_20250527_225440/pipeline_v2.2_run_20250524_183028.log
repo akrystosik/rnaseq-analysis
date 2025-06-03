@@ -1,0 +1,10 @@
+[2025-05-24 18:30:28] === Starting RNA-seq Pipeline Run: 20250524_183028 ===
+[2025-05-24 18:30:28] INPUT BASE DIRECTORY: /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq
+[2025-05-24 18:30:28] OUTPUT BASE DIRECTORY: /mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq
+[2025-05-24 18:30:28] Force flag ('--force') detected. Applicable scripts will regenerate outputs.
+[2025-05-24 18:30:28] --- Performing Pre-run Input Checks (from INPUT_BASE_DIR) ---
+[2025-05-24 18:30:28] --- Pre-run Input Checks Complete ---
+[2025-05-24 18:30:28] --- Stage 0: Preparing Entrez to Ensembl Mapping ---
+[2025-05-24 18:30:28] Running: python "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/pipeline_v2/entrez-to-ensembl-mapping.py" --output "/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/json_generated/entrez_to_ensembl_mapping.csv" --species human --force
+python: can't open file '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/pipeline_v2/entrez-to-ensembl-mapping.py': [Errno 2] No such file or directory
+[2025-05-24 18:30:28] ERROR: Entrez to Ensembl mapping generation failed. Exiting.

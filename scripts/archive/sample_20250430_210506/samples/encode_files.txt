@@ -1,0 +1,3 @@
+/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/encode/raw_data/cell_lines/A549_polyA_plus/ENCFF244DNJ.tsv
+/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/encode/raw_data/cell_lines/Caki2/ENCFF685WJV.tsv
+/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/encode/raw_data/cell_lines/GM23248/ENCFF640FPG.tsv

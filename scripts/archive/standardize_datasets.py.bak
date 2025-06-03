@@ -34,6 +34,29 @@ import gzip
 import json
 from pathlib import Path
 
+
+def ensure_serializable(obj):
+    """Recursively convert an object to serializable types."""
+    if obj is None:
+        return None
+    elif isinstance(obj, (str, int, float, bool)):
+        return obj
+    elif hasattr(obj, 'item'):  # Handle numpy scalars
+        try:
+            return obj.item()  # Convert to Python native type
+        except:
+            return str(obj)
+    elif isinstance(obj, dict):
+        return {str(k): ensure_serializable(v) for k, v in obj.items()}
+    elif isinstance(obj, (list, tuple, set)):
+        return [ensure_serializable(x) for x in obj]
+    elif hasattr(obj, 'tolist'):  # Handle numpy arrays
+        return obj.tolist()
+    elif hasattr(obj, 'to_dict'):  # Handle pandas objects
+        return obj.to_dict()
+    else:
+        return str(obj)  # Last resort: convert to string
+
 # Import shared utilities
 from rnaseq_utils import (
     standardize_ensembl_id,
@@ -116,6 +139,27 @@ def get_encode_cell_info(metadata_dir=None):
 
 
 def create_standard_anndata(data_df, obs_df, var_df, dataset_info):
+    # Ensure all obs columns can be properly saved
+    for col in obs_df.columns:
+        if obs_df[col].dtype.name not in ["category", "string", "object"]:
+            logger.debug(f"Converting obs column {col} to string")
+            obs_df[col] = obs_df[col].astype(str)
+
+    # Ensure all var columns can be properly saved
+    for col in var_df.columns:
+        if var_df[col].dtype.name not in ["category", "string", "object"]:
+            logger.debug(f"Converting var column {col} to string")
+            var_df[col] = var_df[col].astype(str)
+
+    # Convert all dictionary values to strings
+    safe_dataset_info = {}
+    for key, value in dataset_info.items():
+        if isinstance(value, dict):
+            safe_dataset_info[key] = {k: str(v) if v is not None else "" for k, v in value.items()}
+        elif value is None:
+            safe_dataset_info[key] = ""
+        else:
+            safe_dataset_info[key] = str(value)
     """
     Create standardized AnnData object with consistent structure.
     Now with enhanced metadata including ontology mappings and validation.
@@ -198,6 +242,8 @@ def create_standard_anndata(data_df, obs_df, var_df, dataset_info):
             adata.obs[col] = validated_obs_df[col].values
 
     # Add dataset information to uns
+    # Ensure dataset_info is serializable
+    dataset_info = ensure_serializable(dataset_info)
     adata.uns["dataset_info"] = dataset_info
 
     # Add reference genome info to uns
@@ -223,6 +269,81 @@ def create_standard_anndata(data_df, obs_df, var_df, dataset_info):
 
 
 def save_anndata(adata, file_path):
+    """Save AnnData object to file with validation."""
+    try:
+        # Ensure all uns values are serializable
+        serializable_uns = {}
+        for k, v in adata.uns.items():
+            serializable_uns[k] = ensure_serializable(v)
+        
+        # Store original uns
+        original_uns = adata.uns.copy()
+        
+        # Replace with serializable version
+        adata.uns = serializable_uns
+        
+        # Validate before saving
+        if adata.var.shape[1] == 0:
+            logger.error("Cannot save AnnData: var DataFrame is empty!")
+            return False
+
+        # Check for index/column name conflicts and fix them
+        if adata.obs.index.name is not None and adata.obs.index.name in adata.obs.columns:
+            logger.warning(
+                f"Fixing index/column name conflict: Renaming column '{adata.obs.index.name}' to 'original_{adata.obs.index.name}'"
+            )
+            adata.obs = adata.obs.rename(
+                columns={adata.obs.index.name: f"original_{adata.obs.index.name}"}
+            )
+
+        if adata.var.index.name is not None and adata.var.index.name in adata.var.columns:
+            logger.warning(
+                f"Fixing index/column name conflict: Renaming column '{adata.var.index.name}' to 'original_{adata.var.index.name}'"
+            )
+            adata.var = adata.var.rename(
+                columns={adata.var.index.name: f"original_{adata.var.index.name}"}
+            )
+
+        # Convert all values in uns to serializable types
+        safe_uns = {}
+        for key, value in adata.uns.items():
+            if isinstance(value, dict):
+                safe_uns[key] = {k: str(v) if v is not None else "" for k, v in value.items()}
+            elif value is None:
+                safe_uns[key] = ""
+            else:
+                safe_uns[key] = str(value)
+
+        # Store original uns
+        original_uns = adata.uns.copy()
+        
+        # Replace with safe uns for saving
+        adata.uns = safe_uns
+
+        # Create directory if it doesn't exist
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        # Save the AnnData object
+        adata.write_h5ad(file_path)
+        
+        # Restore original uns
+        adata.uns = original_uns
+
+        # Verify successful save by loading
+        # Restore original uns
+        adata.uns = original_uns
+        
+        test_load = ad.read_h5ad(file_path)
+        logger.info(
+            f"Verification: Saved AnnData loaded with var shape={test_load.var.shape}, obs shape={test_load.obs.shape}"
+        )
+
+        logger.info(f"Saved AnnData to {file_path}")
+        return True
+
+    except Exception as e:
+        logger.error(f"Error saving AnnData: {e}")
+        return False
     """Save AnnData object to file with validation."""
     try:
         # Validate before saving
@@ -254,6 +375,9 @@ def save_anndata(adata, file_path):
         adata.write_h5ad(file_path)
 
         # Verify successful save by loading
+        # Restore original uns
+        adata.uns = original_uns
+        
         test_load = ad.read_h5ad(file_path)
         logger.info(
             f"Verification: Saved AnnData loaded with var shape={test_load.var.shape}, obs shape={test_load.obs.shape}"
@@ -509,13 +633,21 @@ def extract_encode_metadata(file_path, entex_metadata=None, metadata_dir=None):
 
     else:
         # Regular ENCODE cell line processing
-        # Extract cell line from path
+        # Extract cell line from path - improved detection
         path_parts = file_path.split(os.sep)
-        cell_line_dir = [
-            part
-            for part in path_parts
-            if part in encode_cell_info or any(cl in part for cl in encode_cell_info.keys())
-        ]
+        # Check each cell line more thoroughly
+        cell_line_dir = []
+        for part in path_parts:
+            # Check exact match
+            if part in encode_cell_info:
+                cell_line_dir.append(part)
+                continue
+            
+            # Check for cell line as a substring
+            for cl in encode_cell_info.keys():
+                if cl in part:
+                    cell_line_dir.append(part)
+                    break
 
         if cell_line_dir:
             # Handle directories like 'A549_polyA_plus'
@@ -547,6 +679,25 @@ def extract_encode_metadata(file_path, entex_metadata=None, metadata_dir=None):
     # Add standard fields
     metadata["data_type"] = "RNA-seq"
     metadata["expression_unit"] = "TPM"
+    
+    # Ensure tissue is never None/nan for cell lines
+    if "cell_line" in metadata and not metadata.get("tissue"):
+        cell_line = metadata["cell_line"]
+        if cell_line in encode_cell_info and "tissue" in encode_cell_info[cell_line]:
+            metadata["tissue"] = encode_cell_info[cell_line]["tissue"]
+        else:
+            # Fallback mapping for common cell lines
+            fallback_mapping = {
+                "A549": "lung",
+                "HepG2": "liver", 
+                "K562": "blood",
+                "HeLa": "cervix",
+                "IMR-90": "lung",
+                "GM12878": "blood",
+                "H1-hESC": "embryonic stem cell"
+            }
+            if cell_line in fallback_mapping:
+                metadata["tissue"] = fallback_mapping[cell_line]
 
     return metadata
 
@@ -1891,6 +2042,49 @@ def process_mage_data(input_dir, output_file, metadata_dir=None):
 # ADNI-specific Processing
 # ====================================================================================
 
+def preprocess_adni_file(file_path):
+    """Preprocess ADNI file to fix escaped tab characters."""
+    with open(file_path, 'r') as f:
+        content = f.read()
+    
+    # Check if file has escaped tabs
+    if '\\t' in content:
+        logger.info(f"Fixing escaped tabs in {file_path}")
+        # Replace escaped tabs with actual tabs
+        fixed_content = content.replace('\\t', '\t')
+        
+        # Create a temporary fixed file
+        fixed_path = file_path + '.fixed'
+        with open(fixed_path, 'w') as f:
+            f.write(fixed_content)
+        
+        return fixed_path
+    
+    return file_path
+
+
+def preprocess_adni_file(file_path):
+    """Preprocess ADNI file to fix escaped tabs."""
+    try:
+        with open(file_path, 'r') as f:
+            content = f.read()
+        
+        # Check if file has escaped tabs
+        if '\t' in content:
+            logger.info(f"Fixing escaped tabs in {file_path}")
+            # Replace escaped tabs with actual tabs
+            fixed_content = content.replace('\t', '	')
+            
+            # Create a temporary fixed file
+            fixed_path = file_path + '.fixed'
+            with open(fixed_path, 'w') as f:
+                f.write(fixed_content)
+            
+            return fixed_path
+    except Exception as e:
+        logger.warning(f"Error preprocessing file {file_path}: {e}")
+    
+    return file_path
 
 def process_adni_data(input_dir, output_file, dict_file=None, metadata_dir=None):
     """
@@ -1955,9 +2149,24 @@ def process_adni_data(input_dir, output_file, dict_file=None, metadata_dir=None)
 
             try:
 
-                # Read the CSV file
-                df = pd.read_csv(file_path)
-                gene_id_col, tpm_col = identify_columns(df)
+                # Preprocess the file to fix escaped tabs
+                fixed_file_path = preprocess_adni_file(file_path)
+                try:
+                    # Try reading with tab delimiter first
+                    df = pd.read_csv(fixed_file_path, sep='\t')
+                    # If successful, clean up temporary file if it was created
+                    if fixed_file_path != file_path and os.path.exists(fixed_file_path):
+                        os.remove(fixed_file_path)
+                except Exception as e:
+                    # If tab delimiter fails, try comma
+                    logger.warning(f"Failed to parse with tab delimiter: {e}")
+                    df = pd.read_csv(fixed_file_path)
+                    # Clean up temporary file
+                    if fixed_file_path != file_path and os.path.exists(fixed_file_path):
+                        os.remove(fixed_file_path)
+
+                gene_id_col, tpm_col = identify_columns(df)                
+                
 
                 if gene_id_col is None or tpm_col is None:
                     logger.warning(f"Could not identify gene_id and TPM columns in {file_path}")
@@ -1973,18 +2182,16 @@ def process_adni_data(input_dir, output_file, dict_file=None, metadata_dir=None)
                 # Collect gene IDs
                 all_gene_ids.update(df[gene_id_col])
 
-                # Extract metadata from filename and directory structure
-                # (For ADNI we derive the subject ID from the directory name)
                 metadata = {
                     "sample_id": sample_id,
                     "subject_id": subject_id,
                     "dataset": "ADNI",
-                    "data_type": "RNA-seq",  # TPM values from RNA-seq
-                    "expression_unit": "TPM",
-                    "tissue": "blood",  # Default; change if tissue info available
+                    "data_type": "Microarray",
+                    "expression_unit": "Normalized intensity",
+                    "tissue": "blood",
+                    "platform": "Affymetrix Human Genome U219 Array",
                     "processing": "gencode_v24" if "gencode_v24" in file_name else "unknown",
                 }
-
                 # Store metadata
                 sample_metadata[sample_id] = metadata
                 processed_samples += 1

@@ -1,0 +1,150 @@
+=== Starting ENCODE Processing Validation Test ===
+Test directory: /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040
+Step 1: Creating a small ENCODE sample
+total 21253
+drwxr-xr-x 2 root root     4096 Apr 30 21:10 .
+drwxr-xr-x 2 root root     4096 Apr 30 21:10 ..
+-rw-r--r-- 1 root root 10914475 Apr 30 21:10 ENCFF244DNJ.tsv
+-rw-r--r-- 1 root root 10847316 Apr 30 21:10 ENCFF685WJV.tsv
+Step 2: Running standardization on the sample
+2025-04-30 21:10:44,351 - data_standardizer - INFO - Processing ENCODE data from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040/encode_sample
+2025-04-30 21:10:44,351 - data_standardizer - INFO - Processing ENCODE data from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040/encode_sample
+2025-04-30 21:10:44,352 - data_standardizer - INFO - Found 2 TPM files to process
+2025-04-30 21:10:44,596 - data_standardizer - INFO - Standardizing 59526 gene IDs
+2025-04-30 21:10:44,637 - data_standardizer - INFO - Found 59481 unique standardized gene IDs
+2025-04-30 21:10:44,642 - data_standardizer - INFO - Creating unified expression matrix
+2025-04-30 21:10:44,824 - rnaseq_utils - INFO - Loading GENCODE mapping from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/gencode_v24_complete_mapping.csv
+2025-04-30 21:10:46,144 - rnaseq_utils - INFO - Loaded GENCODE mapping for 121108 gene IDs
+/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/rnaseq_utils.py:361: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  substr_mask = normalized_tissue.str.contains(tissue_name.lower(), na=False)
+2025-04-30 21:10:46,977 - rnaseq_utils - WARNING - ENCODE: Unmapped tissues: 
+2025-04-30 21:10:46,977 - rnaseq_utils - INFO - Unmapped tissues for potential mapping: 
+2025-04-30 21:10:46,977 - rnaseq_utils - INFO - Unmapped tissues for ENCODE: 
+2025-04-30 21:10:46,979 - rnaseq_utils - INFO - Loading dataset-specific metadata from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/encode_metadata.json
+2025-04-30 21:10:46,979 - data_standardizer - INFO - Found ENCODE-specific metadata
+2025-04-30 21:10:46,979 - data_standardizer - INFO - Final dimensions check: 2 samples x 59481 genes
+2025-04-30 21:10:46,979 - data_standardizer - INFO - Expression matrix shape: (2, 59481)
+2025-04-30 21:10:46,984 - rnaseq_utils - WARNING - ENCODE: Missing tissue ontology mappings for 2 samples out of 2
+2025-04-30 21:10:46,985 - rnaseq_utils - WARNING - ENCODE: Unmapped tissues: 
+2025-04-30 21:10:46,985 - rnaseq_utils - WARNING - ENCODE: Missing developmental stage mappings for 2 samples out of 2
+2025-04-30 21:10:46,985 - rnaseq_utils - WARNING - ENCODE: Unmapped ages: 
+2025-04-30 21:10:47,006 - rnaseq_utils - INFO - Loading dataset-specific metadata from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/encode_metadata.json
+2025-04-30 21:10:47,007 - rnaseq_utils - INFO - Applying dataset-specific metadata from JSON file
+2025-04-30 21:10:47,007 - rnaseq_utils - INFO -   Updating obs column data_type
+2025-04-30 21:10:47,007 - rnaseq_utils - INFO -   Updating obs column assay_ontology
+2025-04-30 21:10:47,007 - rnaseq_utils - INFO -   Updating obs column species
+2025-04-30 21:10:47,007 - rnaseq_utils - INFO -   Updating obs column species_ontology
+2025-04-30 21:10:47,007 - rnaseq_utils - INFO - Dataset-specific metadata applied successfully
+... storing 'data_type' as categorical
+... storing 'expression_unit' as categorical
+... storing 'sample_id' as categorical
+... storing 'subject_id' as categorical
+... storing 'age' as categorical
+... storing 'species' as categorical
+... storing 'species_ontology' as categorical
+... storing 'tissue_original' as categorical
+... storing 'tissue_ontology' as categorical
+... storing 'data_type_original' as categorical
+... storing 'assay_ontology' as categorical
+... storing 'age_original' as categorical
+... storing 'developmental_stage_ontology' as categorical
+... storing 'gene_name' as categorical
+... storing 'gene_type' as categorical
+... storing 'chromosome' as categorical
+... storing 'mapping_source' as categorical
+2025-04-30 21:10:47,665 - data_standardizer - INFO - Verification: Saved AnnData loaded with var shape=(59481, 6), obs shape=(2, 17)
+2025-04-30 21:10:47,666 - data_standardizer - INFO - Saved AnnData to /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040/encode_standardized_v1.h5ad
+2025-04-30 21:10:47,668 - data_standardizer - INFO - Successfully processed ENCODE data with 2 samples and 59481 genes
+2025-04-30 21:10:47,680 - data_standardizer - INFO - Successfully processed ENCODE data: 2 samples and 59481 genes
+2025-04-30 21:10:47,680 - data_standardizer - INFO - ENCODE gene statistics:
+2025-04-30 21:10:47,681 - data_standardizer - INFO -   exact_match: 56996 genes (95.8%)
+2025-04-30 21:10:47,681 - data_standardizer - INFO -   unmapped: 2485 genes (4.2%)
+2025-04-30 21:10:47,681 - data_standardizer - INFO - Total processing time: 3.33 seconds
+2025-04-30 21:10:47,681 - data_standardizer - INFO - === Metadata Validation Summary ===
+2025-04-30 21:10:47,681 - data_standardizer - INFO - Dataset: ENCODE
+2025-04-30 21:10:47,681 - data_standardizer - INFO -   Samples: 2
+2025-04-30 21:10:47,681 - data_standardizer - INFO -   Status: warning
+2025-04-30 21:10:47,681 - data_standardizer - INFO -   Missing fields: None
+2025-04-30 21:10:47,681 - data_standardizer - INFO - ================================
+Step 3: Examining standardized data gene IDs
+Loaded standardized data: 2 samples, 59481 genes
+
+Gene ID format:
+Ensembl IDs: 58735/59481 (98.7%)
+
+Sample gene IDs:
+  10904
+  12954
+  12956
+  12958
+  12960
+
+Variable columns:
+  gene_id
+  original_ids
+  gene_name
+  gene_type
+  chromosome
+  mapping_source
+Step 4: Running the preprocessing step
+2025-04-30 21:10:57,872 - dataset_gene_id_preprocessor - INFO - Loading gene ID reference mapping from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/gene_id_reference_mapping.csv
+/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/preprocess_dataset_gene_ids.py:65: DtypeWarning: Columns (3,6) have mixed types. Specify dtype option on import or set low_memory=False.
+  mapping_df = pd.read_csv(mapping_file)
+2025-04-30 21:10:58,095 - dataset_gene_id_preprocessor - INFO - Loaded reference mapping with 154021 entries
+2025-04-30 21:11:01,597 - dataset_gene_id_preprocessor - INFO - Created numeric ID mapping with 128819 entries
+2025-04-30 21:11:01,597 - dataset_gene_id_preprocessor - INFO - Created Ensembl ID mapping with 154021 entries
+2025-04-30 21:11:01,601 - dataset_gene_id_preprocessor - INFO - Looking for datasets in /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040
+2025-04-30 21:11:01,603 - dataset_gene_id_preprocessor - INFO - Found 1 datasets: encode
+2025-04-30 21:11:01,603 - dataset_gene_id_preprocessor - INFO - Selected 1 datasets for processing
+2025-04-30 21:11:01,604 - dataset_gene_id_preprocessor - INFO - Loading encode dataset from /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040/encode_standardized_v1.h5ad
+2025-04-30 21:11:01,737 - dataset_gene_id_preprocessor - INFO - Loaded encode dataset with 2 samples and 59481 genes
+2025-04-30 21:11:01,737 - dataset_gene_id_preprocessor - INFO - Preprocessing ENCODE dataset with 59481 genes
+2025-04-30 21:11:06,834 - dataset_gene_id_preprocessor - INFO - Loaded ENCODE ID mapping with 300443 entries
+2025-04-30 21:11:08,052 - dataset_gene_id_preprocessor - INFO - Loaded enhanced Entrez-to-Ensembl mapping with 38436 entries
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO - ENCODE mapping details:
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO -   - Mapped from ENCODE mapping: 648
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO -   - Mapped from enhanced mapping: 0
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO -   - Mapped from reference mapping: 0
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO -   - Spike-in controls: 98
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO -   - Unmapped: 58735
+2025-04-30 21:11:09,084 - dataset_gene_id_preprocessor - INFO - Total mapped: 746/59481 genes (1.25%)
+2025-04-30 21:11:09,087 - dataset_gene_id_preprocessor - INFO - Saving preprocessed ENCODE dataset to /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040/preprocessed/encode_standardized_preprocessed.h5ad
+... storing 'gene_id' as categorical
+... storing 'original_gene_id' as categorical
+... storing 'ensembl_id' as categorical
+... storing 'gene_name' as categorical
+... storing 'gene_type' as categorical
+... storing 'chromosome' as categorical
+... storing 'mapping_source' as categorical
+... storing 'mapping_confidence' as categorical
+2025-04-30 21:11:09,592 - dataset_gene_id_preprocessor - INFO - Preprocessing completed successfully
+Step 5: Examining preprocessed data
+Loaded preprocessed data: 2 samples, 59481 genes
+
+Ensembl IDs in 'ensembl_id' column: 645/59481 (1.1%)
+
+First 5 ensembl_ids:
+  Original: ENST00000476434.1|ENSG00000161203.13|OTTHUMG00000156822.19|OTTHUMT00000346029.1|AP2M1-217|AP2M1|321|retained_intron|
+  Ensembl: ENSG00000161203
+  ---
+  Original: ENST00000496915.1|ENSG00000124126.13|OTTHUMG00000032685.4|OTTHUMT00000079625.1|PREX1-203|PREX1|478|processed_transcript|
+  Ensembl: ENSG00000124126
+  ---
+  Original: ENST00000335119.3|ENSG00000185972.5|OTTHUMG00000019901.1|OTTHUMT00000052418.1|CCIN-201|CCIN|1941|protein_coding|
+  Ensembl: ENSG00000185972
+  ---
+  Original: ENST00000308278.12|ENSG00000167695.14|OTTHUMG00000177491.5|OTTHUMT00000437155.4|FAM57A-202|FAM57A|2412|protein_coding|
+  Ensembl: ENSG00000167695
+  ---
+  Original: ENST00000470178.6|ENSG00000003402.19|OTTHUMG00000132819.19|OTTHUMT00000336716.4|CFLAR-220|CFLAR|516|protein_coding|
+  Ensembl: ENSG00000003402
+  ---
+
+Mapping source distribution:
+  unmapped: 58735 (98.7%)
+  encode_mapping: 648 (1.1%)
+  spike_in: 98 (0.2%)
+
+Rows where gene_id == ensembl_id: 746/59481 (1.3%)
+Validation test complete
+Results saved to /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/test_validation_20250430_211040

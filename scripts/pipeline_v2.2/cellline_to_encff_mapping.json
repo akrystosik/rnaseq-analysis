@@ -1,0 +1,23 @@
+{
+  "A549": [
+    "ENCFF244DNJ"
+  ],
+  "K562": [
+    "ENCFF171FQU"
+  ],
+  "HepG2": [
+    "ENCFF863QWG"
+  ],
+  "GM23248": [
+    "ENCFF640FPG"
+  ],
+  "Caki2": [
+    "ENCFF685WJV"
+  ],
+  "NCI-H460": [
+    "ENCFF876SRX"
+  ],
+  "Panc1": [
+    "ENCFF710IFD"
+  ]
+}

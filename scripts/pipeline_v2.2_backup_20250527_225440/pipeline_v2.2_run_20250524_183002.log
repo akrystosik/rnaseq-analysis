@@ -1,0 +1,20 @@
+[2025-05-24 18:30:02] === Starting RNA-seq Pipeline Run: 20250524_183002 ===
+[2025-05-24 18:30:02] INPUT BASE DIRECTORY: /mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq
+[2025-05-24 18:30:02] OUTPUT BASE DIRECTORY: /mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq
+[2025-05-24 18:30:02] --- Performing Pre-run Input Checks (from INPUT_BASE_DIR) ---
+[2025-05-24 18:30:02] --- Pre-run Input Checks Complete ---
+[2025-05-24 18:30:02] --- Stage 0: Preparing Entrez to Ensembl Mapping ---
+[2025-05-24 18:30:02] Entrez to Ensembl mapping file /mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/json_generated/entrez_to_ensembl_mapping.csv already exists and no relevant force flag. Skipping generation.
+[2025-05-24 18:30:02] --- Stage 0.5: Preparing GENCODE v24 GTF File ---
+[2025-05-24 18:30:02] Unzipped GTF /mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/gene_mapping_generated/gencode.v24.annotation.gtf is up-to-date in output. Skipping unzip.
+[2025-05-24 18:30:02] --- Stage A: Generating Primary Gene Annotation & Reference Map ---
+[2025-05-24 18:30:02] Running: python "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/pipeline_v2/gene_id_mapping_reference.py" \
+    --encode-dir "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/encode/raw_data" \
+    --entex-dir "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/encode/entex" \
+    --gencode-gtf "/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/gene_mapping_generated/gencode.v24.annotation.gtf" \
+    --entrez-mapping "/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/json_generated/entrez_to_ensembl_mapping.csv" \
+    --output "/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/gene_mapping_generated/gencode_v24_complete_mapping.csv" \
+    --temp-dir "/mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/temp_gene_ref_downloads" \
+    
+python: can't open file '/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/scripts/pipeline_v2/gene_id_mapping_reference.py': [Errno 2] No such file or directory
+[2025-05-24 18:30:02] ERROR: Stage A (Primary Gene Annotation Map generation to /mnt/czi-sci-ai/intrinsic-variation-gene-ex-2/rnaseq/metadata/gene_mapping_generated/gencode_v24_complete_mapping.csv) failed. Exiting.

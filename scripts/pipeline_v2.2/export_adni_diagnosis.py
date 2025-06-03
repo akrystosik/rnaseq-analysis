@@ -47,7 +47,8 @@ def export_adni_diagnosis(input_file=None, output_dir=None, diagnosis_source='h5
         dx_df_clean = dx_df.dropna(subset=['RID', 'DIAGNOSIS'])
         
         for rid, group in dx_df_clean.groupby('RID'):
-            subject_id = f"941_S_{int(rid)}"  # Reconstruct subject_id format
+            # Use the actual PTID from the data instead of reconstructing
+            subject_id = group['PTID'].iloc[0]  # Get PTID from first row of this RID group
             
             # Get all valid diagnoses for this subject
             valid_diagnoses = []
