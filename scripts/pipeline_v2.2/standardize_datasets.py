@@ -1312,16 +1312,30 @@ def process_adni_data(input_dir, output_file, adni_demographics_file=None, adni_
                     1: "Cognitively Normal", 2: "Mild Cognitive Impairment", 3: "Alzheimer's Disease",
                     -4: "Missing/Unknown"
                 })
-                dx_df_raw_cleaned = dx_df_raw.dropna(subset=['RID', 'EXAMDATE', 'DIAGNOSIS'])
+                # Don't require EXAMDATE - use USERDATE as backup for newer records
+                dx_df_raw_cleaned = dx_df_raw.dropna(subset=['RID', 'DIAGNOSIS'])
                 dx_df_raw_cleaned.loc[:, 'RID'] = pd.to_numeric(dx_df_raw_cleaned['RID'], errors='coerce').astype('Int64')
                 for rid_val, group in dx_df_raw_cleaned.groupby('RID'):
                     subject_diagnoses = []
-                    for _, row in group.sort_values(by='EXAMDATE').iterrows():
+                    # Sort by EXAMDATE, with NaT values at the end, then by USERDATE
+                    group_sorted = group.sort_values(by=['EXAMDATE', 'USERDATE'], na_position='last')
+                    
+                    for _, row in group_sorted.iterrows():
                         diag_code = row['DIAGNOSIS']
                         diag_label = diag_map_codes.get(diag_code, f"Unknown code: {diag_code}")
+                        
+                        # Use EXAMDATE if available, otherwise USERDATE
                         exam_date_val = row['EXAMDATE']
+                        if pd.isna(exam_date_val):
+                            exam_date_val = pd.to_datetime(row['USERDATE'], errors='coerce')
+                        
+                        # Use VISCODE if VISCODE2 is empty
+                        visit_code = str(row.get('VISCODE2', ''))
+                        if not visit_code or visit_code == 'nan' or visit_code == '':
+                            visit_code = str(row.get('VISCODE', 'N/A'))
+                        
                         subject_diagnoses.append({
-                            "visit_code": str(row.get('VISCODE2', 'N/A')),
+                            "visit_code": visit_code,
                             "exam_date": str(exam_date_val.date()) if pd.notna(exam_date_val) and hasattr(exam_date_val, 'date') else 'N/A',
                             "diagnosis_code": int(diag_code) if pd.notna(diag_code) else None,
                             "diagnosis_label": diag_label

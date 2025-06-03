@@ -1,22 +1,10 @@
 donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnosis_visit
-002_S_0295,1,Cognitively Normal,2006-05-10,bl
 002_S_0413,1,Cognitively Normal,2006-05-10,bl
-002_S_0559,1,Cognitively Normal,2006-06-27,bl
-002_S_0619,3,Alzheimer's Disease,2006-06-27,bl
-002_S_0685,1,Cognitively Normal,2006-07-24,bl
 002_S_0729,3,Alzheimer's Disease,2007-09-25,m12
-002_S_0782,2,Mild Cognitive Impairment,2006-08-23,bl
-002_S_0816,3,Alzheimer's Disease,2006-09-13,bl
-002_S_0938,3,Alzheimer's Disease,2006-10-20,bl
-002_S_0954,3,Alzheimer's Disease,2007-10-19,m12
-002_S_0955,3,Alzheimer's Disease,2006-11-08,bl
-002_S_1018,3,Alzheimer's Disease,2006-12-27,bl
-002_S_1070,3,Alzheimer's Disease,2008-09-22,m18
 002_S_1155,2,Mild Cognitive Impairment,2007-01-10,bl
 002_S_1261,2,Mild Cognitive Impairment,2017-03-14,m120
 002_S_1268,3,Alzheimer's Disease,2013-03-14,m72
 002_S_1280,1,Cognitively Normal,2007-03-02,bl
-002_S_2010,2,Mild Cognitive Impairment,2010-07-08,bl
 002_S_2043,2,Mild Cognitive Impairment,2010-09-16,bl
 002_S_2073,2,Mild Cognitive Impairment,2010-09-21,bl
 002_S_4171,3,Alzheimer's Disease,2014-03-05,m24
@@ -24,662 +12,121 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 002_S_4219,2,Mild Cognitive Impairment,2011-08-30,sc
 002_S_4225,3,Alzheimer's Disease,2018-11-08,m84
 002_S_4229,2,Mild Cognitive Impairment,2011-09-06,sc
-002_S_4237,2,Mild Cognitive Impairment,2011-09-08,sc
 002_S_4251,2,Mild Cognitive Impairment,2011-09-15,sc
-002_S_4262,3,Alzheimer's Disease,2016-10-20,m60
-002_S_4264,1,Cognitively Normal,2011-09-22,sc
 002_S_4270,2,Mild Cognitive Impairment,2015-12-01,m48
-002_S_4374,2,Mild Cognitive Impairment,2011-11-10,sc
 002_S_4447,2,Mild Cognitive Impairment,2012-01-03,sc
-002_S_4450,2,Mild Cognitive Impairment,2012-01-05,sc
 002_S_4473,2,Mild Cognitive Impairment,2012-01-12,sc
 002_S_4521,3,Alzheimer's Disease,2015-02-10,m36
-002_S_4654,2,Mild Cognitive Impairment,2012-03-29,sc
-002_S_4662,2,Mild Cognitive Impairment,2012-04-03,sc
-002_S_4746,3,Alzheimer's Disease,2015-08-27,m36
-002_S_4799,2,Mild Cognitive Impairment,2012-06-07,sc
-002_S_5018,3,Alzheimer's Disease,2012-10-25,sc
-002_S_5152,1,Cognitively Normal,2013-04-09,sc
-002_S_5178,2,Mild Cognitive Impairment,2024-12-04,m138
-002_S_5230,1,Cognitively Normal,2013-06-13,sc
-002_S_5256,1,Cognitively Normal,2013-07-02,sc
-002_S_6006,3,Alzheimer's Disease,2017-03-16,sc
-002_S_6007,2,Mild Cognitive Impairment,2024-10-21,m90
-002_S_6009,1,Cognitively Normal,2017-03-30,sc
-002_S_6011,1,Cognitively Normal,2017-04-25,sc
-002_S_6012,1,Cognitively Normal,2017-04-27,sc
-002_S_6021,1,Cognitively Normal,2017-05-23,sc
-002_S_6030,1,Cognitively Normal,2017-06-08,sc
-002_S_6040,2,Mild Cognitive Impairment,2017-07-06,sc
-002_S_6053,1,Cognitively Normal,2017-07-18,sc
-002_S_6066,1,Cognitively Normal,2017-08-15,sc
-002_S_6070,1,Cognitively Normal,2017-08-17,sc
-002_S_6103,1,Cognitively Normal,2017-10-24,sc
-002_S_6139,2,Mild Cognitive Impairment,2017-12-05,sc
-002_S_6404,1,Cognitively Normal,2018-05-29,sc
-002_S_6456,1,Cognitively Normal,2018-06-19,sc
-002_S_6652,2,Mild Cognitive Impairment,2018-12-11,sc
-002_S_6676,2,Mild Cognitive Impairment,2019-01-17,sc
-002_S_6680,1,Cognitively Normal,2019-01-22,sc
-002_S_6695,2,Mild Cognitive Impairment,2019-02-28,sc
-002_S_6864,2,Mild Cognitive Impairment,2020-03-03,sc
 003_S_0907,1,Cognitively Normal,2006-10-16,bl
 003_S_0908,2,Mild Cognitive Impairment,2006-10-12,bl
-003_S_0931,1,Cognitively Normal,2006-11-13,bl
-003_S_0981,1,Cognitively Normal,2006-10-30,bl
-003_S_10042,1,Cognitively Normal,2024-02-13,sc
-003_S_10073,1,Cognitively Normal,2024-04-25,sc
-003_S_10082,1,Cognitively Normal,2024-04-30,sc
-003_S_10158,1,Cognitively Normal,2024-07-11,sc
-003_S_1021,1,Cognitively Normal,2006-12-14,bl
-003_S_10426,2,Mild Cognitive Impairment,2025-02-18,sc
 003_S_1057,3,Alzheimer's Disease,2009-03-05,m24
-003_S_1059,3,Alzheimer's Disease,2006-12-12,bl
-003_S_10593,1,Cognitively Normal,2025-03-26,sc
-003_S_10622,1,Cognitively Normal,2025-03-27,sc
 003_S_1074,3,Alzheimer's Disease,2016-03-29,m108
 003_S_1122,2,Mild Cognitive Impairment,2007-01-12,bl
-003_S_1257,3,Alzheimer's Disease,2007-03-28,bl
 003_S_2374,2,Mild Cognitive Impairment,2011-05-13,bl
 003_S_4081,2,Mild Cognitive Impairment,2024-09-25,m156
-003_S_4106,1,Cognitively Normal,2011-06-28,sc
-003_S_4118,1,Cognitively Normal,2011-07-06,sc
-003_S_4119,1,Cognitively Normal,2011-07-06,sc
 003_S_4136,3,Alzheimer's Disease,2011-07-19,sc
-003_S_4142,3,Alzheimer's Disease,2011-07-20,sc
 003_S_4152,3,Alzheimer's Disease,2011-07-26,sc
-003_S_4207,2,Mild Cognitive Impairment,2011-08-19,sc
 003_S_4288,2,Mild Cognitive Impairment,2014-02-11,m24
 003_S_4350,1,Cognitively Normal,2011-10-31,sc
 003_S_4354,3,Alzheimer's Disease,2021-11-16,m114
 003_S_4373,3,Alzheimer's Disease,2011-11-10,sc
 003_S_4441,1,Cognitively Normal,2011-12-20,sc
-003_S_4524,2,Mild Cognitive Impairment,2012-02-03,sc
 003_S_4555,1,Cognitively Normal,2012-02-17,sc
-003_S_4644,1,Cognitively Normal,2012-03-27,sc
-003_S_4828,2,Mild Cognitive Impairment,2012-06-26,sc
-003_S_4839,1,Cognitively Normal,2012-06-29,sc
-003_S_4840,1,Cognitively Normal,2012-06-23,sc
-003_S_4872,1,Cognitively Normal,2012-07-25,sc
-003_S_4892,3,Alzheimer's Disease,2012-07-26,sc
-003_S_4900,1,Cognitively Normal,2012-08-03,sc
-003_S_5130,2,Mild Cognitive Impairment,2019-12-19,m78
-003_S_5150,1,Cognitively Normal,2013-04-09,sc
-003_S_5154,1,Cognitively Normal,2013-01-07,m06
-003_S_5165,3,Alzheimer's Disease,2013-04-25,sc
-003_S_5187,3,Alzheimer's Disease,2013-05-10,sc
-003_S_5209,1,Cognitively Normal,2013-06-21,sc
-003_S_6014,1,Cognitively Normal,2018-02-14,sc
-003_S_6036,1,Cognitively Normal,2017-07-14,sc
-003_S_6067,1,Cognitively Normal,2017-08-24,sc
-003_S_6091,1,Cognitively Normal,2017-10-18,sc
-003_S_6092,1,Cognitively Normal,2017-12-01,sc
-003_S_6158,1,Cognitively Normal,2018-02-13,sc
-003_S_6256,1,Cognitively Normal,2018-03-06,sc
-003_S_6257,1,Cognitively Normal,2018-03-07,sc
-003_S_6258,2,Mild Cognitive Impairment,2018-03-08,sc
-003_S_6259,1,Cognitively Normal,2018-03-23,sc
-003_S_6260,1,Cognitively Normal,2018-05-22,sc
-003_S_6261,1,Cognitively Normal,2018-03-30,sc
-003_S_6264,3,Alzheimer's Disease,2018-06-04,sc
-003_S_6268,2,Mild Cognitive Impairment,2018-06-08,sc
-003_S_6307,1,Cognitively Normal,2018-07-16,sc
-003_S_6432,2,Mild Cognitive Impairment,2018-06-27,sc
-003_S_6479,2,Mild Cognitive Impairment,2018-07-06,sc
-003_S_6490,1,Cognitively Normal,2018-08-28,sc
-003_S_6606,2,Mild Cognitive Impairment,2018-11-13,sc
-003_S_6644,2,Mild Cognitive Impairment,2024-03-22,m60
-003_S_6678,2,Mild Cognitive Impairment,2019-01-25,sc
-003_S_6833,3,Alzheimer's Disease,2019-11-12,sc
-003_S_6915,1,Cognitively Normal,2021-03-19,sc
-003_S_6924,1,Cognitively Normal,2021-03-30,sc
-003_S_6954,2,Mild Cognitive Impairment,2021-05-26,sc
-003_S_6959,1,Cognitively Normal,2021-06-16,sc
-003_S_6972,2,Mild Cognitive Impairment,2021-06-30,sc
-003_S_6996,1,Cognitively Normal,2021-08-23,sc
-003_S_7010,1,Cognitively Normal,2021-09-23,sc
-005_S_0221,3,Alzheimer's Disease,2006-03-23,bl
-005_S_0222,3,Alzheimer's Disease,2007-03-28,m12
-005_S_0223,3,Alzheimer's Disease,2009-03-20,m36
-005_S_0324,2,Mild Cognitive Impairment,2006-04-21,bl
-005_S_0448,3,Alzheimer's Disease,2014-05-20,m96
 005_S_0546,2,Mild Cognitive Impairment,2006-07-13,bl
 005_S_0553,1,Cognitively Normal,2006-06-28,bl
 005_S_0572,3,Alzheimer's Disease,2007-07-12,m12
 005_S_0602,2,Mild Cognitive Impairment,2013-12-20,m84
 005_S_0610,1,Cognitively Normal,2006-07-10,bl
-005_S_0814,3,Alzheimer's Disease,2006-09-27,bl
-005_S_0929,3,Alzheimer's Disease,2006-11-08,bl
-005_S_10100,1,Cognitively Normal,2024-05-02,sc
-005_S_10101,1,Cognitively Normal,2024-07-09,sc
-005_S_10205,2,Mild Cognitive Impairment,2024-08-15,sc
-005_S_10237,1,Cognitively Normal,2024-11-21,sc
-005_S_10240,2,Mild Cognitive Impairment,2025-02-06,bl
-005_S_10288,1,Cognitively Normal,2024-10-10,sc
-005_S_10300,1,Cognitively Normal,2024-11-21,sc
-005_S_10301,1,Cognitively Normal,2024-11-14,sc
-005_S_10302,1,Cognitively Normal,2024-10-31,sc
-005_S_10421,1,Cognitively Normal,2025-01-06,sc
-005_S_10446,2,Mild Cognitive Impairment,2025-02-06,sc
-005_S_10646,1,Cognitively Normal,2025-04-17,sc
-005_S_1224,3,Alzheimer's Disease,2010-03-12,m36
-005_S_1341,3,Alzheimer's Disease,2007-04-04,bl
 005_S_2390,2,Mild Cognitive Impairment,2011-08-01,bl
 005_S_4168,2,Mild Cognitive Impairment,2011-08-16,sc
 005_S_4185,2,Mild Cognitive Impairment,2011-08-16,sc
-005_S_4617,3,Alzheimer's Disease,2012-03-22,sc
 005_S_4707,3,Alzheimer's Disease,2012-05-01,sc
-005_S_4910,3,Alzheimer's Disease,2012-08-16,sc
-005_S_5038,3,Alzheimer's Disease,2012-11-19,sc
-005_S_5119,3,Alzheimer's Disease,2013-03-22,sc
-005_S_6084,1,Cognitively Normal,2017-10-25,sc
-005_S_6093,1,Cognitively Normal,2017-10-25,sc
-005_S_6393,1,Cognitively Normal,2018-05-30,sc
-005_S_6427,2,Mild Cognitive Impairment,2018-06-11,sc
-006_S_0484,1,Cognitively Normal,2006-09-13,bl
 006_S_0498,1,Cognitively Normal,2006-09-06,bl
-006_S_0547,3,Alzheimer's Disease,2006-09-21,bl
-006_S_0653,3,Alzheimer's Disease,2006-10-10,bl
-006_S_0675,3,Alzheimer's Disease,2008-12-15,m24
-006_S_0681,1,Cognitively Normal,2006-09-20,bl
 006_S_0731,1,Cognitively Normal,2006-09-05,bl
-006_S_10504,2,Mild Cognitive Impairment,2025-02-27,sc
 006_S_1130,3,Alzheimer's Disease,2008-07-15,m18
 006_S_4150,1,Cognitively Normal,2011-07-27,sc
 006_S_4153,3,Alzheimer's Disease,2011-07-27,sc
-006_S_4192,3,Alzheimer's Disease,2011-09-19,sc
 006_S_4346,3,Alzheimer's Disease,2015-01-14,m36
 006_S_4357,1,Cognitively Normal,2011-11-08,sc
 006_S_4363,3,Alzheimer's Disease,2015-01-06,m36
 006_S_4449,1,Cognitively Normal,2012-01-09,sc
-006_S_4485,1,Cognitively Normal,2012-01-23,sc
 006_S_4515,3,Alzheimer's Disease,2012-10-03,m06
-006_S_4528,2,Mild Cognitive Impairment,2012-02-08,sc
 006_S_4546,3,Alzheimer's Disease,2012-02-15,sc
-006_S_4679,2,Mild Cognitive Impairment,2012-05-21,sc
-006_S_4713,3,Alzheimer's Disease,2024-03-20,m138
-006_S_4867,3,Alzheimer's Disease,2012-07-24,sc
-006_S_4960,2,Mild Cognitive Impairment,2012-09-24,sc
-006_S_5153,1,Cognitively Normal,2013-04-11,sc
-006_S_6209,1,Cognitively Normal,2018-02-22,sc
-006_S_6234,1,Cognitively Normal,2018-02-22,sc
-006_S_6243,2,Mild Cognitive Impairment,2018-02-26,sc
-006_S_6252,3,Alzheimer's Disease,2019-08-27,m12
-006_S_6277,1,Cognitively Normal,2018-03-14,sc
-006_S_6291,2,Mild Cognitive Impairment,2018-03-28,sc
-006_S_6375,1,Cognitively Normal,2018-05-10,sc
-006_S_6383,1,Cognitively Normal,2018-06-05,sc
-006_S_6441,2,Mild Cognitive Impairment,2018-07-03,sc
-006_S_6500,1,Cognitively Normal,2018-07-10,sc
-006_S_6610,2,Mild Cognitive Impairment,2018-10-16,sc
-006_S_6651,2,Mild Cognitive Impairment,2018-12-13,sc
-006_S_6657,2,Mild Cognitive Impairment,2018-12-19,sc
-006_S_6672,2,Mild Cognitive Impairment,2019-01-15,sc
-006_S_6674,2,Mild Cognitive Impairment,2019-01-16,sc
-006_S_6677,2,Mild Cognitive Impairment,2019-01-17,sc
-006_S_6681,2,Mild Cognitive Impairment,2019-01-24,sc
-006_S_6682,2,Mild Cognitive Impairment,2019-01-24,sc
-006_S_6689,3,Alzheimer's Disease,2019-02-13,sc
-006_S_6696,2,Mild Cognitive Impairment,2019-03-19,sc
-006_S_6727,2,Mild Cognitive Impairment,2019-04-24,sc
-006_S_6770,3,Alzheimer's Disease,2021-10-10,m24
-007_S_0041,3,Alzheimer's Disease,2007-05-14,m18
 007_S_0068,1,Cognitively Normal,2005-12-14,bl
-007_S_0070,1,Cognitively Normal,2006-02-08,bl
 007_S_0101,3,Alzheimer's Disease,2008-01-08,m24
 007_S_0128,3,Alzheimer's Disease,2007-08-22,m18
-007_S_0249,3,Alzheimer's Disease,2007-04-09,m12
-007_S_0293,3,Alzheimer's Disease,2008-04-21,m24
-007_S_0316,3,Alzheimer's Disease,2006-04-24,bl
-007_S_0344,3,Alzheimer's Disease,2007-04-25,m12
-007_S_0414,2,Mild Cognitive Impairment,2006-06-02,bl
-007_S_0698,3,Alzheimer's Disease,2014-11-03,m96
-007_S_10075,3,Alzheimer's Disease,2024-03-26,sc
-007_S_10130,1,Cognitively Normal,2024-07-16,sc
-007_S_10258,1,Cognitively Normal,2024-12-04,sc
-007_S_10467,1,Cognitively Normal,2025-03-11,sc
 007_S_1206,1,Cognitively Normal,2007-02-01,bl
 007_S_1222,2,Mild Cognitive Impairment,2024-01-30,m204
-007_S_1248,3,Alzheimer's Disease,2007-02-20,bl
-007_S_1304,3,Alzheimer's Disease,2007-04-03,bl
-007_S_1339,3,Alzheimer's Disease,2007-03-28,bl
 007_S_2058,2,Mild Cognitive Impairment,2010-10-06,bl
-007_S_2106,3,Alzheimer's Disease,2013-11-08,m36
 007_S_2394,2,Mild Cognitive Impairment,2011-09-16,bl
 007_S_4272,3,Alzheimer's Disease,2023-01-20,m132
 007_S_4387,1,Cognitively Normal,2011-11-21,sc
 007_S_4467,2,Mild Cognitive Impairment,2012-01-11,sc
 007_S_4488,1,Cognitively Normal,2012-01-19,sc
 007_S_4516,1,Cognitively Normal,2012-01-30,sc
-007_S_4568,3,Alzheimer's Disease,2012-02-23,sc
 007_S_4611,2,Mild Cognitive Impairment,2012-03-14,sc
 007_S_4620,1,Cognitively Normal,2012-03-19,sc
-007_S_4637,3,Alzheimer's Disease,2022-10-25,m126
-007_S_4911,3,Alzheimer's Disease,2012-08-16,sc
-007_S_5196,3,Alzheimer's Disease,2013-05-20,sc
-007_S_5265,3,Alzheimer's Disease,2022-10-04,m108
-007_S_6120,1,Cognitively Normal,2017-11-07,sc
-007_S_6255,1,Cognitively Normal,2018-03-05,sc
-007_S_6310,1,Cognitively Normal,2018-04-09,sc
-007_S_6323,1,Cognitively Normal,2018-04-17,sc
-007_S_6341,3,Alzheimer's Disease,2021-07-19,m36
-007_S_6421,2,Mild Cognitive Impairment,2018-06-05,sc
-007_S_6455,1,Cognitively Normal,2018-06-19,sc
-007_S_6515,1,Cognitively Normal,2018-07-16,sc
-007_S_6521,1,Cognitively Normal,2018-07-17,sc
-009_S_0751,2,Mild Cognitive Impairment,2021-06-29,m180
 009_S_0842,2,Mild Cognitive Impairment,2012-10-31,m72
-009_S_0862,1,Cognitively Normal,2006-10-04,bl
-009_S_10262,1,Cognitively Normal,2024-10-01,sc
-009_S_10280,1,Cognitively Normal,2024-10-08,sc
 009_S_1030,3,Alzheimer's Disease,2011-03-01,m48
-009_S_10620,2,Mild Cognitive Impairment,2025-04-18,sc
-009_S_1199,2,Mild Cognitive Impairment,2007-01-26,bl
-009_S_1334,3,Alzheimer's Disease,2007-04-16,bl
-009_S_1354,3,Alzheimer's Disease,2007-04-16,bl
 009_S_2208,2,Mild Cognitive Impairment,2011-02-22,bl
 009_S_2381,3,Alzheimer's Disease,2013-06-13,m24
 009_S_4324,3,Alzheimer's Disease,2013-12-16,m24
 009_S_4337,2,Mild Cognitive Impairment,2012-11-07,m12
-009_S_4358,1,Cognitively Normal,2011-11-10,sc
 009_S_4359,2,Mild Cognitive Impairment,2011-11-18,sc
 009_S_4388,2,Mild Cognitive Impairment,2012-07-11,m06
 009_S_4530,3,Alzheimer's Disease,2012-08-29,m06
-009_S_4543,2,Mild Cognitive Impairment,2012-02-12,sc
 009_S_4564,2,Mild Cognitive Impairment,2012-02-27,sc
 009_S_4612,1,Cognitively Normal,2012-03-14,sc
-009_S_4741,3,Alzheimer's Disease,2013-01-17,m06
-009_S_4814,2,Mild Cognitive Impairment,2012-06-18,sc
-009_S_4903,2,Mild Cognitive Impairment,2012-08-08,sc
-009_S_4958,3,Alzheimer's Disease,2013-04-17,m06
-009_S_5000,2,Mild Cognitive Impairment,2012-10-19,sc
-009_S_5027,3,Alzheimer's Disease,2012-11-08,sc
-009_S_5037,3,Alzheimer's Disease,2012-11-16,sc
-009_S_5125,1,Cognitively Normal,2013-03-18,sc
-009_S_5147,1,Cognitively Normal,2013-04-08,sc
-009_S_5161,1,Cognitively Normal,2013-04-23,sc
-009_S_5176,1,Cognitively Normal,2013-05-06,sc
-009_S_5224,3,Alzheimer's Disease,2013-06-12,sc
-009_S_5252,3,Alzheimer's Disease,2013-07-01,sc
-009_S_6149,1,Cognitively Normal,2017-12-11,sc
-009_S_6163,1,Cognitively Normal,2018-01-31,sc
-009_S_6212,1,Cognitively Normal,2018-02-12,sc
-009_S_6286,1,Cognitively Normal,2018-04-02,sc
-009_S_6402,2,Mild Cognitive Impairment,2018-05-30,sc
-010_S_0067,1,Cognitively Normal,2006-01-18,bl
-010_S_0161,3,Alzheimer's Disease,2007-03-30,m12
-010_S_0419,1,Cognitively Normal,2006-06-30,bl
-010_S_0420,2,Mild Cognitive Impairment,2010-09-23,m48
-010_S_0422,2,Mild Cognitive Impairment,2006-09-15,bl
-010_S_0472,1,Cognitively Normal,2006-11-21,bl
-010_S_0786,3,Alzheimer's Disease,2006-10-18,bl
-010_S_0829,3,Alzheimer's Disease,2007-02-27,bl
-010_S_0904,3,Alzheimer's Disease,2009-01-29,m24
-010_S_4135,2,Mild Cognitive Impairment,2011-07-29,sc
-010_S_4345,1,Cognitively Normal,2011-11-22,sc
-010_S_4442,1,Cognitively Normal,2012-01-20,sc
-010_S_4481,2,Mild Cognitive Impairment,2012-07-31,sc
-010_S_5163,3,Alzheimer's Disease,2013-05-06,sc
-010_S_6555,1,Cognitively Normal,2018-08-10,sc
-010_S_6567,1,Cognitively Normal,2018-09-04,sc
-010_S_6748,2,Mild Cognitive Impairment,2019-07-09,sc
-011_S_0002,2,Mild Cognitive Impairment,2012-10-04,m84
-011_S_0003,3,Alzheimer's Disease,2005-09-30,bl
-011_S_0005,1,Cognitively Normal,2005-09-30,bl
 011_S_0008,2,Mild Cognitive Impairment,2015-11-10,m120
-011_S_0010,3,Alzheimer's Disease,2005-11-10,bl
-011_S_0016,1,Cognitively Normal,2005-10-25,bl
 011_S_0021,1,Cognitively Normal,2005-11-01,bl
-011_S_0022,2,Mild Cognitive Impairment,2007-10-22,m24
 011_S_0023,1,Cognitively Normal,2005-11-08,bl
-011_S_0053,3,Alzheimer's Disease,2005-11-29,bl
-011_S_0168,2,Mild Cognitive Impairment,2006-02-20,bl
-011_S_0183,3,Alzheimer's Disease,2006-04-04,bl
-011_S_0241,3,Alzheimer's Disease,2006-09-27,m06
-011_S_0326,3,Alzheimer's Disease,2009-03-30,m36
-011_S_0362,3,Alzheimer's Disease,2009-04-07,m36
-011_S_0856,3,Alzheimer's Disease,2007-03-30,m06
-011_S_0861,3,Alzheimer's Disease,2008-03-25,m18
-011_S_10026,3,Alzheimer's Disease,2023-12-05,sc
-011_S_10033,3,Alzheimer's Disease,2024-01-09,sc
-011_S_10041,1,Cognitively Normal,2024-01-24,sc
-011_S_10044,3,Alzheimer's Disease,2024-01-29,sc
-011_S_10045,1,Cognitively Normal,2024-01-31,sc
-011_S_10257,3,Alzheimer's Disease,2024-09-18,sc
-011_S_10261,1,Cognitively Normal,2024-09-24,sc
-011_S_10278,1,Cognitively Normal,2024-10-03,sc
-011_S_10294,1,Cognitively Normal,2024-10-31,sc
-011_S_10296,3,Alzheimer's Disease,2024-11-06,sc
-011_S_10359,2,Mild Cognitive Impairment,2024-11-18,sc
-011_S_10371,1,Cognitively Normal,2024-12-16,sc
-011_S_10384,1,Cognitively Normal,2024-12-09,sc
-011_S_10385,1,Cognitively Normal,2024-12-09,sc
-011_S_10483,2,Mild Cognitive Impairment,2025-03-24,sc
-011_S_10588,1,Cognitively Normal,2025-04-16,sc
 011_S_1080,3,Alzheimer's Disease,2011-01-14,m48
 011_S_1282,3,Alzheimer's Disease,2008-02-28,m12
 011_S_2274,3,Alzheimer's Disease,2012-02-16,m12
 011_S_4075,1,Cognitively Normal,2011-06-02,sc
-011_S_4105,2,Mild Cognitive Impairment,2022-01-07,m126
 011_S_4120,1,Cognitively Normal,2011-07-06,sc
-011_S_4180,1,Cognitively Normal,2011-08-10,sc
 011_S_4222,1,Cognitively Normal,2011-08-31,sc
 011_S_4235,2,Mild Cognitive Impairment,2011-09-07,sc
-011_S_4278,3,Alzheimer's Disease,2024-09-23,m156
-011_S_4326,2,Mild Cognitive Impairment,2011-10-20,sc
 011_S_4366,3,Alzheimer's Disease,2012-11-13,m12
-011_S_4519,3,Alzheimer's Disease,2012-01-30,sc
 011_S_4547,3,Alzheimer's Disease,2017-08-23,m66
-011_S_4812,3,Alzheimer's Disease,2012-06-21,sc
-011_S_4827,3,Alzheimer's Disease,2012-06-26,sc
-011_S_4845,3,Alzheimer's Disease,2012-07-10,sc
-011_S_4893,3,Alzheimer's Disease,2016-10-03,m48
-011_S_4906,3,Alzheimer's Disease,2012-08-07,sc
-011_S_4912,3,Alzheimer's Disease,2012-08-17,sc
-011_S_4949,3,Alzheimer's Disease,2012-09-11,sc
-011_S_6130,1,Cognitively Normal,2017-11-22,sc
-011_S_6303,3,Alzheimer's Disease,2018-04-16,sc
-011_S_6367,1,Cognitively Normal,2018-05-14,sc
-011_S_6418,1,Cognitively Normal,2018-06-11,sc
-011_S_6465,2,Mild Cognitive Impairment,2024-09-09,m72
-011_S_6618,3,Alzheimer's Disease,2024-10-04,m72
-011_S_6714,1,Cognitively Normal,2019-04-08,sc
-011_S_7022,1,Cognitively Normal,2022-01-07,sc
-011_S_7028,1,Cognitively Normal,2022-03-04,sc
-011_S_7048,1,Cognitively Normal,2022-03-11,sc
-011_S_7089,1,Cognitively Normal,2022-03-04,sc
-011_S_7112,1,Cognitively Normal,2022-10-12,sc
-012_S_0634,2,Mild Cognitive Impairment,2006-07-24,bl
 012_S_0637,1,Cognitively Normal,2006-07-24,bl
-012_S_0689,3,Alzheimer's Disease,2006-07-24,bl
-012_S_0712,3,Alzheimer's Disease,2006-07-24,bl
-012_S_0720,3,Alzheimer's Disease,2006-08-24,bl
-012_S_0803,3,Alzheimer's Disease,2006-10-04,bl
-012_S_0917,2,Mild Cognitive Impairment,2006-12-19,bl
-012_S_0932,2,Mild Cognitive Impairment,2006-11-06,bl
-012_S_1009,2,Mild Cognitive Impairment,2007-12-04,m12
-012_S_10213,2,Mild Cognitive Impairment,2024-08-27,sc
-012_S_10244,1,Cognitively Normal,2024-10-02,sc
-012_S_10277,1,Cognitively Normal,2024-10-07,sc
-012_S_10287,2,Mild Cognitive Impairment,2024-10-24,sc
-012_S_10312,1,Cognitively Normal,2024-10-24,sc
-012_S_10313,1,Cognitively Normal,2024-10-24,sc
-012_S_1033,3,Alzheimer's Disease,2007-06-25,m06
-012_S_10454,1,Cognitively Normal,2025-01-23,sc
-012_S_10472,1,Cognitively Normal,2025-02-19,sc
-012_S_1133,1,Cognitively Normal,2007-01-30,bl
-012_S_1165,2,Mild Cognitive Impairment,2007-01-18,bl
-012_S_1175,2,Mild Cognitive Impairment,2007-01-19,bl
-012_S_1212,1,Cognitively Normal,2007-01-24,bl
-012_S_1292,3,Alzheimer's Disease,2007-10-01,m06
-012_S_1321,2,Mild Cognitive Impairment,2007-03-15,bl
 012_S_4012,2,Mild Cognitive Impairment,2011-03-22,sc
 012_S_4026,1,Cognitively Normal,2011-05-03,sc
 012_S_4094,3,Alzheimer's Disease,2012-02-01,m06
 012_S_4128,2,Mild Cognitive Impairment,2011-07-20,sc
-012_S_4188,3,Alzheimer's Disease,2014-10-13,m36
-012_S_4246,1,Cognitively Normal,2011-09-29,sc
-012_S_4247,2,Mild Cognitive Impairment,2011-09-29,sc
-012_S_4316,1,Cognitively Normal,2011-10-18,sc
-012_S_4425,1,Cognitively Normal,2011-12-09,sc
-012_S_4544,3,Alzheimer's Disease,2012-02-13,sc
 012_S_4545,1,Cognitively Normal,2012-02-13,sc
-012_S_4642,1,Cognitively Normal,2012-03-26,sc
 012_S_4643,1,Cognitively Normal,2012-03-27,sc
-012_S_4849,2,Mild Cognitive Impairment,2012-07-17,sc
-012_S_4987,2,Mild Cognitive Impairment,2012-10-10,sc
-012_S_5121,3,Alzheimer's Disease,2015-06-03,m24
-012_S_5157,1,Cognitively Normal,2013-04-25,sc
-012_S_5195,1,Cognitively Normal,2013-06-04,sc
-012_S_5213,1,Cognitively Normal,2013-06-23,sc
-012_S_6073,3,Alzheimer's Disease,2019-10-30,m24
-012_S_6503,2,Mild Cognitive Impairment,2018-07-10,sc
-012_S_6760,2,Mild Cognitive Impairment,2019-06-18,sc
-012_S_6837,3,Alzheimer's Disease,2019-12-02,sc
-013_S_0240,3,Alzheimer's Disease,2007-11-07,m18
-013_S_0325,3,Alzheimer's Disease,2008-01-28,m18
-013_S_0502,1,Cognitively Normal,2006-09-25,bl
-013_S_0575,1,Cognitively Normal,2006-09-26,bl
-013_S_0592,3,Alzheimer's Disease,2007-01-10,bl
-013_S_0699,3,Alzheimer's Disease,2006-11-26,bl
-013_S_0860,3,Alzheimer's Disease,2008-03-12,m12
-013_S_0996,3,Alzheimer's Disease,2006-12-21,bl
-013_S_1035,1,Cognitively Normal,2006-12-04,bl
-013_S_10680,2,Mild Cognitive Impairment,2025-04-15,sc
-013_S_1120,2,Mild Cognitive Impairment,2007-01-04,bl
-013_S_1161,3,Alzheimer's Disease,2007-01-10,bl
 013_S_1186,3,Alzheimer's Disease,2015-04-01,m96
-013_S_1205,3,Alzheimer's Disease,2007-02-08,bl
-013_S_1275,2,Mild Cognitive Impairment,2007-03-26,bl
-013_S_1276,1,Cognitively Normal,2007-03-27,bl
 013_S_2324,2,Mild Cognitive Impairment,2011-04-28,bl
 013_S_2389,2,Mild Cognitive Impairment,2011-07-27,bl
-013_S_4236,2,Mild Cognitive Impairment,2011-09-13,sc
-013_S_4261,2,Mild Cognitive Impairment,2011-09-27,sc
 013_S_4268,2,Mild Cognitive Impairment,2011-10-18,sc
 013_S_4395,2,Mild Cognitive Impairment,2011-11-30,sc
-013_S_4416,1,Cognitively Normal,2011-12-12,sc
-013_S_4570,1,Cognitively Normal,2012-02-29,sc
-013_S_4579,2,Mild Cognitive Impairment,2013-01-08,m06
-013_S_4580,1,Cognitively Normal,2012-03-07,sc
 013_S_4595,3,Alzheimer's Disease,2013-04-17,m12
-013_S_4616,1,Cognitively Normal,2012-03-21,sc
-013_S_4681,1,Cognitively Normal,2012-04-18,sc
-013_S_4695,1,Cognitively Normal,2012-06-06,sc
-013_S_4702,2,Mild Cognitive Impairment,2012-05-01,sc
-013_S_4731,1,Cognitively Normal,2012-05-14,sc
-013_S_4761,2,Mild Cognitive Impairment,2012-05-29,sc
-013_S_4768,2,Mild Cognitive Impairment,2012-05-29,sc
-013_S_4791,2,Mild Cognitive Impairment,2012-06-13,sc
-013_S_4917,2,Mild Cognitive Impairment,2012-08-29,sc
-013_S_4985,2,Mild Cognitive Impairment,2012-10-10,sc
-013_S_5071,3,Alzheimer's Disease,2013-01-30,sc
-013_S_5085,2,Mild Cognitive Impairment,2013-02-13,sc
-013_S_5104,1,Cognitively Normal,2013-02-27,sc
-013_S_5117,1,Cognitively Normal,2013-03-13,sc
-013_S_5137,1,Cognitively Normal,2013-04-03,sc
-013_S_5171,1,Cognitively Normal,2013-05-01,sc
-013_S_5182,1,Cognitively Normal,2013-05-22,sc
-013_S_5192,1,Cognitively Normal,2013-05-22,sc
-013_S_5264,2,Mild Cognitive Impairment,2013-07-17,sc
-013_S_6206,2,Mild Cognitive Impairment,2018-07-11,sc
-013_S_6725,2,Mild Cognitive Impairment,2019-04-24,sc
-013_S_6768,3,Alzheimer's Disease,2019-07-17,sc
-013_S_6780,1,Cognitively Normal,2019-08-28,sc
-013_S_6865,2,Mild Cognitive Impairment,2020-02-03,sc
-013_S_6970,2,Mild Cognitive Impairment,2021-08-05,sc
-013_S_6975,3,Alzheimer's Disease,2021-08-05,sc
-013_S_7057,3,Alzheimer's Disease,2022-08-18,sc
-013_S_7097,2,Mild Cognitive Impairment,2022-09-12,sc
-013_S_7103,1,Cognitively Normal,2022-09-12,sc
-013_S_7107,2,Mild Cognitive Impairment,2022-11-16,sc
-013_S_7110,2,Mild Cognitive Impairment,2023-03-08,sc
-013_S_7118,1,Cognitively Normal,2022-11-11,sc
-013_S_7124,2,Mild Cognitive Impairment,2023-04-20,sc
 014_S_0169,2,Mild Cognitive Impairment,2006-02-16,bl
-014_S_0328,3,Alzheimer's Disease,2006-04-13,bl
-014_S_0356,3,Alzheimer's Disease,2006-04-27,bl
 014_S_0519,1,Cognitively Normal,2006-06-06,bl
-014_S_0520,2,Mild Cognitive Impairment,2013-01-31,m72
 014_S_0548,3,Alzheimer's Disease,2012-07-03,m72
 014_S_0557,2,Mild Cognitive Impairment,2006-06-08,bl
-014_S_0558,3,Alzheimer's Disease,2012-08-17,m72
 014_S_0563,3,Alzheimer's Disease,2009-07-21,m36
 014_S_0658,3,Alzheimer's Disease,2007-08-14,m12
-014_S_10157,2,Mild Cognitive Impairment,2024-07-02,sc
-014_S_10180,1,Cognitively Normal,2024-07-24,sc
-014_S_10236,3,Alzheimer's Disease,2024-09-04,sc
-014_S_10317,1,Cognitively Normal,2024-10-23,sc
-014_S_10325,1,Cognitively Normal,2024-11-07,sc
-014_S_10335,1,Cognitively Normal,2024-11-04,sc
-014_S_10345,1,Cognitively Normal,2024-11-07,sc
-014_S_10351,3,Alzheimer's Disease,2024-11-14,sc
-014_S_10355,1,Cognitively Normal,2024-11-13,sc
-014_S_10409,1,Cognitively Normal,2024-12-16,sc
-014_S_10422,1,Cognitively Normal,2025-01-14,sc
-014_S_10434,1,Cognitively Normal,2025-01-09,sc
-014_S_10476,2,Mild Cognitive Impairment,2025-02-05,sc
-014_S_10477,1,Cognitively Normal,2025-02-05,sc
-014_S_10501,2,Mild Cognitive Impairment,2025-02-18,sc
-014_S_10570,2,Mild Cognitive Impairment,2025-03-06,sc
-014_S_10653,2,Mild Cognitive Impairment,2025-04-02,sc
-014_S_10687,1,Cognitively Normal,2025-04-16,sc
-014_S_1095,3,Alzheimer's Disease,2006-12-12,bl
 014_S_2185,3,Alzheimer's Disease,2018-11-29,m96
 014_S_2308,2,Mild Cognitive Impairment,2011-03-30,bl
 014_S_4039,3,Alzheimer's Disease,2011-04-27,sc
 014_S_4058,3,Alzheimer's Disease,2013-07-18,m24
-014_S_4068,2,Mild Cognitive Impairment,2011-05-24,sc
 014_S_4079,3,Alzheimer's Disease,2013-07-10,m24
-014_S_4080,1,Cognitively Normal,2011-06-08,sc
 014_S_4093,1,Cognitively Normal,2011-06-21,sc
 014_S_4263,3,Alzheimer's Disease,2013-11-14,m24
-014_S_4284,2,Mild Cognitive Impairment,2011-10-05,sc
-014_S_4306,1,Cognitively Normal,2011-10-13,sc
-014_S_4328,2,Mild Cognitive Impairment,2011-10-20,sc
 014_S_4401,1,Cognitively Normal,2011-11-28,sc
 014_S_4576,1,Cognitively Normal,2012-02-27,sc
 014_S_4577,2,Mild Cognitive Impairment,2012-10-04,m06
-014_S_4615,3,Alzheimer's Disease,2012-03-15,sc
 014_S_4668,3,Alzheimer's Disease,2013-06-20,m12
-014_S_6076,1,Cognitively Normal,2017-09-14,sc
-014_S_6087,2,Mild Cognitive Impairment,2017-10-04,sc
-014_S_6109,1,Cognitively Normal,2017-10-26,sc
-014_S_6145,1,Cognitively Normal,2017-12-06,sc
-014_S_6148,1,Cognitively Normal,2017-12-07,sc
-014_S_6199,2,Mild Cognitive Impairment,2019-04-24,m12
-014_S_6210,1,Cognitively Normal,2014-02-14,sc
-014_S_6322,3,Alzheimer's Disease,2018-04-17,sc
-014_S_6325,3,Alzheimer's Disease,2018-04-18,sc
-014_S_6366,1,Cognitively Normal,2018-05-10,sc
-014_S_6424,1,Cognitively Normal,2018-06-08,sc
-014_S_6437,1,Cognitively Normal,2018-06-12,sc
-014_S_6502,2,Mild Cognitive Impairment,2024-06-14,m66
-014_S_6522,1,Cognitively Normal,2018-07-26,sc
-014_S_6584,2,Mild Cognitive Impairment,2018-09-11,sc
-014_S_6765,2,Mild Cognitive Impairment,2019-06-27,sc
-014_S_6831,1,Cognitively Normal,2019-10-24,sc
-014_S_6920,2,Mild Cognitive Impairment,2024-04-11,m30
-014_S_6935,1,Cognitively Normal,2021-04-26,sc
-014_S_6944,2,Mild Cognitive Impairment,2021-06-02,sc
-014_S_6988,2,Mild Cognitive Impairment,2025-03-26,m42
-014_S_6990,1,Cognitively Normal,2021-07-29,sc
-014_S_7072,1,Cognitively Normal,2022-06-07,sc
-014_S_7080,1,Cognitively Normal,2022-05-25,sc
-016_S_0354,2,Mild Cognitive Impairment,2006-06-19,bl
 016_S_0359,1,Cognitively Normal,2006-06-05,bl
-016_S_0538,1,Cognitively Normal,2006-08-15,bl
-016_S_0590,2,Mild Cognitive Impairment,2006-07-18,bl
-016_S_0702,3,Alzheimer's Disease,2008-08-21,m24
-016_S_0769,3,Alzheimer's Disease,2008-09-12,m24
-016_S_0991,3,Alzheimer's Disease,2006-11-21,bl
-016_S_10071,2,Mild Cognitive Impairment,2024-03-12,sc
-016_S_10124,2,Mild Cognitive Impairment,2024-05-22,sc
-016_S_10138,2,Mild Cognitive Impairment,2024-06-12,sc
-016_S_10174,2,Mild Cognitive Impairment,2024-07-17,sc
-016_S_10189,2,Mild Cognitive Impairment,2024-07-31,sc
-016_S_10190,1,Cognitively Normal,2024-07-31,sc
-016_S_10207,1,Cognitively Normal,2024-08-14,sc
-016_S_10239,2,Mild Cognitive Impairment,2024-09-04,sc
-016_S_1028,2,Mild Cognitive Impairment,2006-11-29,bl
-016_S_10324,1,Cognitively Normal,2024-10-28,sc
-016_S_10334,2,Mild Cognitive Impairment,2024-11-04,sc
-016_S_10429,1,Cognitively Normal,2025-01-09,sc
-016_S_10441,2,Mild Cognitive Impairment,2025-02-20,bl
-016_S_10452,2,Mild Cognitive Impairment,2025-01-24,sc
-016_S_10525,2,Mild Cognitive Impairment,2025-02-26,sc
-016_S_10625,1,Cognitively Normal,2025-03-21,sc
-016_S_1092,2,Mild Cognitive Impairment,2006-12-29,bl
-016_S_1117,3,Alzheimer's Disease,2010-06-24,m36
-016_S_1121,3,Alzheimer's Disease,2008-06-23,m18
-016_S_1138,3,Alzheimer's Disease,2009-01-22,m24
-016_S_1149,2,Mild Cognitive Impairment,2007-02-27,bl
-016_S_1263,3,Alzheimer's Disease,2007-03-15,bl
-016_S_1326,3,Alzheimer's Disease,2008-10-06,m18
-016_S_2007,3,Alzheimer's Disease,2015-08-10,m60
-016_S_2031,2,Mild Cognitive Impairment,2010-09-01,bl
 016_S_2284,2,Mild Cognitive Impairment,2011-02-24,bl
 016_S_4009,3,Alzheimer's Disease,2011-06-02,sc
 016_S_4097,1,Cognitively Normal,2011-06-23,sc
-016_S_4121,2,Mild Cognitive Impairment,2015-09-28,m48
-016_S_4191,1,Cognitively Normal,2011-08-15,sc
 016_S_4353,3,Alzheimer's Disease,2011-11-01,sc
-016_S_4532,1,Cognitively Normal,2012-02-07,sc
-016_S_4533,2,Mild Cognitive Impairment,2012-02-07,sc
-016_S_4575,2,Mild Cognitive Impairment,2012-02-27,sc
-016_S_4583,3,Alzheimer's Disease,2012-02-29,sc
-016_S_4584,3,Alzheimer's Disease,2014-04-07,m24
 016_S_4591,3,Alzheimer's Disease,2012-03-05,sc
-016_S_4601,2,Mild Cognitive Impairment,2012-03-08,sc
-016_S_4638,2,Mild Cognitive Impairment,2015-06-29,m36
-016_S_4646,2,Mild Cognitive Impairment,2012-03-27,sc
-016_S_4650,2,Mild Cognitive Impairment,2012-03-29,sc
-016_S_4651,2,Mild Cognitive Impairment,2012-05-10,sc
-016_S_4687,1,Cognitively Normal,2012-05-03,sc
-016_S_4688,1,Cognitively Normal,2012-05-03,sc
-016_S_4887,3,Alzheimer's Disease,2012-07-27,sc
-016_S_4901,2,Mild Cognitive Impairment,2012-08-10,sc
-016_S_4902,3,Alzheimer's Disease,2014-09-15,m24
-016_S_4951,1,Cognitively Normal,2012-09-14,sc
-016_S_4952,1,Cognitively Normal,2012-09-14,sc
-016_S_4963,3,Alzheimer's Disease,2012-09-25,sc
-016_S_5007,2,Mild Cognitive Impairment,2012-10-29,sc
-016_S_5031,3,Alzheimer's Disease,2015-04-29,m24
-016_S_5032,3,Alzheimer's Disease,2012-11-16,sc
-016_S_5057,3,Alzheimer's Disease,2012-12-26,sc
-016_S_5251,3,Alzheimer's Disease,2013-07-01,sc
-016_S_6381,1,Cognitively Normal,2018-05-24,sc
-016_S_6571,2,Mild Cognitive Impairment,2018-08-24,sc
-016_S_6613,2,Mild Cognitive Impairment,2018-10-16,sc
-016_S_6708,3,Alzheimer's Disease,2019-03-28,sc
-016_S_6710,2,Mild Cognitive Impairment,2019-03-27,sc
-016_S_6711,1,Cognitively Normal,2019-04-17,sc
-016_S_6771,2,Mild Cognitive Impairment,2019-07-10,sc
-016_S_6773,1,Cognitively Normal,2019-07-15,sc
-016_S_6789,2,Mild Cognitive Impairment,2019-08-02,sc
-016_S_6790,2,Mild Cognitive Impairment,2019-11-25,bl
-016_S_6799,1,Cognitively Normal,2019-08-16,sc
-016_S_6800,3,Alzheimer's Disease,2021-03-08,m18
-016_S_6802,1,Cognitively Normal,2019-08-21,sc
-016_S_6809,2,Mild Cognitive Impairment,2019-09-05,sc
-016_S_6816,2,Mild Cognitive Impairment,2019-09-20,sc
-016_S_6834,2,Mild Cognitive Impairment,2022-07-18,m30
-016_S_6836,2,Mild Cognitive Impairment,2019-11-24,sc
-016_S_6839,3,Alzheimer's Disease,2019-12-10,sc
-016_S_6853,2,Mild Cognitive Impairment,2020-06-25,bl
-016_S_6892,1,Cognitively Normal,2020-11-13,sc
-016_S_6904,2,Mild Cognitive Impairment,2021-02-09,sc
-016_S_6909,1,Cognitively Normal,2021-03-04,sc
-016_S_6926,2,Mild Cognitive Impairment,2021-04-12,sc
-016_S_6931,1,Cognitively Normal,2021-04-20,sc
-016_S_6934,1,Cognitively Normal,2021-04-22,sc
-016_S_6936,2,Mild Cognitive Impairment,2021-04-28,sc
-016_S_6939,3,Alzheimer's Disease,2022-03-08,bl
-016_S_6941,1,Cognitively Normal,2021-05-21,sc
-016_S_6943,1,Cognitively Normal,2021-05-10,sc
-016_S_6949,2,Mild Cognitive Impairment,2021-06-15,sc
-016_S_6971,1,Cognitively Normal,2021-06-17,sc
-016_S_7002,2,Mild Cognitive Impairment,2021-09-14,sc
-016_S_7005,2,Mild Cognitive Impairment,2021-09-22,sc
-016_S_7014,2,Mild Cognitive Impairment,2021-09-27,sc
-016_S_7039,3,Alzheimer's Disease,2022-01-20,sc
-018_S_0043,1,Cognitively Normal,2006-02-03,bl
 018_S_0055,2,Mild Cognitive Impairment,2011-05-06,m48
-018_S_0057,3,Alzheimer's Disease,2007-10-29,m18
-018_S_0080,3,Alzheimer's Disease,2010-06-08,m48
-018_S_0087,2,Mild Cognitive Impairment,2006-02-03,bl
-018_S_0103,2,Mild Cognitive Impairment,2006-02-06,bl
 018_S_0142,3,Alzheimer's Disease,2016-03-09,m120
-018_S_0155,3,Alzheimer's Disease,2009-03-20,m36
-018_S_0286,3,Alzheimer's Disease,2006-05-23,bl
-018_S_0335,3,Alzheimer's Disease,2006-06-05,bl
-018_S_0369,1,Cognitively Normal,2006-05-16,bl
-018_S_0406,3,Alzheimer's Disease,2009-07-08,m36
-018_S_0425,1,Cognitively Normal,2006-06-20,bl
-018_S_0450,3,Alzheimer's Disease,2009-07-01,m36
-018_S_0633,3,Alzheimer's Disease,2006-07-18,bl
-018_S_0682,3,Alzheimer's Disease,2006-07-27,bl
-018_S_10435,1,Cognitively Normal,2025-01-29,sc
 018_S_2133,3,Alzheimer's Disease,2018-03-15,m84
 018_S_2138,2,Mild Cognitive Impairment,2011-05-04,bl
 018_S_2155,3,Alzheimer's Disease,2022-11-21,m144
@@ -691,117 +138,16 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 018_S_4400,2,Mild Cognitive Impairment,2018-10-05,m78
 018_S_4597,3,Alzheimer's Disease,2016-04-08,m48
 018_S_4696,3,Alzheimer's Disease,2012-04-26,sc
-018_S_4733,3,Alzheimer's Disease,2012-05-17,sc
-018_S_4809,2,Mild Cognitive Impairment,2012-06-18,sc
-018_S_4868,2,Mild Cognitive Impairment,2012-07-19,sc
-018_S_4889,2,Mild Cognitive Impairment,2012-08-06,sc
-018_S_5074,3,Alzheimer's Disease,2013-01-24,sc
-018_S_5240,3,Alzheimer's Disease,2013-06-24,sc
-018_S_5250,1,Cognitively Normal,2013-07-22,sc
-018_S_5262,1,Cognitively Normal,2013-07-22,sc
-018_S_6207,1,Cognitively Normal,2018-02-09,sc
-018_S_6351,1,Cognitively Normal,2018-05-07,sc
-018_S_6414,2,Mild Cognitive Impairment,2018-06-04,sc
-019_S_10102,2,Mild Cognitive Impairment,2024-04-17,sc
-019_S_10106,1,Cognitively Normal,2024-04-23,sc
-019_S_10141,2,Mild Cognitive Impairment,2024-06-13,sc
-019_S_10145,1,Cognitively Normal,2024-06-20,sc
-019_S_10152,2,Mild Cognitive Impairment,2024-06-26,sc
-019_S_10164,3,Alzheimer's Disease,2024-07-12,sc
-019_S_10263,1,Cognitively Normal,2024-09-24,sc
-019_S_10303,2,Mild Cognitive Impairment,2024-10-17,sc
-019_S_10338,1,Cognitively Normal,2024-11-05,sc
-019_S_10395,1,Cognitively Normal,2024-12-05,sc
-019_S_10443,2,Mild Cognitive Impairment,2025-01-16,sc
-019_S_10456,1,Cognitively Normal,2025-01-23,sc
-019_S_10471,2,Mild Cognitive Impairment,2025-02-03,sc
-019_S_10531,1,Cognitively Normal,2025-02-25,sc
-019_S_10705,1,Cognitively Normal,2025-04-28,sc
-019_S_4107,2,Mild Cognitive Impairment,2011-06-27,sc
-019_S_4109,2,Mild Cognitive Impairment,2011-06-28,sc
-019_S_4147,2,Mild Cognitive Impairment,2011-07-22,sc
 019_S_4252,3,Alzheimer's Disease,2011-09-16,sc
 019_S_4285,2,Mild Cognitive Impairment,2011-10-05,sc
 019_S_4293,3,Alzheimer's Disease,2013-11-15,m24
 019_S_4367,1,Cognitively Normal,2011-11-08,sc
 019_S_4477,3,Alzheimer's Disease,2012-01-13,sc
-019_S_4548,2,Mild Cognitive Impairment,2012-02-13,sc
-019_S_4549,3,Alzheimer's Disease,2012-04-18,sc
-019_S_4680,3,Alzheimer's Disease,2013-05-06,m12
-019_S_4835,1,Cognitively Normal,2012-07-02,sc
-019_S_5012,3,Alzheimer's Disease,2012-10-26,sc
-019_S_5019,3,Alzheimer's Disease,2012-10-30,sc
-019_S_5089,1,Cognitively Normal,2013-02-11,sc
-019_S_5180,1,Cognitively Normal,2013-05-08,sc
-019_S_5242,1,Cognitively Normal,2013-06-27,sc
-019_S_6095,2,Mild Cognitive Impairment,2017-10-16,sc
-019_S_6102,3,Alzheimer's Disease,2017-10-19,sc
-019_S_6186,1,Cognitively Normal,2018-01-26,sc
-019_S_6315,2,Mild Cognitive Impairment,2018-04-13,sc
-019_S_6483,3,Alzheimer's Disease,2023-07-24,m60
-019_S_6533,2,Mild Cognitive Impairment,2018-08-10,sc
-019_S_6573,3,Alzheimer's Disease,2018-08-29,sc
-019_S_6585,3,Alzheimer's Disease,2018-09-17,sc
-019_S_6630,2,Mild Cognitive Impairment,2019-02-22,sc
-019_S_6635,2,Mild Cognitive Impairment,2018-11-28,sc
-019_S_6668,3,Alzheimer's Disease,2021-02-05,m24
-019_S_6712,3,Alzheimer's Disease,2019-03-29,sc
-019_S_6757,2,Mild Cognitive Impairment,2019-06-14,sc
-019_S_7016,2,Mild Cognitive Impairment,2021-10-27,bl
-020_S_0097,1,Cognitively Normal,2006-03-16,bl
-020_S_0213,3,Alzheimer's Disease,2006-04-10,bl
-020_S_0883,2,Mild Cognitive Impairment,2009-11-13,m36
-020_S_0899,2,Mild Cognitive Impairment,2009-11-19,m36
 020_S_1288,1,Cognitively Normal,2007-03-20,bl
-020_S_4317,1,Cognitively Normal,2011-10-18,sc
-020_S_4322,1,Cognitively Normal,2011-10-18,sc
-020_S_4619,2,Mild Cognitive Impairment,2012-03-01,sc
-020_S_4685,1,Cognitively Normal,2012-04-10,sc
-020_S_4920,2,Mild Cognitive Impairment,2012-08-23,sc
-020_S_5039,3,Alzheimer's Disease,2012-11-30,sc
-020_S_5140,1,Cognitively Normal,2013-04-03,sc
-020_S_5183,1,Cognitively Normal,2013-09-18,sc
-020_S_5203,1,Cognitively Normal,2013-06-07,sc
-020_S_6140,1,Cognitively Normal,2017-11-29,sc
-020_S_6185,1,Cognitively Normal,2018-02-07,sc
-020_S_6227,1,Cognitively Normal,2018-02-28,sc
-020_S_6282,1,Cognitively Normal,2018-03-20,sc
-020_S_6358,1,Cognitively Normal,2018-05-08,sc
-020_S_6449,1,Cognitively Normal,2018-06-18,sc
-020_S_6470,1,Cognitively Normal,2018-06-25,sc
-020_S_6504,1,Cognitively Normal,2018-07-11,sc
-020_S_6513,1,Cognitively Normal,2018-07-18,sc
-020_S_6566,1,Cognitively Normal,2018-08-15,sc
-020_S_6901,2,Mild Cognitive Impairment,2021-01-26,sc
-021_S_0141,3,Alzheimer's Disease,2007-03-06,m12
 021_S_0159,1,Cognitively Normal,2006-03-03,bl
-021_S_0178,2,Mild Cognitive Impairment,2006-03-09,bl
-021_S_0231,3,Alzheimer's Disease,2008-03-21,m24
-021_S_0273,2,Mild Cognitive Impairment,2006-04-11,bl
 021_S_0276,3,Alzheimer's Disease,2014-04-03,m96
-021_S_0332,3,Alzheimer's Disease,2006-05-05,bl
 021_S_0337,1,Cognitively Normal,2006-05-04,bl
-021_S_0343,3,Alzheimer's Disease,2006-05-05,bl
-021_S_0424,3,Alzheimer's Disease,2010-06-03,m48
-021_S_0626,3,Alzheimer's Disease,2014-08-20,m96
-021_S_0642,3,Alzheimer's Disease,2006-08-01,bl
-021_S_0647,1,Cognitively Normal,2006-08-07,bl
-021_S_0753,3,Alzheimer's Disease,2006-09-18,bl
 021_S_0984,3,Alzheimer's Disease,2013-12-18,m84
-021_S_10059,1,Cognitively Normal,2024-02-23,sc
-021_S_10064,1,Cognitively Normal,2024-02-28,sc
-021_S_10114,1,Cognitively Normal,2024-05-02,sc
-021_S_10146,1,Cognitively Normal,2024-06-25,sc
-021_S_10161,1,Cognitively Normal,2024-07-11,sc
-021_S_10270,1,Cognitively Normal,2024-10-07,sc
-021_S_10293,1,Cognitively Normal,2024-10-14,sc
-021_S_10376,2,Mild Cognitive Impairment,2024-11-22,sc
-021_S_10406,1,Cognitively Normal,2024-12-12,sc
-021_S_10437,2,Mild Cognitive Impairment,2025-01-13,sc
-021_S_10628,2,Mild Cognitive Impairment,2025-03-28,sc
-021_S_10668,1,Cognitively Normal,2025-04-08,sc
-021_S_1109,3,Alzheimer's Disease,2007-01-11,bl
-021_S_2077,2,Mild Cognitive Impairment,2010-10-28,bl
 021_S_2100,2,Mild Cognitive Impairment,2010-10-26,bl
 021_S_2124,2,Mild Cognitive Impairment,2010-11-23,bl
 021_S_2125,2,Mild Cognitive Impairment,2010-10-25,bl
@@ -814,80 +160,10 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 021_S_4402,3,Alzheimer's Disease,2013-02-12,m12
 021_S_4419,2,Mild Cognitive Impairment,2011-12-06,sc
 021_S_4421,1,Cognitively Normal,2011-12-07,sc
-021_S_4558,1,Cognitively Normal,2012-02-20,sc
-021_S_4633,2,Mild Cognitive Impairment,2012-03-21,sc
-021_S_4659,3,Alzheimer's Disease,2015-04-21,m36
-021_S_4718,3,Alzheimer's Disease,2012-05-01,sc
-021_S_4744,2,Mild Cognitive Impairment,2012-05-17,sc
-021_S_4857,3,Alzheimer's Disease,2013-03-19,m06
-021_S_4924,3,Alzheimer's Disease,2012-08-28,sc
-021_S_5099,2,Mild Cognitive Impairment,2013-02-19,sc
-021_S_5129,1,Cognitively Normal,2013-03-20,sc
-021_S_5177,1,Cognitively Normal,2013-05-06,sc
-021_S_5194,1,Cognitively Normal,2013-05-17,sc
-021_S_5236,1,Cognitively Normal,2013-06-19,sc
-021_S_5237,3,Alzheimer's Disease,2021-10-01,m96
-021_S_6312,2,Mild Cognitive Impairment,2018-05-04,bl
-021_S_6890,2,Mild Cognitive Impairment,2020-10-14,sc
-021_S_6896,1,Cognitively Normal,2020-12-15,sc
-021_S_6910,1,Cognitively Normal,2021-02-24,sc
-021_S_6914,1,Cognitively Normal,2021-03-08,sc
-021_S_6918,1,Cognitively Normal,2021-03-15,sc
-021_S_6940,1,Cognitively Normal,2021-05-04,sc
-021_S_6978,1,Cognitively Normal,2021-06-30,sc
-021_S_6987,1,Cognitively Normal,2021-07-22,sc
-021_S_6994,1,Cognitively Normal,2021-08-11,sc
-021_S_7045,1,Cognitively Normal,2022-02-17,sc
-021_S_7047,1,Cognitively Normal,2022-02-22,sc
-021_S_7055,1,Cognitively Normal,2022-03-14,sc
-021_S_7062,1,Cognitively Normal,2022-03-23,sc
-021_S_7092,1,Cognitively Normal,2022-06-23,sc
-022_S_0004,2,Mild Cognitive Impairment,2005-11-08,bl
-022_S_0007,3,Alzheimer's Disease,2005-10-06,bl
-022_S_0014,1,Cognitively Normal,2005-11-04,bl
-022_S_0044,2,Mild Cognitive Impairment,2005-11-30,bl
-022_S_0066,1,Cognitively Normal,2005-12-07,bl
-022_S_0096,1,Cognitively Normal,2006-02-06,bl
-022_S_0129,3,Alzheimer's Disease,2006-02-13,bl
 022_S_0130,1,Cognitively Normal,2006-02-07,bl
-022_S_0219,3,Alzheimer's Disease,2006-04-04,bl
-022_S_0543,3,Alzheimer's Disease,2006-06-08,bl
-022_S_0544,2,Mild Cognitive Impairment,2006-05-25,bl
-022_S_0750,3,Alzheimer's Disease,2008-03-07,m18
-022_S_0924,2,Mild Cognitive Impairment,2006-10-12,bl
-022_S_0961,2,Mild Cognitive Impairment,2007-01-12,bl
-022_S_10040,1,Cognitively Normal,2024-03-20,sc
-022_S_10043,1,Cognitively Normal,2024-03-20,sc
-022_S_10046,1,Cognitively Normal,2024-03-20,sc
-022_S_10055,1,Cognitively Normal,2024-03-20,sc
-022_S_10056,1,Cognitively Normal,2024-04-22,sc
-022_S_10066,1,Cognitively Normal,2024-05-03,sc
-022_S_10132,1,Cognitively Normal,2024-07-03,sc
-022_S_10136,1,Cognitively Normal,2024-08-12,sc
-022_S_10143,1,Cognitively Normal,2024-08-12,sc
-022_S_10181,2,Mild Cognitive Impairment,2024-09-10,sc
-022_S_10186,1,Cognitively Normal,2024-10-16,sc
-022_S_10227,1,Cognitively Normal,2024-11-14,sc
-022_S_10256,1,Cognitively Normal,2024-10-16,sc
-022_S_10306,1,Cognitively Normal,2024-11-14,sc
-022_S_10323,1,Cognitively Normal,2024-11-14,sc
-022_S_10343,1,Cognitively Normal,2024-12-12,sc
-022_S_10348,1,Cognitively Normal,2024-12-12,sc
-022_S_10361,2,Mild Cognitive Impairment,2024-12-12,sc
-022_S_10381,2,Mild Cognitive Impairment,2024-12-12,sc
-022_S_10403,1,Cognitively Normal,2025-01-16,sc
-022_S_10432,2,Mild Cognitive Impairment,2025-01-16,sc
-022_S_10440,1,Cognitively Normal,2025-02-11,sc
-022_S_10461,1,Cognitively Normal,2025-02-11,sc
-022_S_10473,1,Cognitively Normal,2025-02-11,sc
-022_S_10481,2,Mild Cognitive Impairment,2025-03-12,sc
 022_S_1097,3,Alzheimer's Disease,2011-01-19,m48
 022_S_1351,3,Alzheimer's Disease,2010-03-19,m36
-022_S_1366,2,Mild Cognitive Impairment,2007-04-16,bl
-022_S_1394,3,Alzheimer's Disease,2008-05-27,m12
 022_S_2087,3,Alzheimer's Disease,2014-10-24,m48
-022_S_2167,2,Mild Cognitive Impairment,2011-01-19,bl
-022_S_2263,2,Mild Cognitive Impairment,2011-02-16,bl
 022_S_2379,2,Mild Cognitive Impairment,2011-06-08,bl
 022_S_4173,1,Cognitively Normal,2011-08-11,sc
 022_S_4196,1,Cognitively Normal,2011-08-25,sc
@@ -895,261 +171,50 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 022_S_4291,1,Cognitively Normal,2011-10-18,sc
 022_S_4320,1,Cognitively Normal,2011-10-28,sc
 022_S_4444,2,Mild Cognitive Impairment,2012-01-04,sc
-022_S_4608,2,Mild Cognitive Impairment,2012-03-21,sc
-022_S_4805,2,Mild Cognitive Impairment,2012-06-20,sc
-022_S_4922,2,Mild Cognitive Impairment,2012-09-07,sc
-022_S_5004,2,Mild Cognitive Impairment,2012-10-23,sc
-022_S_6013,3,Alzheimer's Disease,2017-04-18,sc
-022_S_6069,1,Cognitively Normal,2017-08-21,sc
-022_S_6112,1,Cognitively Normal,2017-12-20,sc
-022_S_6280,2,Mild Cognitive Impairment,2018-03-19,sc
-022_S_6506,1,Cognitively Normal,2025-02-17,sc
-022_S_6716,2,Mild Cognitive Impairment,2019-04-05,sc
-022_S_6796,3,Alzheimer's Disease,2019-08-19,sc
-022_S_6797,1,Cognitively Normal,2019-08-19,sc
-022_S_6822,1,Cognitively Normal,2019-09-23,sc
-022_S_6847,2,Mild Cognitive Impairment,2020-01-21,sc
-022_S_6863,3,Alzheimer's Disease,2020-09-29,bl
-023_S_0030,3,Alzheimer's Disease,2006-04-13,m06
 023_S_0031,1,Cognitively Normal,2005-10-24,bl
 023_S_0042,3,Alzheimer's Disease,2006-11-09,m12
 023_S_0058,1,Cognitively Normal,2005-12-12,bl
-023_S_0061,3,Alzheimer's Disease,2014-01-04,m96
-023_S_0078,3,Alzheimer's Disease,2006-01-12,bl
-023_S_0081,1,Cognitively Normal,2006-01-25,bl
-023_S_0083,3,Alzheimer's Disease,2006-01-19,bl
-023_S_0084,3,Alzheimer's Disease,2006-01-24,bl
-023_S_0093,3,Alzheimer's Disease,2006-01-26,bl
 023_S_0126,3,Alzheimer's Disease,2009-03-03,m36
-023_S_0139,3,Alzheimer's Disease,2006-02-02,bl
 023_S_0217,3,Alzheimer's Disease,2008-02-25,m24
 023_S_0331,3,Alzheimer's Disease,2009-04-13,m36
-023_S_0376,3,Alzheimer's Disease,2010-05-17,m48
-023_S_0388,3,Alzheimer's Disease,2007-10-31,m18
-023_S_0604,3,Alzheimer's Disease,2007-12-11,m18
-023_S_0613,2,Mild Cognitive Impairment,2006-07-24,bl
 023_S_0625,3,Alzheimer's Disease,2007-02-27,m06
-023_S_0855,3,Alzheimer's Disease,2007-09-10,m12
 023_S_0887,3,Alzheimer's Disease,2008-03-29,m18
-023_S_0916,3,Alzheimer's Disease,2006-09-26,bl
-023_S_0926,2,Mild Cognitive Impairment,2018-06-22,m138
-023_S_0963,1,Cognitively Normal,2006-10-17,bl
-023_S_10094,1,Cognitively Normal,2024-04-03,sc
-023_S_10173,1,Cognitively Normal,2024-08-28,sc
-023_S_10179,1,Cognitively Normal,2024-07-24,sc
 023_S_1046,2,Mild Cognitive Impairment,2006-11-16,bl
-023_S_1104,2,Mild Cognitive Impairment,2006-12-05,bl
-023_S_1126,3,Alzheimer's Disease,2007-12-05,m12
 023_S_1190,3,Alzheimer's Disease,2017-10-27,m132
-023_S_1247,3,Alzheimer's Disease,2008-01-29,m12
-023_S_1262,3,Alzheimer's Disease,2007-03-01,bl
-023_S_1289,3,Alzheimer's Disease,2007-02-20,bl
-023_S_1306,1,Cognitively Normal,2007-02-23,bl
 023_S_2068,2,Mild Cognitive Impairment,2010-10-06,bl
 023_S_4020,1,Cognitively Normal,2011-04-12,sc
-023_S_4034,2,Mild Cognitive Impairment,2011-05-05,sc
 023_S_4035,3,Alzheimer's Disease,2012-10-11,m12
-023_S_4088,1,Cognitively Normal,2011-06-21,sc
-023_S_4108,3,Alzheimer's Disease,2011-07-06,sc
 023_S_4115,3,Alzheimer's Disease,2019-01-16,m90
 023_S_4122,2,Mild Cognitive Impairment,2011-08-08,sc
 023_S_4164,1,Cognitively Normal,2011-08-02,sc
-023_S_4241,2,Mild Cognitive Impairment,2012-01-05,sc
 023_S_4243,3,Alzheimer's Disease,2014-03-20,m24
 023_S_4448,1,Cognitively Normal,2012-01-12,sc
-023_S_4478,2,Mild Cognitive Impairment,2012-03-01,sc
 023_S_4501,3,Alzheimer's Disease,2012-03-08,sc
-023_S_4502,3,Alzheimer's Disease,2012-11-07,m06
-023_S_4669,2,Mild Cognitive Impairment,2012-05-04,sc
-023_S_4693,1,Cognitively Normal,2012-06-14,sc
-023_S_4716,1,Cognitively Normal,2012-06-06,sc
-023_S_4796,3,Alzheimer's Disease,2013-03-27,m06
-023_S_4866,1,Cognitively Normal,2012-07-30,sc
-023_S_4913,2,Mild Cognitive Impairment,2012-08-31,sc
-023_S_5120,3,Alzheimer's Disease,2013-04-22,sc
-023_S_5220,1,Cognitively Normal,2013-06-18,sc
-023_S_5241,3,Alzheimer's Disease,2013-06-26,sc
-023_S_5284,1,Cognitively Normal,2013-08-20,sc
-023_S_6270,1,Cognitively Normal,2018-03-09,sc
-023_S_6334,2,Mild Cognitive Impairment,2018-04-25,sc
-023_S_6346,1,Cognitively Normal,2018-05-02,sc
-023_S_6356,2,Mild Cognitive Impairment,2018-05-11,sc
-023_S_6369,2,Mild Cognitive Impairment,2018-05-11,sc
-023_S_6374,1,Cognitively Normal,2018-05-10,sc
-023_S_6399,1,Cognitively Normal,2018-06-04,sc
-023_S_6400,1,Cognitively Normal,2018-06-04,sc
-023_S_6407,1,Cognitively Normal,2018-06-08,sc
-023_S_6444,1,Cognitively Normal,2018-06-14,sc
-023_S_6535,3,Alzheimer's Disease,2021-10-13,m36
-023_S_6547,1,Cognitively Normal,2018-08-08,sc
-023_S_6661,3,Alzheimer's Disease,2019-01-07,sc
-023_S_6702,2,Mild Cognitive Impairment,2019-03-13,sc
-023_S_6723,2,Mild Cognitive Impairment,2019-04-19,sc
-023_S_6792,1,Cognitively Normal,2019-08-06,sc
-023_S_6795,1,Cognitively Normal,2019-08-08,sc
 024_S_0985,3,Alzheimer's Disease,2012-11-09,m72
 024_S_1063,2,Mild Cognitive Impairment,2008-12-05,m24
-024_S_1171,3,Alzheimer's Disease,2007-01-19,bl
-024_S_1307,3,Alzheimer's Disease,2007-03-06,bl
-024_S_1393,3,Alzheimer's Disease,2008-10-29,m18
-024_S_1400,2,Mild Cognitive Impairment,2007-05-29,bl
 024_S_2239,2,Mild Cognitive Impairment,2011-02-17,bl
-024_S_4084,1,Cognitively Normal,2011-06-15,sc
-024_S_4137,1,Cognitively Normal,2011-07-22,sc
-024_S_4158,1,Cognitively Normal,2011-08-02,sc
 024_S_4169,2,Mild Cognitive Impairment,2011-08-08,sc
-024_S_4186,2,Mild Cognitive Impairment,2011-08-16,sc
 024_S_4223,3,Alzheimer's Disease,2011-09-02,sc
 024_S_4280,3,Alzheimer's Disease,2011-10-06,sc
 024_S_4392,2,Mild Cognitive Impairment,2011-12-01,sc
-024_S_4622,2,Mild Cognitive Impairment,2012-03-26,sc
-024_S_4674,2,Mild Cognitive Impairment,2012-04-13,sc
-024_S_4905,3,Alzheimer's Disease,2012-08-16,sc
-024_S_5054,3,Alzheimer's Disease,2012-12-12,sc
-024_S_5290,1,Cognitively Normal,2013-08-29,sc
-024_S_6005,1,Cognitively Normal,2017-02-28,sc
-024_S_6033,2,Mild Cognitive Impairment,2017-06-19,sc
-024_S_6184,1,Cognitively Normal,2018-02-01,sc
-024_S_6202,1,Cognitively Normal,2018-02-20,sc
-024_S_6385,1,Cognitively Normal,2018-06-04,sc
-024_S_6472,1,Cognitively Normal,2018-07-10,sc
-024_S_6745,2,Mild Cognitive Impairment,2019-06-04,sc
-024_S_6846,2,Mild Cognitive Impairment,2020-01-16,sc
-024_S_7025,2,Mild Cognitive Impairment,2021-11-04,sc
 027_S_0074,1,Cognitively Normal,2006-01-10,bl
-027_S_0116,2,Mild Cognitive Impairment,2006-02-15,bl
 027_S_0118,1,Cognitively Normal,2006-02-10,bl
 027_S_0120,1,Cognitively Normal,2006-02-16,bl
-027_S_0179,3,Alzheimer's Disease,2007-09-10,m18
 027_S_0256,3,Alzheimer's Disease,2006-10-04,m06
-027_S_0307,2,Mild Cognitive Impairment,2006-04-28,bl
-027_S_0403,1,Cognitively Normal,2006-05-04,bl
-027_S_0404,3,Alzheimer's Disease,2006-05-12,bl
-027_S_0408,3,Alzheimer's Disease,2010-05-10,m48
-027_S_0417,2,Mild Cognitive Impairment,2006-05-24,bl
-027_S_0461,3,Alzheimer's Disease,2008-01-02,m18
-027_S_0485,2,Mild Cognitive Impairment,2006-05-25,bl
 027_S_0644,2,Mild Cognitive Impairment,2006-07-05,bl
 027_S_0835,3,Alzheimer's Disease,2008-09-17,m24
-027_S_0850,3,Alzheimer's Disease,2006-09-20,bl
-027_S_10272,1,Cognitively Normal,2024-09-30,sc
-027_S_10289,2,Mild Cognitive Impairment,2024-11-12,sc
-027_S_10316,1,Cognitively Normal,2024-11-05,sc
-027_S_10362,1,Cognitively Normal,2024-12-09,sc
-027_S_10430,1,Cognitively Normal,2025-01-10,sc
-027_S_10438,1,Cognitively Normal,2025-01-14,sc
 027_S_1045,2,Mild Cognitive Impairment,2006-11-17,bl
-027_S_10457,2,Mild Cognitive Impairment,2025-01-27,sc
-027_S_10494,1,Cognitively Normal,2025-02-17,sc
-027_S_10520,1,Cognitively Normal,2025-02-24,sc
-027_S_10618,1,Cognitively Normal,2025-03-25,sc
-027_S_10635,1,Cognitively Normal,2025-03-25,sc
-027_S_10685,1,Cognitively Normal,2025-04-16,sc
-027_S_10688,1,Cognitively Normal,2025-04-17,sc
-027_S_10711,1,Cognitively Normal,2025-04-29,sc
-027_S_1081,3,Alzheimer's Disease,2007-02-05,bl
-027_S_1082,3,Alzheimer's Disease,2006-12-06,bl
-027_S_1213,3,Alzheimer's Disease,2008-01-21,m12
-027_S_1254,3,Alzheimer's Disease,2007-02-12,bl
-027_S_1277,2,Mild Cognitive Impairment,2007-02-21,bl
-027_S_1385,3,Alzheimer's Disease,2007-03-13,bl
 027_S_1387,3,Alzheimer's Disease,2008-09-19,m18
-027_S_2183,2,Mild Cognitive Impairment,2010-12-03,bl
 027_S_2219,2,Mild Cognitive Impairment,2010-12-20,bl
 027_S_2245,2,Mild Cognitive Impairment,2011-01-11,bl
 027_S_2336,2,Mild Cognitive Impairment,2011-04-07,bl
-027_S_4729,3,Alzheimer's Disease,2014-06-16,m24
-027_S_4734,2,Mild Cognitive Impairment,2012-05-10,sc
-027_S_4754,1,Cognitively Normal,2012-05-21,sc
-027_S_4757,3,Alzheimer's Disease,2014-08-11,m24
-027_S_4758,1,Cognitively Normal,2012-05-22,sc
-027_S_4801,3,Alzheimer's Disease,2012-06-11,sc
-027_S_4802,3,Alzheimer's Disease,2012-06-26,sc
-027_S_4804,2,Mild Cognitive Impairment,2012-06-26,sc
-027_S_4864,2,Mild Cognitive Impairment,2012-07-16,sc
-027_S_4869,2,Mild Cognitive Impairment,2012-07-19,sc
-027_S_4873,3,Alzheimer's Disease,2016-12-02,m54
-027_S_4881,1,Cognitively Normal,2012-07-24,sc
-027_S_4919,3,Alzheimer's Disease,2024-07-09,m144
-027_S_4923,1,Cognitively Normal,2012-08-27,sc
-027_S_4926,2,Mild Cognitive Impairment,2012-08-28,sc
-027_S_4933,1,Cognitively Normal,2012-09-30,sc
-027_S_4936,3,Alzheimer's Disease,2014-09-24,m24
-027_S_4938,3,Alzheimer's Disease,2012-09-04,sc
-027_S_4943,3,Alzheimer's Disease,2013-05-01,m06
-027_S_4955,2,Mild Cognitive Impairment,2012-09-13,sc
-027_S_4957,3,Alzheimer's Disease,2012-09-13,sc
-027_S_4962,3,Alzheimer's Disease,2012-09-17,sc
-027_S_4964,3,Alzheimer's Disease,2012-09-18,sc
-027_S_4966,2,Mild Cognitive Impairment,2012-09-20,sc
-027_S_4998,1,Cognitively Normal,2012-10-16,sc
-027_S_5043,2,Mild Cognitive Impairment,2012-11-19,sc
-027_S_5046,2,Mild Cognitive Impairment,2012-11-20,sc
-027_S_5060,2,Mild Cognitive Impairment,2013-01-07,sc
-027_S_5064,2,Mild Cognitive Impairment,2013-01-14,sc
-027_S_5072,1,Cognitively Normal,2013-01-22,sc
-027_S_5079,1,Cognitively Normal,2013-01-29,sc
-027_S_5083,1,Cognitively Normal,2013-02-04,sc
-027_S_5092,1,Cognitively Normal,2013-02-07,sc
-027_S_5093,1,Cognitively Normal,2013-02-11,sc
-027_S_5105,2,Mild Cognitive Impairment,2013-02-26,sc
-027_S_5109,1,Cognitively Normal,2013-02-28,sc
-027_S_5110,1,Cognitively Normal,2013-02-28,sc
-027_S_5118,1,Cognitively Normal,2013-03-07,sc
-027_S_5127,1,Cognitively Normal,2013-03-20,sc
-027_S_5128,1,Cognitively Normal,2013-03-20,sc
-027_S_5169,1,Cognitively Normal,2013-04-29,sc
-027_S_5170,1,Cognitively Normal,2013-04-29,sc
-027_S_5197,1,Cognitively Normal,2013-05-21,sc
-027_S_5277,2,Mild Cognitive Impairment,2017-08-15,m48
-027_S_5288,1,Cognitively Normal,2013-08-23,sc
-027_S_5291,1,Cognitively Normal,2013-08-29,sc
-027_S_6001,2,Mild Cognitive Impairment,2021-04-23,m48
-027_S_6002,2,Mild Cognitive Impairment,2017-01-03,sc
-027_S_6034,3,Alzheimer's Disease,2021-06-28,m48
-027_S_6183,1,Cognitively Normal,2018-01-18,sc
-027_S_6317,1,Cognitively Normal,2018-04-11,sc
-027_S_6327,3,Alzheimer's Disease,2024-09-06,m78
-027_S_6370,2,Mild Cognitive Impairment,2018-05-09,sc
-027_S_6434,2,Mild Cognitive Impairment,2018-06-11,sc
-027_S_6463,2,Mild Cognitive Impairment,2018-06-20,sc
-027_S_6516,1,Cognitively Normal,2018-07-16,sc
-027_S_6577,1,Cognitively Normal,2018-08-29,sc
-027_S_6582,1,Cognitively Normal,2018-09-05,sc
-027_S_6640,3,Alzheimer's Disease,2021-05-04,m30
-027_S_6643,2,Mild Cognitive Impairment,2018-11-29,sc
-027_S_6648,3,Alzheimer's Disease,2018-12-04,sc
-027_S_6733,3,Alzheimer's Disease,2019-05-21,sc
-027_S_6788,3,Alzheimer's Disease,2021-11-29,m30
-027_S_6793,2,Mild Cognitive Impairment,2019-08-01,sc
-027_S_6842,2,Mild Cognitive Impairment,2020-01-09,sc
-027_S_6849,3,Alzheimer's Disease,2020-01-21,sc
-027_S_6961,2,Mild Cognitive Impairment,2021-06-07,sc
-027_S_6965,3,Alzheimer's Disease,2021-06-14,sc
-027_S_7007,2,Mild Cognitive Impairment,2021-09-20,sc
-027_S_7009,2,Mild Cognitive Impairment,2021-09-23,sc
-027_S_7024,2,Mild Cognitive Impairment,2024-11-07,m36
-027_S_7054,2,Mild Cognitive Impairment,2022-03-11,sc
-027_S_7071,2,Mild Cognitive Impairment,2022-04-18,sc
 029_S_0824,1,Cognitively Normal,2006-09-13,bl
-029_S_0836,3,Alzheimer's Disease,2006-09-07,bl
 029_S_0843,3,Alzheimer's Disease,2016-01-28,m108
 029_S_0845,1,Cognitively Normal,2006-09-21,bl
-029_S_0866,1,Cognitively Normal,2006-10-05,bl
-029_S_0871,2,Mild Cognitive Impairment,2007-01-11,bl
 029_S_0878,3,Alzheimer's Disease,2008-10-30,m24
 029_S_0914,3,Alzheimer's Disease,2015-03-18,m96
-029_S_0999,3,Alzheimer's Disease,2006-12-21,bl
-029_S_10197,2,Mild Cognitive Impairment,2024-08-08,sc
-029_S_1038,2,Mild Cognitive Impairment,2006-12-14,bl
-029_S_10478,1,Cognitively Normal,2025-02-10,sc
-029_S_1056,3,Alzheimer's Disease,2006-12-13,bl
-029_S_1073,3,Alzheimer's Disease,2009-12-17,m36
-029_S_1184,3,Alzheimer's Disease,2007-01-31,bl
-029_S_1215,2,Mild Cognitive Impairment,2007-02-07,bl
 029_S_1218,2,Mild Cognitive Impairment,2007-02-08,bl
 029_S_1318,3,Alzheimer's Disease,2013-03-14,m72
-029_S_1384,2,Mild Cognitive Impairment,2007-04-05,bl
 029_S_2376,2,Mild Cognitive Impairment,2011-07-19,bl
 029_S_2395,2,Mild Cognitive Impairment,2011-09-01,bl
 029_S_4279,1,Cognitively Normal,2011-09-29,sc
@@ -1158,844 +223,151 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 029_S_4327,2,Mild Cognitive Impairment,2011-10-20,sc
 029_S_4384,1,Cognitively Normal,2011-11-15,sc
 029_S_4385,3,Alzheimer's Disease,2016-01-28,m48
-029_S_4585,1,Cognitively Normal,2012-03-01,sc
-029_S_4652,2,Mild Cognitive Impairment,2013-06-20,m12
-029_S_5135,2,Mild Cognitive Impairment,2013-03-28,sc
-029_S_5158,1,Cognitively Normal,2013-04-18,sc
-029_S_5166,2,Mild Cognitive Impairment,2015-07-23,m24
-029_S_5186,1,Cognitively Normal,2013-05-09,sc
-029_S_5219,2,Mild Cognitive Impairment,2018-04-26,m54
-029_S_6289,1,Cognitively Normal,2018-03-27,sc
-029_S_6505,1,Cognitively Normal,2018-07-26,sc
-029_S_6579,2,Mild Cognitive Impairment,2018-09-17,sc
-029_S_6726,2,Mild Cognitive Impairment,2019-07-11,sc
-029_S_6798,2,Mild Cognitive Impairment,2019-09-16,sc
 031_S_0294,3,Alzheimer's Disease,2008-04-01,m24
-031_S_0321,3,Alzheimer's Disease,2006-04-21,bl
-031_S_0351,2,Mild Cognitive Impairment,2006-05-10,bl
-031_S_0554,3,Alzheimer's Disease,2006-06-12,bl
-031_S_0568,3,Alzheimer's Disease,2007-06-18,m12
-031_S_0618,1,Cognitively Normal,2006-08-10,bl
-031_S_0821,2,Mild Cognitive Impairment,2006-09-20,bl
 031_S_0830,3,Alzheimer's Disease,2010-10-18,m48
 031_S_0867,2,Mild Cognitive Impairment,2006-10-03,bl
-031_S_10601,1,Cognitively Normal,2025-03-11,sc
-031_S_10651,1,Cognitively Normal,2025-04-01,sc
-031_S_10652,1,Cognitively Normal,2025-04-02,sc
 031_S_1066,3,Alzheimer's Disease,2008-01-09,m12
-031_S_10660,1,Cognitively Normal,2025-04-04,sc
-031_S_10661,2,Mild Cognitive Impairment,2025-04-04,sc
-031_S_10699,1,Cognitively Normal,2025-04-23,sc
-031_S_1209,3,Alzheimer's Disease,2007-02-14,bl
 031_S_2018,2,Mild Cognitive Impairment,2010-07-26,bl
-031_S_2022,2,Mild Cognitive Impairment,2010-08-30,bl
 031_S_2233,2,Mild Cognitive Impairment,2011-01-06,bl
 031_S_4005,3,Alzheimer's Disease,2012-04-30,m12
-031_S_4006,1,Cognitively Normal,2011-04-04,sc
 031_S_4021,1,Cognitively Normal,2011-04-11,sc
 031_S_4024,3,Alzheimer's Disease,2011-04-13,sc
 031_S_4029,2,Mild Cognitive Impairment,2011-04-18,sc
 031_S_4032,1,Cognitively Normal,2011-04-25,sc
-031_S_4042,3,Alzheimer's Disease,2013-03-07,m24
-031_S_4149,3,Alzheimer's Disease,2018-11-26,m84
-031_S_4194,2,Mild Cognitive Impairment,2011-08-17,sc
 031_S_4203,3,Alzheimer's Disease,2012-10-17,m12
-031_S_4218,2,Mild Cognitive Impairment,2012-10-10,m12
 031_S_4474,2,Mild Cognitive Impairment,2012-08-13,m06
 031_S_4476,2,Mild Cognitive Impairment,2012-01-19,sc
 031_S_4496,1,Cognitively Normal,2012-01-25,sc
 031_S_4590,2,Mild Cognitive Impairment,2012-03-08,sc
-031_S_4721,3,Alzheimer's Disease,2018-11-26,m78
-031_S_4947,3,Alzheimer's Disease,2013-04-29,m06
-031_S_5098,3,Alzheimer's Disease,2013-02-21,sc
-031_S_5111,1,Cognitively Normal,2013-03-07,sc
-031_S_6715,2,Mild Cognitive Impairment,2019-04-04,sc
-031_S_6838,3,Alzheimer's Disease,2019-11-26,sc
-031_S_6870,1,Cognitively Normal,2022-03-03,sc
-032_S_0095,1,Cognitively Normal,2006-01-19,bl
-032_S_0147,3,Alzheimer's Disease,2006-02-22,bl
-032_S_0187,3,Alzheimer's Disease,2008-03-03,m24
-032_S_0214,3,Alzheimer's Disease,2008-03-26,m24
-032_S_0400,3,Alzheimer's Disease,2006-05-09,bl
 032_S_0479,1,Cognitively Normal,2006-06-01,bl
 032_S_0677,1,Cognitively Normal,2006-07-13,bl
-032_S_0718,2,Mild Cognitive Impairment,2006-08-31,bl
 032_S_0978,3,Alzheimer's Disease,2008-12-23,m24
-032_S_1037,3,Alzheimer's Disease,2006-11-22,bl
-032_S_10522,3,Alzheimer's Disease,2025-03-04,sc
-032_S_10638,1,Cognitively Normal,2025-04-15,sc
-032_S_1101,3,Alzheimer's Disease,2006-12-04,bl
 032_S_1169,2,Mild Cognitive Impairment,2012-02-08,m60
 032_S_2119,2,Mild Cognitive Impairment,2010-10-28,bl
 032_S_2240,2,Mild Cognitive Impairment,2011-01-19,bl
 032_S_2247,2,Mild Cognitive Impairment,2011-03-16,bl
 032_S_4277,2,Mild Cognitive Impairment,2013-11-27,m24
-032_S_4304,1,Cognitively Normal,2011-10-19,sc
 032_S_4348,1,Cognitively Normal,2011-03-09,bl
 032_S_4386,1,Cognitively Normal,2011-12-07,sc
 032_S_4429,1,Cognitively Normal,2011-12-14,sc
-032_S_4755,3,Alzheimer's Disease,2012-06-29,sc
-032_S_4823,3,Alzheimer's Disease,2015-07-02,m36
-032_S_4921,1,Cognitively Normal,2012-08-31,sc
-032_S_5263,2,Mild Cognitive Impairment,2017-01-26,m24
-032_S_5289,1,Cognitively Normal,2013-08-28,sc
-032_S_6055,2,Mild Cognitive Impairment,2018-08-09,sc
-032_S_6211,1,Cognitively Normal,2018-02-22,sc
-032_S_6279,2,Mild Cognitive Impairment,2019-10-17,m12
-032_S_6290,1,Cognitively Normal,2018-04-12,sc
-032_S_6293,1,Cognitively Normal,2018-04-12,sc
-032_S_6294,1,Cognitively Normal,2018-04-12,sc
-032_S_6526,1,Cognitively Normal,2018-07-30,sc
-032_S_6600,3,Alzheimer's Disease,2018-10-18,sc
-032_S_6602,3,Alzheimer's Disease,2018-10-18,sc
-032_S_6699,1,Cognitively Normal,2019-04-25,sc
-032_S_6700,2,Mild Cognitive Impairment,2019-05-09,sc
-032_S_6701,1,Cognitively Normal,2019-05-09,sc
-032_S_6709,1,Cognitively Normal,2019-04-25,sc
-032_S_6717,1,Cognitively Normal,2019-05-30,sc
-032_S_6728,2,Mild Cognitive Impairment,2019-07-11,sc
-032_S_6804,2,Mild Cognitive Impairment,2019-10-17,sc
-032_S_6855,3,Alzheimer's Disease,2020-03-12,sc
-033_S_0511,3,Alzheimer's Disease,2008-06-04,m24
-033_S_0513,3,Alzheimer's Disease,2009-06-03,m36
 033_S_0514,3,Alzheimer's Disease,2010-06-09,m48
-033_S_0516,1,Cognitively Normal,2006-06-09,bl
-033_S_0567,3,Alzheimer's Disease,2006-12-04,m06
-033_S_0723,3,Alzheimer's Disease,2007-02-22,m06
-033_S_0724,3,Alzheimer's Disease,2006-08-02,bl
-033_S_0725,3,Alzheimer's Disease,2008-02-20,m18
-033_S_0733,3,Alzheimer's Disease,2006-08-01,bl
-033_S_0734,1,Cognitively Normal,2006-08-04,bl
-033_S_0739,2,Mild Cognitive Impairment,2006-07-31,bl
-033_S_0741,2,Mild Cognitive Impairment,2015-08-14,m108
-033_S_0889,3,Alzheimer's Disease,2006-10-09,bl
 033_S_0906,3,Alzheimer's Disease,2008-04-10,m18
 033_S_0920,3,Alzheimer's Disease,2016-01-13,m108
 033_S_0922,3,Alzheimer's Disease,2007-10-12,m12
 033_S_0923,1,Cognitively Normal,2006-10-13,bl
-033_S_10005,2,Mild Cognitive Impairment,2023-09-15,sc
-033_S_10008,2,Mild Cognitive Impairment,2023-09-12,sc
-033_S_10009,2,Mild Cognitive Impairment,2023-10-26,bl
-033_S_10014,2,Mild Cognitive Impairment,2023-09-25,sc
-033_S_10016,2,Mild Cognitive Impairment,2023-10-04,sc
-033_S_10021,3,Alzheimer's Disease,2023-11-08,sc
-033_S_10022,2,Mild Cognitive Impairment,2023-11-13,sc
-033_S_10025,2,Mild Cognitive Impairment,2024-01-02,sc
-033_S_10027,3,Alzheimer's Disease,2023-12-13,sc
-033_S_10049,3,Alzheimer's Disease,2024-02-07,sc
-033_S_10083,2,Mild Cognitive Impairment,2024-03-25,sc
-033_S_10092,1,Cognitively Normal,2024-02-04,sc
-033_S_10095,2,Mild Cognitive Impairment,2024-04-03,sc
-033_S_10099,1,Cognitively Normal,2024-04-15,sc
-033_S_10107,3,Alzheimer's Disease,2024-04-23,sc
-033_S_10118,2,Mild Cognitive Impairment,2024-05-08,sc
-033_S_10121,2,Mild Cognitive Impairment,2024-05-20,sc
-033_S_10144,3,Alzheimer's Disease,2024-06-25,sc
-033_S_10147,3,Alzheimer's Disease,2024-06-24,sc
-033_S_10150,1,Cognitively Normal,2024-06-25,sc
-033_S_1016,1,Cognitively Normal,2006-11-13,bl
-033_S_10170,1,Cognitively Normal,2024-07-29,sc
-033_S_10175,1,Cognitively Normal,2024-07-17,sc
-033_S_10187,2,Mild Cognitive Impairment,2024-11-12,sc
-033_S_10196,2,Mild Cognitive Impairment,2024-08-07,sc
-033_S_10210,2,Mild Cognitive Impairment,2024-08-19,sc
-033_S_10215,1,Cognitively Normal,2024-08-20,sc
-033_S_10217,1,Cognitively Normal,2024-08-21,sc
-033_S_10229,2,Mild Cognitive Impairment,2024-09-05,sc
-033_S_10231,2,Mild Cognitive Impairment,2024-08-28,sc
-033_S_10249,3,Alzheimer's Disease,2024-09-12,sc
-033_S_10255,1,Cognitively Normal,2024-09-17,sc
-033_S_10265,3,Alzheimer's Disease,2024-09-24,sc
-033_S_10276,2,Mild Cognitive Impairment,2024-10-01,sc
-033_S_10297,2,Mild Cognitive Impairment,2024-10-15,sc
-033_S_10326,1,Cognitively Normal,2024-10-29,sc
-033_S_10328,2,Mild Cognitive Impairment,2024-10-31,sc
-033_S_10353,1,Cognitively Normal,2024-11-12,sc
-033_S_10379,1,Cognitively Normal,2024-11-21,sc
-033_S_10391,1,Cognitively Normal,2024-12-03,sc
-033_S_10693,3,Alzheimer's Disease,2025-04-21,sc
-033_S_1086,1,Cognitively Normal,2006-12-13,bl
 033_S_1098,3,Alzheimer's Disease,2016-12-06,m120
 033_S_1116,3,Alzheimer's Disease,2009-12-08,m36
-033_S_1279,2,Mild Cognitive Impairment,2007-02-28,bl
-033_S_1281,3,Alzheimer's Disease,2007-03-02,bl
-033_S_1283,3,Alzheimer's Disease,2007-02-26,bl
-033_S_1284,2,Mild Cognitive Impairment,2007-02-26,bl
-033_S_1285,3,Alzheimer's Disease,2007-02-26,bl
-033_S_1308,3,Alzheimer's Disease,2007-02-28,bl
-033_S_1309,2,Mild Cognitive Impairment,2007-02-28,bl
 033_S_4176,1,Cognitively Normal,2011-08-09,sc
 033_S_4177,1,Cognitively Normal,2011-08-09,sc
 033_S_4179,2,Mild Cognitive Impairment,2019-01-15,m90
-033_S_4181,2,Mild Cognitive Impairment,2011-08-10,sc
 033_S_4505,1,Cognitively Normal,2012-01-25,sc
 033_S_4508,1,Cognitively Normal,2012-01-26,sc
-033_S_4691,2,Mild Cognitive Impairment,2013-05-02,sc
-033_S_5013,3,Alzheimer's Disease,2012-10-24,sc
-033_S_5017,3,Alzheimer's Disease,2012-10-25,sc
-033_S_5087,3,Alzheimer's Disease,2013-02-07,sc
-033_S_5198,1,Cognitively Normal,2013-05-22,sc
-033_S_5235,1,Cognitively Normal,2013-06-19,sc
-033_S_5259,1,Cognitively Normal,2013-07-08,sc
-033_S_5270,1,Cognitively Normal,2013-07-23,sc
-033_S_6266,1,Cognitively Normal,2018-03-07,sc
-033_S_6298,1,Cognitively Normal,2018-04-04,sc
-033_S_6352,2,Mild Cognitive Impairment,2024-11-06,m78
-033_S_6497,3,Alzheimer's Disease,2019-06-11,m12
-033_S_6572,1,Cognitively Normal,2018-08-27,sc
-033_S_6594,3,Alzheimer's Disease,2018-09-25,sc
-033_S_6625,1,Cognitively Normal,2018-11-01,sc
-033_S_6697,2,Mild Cognitive Impairment,2019-03-07,sc
-033_S_6705,3,Alzheimer's Disease,2019-03-19,sc
-033_S_6741,3,Alzheimer's Disease,2019-05-29,sc
-033_S_6824,3,Alzheimer's Disease,2019-09-24,sc
-033_S_6859,1,Cognitively Normal,2020-02-18,sc
-033_S_6889,2,Mild Cognitive Impairment,2020-09-25,sc
-033_S_6969,2,Mild Cognitive Impairment,2022-07-26,m12
-033_S_6976,3,Alzheimer's Disease,2021-06-30,sc
-033_S_7066,3,Alzheimer's Disease,2022-04-12,sc
-033_S_7079,2,Mild Cognitive Impairment,2022-05-23,sc
-033_S_7088,3,Alzheimer's Disease,2023-07-11,m12
-033_S_7095,1,Cognitively Normal,2022-07-01,sc
-033_S_7100,1,Cognitively Normal,2022-08-08,sc
-033_S_7114,1,Cognitively Normal,2022-10-13,sc
-033_S_7116,3,Alzheimer's Disease,2022-10-28,sc
-035_S_0033,2,Mild Cognitive Impairment,2005-12-09,bl
-035_S_0048,1,Cognitively Normal,2005-12-19,bl
 035_S_0156,2,Mild Cognitive Impairment,2013-02-27,m84
-035_S_0204,3,Alzheimer's Disease,2007-02-27,m12
-035_S_0292,3,Alzheimer's Disease,2010-05-05,m48
-035_S_0341,3,Alzheimer's Disease,2006-04-26,bl
 035_S_0555,3,Alzheimer's Disease,2016-08-02,m108
 035_S_0997,3,Alzheimer's Disease,2008-07-31,m18
-035_S_10030,1,Cognitively Normal,2024-01-03,sc
-035_S_10031,1,Cognitively Normal,2024-01-04,sc
-035_S_10032,1,Cognitively Normal,2024-01-08,sc
-035_S_10048,2,Mild Cognitive Impairment,2024-02-05,sc
-035_S_10052,2,Mild Cognitive Impairment,2024-02-06,sc
-035_S_10053,2,Mild Cognitive Impairment,2024-02-07,sc
-035_S_10067,1,Cognitively Normal,2024-03-04,sc
-035_S_10068,1,Cognitively Normal,2024-03-05,sc
-035_S_10093,1,Cognitively Normal,2024-04-02,sc
-035_S_10096,1,Cognitively Normal,2024-04-03,sc
-035_S_10193,2,Mild Cognitive Impairment,2024-08-06,sc
-035_S_10241,1,Cognitively Normal,2024-09-09,sc
-035_S_10274,1,Cognitively Normal,2024-09-30,sc
-035_S_10329,3,Alzheimer's Disease,2024-10-31,sc
-035_S_10340,2,Mild Cognitive Impairment,2024-11-06,sc
-035_S_10364,1,Cognitively Normal,2024-11-18,sc
-035_S_10382,1,Cognitively Normal,2024-11-25,sc
-035_S_10455,2,Mild Cognitive Impairment,2025-01-22,sc
-035_S_10530,2,Mild Cognitive Impairment,2025-02-24,sc
-035_S_10586,1,Cognitively Normal,2025-03-05,sc
 035_S_2061,2,Mild Cognitive Impairment,2010-10-28,bl
 035_S_2074,2,Mild Cognitive Impairment,2011-01-06,bl
 035_S_2199,2,Mild Cognitive Impairment,2011-01-12,bl
-035_S_4033,3,Alzheimer's Disease,2011-04-27,sc
-035_S_4062,2,Mild Cognitive Impairment,2011-06-14,sc
 035_S_4082,1,Cognitively Normal,2011-06-14,sc
-035_S_4085,2,Mild Cognitive Impairment,2011-06-14,sc
 035_S_4114,3,Alzheimer's Disease,2012-11-30,m12
 035_S_4256,2,Mild Cognitive Impairment,2011-12-08,sc
 035_S_4414,3,Alzheimer's Disease,2012-11-30,m06
-035_S_4457,1,Cognitively Normal,2012-01-11,sc
 035_S_4464,1,Cognitively Normal,2012-01-11,sc
 035_S_4582,3,Alzheimer's Disease,2016-08-18,m48
-035_S_4588,2,Mild Cognitive Impairment,2012-03-09,sc
-035_S_4783,3,Alzheimer's Disease,2012-06-20,sc
-035_S_4784,3,Alzheimer's Disease,2013-02-27,m06
-035_S_4785,2,Mild Cognitive Impairment,2019-11-06,m78
-035_S_4786,2,Mild Cognitive Impairment,2013-07-08,sc
-035_S_6156,1,Cognitively Normal,2017-12-13,sc
-035_S_6160,1,Cognitively Normal,2017-12-20,sc
-035_S_6195,1,Cognitively Normal,2018-01-24,sc
-035_S_6200,1,Cognitively Normal,2018-01-31,sc
-035_S_6306,1,Cognitively Normal,2018-04-05,sc
-035_S_6380,2,Mild Cognitive Impairment,2018-05-21,sc
-035_S_6480,2,Mild Cognitive Impairment,2018-06-27,sc
-035_S_6488,1,Cognitively Normal,2018-07-02,sc
-035_S_6551,1,Cognitively Normal,2018-08-02,sc
-035_S_6641,2,Mild Cognitive Impairment,2018-11-28,sc
-035_S_6650,3,Alzheimer's Disease,2018-12-10,sc
-035_S_6660,3,Alzheimer's Disease,2019-01-07,sc
-035_S_6722,1,Cognitively Normal,2019-04-18,sc
-035_S_6730,1,Cognitively Normal,2019-05-09,sc
-035_S_6739,1,Cognitively Normal,2019-05-23,sc
-035_S_6751,1,Cognitively Normal,2019-06-05,sc
-035_S_6782,1,Cognitively Normal,2019-07-24,sc
-035_S_6841,1,Cognitively Normal,2020-07-28,sc
-035_S_6905,3,Alzheimer's Disease,2021-02-10,sc
-035_S_6927,3,Alzheimer's Disease,2021-04-12,sc
-035_S_6937,2,Mild Cognitive Impairment,2021-04-26,sc
-035_S_6946,1,Cognitively Normal,2021-05-11,sc
-035_S_6947,2,Mild Cognitive Impairment,2021-05-18,sc
-035_S_6948,1,Cognitively Normal,2021-05-13,sc
-035_S_6950,1,Cognitively Normal,2021-05-17,sc
-035_S_6953,2,Mild Cognitive Impairment,2021-05-25,sc
-035_S_6967,1,Cognitively Normal,2021-06-14,sc
-035_S_6999,1,Cognitively Normal,2021-08-30,sc
-035_S_7000,3,Alzheimer's Disease,2023-10-04,m24
-035_S_7001,3,Alzheimer's Disease,2021-09-09,sc
-035_S_7004,1,Cognitively Normal,2021-09-14,sc
-035_S_7019,2,Mild Cognitive Impairment,2021-10-11,sc
-035_S_7021,2,Mild Cognitive Impairment,2021-10-13,sc
-035_S_7030,1,Cognitively Normal,2021-11-29,sc
-035_S_7031,2,Mild Cognitive Impairment,2021-12-01,sc
-035_S_7043,1,Cognitively Normal,2022-02-14,sc
-035_S_7049,2,Mild Cognitive Impairment,2022-03-01,sc
-035_S_7050,1,Cognitively Normal,2022-03-03,sc
-035_S_7073,2,Mild Cognitive Impairment,2022-04-20,sc
-035_S_7076,1,Cognitively Normal,2022-05-05,sc
-035_S_7077,1,Cognitively Normal,2022-05-11,sc
-035_S_7105,2,Mild Cognitive Impairment,2022-08-22,sc
-035_S_7115,1,Cognitively Normal,2022-10-18,sc
-035_S_7120,3,Alzheimer's Disease,2023-01-19,sc
-035_S_7121,2,Mild Cognitive Impairment,2023-02-09,sc
-035_S_7123,1,Cognitively Normal,2023-02-28,sc
-036_S_0576,1,Cognitively Normal,2006-06-09,bl
-036_S_0577,3,Alzheimer's Disease,2006-06-09,bl
-036_S_0656,2,Mild Cognitive Impairment,2006-07-27,bl
 036_S_0672,1,Cognitively Normal,2006-08-01,bl
 036_S_0673,2,Mild Cognitive Impairment,2006-08-01,bl
-036_S_0748,2,Mild Cognitive Impairment,2006-08-28,bl
-036_S_0759,3,Alzheimer's Disease,2006-09-01,bl
-036_S_0760,3,Alzheimer's Disease,2006-09-13,bl
-036_S_0813,1,Cognitively Normal,2006-09-13,bl
-036_S_0869,3,Alzheimer's Disease,2008-11-17,m24
 036_S_0945,3,Alzheimer's Disease,2010-12-10,m48
-036_S_0976,3,Alzheimer's Disease,2010-02-04,m36
-036_S_1001,3,Alzheimer's Disease,2006-11-29,bl
-036_S_10112,2,Mild Cognitive Impairment,2024-04-29,sc
-036_S_10133,3,Alzheimer's Disease,2024-06-03,sc
-036_S_10165,2,Mild Cognitive Impairment,2024-07-15,sc
-036_S_10206,3,Alzheimer's Disease,2024-08-14,sc
 036_S_1023,1,Cognitively Normal,2007-01-05,bl
-036_S_10314,2,Mild Cognitive Impairment,2024-10-23,sc
-036_S_10322,3,Alzheimer's Disease,2024-10-28,sc
-036_S_10372,2,Mild Cognitive Impairment,2024-11-20,sc
-036_S_10424,3,Alzheimer's Disease,2025-01-06,sc
-036_S_10497,2,Mild Cognitive Impairment,2025-02-17,sc
-036_S_10544,1,Cognitively Normal,2025-02-26,sc
-036_S_10545,1,Cognitively Normal,2025-02-26,sc
-036_S_10595,1,Cognitively Normal,2025-03-10,sc
-036_S_10642,1,Cognitively Normal,2025-03-26,sc
-036_S_10649,1,Cognitively Normal,2025-04-01,sc
-036_S_10662,1,Cognitively Normal,2025-04-07,sc
-036_S_1135,3,Alzheimer's Disease,2009-01-21,m24
-036_S_1240,3,Alzheimer's Disease,2009-03-05,m24
 036_S_2378,2,Mild Cognitive Impairment,2011-07-06,bl
 036_S_2380,3,Alzheimer's Disease,2021-01-13,m114
-036_S_4389,1,Cognitively Normal,2011-11-21,sc
 036_S_4430,3,Alzheimer's Disease,2012-08-02,m06
-036_S_4491,1,Cognitively Normal,2012-01-19,sc
-036_S_4535,2,Mild Cognitive Impairment,2012-02-07,sc
-036_S_4538,3,Alzheimer's Disease,2018-12-20,m78
 036_S_4562,2,Mild Cognitive Impairment,2012-02-22,sc
-036_S_4714,3,Alzheimer's Disease,2016-05-23,m48
-036_S_4715,3,Alzheimer's Disease,2014-06-02,m24
-036_S_4736,2,Mild Cognitive Impairment,2012-05-14,sc
-036_S_4740,3,Alzheimer's Disease,2012-05-16,sc
-036_S_4808,2,Mild Cognitive Impairment,2012-06-13,sc
-036_S_4820,3,Alzheimer's Disease,2012-06-21,sc
-036_S_4878,1,Cognitively Normal,2012-07-23,sc
-036_S_4894,3,Alzheimer's Disease,2012-07-26,sc
-036_S_4899,3,Alzheimer's Disease,2013-05-14,m06
-036_S_5063,3,Alzheimer's Disease,2013-01-15,sc
-036_S_5112,3,Alzheimer's Disease,2013-03-04,sc
-036_S_5149,3,Alzheimer's Disease,2013-04-08,sc
-036_S_5210,3,Alzheimer's Disease,2013-05-30,sc
-036_S_5248,1,Cognitively Normal,2013-06-27,sc
-036_S_5271,1,Cognitively Normal,2013-07-22,sc
-036_S_5283,1,Cognitively Normal,2013-08-15,sc
-036_S_6088,1,Cognitively Normal,2017-10-05,sc
-036_S_6099,2,Mild Cognitive Impairment,2017-10-18,sc
-036_S_6134,2,Mild Cognitive Impairment,2017-11-27,sc
-036_S_6179,3,Alzheimer's Disease,2018-01-16,sc
-036_S_6189,2,Mild Cognitive Impairment,2020-10-15,m30
-036_S_6231,3,Alzheimer's Disease,2018-02-13,sc
-036_S_6316,1,Cognitively Normal,2018-04-11,sc
-036_S_6466,1,Cognitively Normal,2018-06-22,sc
-036_S_6876,2,Mild Cognitive Impairment,2020-07-02,sc
-036_S_6878,3,Alzheimer's Disease,2024-04-22,m42
-036_S_6885,3,Alzheimer's Disease,2024-10-23,m48
-036_S_6887,3,Alzheimer's Disease,2024-06-18,m42
-036_S_6894,2,Mild Cognitive Impairment,2020-11-05,sc
-036_S_6897,2,Mild Cognitive Impairment,2021-01-07,sc
-036_S_6916,3,Alzheimer's Disease,2024-08-05,m42
-036_S_6922,2,Mild Cognitive Impairment,2021-03-25,sc
-036_S_7023,2,Mild Cognitive Impairment,2021-10-25,sc
-036_S_7044,2,Mild Cognitive Impairment,2022-02-14,sc
-036_S_7067,2,Mild Cognitive Impairment,2022-04-11,sc
-036_S_7070,3,Alzheimer's Disease,2024-04-24,m24
-036_S_7075,2,Mild Cognitive Impairment,2022-04-27,sc
 037_S_0150,3,Alzheimer's Disease,2017-12-13,m138
-037_S_0182,3,Alzheimer's Disease,2007-06-14,m06
 037_S_0303,1,Cognitively Normal,2006-05-09,bl
-037_S_0327,1,Cognitively Normal,2006-05-31,bl
-037_S_0377,2,Mild Cognitive Impairment,2006-06-18,bl
-037_S_0454,2,Mild Cognitive Impairment,2012-03-16,m72
 037_S_0467,3,Alzheimer's Disease,2012-06-20,m72
 037_S_0501,3,Alzheimer's Disease,2014-07-09,m96
 037_S_0539,3,Alzheimer's Disease,2008-07-09,m24
-037_S_0552,3,Alzheimer's Disease,2011-07-24,m60
 037_S_0566,3,Alzheimer's Disease,2009-12-18,m36
-037_S_0588,3,Alzheimer's Disease,2011-08-22,m60
-037_S_0627,3,Alzheimer's Disease,2006-08-17,bl
-037_S_10050,1,Cognitively Normal,2024-02-19,sc
-037_S_10061,1,Cognitively Normal,2024-03-06,sc
-037_S_10062,1,Cognitively Normal,2024-03-28,sc
-037_S_10063,1,Cognitively Normal,2024-04-10,sc
-037_S_10086,1,Cognitively Normal,2024-04-02,sc
-037_S_10087,1,Cognitively Normal,2024-05-02,sc
-037_S_10098,2,Mild Cognitive Impairment,2024-05-30,sc
-037_S_10116,1,Cognitively Normal,2024-10-10,sc
-037_S_10117,1,Cognitively Normal,2024-06-05,sc
-037_S_10131,1,Cognitively Normal,2024-10-31,sc
-037_S_10171,3,Alzheimer's Disease,2024-08-29,sc
-037_S_10209,1,Cognitively Normal,2024-12-17,sc
-037_S_10225,1,Cognitively Normal,2024-10-31,sc
-037_S_10233,1,Cognitively Normal,2024-11-26,sc
-037_S_10234,1,Cognitively Normal,2024-11-26,sc
-037_S_10243,1,Cognitively Normal,2024-11-14,sc
-037_S_10253,1,Cognitively Normal,2024-12-11,sc
-037_S_10463,1,Cognitively Normal,2025-03-31,sc
-037_S_10464,1,Cognitively Normal,2025-03-25,sc
-037_S_10568,1,Cognitively Normal,2025-04-08,sc
-037_S_10611,1,Cognitively Normal,2025-03-26,sc
 037_S_1078,3,Alzheimer's Disease,2011-02-21,m48
-037_S_1225,3,Alzheimer's Disease,2008-09-16,m18
-037_S_1421,2,Mild Cognitive Impairment,2007-09-14,bl
 037_S_4001,3,Alzheimer's Disease,2011-03-10,bl
 037_S_4015,3,Alzheimer's Disease,2013-05-08,m24
 037_S_4028,1,Cognitively Normal,2011-04-18,sc
 037_S_4030,3,Alzheimer's Disease,2014-05-25,m36
-037_S_4071,2,Mild Cognitive Impairment,2013-09-28,m24
 037_S_4146,2,Mild Cognitive Impairment,2011-08-31,sc
 037_S_4214,2,Mild Cognitive Impairment,2011-08-24,sc
 037_S_4302,2,Mild Cognitive Impairment,2011-10-14,sc
 037_S_4308,1,Cognitively Normal,2012-01-04,sc
 037_S_4381,2,Mild Cognitive Impairment,2012-01-09,sc
 037_S_4410,1,Cognitively Normal,2011-12-07,sc
-037_S_4432,3,Alzheimer's Disease,2012-09-12,m06
-037_S_4706,3,Alzheimer's Disease,2013-05-18,m12
-037_S_4750,2,Mild Cognitive Impairment,2012-06-04,sc
-037_S_4770,3,Alzheimer's Disease,2012-06-06,sc
-037_S_4879,3,Alzheimer's Disease,2012-08-20,sc
-037_S_4953,2,Mild Cognitive Impairment,2012-09-21,sc
-037_S_5126,1,Cognitively Normal,2013-04-15,sc
-037_S_5162,3,Alzheimer's Disease,2013-04-22,sc
-037_S_5164,3,Alzheimer's Disease,2013-04-24,sc
-037_S_5222,1,Cognitively Normal,2013-07-01,sc
-037_S_6031,1,Cognitively Normal,2017-06-15,sc
-037_S_6032,1,Cognitively Normal,2017-06-09,sc
-037_S_6046,2,Mild Cognitive Impairment,2024-07-09,m72
-037_S_6083,2,Mild Cognitive Impairment,2017-10-05,sc
-037_S_6115,1,Cognitively Normal,2017-11-15,sc
-037_S_6125,2,Mild Cognitive Impairment,2017-11-15,sc
-037_S_6141,2,Mild Cognitive Impairment,2017-12-21,sc
-037_S_6144,2,Mild Cognitive Impairment,2020-05-19,m24
-037_S_6187,1,Cognitively Normal,2018-03-07,sc
-037_S_6204,1,Cognitively Normal,2018-03-08,sc
-037_S_6216,3,Alzheimer's Disease,2018-04-18,sc
-037_S_6222,3,Alzheimer's Disease,2020-12-10,m30
-037_S_6230,3,Alzheimer's Disease,2018-05-18,sc
-037_S_6248,1,Cognitively Normal,2018-03-26,sc
-037_S_6271,1,Cognitively Normal,2018-04-24,sc
-037_S_6377,3,Alzheimer's Disease,2018-06-29,sc
-037_S_6552,2,Mild Cognitive Impairment,2018-08-31,sc
-037_S_6620,2,Mild Cognitive Impairment,2018-11-12,sc
-037_S_6627,2,Mild Cognitive Impairment,2018-11-12,sc
-037_S_6951,1,Cognitively Normal,2021-08-16,sc
-037_S_6956,1,Cognitively Normal,2021-06-15,sc
-037_S_6963,1,Cognitively Normal,2021-07-19,sc
-037_S_6974,1,Cognitively Normal,2021-06-30,sc
-037_S_6977,1,Cognitively Normal,2021-06-30,sc
-037_S_6991,1,Cognitively Normal,2021-08-30,sc
-037_S_6992,1,Cognitively Normal,2021-09-01,sc
-037_S_6993,1,Cognitively Normal,2021-08-25,sc
-037_S_6995,1,Cognitively Normal,2021-08-30,sc
-037_S_7006,1,Cognitively Normal,2021-10-04,sc
-037_S_7011,1,Cognitively Normal,2021-10-12,sc
-037_S_7012,1,Cognitively Normal,2021-10-12,sc
-037_S_7035,1,Cognitively Normal,2022-06-23,sc
-041_S_0125,1,Cognitively Normal,2006-02-27,bl
-041_S_0262,1,Cognitively Normal,2006-04-24,bl
-041_S_0282,2,Mild Cognitive Impairment,2006-07-11,bl
-041_S_0314,3,Alzheimer's Disease,2009-04-20,m36
-041_S_0407,2,Mild Cognitive Impairment,2006-07-03,bl
-041_S_0446,2,Mild Cognitive Impairment,2006-07-11,bl
-041_S_0549,3,Alzheimer's Disease,2008-03-24,m18
-041_S_0598,2,Mild Cognitive Impairment,2006-08-02,bl
 041_S_0679,2,Mild Cognitive Impairment,2006-08-04,bl
-041_S_0721,2,Mild Cognitive Impairment,2006-09-25,bl
-041_S_0898,3,Alzheimer's Disease,2009-11-20,m36
-041_S_1002,1,Cognitively Normal,2006-12-06,bl
 041_S_1010,3,Alzheimer's Disease,2009-01-12,m24
-041_S_10104,1,Cognitively Normal,2024-09-18,sc
-041_S_10125,1,Cognitively Normal,2024-06-21,sc
-041_S_10320,1,Cognitively Normal,2024-11-20,sc
-041_S_10327,1,Cognitively Normal,2024-12-18,sc
-041_S_10330,1,Cognitively Normal,2024-12-18,sc
-041_S_10448,1,Cognitively Normal,2025-02-20,sc
-041_S_10583,1,Cognitively Normal,2025-04-03,sc
-041_S_10634,1,Cognitively Normal,2025-04-22,sc
 041_S_1260,2,Mild Cognitive Impairment,2007-03-01,bl
-041_S_1368,3,Alzheimer's Disease,2007-03-22,bl
-041_S_1391,3,Alzheimer's Disease,2007-04-19,bl
-041_S_1411,2,Mild Cognitive Impairment,2007-08-10,bl
-041_S_1412,3,Alzheimer's Disease,2008-07-28,m12
 041_S_1418,2,Mild Cognitive Impairment,2007-08-14,bl
-041_S_1420,2,Mild Cognitive Impairment,2007-10-10,bl
-041_S_1423,3,Alzheimer's Disease,2008-08-13,m12
 041_S_1425,3,Alzheimer's Disease,2011-02-23,m36
-041_S_1435,3,Alzheimer's Disease,2007-09-11,bl
 041_S_4004,2,Mild Cognitive Impairment,2011-03-29,sc
-041_S_4014,1,Cognitively Normal,2011-03-28,sc
 041_S_4037,1,Cognitively Normal,2011-04-29,sc
 041_S_4041,3,Alzheimer's Disease,2013-07-08,m24
 041_S_4051,2,Mild Cognitive Impairment,2011-05-23,sc
 041_S_4060,1,Cognitively Normal,2011-05-18,sc
-041_S_4083,1,Cognitively Normal,2011-06-17,sc
-041_S_4116,1,Cognitively Normal,2011-07-11,sc
 041_S_4138,3,Alzheimer's Disease,2017-09-06,m72
-041_S_4140,1,Cognitively Normal,2011-07-20,sc
 041_S_4143,3,Alzheimer's Disease,2017-07-13,m72
 041_S_4200,3,Alzheimer's Disease,2024-09-20,m156
 041_S_4271,3,Alzheimer's Disease,2019-10-07,m96
-041_S_4375,2,Mild Cognitive Impairment,2011-12-12,sc
 041_S_4427,1,Cognitively Normal,2011-12-16,sc
-041_S_4495,2,Mild Cognitive Impairment,2012-01-30,sc
-041_S_4509,1,Cognitively Normal,2012-02-07,sc
 041_S_4510,2,Mild Cognitive Impairment,2012-02-06,sc
 041_S_4513,2,Mild Cognitive Impairment,2012-02-23,sc
-041_S_4523,2,Mild Cognitive Impairment,2012-02-14,sc
-041_S_4629,2,Mild Cognitive Impairment,2012-04-12,sc
-041_S_4720,3,Alzheimer's Disease,2015-07-15,m36
-041_S_4874,2,Mild Cognitive Impairment,2012-07-30,sc
-041_S_4876,2,Mild Cognitive Impairment,2012-08-08,sc
-041_S_4877,2,Mild Cognitive Impairment,2012-08-23,sc
-041_S_4974,3,Alzheimer's Disease,2018-04-16,m60
-041_S_4989,2,Mild Cognitive Impairment,2012-10-15,sc
-041_S_5026,3,Alzheimer's Disease,2013-12-06,m12
-041_S_5078,1,Cognitively Normal,2013-02-01,sc
-041_S_5082,1,Cognitively Normal,2013-02-18,sc
-041_S_5097,2,Mild Cognitive Impairment,2015-04-06,m24
-041_S_5100,1,Cognitively Normal,2013-03-07,sc
-041_S_5131,1,Cognitively Normal,2013-03-28,sc
-041_S_5141,1,Cognitively Normal,2013-04-11,sc
-041_S_5173,1,Cognitively Normal,2013-05-02,sc
-041_S_5204,1,Cognitively Normal,2013-06-05,sc
-041_S_5244,1,Cognitively Normal,2013-07-05,sc
-041_S_5253,2,Mild Cognitive Impairment,2022-03-28,m102
-041_S_6136,1,Cognitively Normal,2017-11-28,sc
-041_S_6159,1,Cognitively Normal,2017-12-15,sc
-041_S_6192,1,Cognitively Normal,2018-01-29,sc
-041_S_6226,1,Cognitively Normal,2018-02-15,sc
-041_S_6292,1,Cognitively Normal,2018-03-29,sc
-041_S_6314,1,Cognitively Normal,2018-04-10,sc
-041_S_6354,1,Cognitively Normal,2018-05-21,sc
-041_S_6401,1,Cognitively Normal,2018-05-25,sc
-041_S_6447,1,Cognitively Normal,2018-06-18,sc
-041_S_6731,3,Alzheimer's Disease,2023-08-04,m48
-041_S_6785,1,Cognitively Normal,2019-08-02,sc
-041_S_6786,1,Cognitively Normal,2019-07-30,sc
-041_S_6801,1,Cognitively Normal,2019-08-20,sc
-041_S_7017,1,Cognitively Normal,2020-12-14,sc
 051_S_1040,2,Mild Cognitive Impairment,2006-11-09,bl
 051_S_1072,2,Mild Cognitive Impairment,2006-12-20,bl
 051_S_1123,3,Alzheimer's Disease,2015-03-24,m96
 051_S_1131,2,Mild Cognitive Impairment,2007-01-18,bl
-051_S_1296,3,Alzheimer's Disease,2007-03-01,bl
 051_S_1331,3,Alzheimer's Disease,2008-07-08,m12
-051_S_1338,2,Mild Cognitive Impairment,2007-05-15,bl
-051_S_4929,3,Alzheimer's Disease,2014-10-30,m24
-051_S_4980,3,Alzheimer's Disease,2012-10-02,sc
-051_S_5005,3,Alzheimer's Disease,2012-10-19,sc
-051_S_5077,3,Alzheimer's Disease,2013-01-25,sc
-051_S_5285,3,Alzheimer's Disease,2019-06-12,m66
-051_S_5293,1,Cognitively Normal,2013-09-12,sc
-051_S_5294,2,Mild Cognitive Impairment,2019-06-18,m66
-051_S_6719,2,Mild Cognitive Impairment,2019-04-10,sc
-051_S_6761,2,Mild Cognitive Impairment,2019-06-19,sc
 052_S_0671,3,Alzheimer's Disease,2014-03-07,m84
 052_S_0951,1,Cognitively Normal,2006-11-17,bl
 052_S_0952,3,Alzheimer's Disease,2008-09-29,m18
 052_S_0989,2,Mild Cognitive Impairment,2006-12-01,bl
-052_S_10159,2,Mild Cognitive Impairment,2024-07-08,sc
-052_S_10168,1,Cognitively Normal,2024-07-16,sc
-052_S_10185,1,Cognitively Normal,2024-07-29,sc
-052_S_10188,1,Cognitively Normal,2024-07-31,sc
-052_S_10195,2,Mild Cognitive Impairment,2024-08-07,sc
-052_S_10202,1,Cognitively Normal,2024-08-12,sc
-052_S_10211,1,Cognitively Normal,2024-08-19,sc
-052_S_10238,1,Cognitively Normal,2024-09-04,sc
-052_S_10242,1,Cognitively Normal,2024-09-09,sc
-052_S_10246,1,Cognitively Normal,2024-09-10,sc
-052_S_10252,1,Cognitively Normal,2024-09-16,sc
-052_S_10260,2,Mild Cognitive Impairment,2024-10-15,sc
-052_S_10267,1,Cognitively Normal,2024-09-25,sc
-052_S_10273,1,Cognitively Normal,2024-09-30,sc
-052_S_10275,1,Cognitively Normal,2024-10-01,sc
-052_S_10281,1,Cognitively Normal,2024-10-07,sc
-052_S_10284,1,Cognitively Normal,2024-10-08,sc
-052_S_10286,1,Cognitively Normal,2024-10-09,sc
-052_S_10307,1,Cognitively Normal,2024-10-21,sc
-052_S_10315,2,Mild Cognitive Impairment,2024-10-23,sc
-052_S_10331,1,Cognitively Normal,2024-11-04,sc
-052_S_10339,1,Cognitively Normal,2024-11-06,sc
-052_S_10349,1,Cognitively Normal,2024-11-11,sc
-052_S_10354,2,Mild Cognitive Impairment,2024-11-13,sc
-052_S_10387,1,Cognitively Normal,2024-11-27,sc
-052_S_10400,2,Mild Cognitive Impairment,2025-04-02,bl
-052_S_10411,1,Cognitively Normal,2024-12-17,sc
-052_S_10425,1,Cognitively Normal,2025-01-06,sc
-052_S_10431,1,Cognitively Normal,2025-01-08,sc
-052_S_10449,1,Cognitively Normal,2025-01-21,sc
-052_S_10469,1,Cognitively Normal,2025-02-03,sc
-052_S_1054,3,Alzheimer's Disease,2008-01-09,m12
-052_S_10548,1,Cognitively Normal,2025-02-26,sc
-052_S_10672,1,Cognitively Normal,2025-04-14,sc
-052_S_10692,2,Mild Cognitive Impairment,2025-04-21,sc
-052_S_10695,1,Cognitively Normal,2025-04-22,sc
-052_S_10697,1,Cognitively Normal,2025-04-23,sc
-052_S_1168,2,Mild Cognitive Impairment,2006-12-21,bl
 052_S_1250,1,Cognitively Normal,2007-02-16,bl
-052_S_1251,1,Cognitively Normal,2007-02-23,bl
-052_S_1346,3,Alzheimer's Disease,2011-06-08,m48
 052_S_1352,2,Mild Cognitive Impairment,2007-03-19,bl
 052_S_2249,2,Mild Cognitive Impairment,2011-01-05,bl
-052_S_4626,2,Mild Cognitive Impairment,2012-03-20,sc
-052_S_4807,3,Alzheimer's Disease,2015-08-04,m36
-052_S_4885,3,Alzheimer's Disease,2016-11-18,m48
-052_S_4944,2,Mild Cognitive Impairment,2012-10-16,sc
-052_S_4945,3,Alzheimer's Disease,2015-01-22,m24
-052_S_4959,3,Alzheimer's Disease,2013-02-05,sc
-052_S_5062,3,Alzheimer's Disease,2013-01-10,sc
-052_S_5107,3,Alzheimer's Disease,2013-03-10,sc
-052_S_5229,1,Cognitively Normal,2013-06-13,sc
-052_S_6296,1,Cognitively Normal,2018-04-12,sc
-052_S_6305,3,Alzheimer's Disease,2018-04-12,sc
-052_S_6412,1,Cognitively Normal,2018-06-13,sc
-052_S_6832,2,Mild Cognitive Impairment,2019-12-20,sc
-052_S_6844,3,Alzheimer's Disease,2024-11-05,m60
-052_S_7027,2,Mild Cognitive Impairment,2021-11-16,sc
-052_S_7036,2,Mild Cognitive Impairment,2022-01-10,sc
-052_S_7037,2,Mild Cognitive Impairment,2022-01-21,sc
-053_S_0389,3,Alzheimer's Disease,2010-05-14,m48
-053_S_0507,3,Alzheimer's Disease,2007-06-27,m12
-053_S_0621,2,Mild Cognitive Impairment,2006-06-26,bl
 053_S_0919,2,Mild Cognitive Impairment,2007-02-15,bl
-053_S_1044,3,Alzheimer's Disease,2007-01-15,bl
 053_S_2357,2,Mild Cognitive Impairment,2011-05-10,bl
-053_S_2396,2,Mild Cognitive Impairment,2011-08-30,bl
 053_S_4557,2,Mild Cognitive Impairment,2012-02-21,sc
 053_S_4578,1,Cognitively Normal,2012-02-28,sc
-053_S_4661,3,Alzheimer's Disease,2012-12-05,m06
-053_S_4813,2,Mild Cognitive Impairment,2012-06-15,sc
-053_S_5070,3,Alzheimer's Disease,2013-01-18,sc
-053_S_5202,1,Cognitively Normal,2013-05-23,sc
-053_S_5208,3,Alzheimer's Disease,2013-05-28,sc
-053_S_5272,1,Cognitively Normal,2013-07-24,sc
-053_S_5281,1,Cognitively Normal,2013-08-07,sc
-053_S_5287,1,Cognitively Normal,2013-08-23,sc
-053_S_5296,1,Cognitively Normal,2013-11-29,sc
-053_S_6598,2,Mild Cognitive Impairment,2018-09-27,sc
-053_S_6861,2,Mild Cognitive Impairment,2020-02-28,sc
-053_S_7086,2,Mild Cognitive Impairment,2022-06-22,sc
-053_S_7109,3,Alzheimer's Disease,2022-11-07,sc
-057_S_0464,2,Mild Cognitive Impairment,2006-06-20,bl
-057_S_0474,3,Alzheimer's Disease,2006-05-30,bl
-057_S_0643,1,Cognitively Normal,2006-07-12,bl
-057_S_0779,2,Mild Cognitive Impairment,2008-09-17,m24
-057_S_0818,1,Cognitively Normal,2006-09-27,bl
-057_S_0839,3,Alzheimer's Disease,2008-10-15,m24
 057_S_0934,1,Cognitively Normal,2006-10-25,bl
-057_S_0941,3,Alzheimer's Disease,2007-10-30,m12
-057_S_0957,2,Mild Cognitive Impairment,2006-11-01,bl
 057_S_1007,3,Alzheimer's Disease,2008-11-05,m24
-057_S_1217,3,Alzheimer's Disease,2008-03-18,m12
-057_S_1265,3,Alzheimer's Disease,2010-03-10,m36
 057_S_1269,2,Mild Cognitive Impairment,2007-02-15,bl
-057_S_1371,3,Alzheimer's Disease,2007-04-12,bl
-057_S_1373,3,Alzheimer's Disease,2007-04-17,bl
-057_S_1379,3,Alzheimer's Disease,2007-04-12,bl
 057_S_2398,3,Alzheimer's Disease,2012-07-25,m12
-057_S_4091,2,Mild Cognitive Impairment,2011-06-17,sc
-057_S_4110,3,Alzheimer's Disease,2011-06-29,sc
-057_S_4888,3,Alzheimer's Disease,2013-02-14,m06
-057_S_4897,2,Mild Cognitive Impairment,2012-08-01,sc
-057_S_4909,2,Mild Cognitive Impairment,2012-08-14,sc
-057_S_5199,1,Cognitively Normal,2013-05-23,sc
-057_S_5292,2,Mild Cognitive Impairment,2024-09-25,m132
-057_S_5295,1,Cognitively Normal,2013-11-14,sc
-057_S_6746,3,Alzheimer's Disease,2019-06-04,sc
-057_S_6869,3,Alzheimer's Disease,2020-03-16,sc
-062_S_0535,3,Alzheimer's Disease,2006-06-13,bl
-062_S_0578,1,Cognitively Normal,2006-06-22,bl
-062_S_0690,3,Alzheimer's Disease,2006-07-27,bl
-062_S_0730,3,Alzheimer's Disease,2006-07-31,bl
-062_S_0768,1,Cognitively Normal,2006-08-23,bl
-062_S_0793,3,Alzheimer's Disease,2006-09-11,bl
-062_S_1099,1,Cognitively Normal,2006-12-04,bl
-062_S_1182,2,Mild Cognitive Impairment,2007-02-13,bl
-062_S_1294,2,Mild Cognitive Impairment,2007-02-26,bl
-062_S_1299,3,Alzheimer's Disease,2008-09-16,m18
-067_S_0019,1,Cognitively Normal,2005-12-08,bl
-067_S_0029,3,Alzheimer's Disease,2005-11-11,bl
-067_S_0038,2,Mild Cognitive Impairment,2005-12-16,bl
-067_S_0045,3,Alzheimer's Disease,2007-03-28,m12
 067_S_0056,2,Mild Cognitive Impairment,2012-12-20,m84
 067_S_0059,2,Mild Cognitive Impairment,2012-12-20,m84
-067_S_0076,3,Alzheimer's Disease,2006-01-13,bl
-067_S_0077,3,Alzheimer's Disease,2007-03-26,m12
-067_S_0098,3,Alzheimer's Disease,2009-04-02,m36
-067_S_0110,3,Alzheimer's Disease,2006-03-06,bl
-067_S_0176,2,Mild Cognitive Impairment,2006-05-22,bl
-067_S_0177,1,Cognitively Normal,2006-04-14,bl
-067_S_0243,3,Alzheimer's Disease,2006-12-05,m06
 067_S_0257,1,Cognitively Normal,2006-08-10,bl
-067_S_0284,2,Mild Cognitive Impairment,2006-05-10,bl
-067_S_0290,2,Mild Cognitive Impairment,2006-05-10,bl
-067_S_0336,3,Alzheimer's Disease,2006-12-19,m06
-067_S_0607,2,Mild Cognitive Impairment,2006-12-05,bl
-067_S_0812,3,Alzheimer's Disease,2006-12-19,bl
-067_S_0828,3,Alzheimer's Disease,2006-12-05,bl
-067_S_10360,1,Cognitively Normal,2024-11-20,sc
-067_S_10374,3,Alzheimer's Disease,2024-11-26,sc
-067_S_10375,1,Cognitively Normal,2024-11-25,sc
-067_S_10474,2,Mild Cognitive Impairment,2025-02-10,sc
-067_S_10475,1,Cognitively Normal,2025-02-07,sc
-067_S_10508,1,Cognitively Normal,2025-03-05,sc
-067_S_10605,2,Mild Cognitive Impairment,2025-03-28,sc
-067_S_10640,1,Cognitively Normal,2025-04-11,sc
-067_S_10643,1,Cognitively Normal,2025-03-31,sc
-067_S_1185,3,Alzheimer's Disease,2007-01-23,bl
-067_S_1253,3,Alzheimer's Disease,2007-04-09,bl
 067_S_2195,3,Alzheimer's Disease,2014-12-16,m48
 067_S_2196,2,Mild Cognitive Impairment,2010-12-03,bl
 067_S_2301,2,Mild Cognitive Impairment,2011-03-02,bl
 067_S_2304,2,Mild Cognitive Impairment,2011-03-10,bl
 067_S_4054,2,Mild Cognitive Impairment,2011-05-19,sc
-067_S_4055,1,Cognitively Normal,2011-05-19,sc
 067_S_4072,2,Mild Cognitive Impairment,2011-06-10,sc
-067_S_4112,1,Cognitively Normal,2011-07-08,sc
-067_S_4113,2,Mild Cognitive Impairment,2011-07-08,sc
-067_S_4178,1,Cognitively Normal,2011-08-18,sc
-067_S_4183,2,Mild Cognitive Impairment,2011-08-15,sc
 067_S_4184,2,Mild Cognitive Impairment,2011-08-29,sc
 067_S_4212,2,Mild Cognitive Impairment,2011-08-29,sc
 067_S_4310,2,Mild Cognitive Impairment,2011-10-14,sc
-067_S_4717,3,Alzheimer's Disease,2012-05-03,sc
-067_S_4728,3,Alzheimer's Disease,2012-05-11,sc
-067_S_4767,2,Mild Cognitive Impairment,2012-06-01,sc
-067_S_4782,3,Alzheimer's Disease,2021-10-11,m108
-067_S_4918,3,Alzheimer's Disease,2013-05-10,m06
-067_S_4948,3,Alzheimer's Disease,2012-09-14,sc
-067_S_5042,3,Alzheimer's Disease,2012-11-20,sc
-067_S_5159,1,Cognitively Normal,2013-04-24,sc
-067_S_5160,2,Mild Cognitive Impairment,2013-05-03,sc
-067_S_5205,3,Alzheimer's Disease,2013-05-30,sc
-067_S_5212,1,Cognitively Normal,2013-06-05,sc
-067_S_5257,1,Cognitively Normal,2013-07-24,sc
-067_S_6045,1,Cognitively Normal,2017-07-19,sc
-067_S_6078,1,Cognitively Normal,2017-09-29,sc
-067_S_6117,1,Cognitively Normal,2017-11-03,sc
-067_S_6138,1,Cognitively Normal,2018-06-12,sc
-067_S_6442,1,Cognitively Normal,2018-06-15,sc
-067_S_6443,1,Cognitively Normal,2018-06-15,sc
-067_S_6474,2,Mild Cognitive Impairment,2018-06-27,sc
-067_S_6518,1,Cognitively Normal,2018-09-05,sc
-067_S_6525,2,Mild Cognitive Impairment,2019-06-10,sc
-067_S_6528,1,Cognitively Normal,2018-09-10,sc
-067_S_6529,3,Alzheimer's Disease,2021-09-28,m36
-067_S_6912,2,Mild Cognitive Impairment,2021-03-17,sc
-067_S_6957,1,Cognitively Normal,2021-06-04,sc
-067_S_6958,1,Cognitively Normal,2021-06-04,sc
-067_S_6980,1,Cognitively Normal,2022-07-19,sc
-067_S_6986,2,Mild Cognitive Impairment,2021-10-14,sc
-067_S_6989,2,Mild Cognitive Impairment,2021-08-17,sc
-067_S_7008,2,Mild Cognitive Impairment,2021-09-29,sc
-067_S_7020,2,Mild Cognitive Impairment,2021-10-13,sc
-067_S_7029,2,Mild Cognitive Impairment,2021-11-22,sc
-067_S_7033,3,Alzheimer's Disease,2021-12-08,sc
-067_S_7059,1,Cognitively Normal,2022-04-06,sc
-067_S_7061,2,Mild Cognitive Impairment,2022-06-13,bl
-067_S_7063,1,Cognitively Normal,2022-03-29,sc
-067_S_7068,2,Mild Cognitive Impairment,2022-08-05,bl
-067_S_7069,2,Mild Cognitive Impairment,2022-04-18,sc
-067_S_7094,1,Cognitively Normal,2022-07-13,sc
-067_S_7096,1,Cognitively Normal,2022-07-18,sc
-068_S_0109,3,Alzheimer's Disease,2006-02-02,bl
-068_S_0127,2,Mild Cognitive Impairment,2011-07-15,m60
-068_S_0210,2,Mild Cognitive Impairment,2010-02-09,m36
-068_S_0401,2,Mild Cognitive Impairment,2006-06-12,bl
-068_S_0442,3,Alzheimer's Disease,2007-08-13,m12
 068_S_0473,1,Cognitively Normal,2006-05-19,bl
-068_S_0476,3,Alzheimer's Disease,2007-08-07,m12
-068_S_0478,2,Mild Cognitive Impairment,2006-06-28,bl
 068_S_0802,2,Mild Cognitive Impairment,2006-10-18,bl
-068_S_0872,3,Alzheimer's Disease,2012-01-18,m60
-068_S_1075,2,Mild Cognitive Impairment,2007-04-27,bl
-068_S_1191,1,Cognitively Normal,2007-02-23,bl
 068_S_2168,2,Mild Cognitive Impairment,2011-04-15,bl
 068_S_2171,2,Mild Cognitive Impairment,2011-04-05,bl
 068_S_2184,2,Mild Cognitive Impairment,2011-04-05,bl
 068_S_2187,2,Mild Cognitive Impairment,2011-04-05,bl
-068_S_2193,2,Mild Cognitive Impairment,2011-04-05,bl
 068_S_2194,2,Mild Cognitive Impairment,2011-04-05,bl
 068_S_2248,3,Alzheimer's Disease,2013-06-26,m24
 068_S_2315,2,Mild Cognitive Impairment,2011-07-15,bl
-068_S_2316,3,Alzheimer's Disease,2013-10-09,m12
-068_S_4061,2,Mild Cognitive Impairment,2011-05-27,sc
 068_S_4067,2,Mild Cognitive Impairment,2011-05-27,sc
-068_S_4126,2,Mild Cognitive Impairment,2011-08-09,sc
-068_S_4134,2,Mild Cognitive Impairment,2011-07-22,sc
 068_S_4174,1,Cognitively Normal,2011-08-11,sc
 068_S_4217,2,Mild Cognitive Impairment,2011-09-01,sc
-068_S_4228,1,Cognitively Normal,2011-09-20,sc
 068_S_4274,2,Mild Cognitive Impairment,2011-10-06,sc
 068_S_4332,2,Mild Cognitive Impairment,2011-10-31,sc
 068_S_4340,1,Cognitively Normal,2011-11-17,sc
 068_S_4424,1,Cognitively Normal,2011-12-13,sc
 068_S_4431,2,Mild Cognitive Impairment,2012-02-01,sc
-068_S_4859,3,Alzheimer's Disease,2012-08-01,sc
-068_S_4914,2,Mild Cognitive Impairment,2012-08-29,sc
-068_S_4968,3,Alzheimer's Disease,2013-01-29,sc
-068_S_5146,3,Alzheimer's Disease,2013-05-02,sc
-068_S_5206,3,Alzheimer's Disease,2013-06-19,sc
-070_S_10080,2,Mild Cognitive Impairment,2024-03-20,sc
-070_S_10298,1,Cognitively Normal,2024-10-16,sc
-070_S_10377,1,Cognitively Normal,2025-01-30,sc
-070_S_10655,1,Cognitively Normal,2025-04-03,sc
 070_S_4692,3,Alzheimer's Disease,2012-04-17,sc
-070_S_4697,2,Mild Cognitive Impairment,2012-04-19,sc
-070_S_4704,1,Cognitively Normal,2012-04-25,sc
-070_S_4708,2,Mild Cognitive Impairment,2012-04-27,sc
-070_S_4719,3,Alzheimer's Disease,2012-05-09,sc
-070_S_4793,2,Mild Cognitive Impairment,2012-06-06,sc
-070_S_4797,1,Cognitively Normal,2012-06-18,sc
-070_S_4798,2,Mild Cognitive Impairment,2012-06-07,sc
-070_S_4856,1,Cognitively Normal,2012-07-11,sc
-070_S_5040,1,Cognitively Normal,2012-11-19,sc
-070_S_6191,1,Cognitively Normal,2018-01-18,sc
-070_S_6229,2,Mild Cognitive Impairment,2018-02-13,sc
-070_S_6236,3,Alzheimer's Disease,2024-11-20,m78
-070_S_6386,1,Cognitively Normal,2018-05-21,sc
-070_S_6394,1,Cognitively Normal,2018-05-24,sc
-070_S_6542,1,Cognitively Normal,2018-07-30,sc
-070_S_6548,1,Cognitively Normal,2018-08-02,sc
-070_S_6886,1,Cognitively Normal,2020-09-02,sc
-070_S_6911,3,Alzheimer's Disease,2022-05-02,m12
-070_S_6923,3,Alzheimer's Disease,2021-03-29,sc
-070_S_6942,1,Cognitively Normal,2021-05-10,sc
-070_S_6966,1,Cognitively Normal,2021-06-14,sc
-070_S_7078,2,Mild Cognitive Impairment,2022-05-19,sc
-072_S_0315,1,Cognitively Normal,2006-04-17,bl
-072_S_1211,2,Mild Cognitive Impairment,2007-03-02,bl
-072_S_1380,2,Mild Cognitive Impairment,2007-07-05,bl
 072_S_2026,2,Mild Cognitive Impairment,2010-08-12,bl
 072_S_2027,2,Mild Cognitive Impairment,2010-09-03,bl
-072_S_2037,2,Mild Cognitive Impairment,2010-08-24,bl
 072_S_2070,2,Mild Cognitive Impairment,2010-09-20,bl
 072_S_2072,2,Mild Cognitive Impairment,2010-09-21,bl
 072_S_2083,2,Mild Cognitive Impairment,2010-09-27,bl
@@ -2003,13 +375,8 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 072_S_2116,2,Mild Cognitive Impairment,2010-10-29,bl
 072_S_2164,2,Mild Cognitive Impairment,2010-12-02,bl
 072_S_4007,2,Mild Cognitive Impairment,2011-03-04,sc
-072_S_4008,2,Mild Cognitive Impairment,2011-05-10,sc
-072_S_4056,1,Cognitively Normal,2011-05-18,sc
-072_S_4057,3,Alzheimer's Disease,2012-01-23,m06
-072_S_4063,2,Mild Cognitive Impairment,2011-05-20,sc
 072_S_4102,3,Alzheimer's Disease,2012-09-11,m12
 072_S_4103,1,Cognitively Normal,2011-07-08,sc
-072_S_4130,2,Mild Cognitive Impairment,2011-07-11,sc
 072_S_4131,3,Alzheimer's Disease,2012-09-11,m12
 072_S_4206,2,Mild Cognitive Impairment,2011-08-30,sc
 072_S_4226,2,Mild Cognitive Impairment,2011-09-13,sc
@@ -2022,54 +389,10 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 072_S_4465,2,Mild Cognitive Impairment,2012-01-30,sc
 072_S_4522,2,Mild Cognitive Impairment,2012-02-09,sc
 072_S_4539,2,Mild Cognitive Impairment,2012-02-24,sc
-072_S_4569,2,Mild Cognitive Impairment,2012-03-07,sc
-072_S_4606,2,Mild Cognitive Impairment,2012-03-22,sc
-072_S_4610,2,Mild Cognitive Impairment,2012-03-22,sc
 072_S_4613,2,Mild Cognitive Impairment,2012-03-22,sc
-072_S_4694,2,Mild Cognitive Impairment,2012-05-22,sc
-072_S_4769,2,Mild Cognitive Impairment,2012-06-28,sc
-072_S_4871,2,Mild Cognitive Impairment,2012-07-31,sc
-072_S_4941,2,Mild Cognitive Impairment,2012-09-24,sc
-072_S_5207,2,Mild Cognitive Impairment,2014-01-21,m06
 073_S_0089,1,Cognitively Normal,2006-01-31,bl
 073_S_0311,1,Cognitively Normal,2006-08-02,bl
-073_S_0312,1,Cognitively Normal,2006-08-02,bl
-073_S_0386,1,Cognitively Normal,2006-05-23,bl
-073_S_0445,2,Mild Cognitive Impairment,2006-08-04,bl
-073_S_0518,3,Alzheimer's Disease,2008-12-08,m24
-073_S_0565,3,Alzheimer's Disease,2006-08-03,bl
 073_S_0746,2,Mild Cognitive Impairment,2007-03-07,bl
-073_S_0909,3,Alzheimer's Disease,2009-12-15,m36
-073_S_10006,1,Cognitively Normal,2023-09-07,sc
-073_S_10017,2,Mild Cognitive Impairment,2023-10-13,sc
-073_S_10047,2,Mild Cognitive Impairment,2024-04-25,bl
-073_S_10054,1,Cognitively Normal,2024-02-26,sc
-073_S_10060,1,Cognitively Normal,2024-03-04,sc
-073_S_10069,3,Alzheimer's Disease,2024-03-12,sc
-073_S_10074,1,Cognitively Normal,2024-03-25,sc
-073_S_10084,2,Mild Cognitive Impairment,2024-03-26,sc
-073_S_10088,1,Cognitively Normal,2024-04-01,sc
-073_S_10089,1,Cognitively Normal,2024-04-01,sc
-073_S_10105,3,Alzheimer's Disease,2024-04-23,sc
-073_S_10113,1,Cognitively Normal,2024-04-30,sc
-073_S_10120,2,Mild Cognitive Impairment,2024-05-14,sc
-073_S_10134,1,Cognitively Normal,2024-06-19,sc
-073_S_10167,2,Mild Cognitive Impairment,2024-07-16,sc
-073_S_10172,1,Cognitively Normal,2024-07-25,sc
-073_S_10177,1,Cognitively Normal,2024-07-23,sc
-073_S_10178,2,Mild Cognitive Impairment,2024-08-08,sc
-073_S_10228,2,Mild Cognitive Impairment,2024-09-03,sc
-073_S_10245,2,Mild Cognitive Impairment,2024-09-10,sc
-073_S_10254,1,Cognitively Normal,2024-09-24,sc
-073_S_10333,1,Cognitively Normal,2024-11-05,sc
-073_S_10336,1,Cognitively Normal,2024-11-05,sc
-073_S_10352,2,Mild Cognitive Impairment,2024-11-12,sc
-073_S_10388,2,Mild Cognitive Impairment,2024-12-03,sc
-073_S_10460,2,Mild Cognitive Impairment,2025-01-28,sc
-073_S_10465,2,Mild Cognitive Impairment,2025-02-13,sc
-073_S_10529,1,Cognitively Normal,2025-02-25,sc
-073_S_10597,2,Mild Cognitive Impairment,2025-03-11,sc
-073_S_1357,2,Mild Cognitive Impairment,2007-04-24,bl
 073_S_2153,2,Mild Cognitive Impairment,2011-04-01,bl
 073_S_2182,2,Mild Cognitive Impairment,2011-04-01,bl
 073_S_2190,2,Mild Cognitive Impairment,2011-04-01,bl
@@ -2078,7 +401,6 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 073_S_2264,2,Mild Cognitive Impairment,2011-04-01,bl
 073_S_4155,1,Cognitively Normal,2011-07-29,sc
 073_S_4216,2,Mild Cognitive Impairment,2011-08-29,sc
-073_S_4230,2,Mild Cognitive Impairment,2011-09-08,sc
 073_S_4259,2,Mild Cognitive Impairment,2011-10-07,sc
 073_S_4300,2,Mild Cognitive Impairment,2011-10-13,sc
 073_S_4311,2,Mild Cognitive Impairment,2011-10-20,sc
@@ -2091,63 +413,7 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 073_S_4540,2,Mild Cognitive Impairment,2012-02-14,sc
 073_S_4552,1,Cognitively Normal,2012-02-17,sc
 073_S_4559,1,Cognitively Normal,2012-02-27,sc
-073_S_4614,2,Mild Cognitive Impairment,2012-03-22,sc
-073_S_4739,1,Cognitively Normal,2012-05-22,sc
-073_S_4748,2,Mild Cognitive Impairment,2012-05-22,sc
-073_S_4762,1,Cognitively Normal,2012-05-29,sc
-073_S_4777,3,Alzheimer's Disease,2016-11-28,m48
-073_S_4794,1,Cognitively Normal,2012-06-21,sc
-073_S_4795,1,Cognitively Normal,2012-06-06,sc
-073_S_4825,2,Mild Cognitive Impairment,2012-07-13,sc
-073_S_4853,3,Alzheimer's Disease,2012-07-17,sc
-073_S_4986,2,Mild Cognitive Impairment,2012-10-08,sc
-073_S_4995,2,Mild Cognitive Impairment,2012-11-27,sc
-073_S_5016,3,Alzheimer's Disease,2012-11-27,sc
-073_S_5023,1,Cognitively Normal,2012-11-05,sc
-073_S_5090,3,Alzheimer's Disease,2013-02-19,sc
-073_S_5167,1,Cognitively Normal,2013-05-03,sc
-073_S_5215,1,Cognitively Normal,2013-06-06,sc
-073_S_5227,2,Mild Cognitive Impairment,2015-07-28,m24
-073_S_6669,2,Mild Cognitive Impairment,2021-03-20,sc
-073_S_6670,1,Cognitively Normal,2021-03-24,sc
-073_S_6673,2,Mild Cognitive Impairment,2021-03-12,sc
-073_S_6907,1,Cognitively Normal,2021-03-24,sc
-073_S_6925,1,Cognitively Normal,2021-04-07,sc
-073_S_6928,1,Cognitively Normal,2021-06-17,sc
-073_S_6929,2,Mild Cognitive Impairment,2021-05-03,sc
-073_S_6952,1,Cognitively Normal,2021-06-21,sc
-073_S_6973,3,Alzheimer's Disease,2021-07-09,sc
-073_S_7052,2,Mild Cognitive Impairment,2022-03-17,sc
-073_S_7056,2,Mild Cognitive Impairment,2022-04-04,sc
-073_S_7081,2,Mild Cognitive Impairment,2022-06-09,sc
-073_S_7082,1,Cognitively Normal,2022-06-09,sc
-073_S_7093,2,Mild Cognitive Impairment,2022-07-18,sc
-082_S_0304,1,Cognitively Normal,2006-04-06,bl
-082_S_0363,2,Mild Cognitive Impairment,2012-04-16,m72
-082_S_0469,2,Mild Cognitive Impairment,2006-08-07,bl
-082_S_0640,1,Cognitively Normal,2006-08-21,bl
-082_S_0641,3,Alzheimer's Disease,2008-03-17,m18
-082_S_0761,1,Cognitively Normal,2006-10-30,bl
-082_S_0832,3,Alzheimer's Disease,2008-10-30,m24
-082_S_0928,2,Mild Cognitive Impairment,2006-11-02,bl
-082_S_10137,1,Cognitively Normal,2024-06-06,sc
-082_S_10153,3,Alzheimer's Disease,2024-09-25,sc
-082_S_10154,2,Mild Cognitive Impairment,2024-08-01,sc
-082_S_10155,2,Mild Cognitive Impairment,2024-07-29,sc
-082_S_10199,1,Cognitively Normal,2024-08-26,sc
-082_S_10200,1,Cognitively Normal,2024-09-03,sc
-082_S_10218,2,Mild Cognitive Impairment,2024-09-13,sc
-082_S_10219,3,Alzheimer's Disease,2024-10-02,sc
-082_S_10220,1,Cognitively Normal,2024-09-13,sc
-082_S_10221,1,Cognitively Normal,2024-10-09,sc
-082_S_10222,2,Mild Cognitive Impairment,2024-10-30,sc
-082_S_10223,1,Cognitively Normal,2024-12-18,sc
-082_S_10636,1,Cognitively Normal,2025-04-01,sc
-082_S_1079,3,Alzheimer's Disease,2006-12-05,bl
-082_S_1119,2,Mild Cognitive Impairment,2006-12-18,bl
 082_S_1256,1,Cognitively Normal,2007-02-23,bl
-082_S_1377,3,Alzheimer's Disease,2007-03-26,bl
-082_S_2099,2,Mild Cognitive Impairment,2010-10-21,bl
 082_S_2121,2,Mild Cognitive Impairment,2010-11-03,bl
 082_S_2307,2,Mild Cognitive Impairment,2011-03-10,bl
 082_S_4090,1,Cognitively Normal,2011-06-16,sc
@@ -2156,525 +422,111 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 082_S_4244,2,Mild Cognitive Impairment,2011-10-13,sc
 082_S_4339,1,Cognitively Normal,2011-10-31,sc
 082_S_4428,1,Cognitively Normal,2011-12-12,sc
-082_S_4497,3,Alzheimer's Disease,2012-01-25,sc
-082_S_4766,2,Mild Cognitive Impairment,2012-05-24,sc
-082_S_5014,2,Mild Cognitive Impairment,2012-10-31,sc
-082_S_5029,3,Alzheimer's Disease,2012-11-07,sc
-082_S_5108,1,Cognitively Normal,2013-02-28,sc
-082_S_5179,1,Cognitively Normal,2013-05-07,sc
-082_S_5184,3,Alzheimer's Disease,2013-05-13,sc
-082_S_5278,1,Cognitively Normal,2013-08-05,sc
-082_S_5279,1,Cognitively Normal,2013-08-07,sc
-082_S_5282,2,Mild Cognitive Impairment,2020-10-20,m84
-082_S_6197,1,Cognitively Normal,2018-02-14,sc
-082_S_6283,1,Cognitively Normal,2018-04-02,sc
-082_S_6287,1,Cognitively Normal,2018-04-19,sc
-082_S_6415,1,Cognitively Normal,2018-07-31,sc
-082_S_6563,1,Cognitively Normal,2018-08-30,sc
-082_S_6564,1,Cognitively Normal,2018-09-10,sc
-082_S_6629,1,Cognitively Normal,2018-11-12,sc
-082_S_6690,3,Alzheimer's Disease,2019-04-22,sc
-082_S_7117,2,Mild Cognitive Impairment,2023-01-12,sc
-082_S_7122,1,Cognitively Normal,2023-02-17,sc
-094_S_0434,3,Alzheimer's Disease,2006-11-14,m06
-094_S_0489,1,Cognitively Normal,2006-05-23,bl
-094_S_0526,1,Cognitively Normal,2006-05-25,bl
-094_S_0531,2,Mild Cognitive Impairment,2006-05-25,bl
-094_S_0692,1,Cognitively Normal,2006-08-11,bl
-094_S_0711,1,Cognitively Normal,2006-08-15,bl
-094_S_0921,2,Mild Cognitive Impairment,2006-10-24,bl
-094_S_1015,3,Alzheimer's Disease,2007-05-21,m06
-094_S_1027,3,Alzheimer's Disease,2006-11-20,bl
-094_S_1090,3,Alzheimer's Disease,2007-01-16,bl
-094_S_1102,3,Alzheimer's Disease,2006-12-20,bl
-094_S_1164,3,Alzheimer's Disease,2007-01-16,bl
-094_S_1188,2,Mild Cognitive Impairment,2007-01-18,bl
-094_S_1241,2,Mild Cognitive Impairment,2008-03-04,m12
-094_S_1267,1,Cognitively Normal,2007-03-29,bl
-094_S_1293,2,Mild Cognitive Impairment,2007-03-29,bl
-094_S_1314,2,Mild Cognitive Impairment,2007-03-29,bl
-094_S_1330,2,Mild Cognitive Impairment,2007-03-29,bl
-094_S_1397,3,Alzheimer's Disease,2007-05-17,bl
-094_S_1398,3,Alzheimer's Disease,2007-11-20,m06
-094_S_1402,3,Alzheimer's Disease,2007-05-25,bl
-094_S_1417,2,Mild Cognitive Impairment,2007-08-03,bl
 094_S_2201,1,Cognitively Normal,2011-02-10,bl
 094_S_2216,3,Alzheimer's Disease,2013-04-22,m24
 094_S_2238,2,Mild Cognitive Impairment,2011-01-27,bl
 094_S_2367,3,Alzheimer's Disease,2015-08-10,m48
 094_S_4089,3,Alzheimer's Disease,2011-06-23,sc
-094_S_4162,3,Alzheimer's Disease,2013-11-27,m24
 094_S_4234,2,Mild Cognitive Impairment,2018-01-29,m72
-094_S_4249,2,Mild Cognitive Impairment,2011-09-23,sc
 094_S_4282,3,Alzheimer's Disease,2011-10-13,sc
-094_S_4295,2,Mild Cognitive Impairment,2011-10-19,sc
-094_S_4342,2,Mild Cognitive Impairment,2011-11-10,sc
 094_S_4434,3,Alzheimer's Disease,2015-02-18,m36
-094_S_4440,2,Mild Cognitive Impairment,2012-01-04,sc
-094_S_4459,1,Cognitively Normal,2012-01-23,sc
-094_S_4460,1,Cognitively Normal,2012-01-23,sc
-094_S_4486,2,Mild Cognitive Impairment,2012-02-01,sc
 094_S_4503,1,Cognitively Normal,2012-02-15,sc
-094_S_4560,1,Cognitively Normal,2012-03-02,sc
-094_S_4630,2,Mild Cognitive Impairment,2012-04-18,sc
-094_S_4649,1,Cognitively Normal,2012-04-18,sc
-094_S_4677,2,Mild Cognitive Impairment,2012-04-18,sc
-094_S_4737,3,Alzheimer's Disease,2012-05-23,sc
-094_S_4787,2,Mild Cognitive Impairment,2012-06-13,sc
-094_S_4858,2,Mild Cognitive Impairment,2012-07-30,sc
-094_S_5155,1,Cognitively Normal,2013-06-05,sc
-094_S_6096,3,Alzheimer's Disease,2017-10-25,sc
-094_S_6122,1,Cognitively Normal,2017-11-27,sc
-094_S_6152,1,Cognitively Normal,2018-01-02,sc
-094_S_6162,1,Cognitively Normal,2018-01-17,sc
-094_S_6190,1,Cognitively Normal,2018-03-14,sc
-094_S_6242,1,Cognitively Normal,2018-03-14,sc
-094_S_6250,1,Cognitively Normal,2018-03-19,sc
-094_S_6269,1,Cognitively Normal,2018-03-16,sc
-094_S_6275,1,Cognitively Normal,2018-03-16,sc
-094_S_6278,1,Cognitively Normal,2018-05-02,sc
-094_S_6417,1,Cognitively Normal,2018-06-20,sc
-094_S_6419,1,Cognitively Normal,2018-06-13,sc
-094_S_6440,1,Cognitively Normal,2018-06-21,sc
-094_S_6468,1,Cognitively Normal,2018-07-05,sc
-094_S_6485,1,Cognitively Normal,2018-07-09,sc
-094_S_6736,3,Alzheimer's Disease,2019-05-23,sc
-094_S_6867,3,Alzheimer's Disease,2020-03-05,sc
-098_S_0149,3,Alzheimer's Disease,2006-02-08,bl
 098_S_0160,3,Alzheimer's Disease,2011-03-15,m60
-098_S_0171,2,Mild Cognitive Impairment,2013-04-10,m84
 098_S_0172,1,Cognitively Normal,2006-03-30,bl
 098_S_0269,3,Alzheimer's Disease,2006-10-19,m06
-098_S_0288,2,Mild Cognitive Impairment,2006-04-18,bl
 098_S_0667,3,Alzheimer's Disease,2008-07-21,m24
-098_S_0884,3,Alzheimer's Disease,2007-02-13,bl
-098_S_0896,3,Alzheimer's Disease,2019-06-04,m150
-098_S_10357,1,Cognitively Normal,2024-11-19,sc
-098_S_10358,1,Cognitively Normal,2024-11-26,sc
-098_S_10390,2,Mild Cognitive Impairment,2025-04-22,bl
-098_S_10392,2,Mild Cognitive Impairment,2025-01-22,sc
-098_S_10479,1,Cognitively Normal,2025-02-21,sc
-098_S_10480,1,Cognitively Normal,2025-04-03,sc
-098_S_10491,1,Cognitively Normal,2025-03-07,sc
-098_S_10542,1,Cognitively Normal,2025-03-24,sc
-098_S_10543,1,Cognitively Normal,2025-03-24,sc
-098_S_10631,1,Cognitively Normal,2025-04-21,sc
 098_S_2047,3,Alzheimer's Disease,2012-09-18,m24
 098_S_2052,2,Mild Cognitive Impairment,2010-09-30,bl
 098_S_2079,2,Mild Cognitive Impairment,2010-10-13,bl
-098_S_4002,1,Cognitively Normal,2011-02-14,sc
 098_S_4003,1,Cognitively Normal,2011-02-22,sc
-098_S_4017,1,Cognitively Normal,2011-04-05,sc
-098_S_4018,1,Cognitively Normal,2011-04-05,sc
 098_S_4050,1,Cognitively Normal,2011-05-10,sc
-098_S_4059,2,Mild Cognitive Impairment,2011-05-17,sc
 098_S_4095,3,Alzheimer's Disease,2011-06-22,sc
 098_S_4201,3,Alzheimer's Disease,2011-08-19,sc
 098_S_4215,3,Alzheimer's Disease,2011-08-24,sc
-098_S_4275,2,Mild Cognitive Impairment,2016-01-20,m48
-098_S_4286,2,Mild Cognitive Impairment,2011-10-05,sc
-098_S_4370,1,Cognitively Normal,2011-12-07,sc
 098_S_4506,3,Alzheimer's Disease,2014-03-26,m24
-098_S_4965,2,Mild Cognitive Impairment,2012-09-19,sc
-098_S_4981,1,Cognitively Normal,2012-10-02,sc
-098_S_5048,2,Mild Cognitive Impairment,2012-11-27,sc
-098_S_5225,3,Alzheimer's Disease,2013-06-12,sc
-098_S_5286,2,Mild Cognitive Impairment,2013-08-21,sc
-098_S_6155,2,Mild Cognitive Impairment,2017-12-12,sc
-098_S_6267,1,Cognitively Normal,2018-03-07,sc
-098_S_6343,1,Cognitively Normal,2018-04-30,sc
-098_S_6362,2,Mild Cognitive Impairment,2024-07-02,m72
-098_S_6534,2,Mild Cognitive Impairment,2018-08-17,sc
-098_S_6593,2,Mild Cognitive Impairment,2018-09-24,sc
-098_S_6601,3,Alzheimer's Disease,2018-10-12,sc
-098_S_6655,3,Alzheimer's Disease,2018-12-19,sc
-098_S_6658,3,Alzheimer's Disease,2019-02-07,sc
-098_S_6707,2,Mild Cognitive Impairment,2019-04-10,sc
-098_S_6734,1,Cognitively Normal,2019-06-04,sc
-098_S_6747,2,Mild Cognitive Impairment,2019-08-14,sc
-099_S_0040,1,Cognitively Normal,2005-12-29,bl
 099_S_0051,3,Alzheimer's Disease,2011-08-08,m72
-099_S_0054,3,Alzheimer's Disease,2007-03-09,m12
-099_S_0060,2,Mild Cognitive Impairment,2006-01-17,bl
-099_S_0090,1,Cognitively Normal,2006-02-07,bl
-099_S_0111,3,Alzheimer's Disease,2007-03-02,m12
 099_S_0291,2,Mild Cognitive Impairment,2006-05-19,bl
 099_S_0352,1,Cognitively Normal,2006-05-19,bl
-099_S_0372,3,Alzheimer's Disease,2006-05-19,bl
-099_S_0470,3,Alzheimer's Disease,2006-05-26,bl
-099_S_0492,3,Alzheimer's Disease,2006-09-01,bl
-099_S_0533,1,Cognitively Normal,2006-09-01,bl
-099_S_0534,1,Cognitively Normal,2006-05-24,bl
-099_S_0551,2,Mild Cognitive Impairment,2006-09-01,bl
-099_S_0880,2,Mild Cognitive Impairment,2006-11-17,bl
-099_S_0958,2,Mild Cognitive Impairment,2006-11-30,bl
-099_S_1034,2,Mild Cognitive Impairment,2006-12-15,bl
-099_S_10466,2,Mild Cognitive Impairment,2025-02-12,sc
-099_S_10503,1,Cognitively Normal,2025-03-24,sc
-099_S_1144,3,Alzheimer's Disease,2007-03-09,bl
 099_S_2042,2,Mild Cognitive Impairment,2010-08-25,bl
 099_S_2063,2,Mild Cognitive Impairment,2010-11-01,bl
 099_S_2146,2,Mild Cognitive Impairment,2010-11-18,bl
 099_S_2205,2,Mild Cognitive Impairment,2011-01-24,bl
 099_S_4022,2,Mild Cognitive Impairment,2011-04-15,sc
-099_S_4046,2,Mild Cognitive Impairment,2011-05-09,sc
-099_S_4065,3,Alzheimer's Disease,2011-05-25,sc
-099_S_4076,2,Mild Cognitive Impairment,2021-12-16,m126
 099_S_4086,1,Cognitively Normal,2011-06-16,sc
 099_S_4104,1,Cognitively Normal,2011-06-29,sc
-099_S_4124,3,Alzheimer's Disease,2011-07-12,sc
-099_S_4157,3,Alzheimer's Disease,2014-10-09,m36
 099_S_4202,2,Mild Cognitive Impairment,2011-08-22,sc
 099_S_4205,2,Mild Cognitive Impairment,2011-08-23,sc
-099_S_4334,2,Mild Cognitive Impairment,2011-11-02,sc
 099_S_4463,2,Mild Cognitive Impairment,2012-01-13,sc
 099_S_4475,2,Mild Cognitive Impairment,2012-01-17,sc
 099_S_4480,2,Mild Cognitive Impairment,2012-01-17,sc
 099_S_4498,2,Mild Cognitive Impairment,2012-02-27,sc
 099_S_4565,2,Mild Cognitive Impairment,2012-02-27,sc
-099_S_4994,3,Alzheimer's Disease,2012-10-11,sc
-099_S_6016,1,Cognitively Normal,2017-05-04,sc
-099_S_6025,1,Cognitively Normal,2017-05-22,sc
-099_S_6038,1,Cognitively Normal,2017-06-13,sc
-099_S_6077,1,Cognitively Normal,2017-10-25,sc
-099_S_6097,1,Cognitively Normal,2017-11-08,sc
-099_S_6175,2,Mild Cognitive Impairment,2024-07-17,m72
-099_S_6344,1,Cognitively Normal,2018-05-22,sc
-099_S_6379,2,Mild Cognitive Impairment,2018-06-05,sc
-099_S_6396,1,Cognitively Normal,2018-06-01,sc
-099_S_6476,1,Cognitively Normal,2018-07-12,sc
-099_S_6632,3,Alzheimer's Disease,2021-01-13,m24
-099_S_6691,2,Mild Cognitive Impairment,2020-11-09,sc
-100_S_0006,2,Mild Cognitive Impairment,2005-12-01,bl
-100_S_0015,2,Mild Cognitive Impairment,2011-11-29,m72
 100_S_0035,2,Mild Cognitive Impairment,2011-03-31,m60
 100_S_0047,1,Cognitively Normal,2005-12-15,bl
 100_S_0069,2,Mild Cognitive Impairment,2012-01-23,m72
-100_S_0190,3,Alzheimer's Disease,2006-06-01,bl
-100_S_0296,2,Mild Cognitive Impairment,2006-04-28,bl
-100_S_0743,3,Alzheimer's Disease,2006-09-13,bl
-100_S_0747,3,Alzheimer's Disease,2006-09-13,bl
-100_S_0892,3,Alzheimer's Disease,2008-10-30,m24
-100_S_0930,3,Alzheimer's Disease,2007-11-08,m12
-100_S_0995,3,Alzheimer's Disease,2007-02-21,bl
-100_S_10028,1,Cognitively Normal,2024-01-12,sc
-100_S_10029,3,Alzheimer's Disease,2024-01-23,sc
-100_S_10034,1,Cognitively Normal,2024-01-23,sc
-100_S_10035,1,Cognitively Normal,2024-02-20,sc
-100_S_10036,2,Mild Cognitive Impairment,2024-12-16,bl
-100_S_10091,1,Cognitively Normal,2024-05-17,sc
-100_S_10108,1,Cognitively Normal,2024-06-17,sc
-100_S_10109,1,Cognitively Normal,2024-06-24,sc
-100_S_10110,1,Cognitively Normal,2024-09-12,sc
-100_S_10232,1,Cognitively Normal,2024-09-19,sc
-100_S_10319,1,Cognitively Normal,2024-11-18,sc
-100_S_10347,1,Cognitively Normal,2024-11-25,sc
-100_S_10356,1,Cognitively Normal,2025-01-08,sc
-100_S_10393,1,Cognitively Normal,2024-12-16,sc
-100_S_10394,3,Alzheimer's Disease,2025-02-10,sc
-100_S_10462,2,Mild Cognitive Impairment,2025-03-26,sc
-100_S_1062,3,Alzheimer's Disease,2007-02-21,bl
-100_S_10657,1,Cognitively Normal,2025-04-16,sc
-100_S_1113,3,Alzheimer's Disease,2007-01-22,bl
-100_S_1154,3,Alzheimer's Disease,2007-02-28,bl
-100_S_1226,3,Alzheimer's Disease,2007-03-14,bl
-100_S_1286,1,Cognitively Normal,2007-03-06,bl
-100_S_2351,2,Mild Cognitive Impairment,2011-09-08,bl
-100_S_4329,2,Mild Cognitive Impairment,2011-11-14,sc
 100_S_4469,1,Cognitively Normal,2012-02-15,sc
-100_S_4492,1,Cognitively Normal,2012-02-14,sc
-100_S_4511,1,Cognitively Normal,2012-02-14,sc
-100_S_4512,2,Mild Cognitive Impairment,2012-04-01,sc
-100_S_4551,1,Cognitively Normal,2012-03-06,sc
-100_S_4556,2,Mild Cognitive Impairment,2012-04-20,sc
-100_S_4700,2,Mild Cognitive Impairment,2012-05-24,sc
-100_S_4701,2,Mild Cognitive Impairment,2012-05-08,sc
-100_S_4775,1,Cognitively Normal,2012-08-08,sc
-100_S_4884,2,Mild Cognitive Impairment,2012-10-15,sc
-100_S_4970,2,Mild Cognitive Impairment,2012-10-03,sc
-100_S_5036,2,Mild Cognitive Impairment,2012-11-27,sc
-100_S_5073,2,Mild Cognitive Impairment,2013-02-06,sc
-100_S_5075,2,Mild Cognitive Impairment,2024-09-26,m132
-100_S_5076,1,Cognitively Normal,2013-02-21,sc
-100_S_5091,1,Cognitively Normal,2013-02-21,sc
-100_S_5096,2,Mild Cognitive Impairment,2014-01-13,m06
-100_S_5102,1,Cognitively Normal,2013-03-12,sc
-100_S_5103,1,Cognitively Normal,2013-03-12,sc
-100_S_5106,3,Alzheimer's Disease,2013-03-19,sc
-100_S_5122,3,Alzheimer's Disease,2013-03-29,sc
-100_S_5246,1,Cognitively Normal,2013-07-29,sc
-100_S_5280,1,Cognitively Normal,2013-08-02,sc
-100_S_6164,1,Cognitively Normal,2018-01-10,sc
-100_S_6165,2,Mild Cognitive Impairment,2018-02-16,sc
-100_S_6273,1,Cognitively Normal,2018-03-21,sc
-100_S_6308,1,Cognitively Normal,2018-04-17,sc
-100_S_6332,1,Cognitively Normal,2018-04-25,sc
-100_S_6349,1,Cognitively Normal,2018-05-16,sc
-100_S_6477,1,Cognitively Normal,2018-07-03,sc
-100_S_6493,1,Cognitively Normal,2018-09-05,sc
-100_S_6578,1,Cognitively Normal,2018-09-20,sc
-100_S_6713,3,Alzheimer's Disease,2019-04-10,sc
-100_S_6767,2,Mild Cognitive Impairment,2019-07-15,sc
-109_S_0777,3,Alzheimer's Disease,2006-09-21,bl
-109_S_0876,1,Cognitively Normal,2006-10-05,bl
-109_S_0950,2,Mild Cognitive Impairment,2006-12-12,bl
-109_S_0967,1,Cognitively Normal,2006-12-12,bl
-109_S_1013,1,Cognitively Normal,2006-12-12,bl
-109_S_1014,1,Cognitively Normal,2007-02-01,bl
-109_S_1114,2,Mild Cognitive Impairment,2007-01-10,bl
-109_S_1157,3,Alzheimer's Disease,2007-01-10,bl
-109_S_1183,2,Mild Cognitive Impairment,2007-01-23,bl
-109_S_1192,3,Alzheimer's Disease,2007-01-30,bl
-109_S_1343,2,Mild Cognitive Impairment,2007-04-10,bl
 109_S_2200,2,Mild Cognitive Impairment,2010-12-15,bl
 109_S_2237,2,Mild Cognitive Impairment,2011-01-26,bl
 109_S_2278,2,Mild Cognitive Impairment,2011-04-07,bl
 109_S_4260,2,Mild Cognitive Impairment,2011-10-05,sc
-109_S_4378,3,Alzheimer's Disease,2011-11-15,sc
-109_S_4380,2,Mild Cognitive Impairment,2011-11-28,sc
-109_S_4454,2,Mild Cognitive Impairment,2012-01-10,sc
 109_S_4455,2,Mild Cognitive Impairment,2012-01-12,sc
-109_S_4471,2,Mild Cognitive Impairment,2012-01-17,sc
 109_S_4499,2,Mild Cognitive Impairment,2012-10-02,m06
-109_S_4531,2,Mild Cognitive Impairment,2012-02-07,sc
-109_S_4593,1,Cognitively Normal,2012-03-30,sc
-109_S_4594,2,Mild Cognitive Impairment,2012-03-13,sc
-109_S_4880,1,Cognitively Normal,2013-07-19,sc
-109_S_5254,1,Cognitively Normal,2013-07-02,sc
-109_S_5255,1,Cognitively Normal,2013-07-19,sc
-109_S_6213,1,Cognitively Normal,2018-02-21,sc
-109_S_6215,2,Mild Cognitive Impairment,2018-02-27,sc
-109_S_6217,2,Mild Cognitive Impairment,2018-04-06,sc
-109_S_6218,1,Cognitively Normal,2018-04-06,sc
-109_S_6219,2,Mild Cognitive Impairment,2018-03-27,sc
-109_S_6220,2,Mild Cognitive Impairment,2018-04-03,sc
-109_S_6221,2,Mild Cognitive Impairment,2018-07-23,sc
-109_S_6299,2,Mild Cognitive Impairment,2018-04-17,sc
-109_S_6300,2,Mild Cognitive Impairment,2018-07-26,sc
-109_S_6363,2,Mild Cognitive Impairment,2018-08-14,sc
-109_S_6364,2,Mild Cognitive Impairment,2018-09-13,sc
-109_S_6373,2,Mild Cognitive Impairment,2018-07-17,sc
-109_S_6376,2,Mild Cognitive Impairment,2018-07-27,sc
-109_S_6405,1,Cognitively Normal,2018-07-27,sc
-109_S_6406,2,Mild Cognitive Impairment,2018-08-31,sc
 114_S_0166,3,Alzheimer's Disease,2011-06-30,m60
 114_S_0173,2,Mild Cognitive Impairment,2014-05-28,m96
-114_S_0228,3,Alzheimer's Disease,2006-03-03,bl
-114_S_0374,3,Alzheimer's Disease,2006-04-19,bl
 114_S_0378,3,Alzheimer's Disease,2012-01-16,m72
-114_S_0410,2,Mild Cognitive Impairment,2006-05-11,bl
 114_S_0416,3,Alzheimer's Disease,2017-07-10,m132
-114_S_0458,2,Mild Cognitive Impairment,2006-05-31,bl
-114_S_0601,1,Cognitively Normal,2006-06-27,bl
-114_S_0979,3,Alzheimer's Disease,2006-11-21,bl
-114_S_10283,1,Cognitively Normal,2024-10-08,sc
-114_S_10299,3,Alzheimer's Disease,2024-10-18,sc
-114_S_10305,1,Cognitively Normal,2024-10-21,sc
-114_S_10321,1,Cognitively Normal,2024-10-28,sc
-114_S_10342,1,Cognitively Normal,2024-11-12,sc
-114_S_10380,1,Cognitively Normal,2024-11-25,sc
-114_S_10383,1,Cognitively Normal,2024-11-26,sc
-114_S_10412,1,Cognitively Normal,2024-12-19,sc
-114_S_10413,1,Cognitively Normal,2024-12-19,sc
-114_S_10442,1,Cognitively Normal,2025-01-16,sc
-114_S_10468,2,Mild Cognitive Impairment,2025-03-18,sc
-114_S_10557,1,Cognitively Normal,2025-02-27,sc
-114_S_10615,1,Cognitively Normal,2025-03-18,sc
-114_S_10675,1,Cognitively Normal,2025-04-15,sc
-114_S_1103,2,Mild Cognitive Impairment,2006-12-08,bl
 114_S_1106,3,Alzheimer's Disease,2013-02-07,m72
-114_S_1118,2,Mild Cognitive Impairment,2007-01-03,bl
-114_S_2392,2,Mild Cognitive Impairment,2011-07-11,bl
-114_S_4190,1,Cognitively Normal,2011-08-19,sc
-114_S_4379,3,Alzheimer's Disease,2011-11-21,sc
 114_S_4404,3,Alzheimer's Disease,2017-11-15,m66
-114_S_5047,3,Alzheimer's Disease,2023-06-29,m78
-114_S_5172,1,Cognitively Normal,2013-05-07,sc
-114_S_5234,2,Mild Cognitive Impairment,2015-07-29,m24
-114_S_5247,1,Cognitively Normal,2013-07-19,sc
-114_S_6039,3,Alzheimer's Disease,2017-06-14,sc
-114_S_6057,1,Cognitively Normal,2017-08-11,sc
-114_S_6063,1,Cognitively Normal,2017-08-21,sc
-114_S_6113,1,Cognitively Normal,2018-03-08,sc
-114_S_6251,1,Cognitively Normal,2018-03-15,sc
-114_S_6309,1,Cognitively Normal,2018-04-18,sc
-114_S_6347,3,Alzheimer's Disease,2018-05-10,sc
-114_S_6368,3,Alzheimer's Disease,2018-08-18,sc
-114_S_6429,1,Cognitively Normal,2018-07-05,sc
-114_S_6462,1,Cognitively Normal,2018-07-05,sc
-114_S_6487,1,Cognitively Normal,2018-08-27,sc
-114_S_6524,1,Cognitively Normal,2018-08-31,sc
-114_S_6595,3,Alzheimer's Disease,2018-10-22,sc
-114_S_6597,2,Mild Cognitive Impairment,2018-10-29,sc
-114_S_6758,2,Mild Cognitive Impairment,2019-09-10,sc
-114_S_6813,1,Cognitively Normal,2019-10-08,sc
-114_S_6917,1,Cognitively Normal,2021-03-30,sc
-116_S_0360,1,Cognitively Normal,2006-05-17,bl
 116_S_0361,3,Alzheimer's Disease,2011-05-16,m60
-116_S_0370,3,Alzheimer's Disease,2006-05-17,bl
 116_S_0382,1,Cognitively Normal,2006-06-01,bl
-116_S_0392,3,Alzheimer's Disease,2006-06-20,bl
-116_S_0487,3,Alzheimer's Disease,2006-06-12,bl
-116_S_0648,1,Cognitively Normal,2006-08-15,bl
 116_S_0649,3,Alzheimer's Disease,2008-08-19,m24
 116_S_0657,1,Cognitively Normal,2006-09-07,bl
 116_S_0752,3,Alzheimer's Disease,2007-08-14,m12
 116_S_0834,3,Alzheimer's Disease,2007-12-04,m12
-116_S_0890,2,Mild Cognitive Impairment,2007-02-20,bl
-116_S_10365,1,Cognitively Normal,2024-11-18,sc
-116_S_10621,1,Cognitively Normal,2025-03-17,sc
-116_S_10641,1,Cognitively Normal,2025-04-17,sc
-116_S_10654,1,Cognitively Normal,2025-04-02,sc
-116_S_10683,1,Cognitively Normal,2025-04-23,sc
-116_S_1083,3,Alzheimer's Disease,2006-12-06,bl
 116_S_1232,1,Cognitively Normal,2007-02-27,bl
-116_S_1243,3,Alzheimer's Disease,2009-03-10,m24
 116_S_1249,3,Alzheimer's Disease,2015-03-12,m96
 116_S_1271,3,Alzheimer's Disease,2009-03-23,m24
-116_S_1315,3,Alzheimer's Disease,2010-04-07,m36
 116_S_4010,1,Cognitively Normal,2011-03-28,sc
-116_S_4013,2,Mild Cognitive Impairment,2011-03-29,sc
-116_S_4038,3,Alzheimer's Disease,2011-06-01,sc
 116_S_4043,1,Cognitively Normal,2011-05-10,sc
 116_S_4092,2,Mild Cognitive Impairment,2012-07-31,m12
 116_S_4167,3,Alzheimer's Disease,2012-09-05,m12
 116_S_4175,3,Alzheimer's Disease,2018-03-19,m78
-116_S_4195,3,Alzheimer's Disease,2011-08-24,sc
 116_S_4199,2,Mild Cognitive Impairment,2011-08-22,sc
 116_S_4209,3,Alzheimer's Disease,2011-08-25,sc
-116_S_4325,2,Mild Cognitive Impairment,2011-10-26,sc
 116_S_4338,3,Alzheimer's Disease,2011-10-31,sc
 116_S_4453,1,Cognitively Normal,2012-01-10,sc
 116_S_4483,1,Cognitively Normal,2012-01-17,sc
-116_S_4537,3,Alzheimer's Disease,2012-02-14,sc
 116_S_4625,3,Alzheimer's Disease,2012-03-26,sc
 116_S_4635,2,Mild Cognitive Impairment,2012-03-26,sc
-116_S_4732,3,Alzheimer's Disease,2012-05-09,sc
-116_S_4855,2,Mild Cognitive Impairment,2014-08-25,m24
-116_S_4898,2,Mild Cognitive Impairment,2012-08-03,sc
-116_S_4927,2,Mild Cognitive Impairment,2012-08-30,sc
-116_S_5268,3,Alzheimer's Disease,2013-07-22,sc
-116_S_6074,1,Cognitively Normal,2017-09-11,sc
-116_S_6100,3,Alzheimer's Disease,2017-10-18,sc
-116_S_6119,1,Cognitively Normal,2017-11-06,sc
-116_S_6129,1,Cognitively Normal,2017-11-16,sc
-116_S_6133,2,Mild Cognitive Impairment,2025-04-24,m84
-116_S_6340,1,Cognitively Normal,2018-04-30,sc
-116_S_6395,1,Cognitively Normal,2018-05-24,sc
-116_S_6428,2,Mild Cognitive Impairment,2018-06-06,sc
-116_S_6439,1,Cognitively Normal,2018-07-03,sc
-116_S_6453,2,Mild Cognitive Impairment,2018-06-18,sc
-116_S_6458,1,Cognitively Normal,2018-07-03,sc
-116_S_6464,1,Cognitively Normal,2018-06-20,sc
-116_S_6517,1,Cognitively Normal,2018-07-18,sc
-116_S_6532,1,Cognitively Normal,2018-07-25,sc
-116_S_6537,1,Cognitively Normal,2018-07-25,sc
-116_S_6543,3,Alzheimer's Disease,2018-08-21,sc
-116_S_6550,2,Mild Cognitive Impairment,2018-08-07,sc
-116_S_6624,1,Cognitively Normal,2018-10-30,sc
-116_S_6750,1,Cognitively Normal,2019-07-03,sc
-116_S_6775,2,Mild Cognitive Impairment,2019-07-25,sc
-121_S_1322,2,Mild Cognitive Impairment,2007-03-15,bl
-121_S_1350,3,Alzheimer's Disease,2007-09-05,m06
-123_S_0050,3,Alzheimer's Disease,2006-06-07,m06
 123_S_0072,1,Cognitively Normal,2006-01-17,bl
-123_S_0088,3,Alzheimer's Disease,2006-02-13,bl
-123_S_0091,3,Alzheimer's Disease,2006-01-03,bl
-123_S_0094,3,Alzheimer's Disease,2006-01-05,bl
 123_S_0106,3,Alzheimer's Disease,2015-03-05,m108
 123_S_0108,3,Alzheimer's Disease,2007-08-09,m18
 123_S_0113,1,Cognitively Normal,2006-03-15,bl
-123_S_0162,3,Alzheimer's Disease,2006-03-09,bl
 123_S_0298,1,Cognitively Normal,2006-04-27,bl
-123_S_0390,3,Alzheimer's Disease,2008-05-12,m24
-123_S_10248,1,Cognitively Normal,2024-09-10,sc
-123_S_10290,1,Cognitively Normal,2024-10-10,sc
-123_S_10292,2,Mild Cognitive Impairment,2024-10-11,sc
-123_S_10350,1,Cognitively Normal,2024-11-11,sc
-123_S_10363,1,Cognitively Normal,2024-11-18,sc
-123_S_10401,3,Alzheimer's Disease,2024-12-10,sc
-123_S_10450,2,Mild Cognitive Impairment,2025-01-21,sc
-123_S_10523,2,Mild Cognitive Impairment,2025-02-26,sc
-123_S_10547,1,Cognitively Normal,2025-02-28,sc
-123_S_10647,1,Cognitively Normal,2025-03-28,sc
-123_S_10648,1,Cognitively Normal,2025-03-31,sc
-123_S_10678,2,Mild Cognitive Impairment,2025-04-22,sc
 123_S_1300,2,Mild Cognitive Impairment,2007-03-30,bl
 123_S_2055,2,Mild Cognitive Impairment,2010-09-08,bl
 123_S_2363,2,Mild Cognitive Impairment,2011-05-02,bl
 123_S_4096,3,Alzheimer's Disease,2012-08-09,m12
 123_S_4127,2,Mild Cognitive Impairment,2011-07-21,sc
 123_S_4170,2,Mild Cognitive Impairment,2011-08-04,sc
-123_S_4283,2,Mild Cognitive Impairment,2011-10-06,sc
-123_S_4362,1,Cognitively Normal,2011-11-04,sc
 123_S_4526,3,Alzheimer's Disease,2012-02-03,sc
-123_S_4780,2,Mild Cognitive Impairment,2012-06-01,sc
-123_S_4806,2,Mild Cognitive Impairment,2012-06-12,sc
-123_S_4904,2,Mild Cognitive Impairment,2012-08-06,sc
-123_S_6118,1,Cognitively Normal,2017-11-07,sc
-123_S_6825,3,Alzheimer's Disease,2019-10-02,sc
-123_S_6884,2,Mild Cognitive Impairment,2020-09-08,sc
-123_S_6888,2,Mild Cognitive Impairment,2020-10-01,sc
-123_S_6891,3,Alzheimer's Disease,2020-10-29,sc
-123_S_7125,2,Mild Cognitive Impairment,2023-05-03,sc
-123_S_7126,2,Mild Cognitive Impairment,2025-01-15,sc
-126_S_0405,1,Cognitively Normal,2006-06-06,bl
-126_S_0506,1,Cognitively Normal,2006-06-28,bl
 126_S_0605,3,Alzheimer's Disease,2019-07-22,m156
-126_S_0606,3,Alzheimer's Disease,2006-08-02,bl
 126_S_0680,2,Mild Cognitive Impairment,2013-07-09,m84
-126_S_0708,3,Alzheimer's Disease,2008-07-15,m24
 126_S_0709,2,Mild Cognitive Impairment,2006-08-10,bl
-126_S_0784,3,Alzheimer's Disease,2006-10-11,bl
-126_S_0865,3,Alzheimer's Disease,2009-11-19,m36
-126_S_0891,3,Alzheimer's Disease,2006-10-12,bl
-126_S_10166,1,Cognitively Normal,2024-07-15,sc
-126_S_10201,1,Cognitively Normal,2024-08-12,sc
-126_S_10271,2,Mild Cognitive Impairment,2024-09-30,sc
-126_S_1077,3,Alzheimer's Disease,2008-06-23,m18
 126_S_1187,2,Mild Cognitive Impairment,2007-02-08,bl
-126_S_1221,3,Alzheimer's Disease,2007-02-07,bl
-126_S_1340,2,Mild Cognitive Impairment,2007-04-02,bl
-126_S_2360,2,Mild Cognitive Impairment,2011-05-25,bl
 126_S_2405,2,Mild Cognitive Impairment,2011-10-11,bl
-126_S_2407,2,Mild Cognitive Impairment,2011-12-06,bl
 126_S_4458,3,Alzheimer's Disease,2013-02-05,m12
 126_S_4494,3,Alzheimer's Disease,2012-01-23,sc
 126_S_4507,3,Alzheimer's Disease,2014-01-17,m24
 126_S_4514,2,Mild Cognitive Impairment,2012-01-30,sc
-126_S_4675,3,Alzheimer's Disease,2014-05-07,m24
 126_S_4686,3,Alzheimer's Disease,2012-04-16,sc
-126_S_4712,3,Alzheimer's Disease,2013-04-30,m12
-126_S_4743,2,Mild Cognitive Impairment,2012-05-17,sc
-126_S_4891,3,Alzheimer's Disease,2019-08-16,m84
-126_S_4896,2,Mild Cognitive Impairment,2012-07-30,sc
-126_S_5214,2,Mild Cognitive Impairment,2015-06-29,m24
-126_S_5243,1,Cognitively Normal,2013-06-26,sc
-126_S_6559,2,Mild Cognitive Impairment,2020-11-04,m24
-126_S_6683,3,Alzheimer's Disease,2019-01-29,sc
-126_S_6721,3,Alzheimer's Disease,2019-04-16,sc
-126_S_6724,3,Alzheimer's Disease,2020-10-26,m12
-126_S_6774,2,Mild Cognitive Impairment,2019-07-15,sc
-126_S_7015,2,Mild Cognitive Impairment,2021-09-28,sc
-126_S_7060,3,Alzheimer's Disease,2025-04-01,m36
-126_S_7083,2,Mild Cognitive Impairment,2022-05-31,sc
 127_S_0112,3,Alzheimer's Disease,2016-03-15,m120
 127_S_0259,3,Alzheimer's Disease,2015-05-01,m108
 127_S_0260,1,Cognitively Normal,2006-05-02,bl
-127_S_0393,2,Mild Cognitive Impairment,2006-05-31,bl
-127_S_0394,3,Alzheimer's Disease,2007-07-06,m12
-127_S_0397,2,Mild Cognitive Impairment,2006-06-16,bl
-127_S_0431,3,Alzheimer's Disease,2006-06-27,bl
 127_S_0622,2,Mild Cognitive Impairment,2010-09-17,m48
 127_S_0684,2,Mild Cognitive Impairment,2022-06-28,m186
-127_S_0754,3,Alzheimer's Disease,2006-09-29,bl
-127_S_0844,3,Alzheimer's Disease,2006-11-14,bl
 127_S_0925,3,Alzheimer's Disease,2015-11-17,m108
 127_S_1032,3,Alzheimer's Disease,2017-01-24,m120
-127_S_1140,2,Mild Cognitive Impairment,2007-01-16,bl
-127_S_1210,2,Mild Cognitive Impairment,2007-03-02,bl
-127_S_1382,3,Alzheimer's Disease,2007-04-27,bl
-127_S_1419,2,Mild Cognitive Impairment,2007-08-28,bl
 127_S_1427,3,Alzheimer's Disease,2008-09-11,m12
 127_S_2213,3,Alzheimer's Disease,2017-11-21,m72
 127_S_2234,2,Mild Cognitive Impairment,2010-12-20,bl
@@ -2686,851 +538,110 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 127_S_4301,2,Mild Cognitive Impairment,2011-10-18,sc
 127_S_4500,3,Alzheimer's Disease,2012-02-01,sc
 127_S_4604,1,Cognitively Normal,2012-03-14,sc
-127_S_4618,1,Cognitively Normal,2012-03-22,sc
-127_S_4624,2,Mild Cognitive Impairment,2012-05-23,sc
 127_S_4645,1,Cognitively Normal,2012-03-29,sc
-127_S_4749,3,Alzheimer's Disease,2012-05-23,sc
-127_S_4765,3,Alzheimer's Disease,2015-06-26,m36
-127_S_4829,3,Alzheimer's Disease,2012-07-02,sc
-127_S_4843,1,Cognitively Normal,2012-07-09,sc
-127_S_4844,3,Alzheimer's Disease,2016-01-12,m36
-127_S_4928,3,Alzheimer's Disease,2013-06-14,m06
-127_S_4940,3,Alzheimer's Disease,2012-09-17,sc
-127_S_4992,3,Alzheimer's Disease,2012-10-17,sc
-127_S_5028,3,Alzheimer's Disease,2012-11-12,sc
-127_S_5056,3,Alzheimer's Disease,2012-12-14,sc
-127_S_5058,3,Alzheimer's Disease,2013-01-09,sc
-127_S_5067,3,Alzheimer's Disease,2013-01-30,sc
-127_S_5095,3,Alzheimer's Disease,2013-02-22,sc
-127_S_5132,2,Mild Cognitive Impairment,2020-08-06,m72
-127_S_5168,3,Alzheimer's Disease,2013-05-23,sc
-127_S_5185,1,Cognitively Normal,2013-05-17,sc
-127_S_5200,1,Cognitively Normal,2013-06-05,sc
-127_S_5201,1,Cognitively Normal,2013-06-05,sc
-127_S_5218,1,Cognitively Normal,2013-06-14,sc
-127_S_5228,1,Cognitively Normal,2013-06-14,sc
-127_S_5233,1,Cognitively Normal,2013-06-28,sc
-127_S_5266,1,Cognitively Normal,2013-07-19,sc
-127_S_6024,1,Cognitively Normal,2017-12-05,bl
-127_S_6147,1,Cognitively Normal,2018-02-14,sc
-127_S_6167,1,Cognitively Normal,2018-01-30,sc
-127_S_6168,1,Cognitively Normal,2018-02-06,sc
-127_S_6173,2,Mild Cognitive Impairment,2020-09-29,m24
-127_S_6203,1,Cognitively Normal,2018-03-16,sc
-127_S_6232,1,Cognitively Normal,2018-04-03,sc
-127_S_6241,3,Alzheimer's Disease,2020-09-01,m24
-127_S_6330,2,Mild Cognitive Impairment,2022-10-17,m54
-127_S_6331,1,Cognitively Normal,2018-06-05,sc
-127_S_6348,1,Cognitively Normal,2018-07-31,sc
-127_S_6357,1,Cognitively Normal,2018-07-31,sc
-127_S_6365,1,Cognitively Normal,2018-06-12,sc
-127_S_6433,3,Alzheimer's Disease,2018-08-14,sc
-127_S_6436,1,Cognitively Normal,2018-07-18,sc
-127_S_6512,2,Mild Cognitive Impairment,2018-08-28,sc
-127_S_6549,3,Alzheimer's Disease,2018-10-03,sc
 128_S_0135,3,Alzheimer's Disease,2010-09-07,m48
 128_S_0138,2,Mild Cognitive Impairment,2006-02-21,bl
-128_S_0167,3,Alzheimer's Disease,2006-03-16,bl
-128_S_0188,2,Mild Cognitive Impairment,2006-02-22,bl
 128_S_0200,2,Mild Cognitive Impairment,2006-03-07,bl
 128_S_0205,2,Mild Cognitive Impairment,2006-02-28,bl
-128_S_0216,3,Alzheimer's Disease,2006-02-27,bl
 128_S_0225,2,Mild Cognitive Impairment,2006-03-08,bl
-128_S_0227,3,Alzheimer's Disease,2009-09-08,m36
 128_S_0229,2,Mild Cognitive Impairment,2016-04-20,m120
 128_S_0230,3,Alzheimer's Disease,2009-09-16,m36
-128_S_0245,1,Cognitively Normal,2006-04-18,bl
-128_S_0258,3,Alzheimer's Disease,2008-05-08,m24
-128_S_0266,3,Alzheimer's Disease,2006-04-17,bl
 128_S_0272,1,Cognitively Normal,2006-04-26,bl
-128_S_0310,3,Alzheimer's Disease,2006-04-24,bl
-128_S_0500,1,Cognitively Normal,2006-05-25,bl
-128_S_0517,3,Alzheimer's Disease,2006-06-08,bl
 128_S_0522,2,Mild Cognitive Impairment,2012-01-12,m72
-128_S_0528,3,Alzheimer's Disease,2006-05-30,bl
 128_S_0545,2,Mild Cognitive Impairment,2014-07-29,m96
-128_S_0608,2,Mild Cognitive Impairment,2006-06-15,bl
-128_S_0611,3,Alzheimer's Disease,2009-10-08,m36
-128_S_0715,2,Mild Cognitive Impairment,2006-07-26,bl
-128_S_0740,3,Alzheimer's Disease,2006-08-21,bl
 128_S_0770,2,Mild Cognitive Impairment,2006-08-14,bl
 128_S_0863,1,Cognitively Normal,2006-10-11,bl
-128_S_0947,3,Alzheimer's Disease,2008-04-17,m18
 128_S_1043,3,Alzheimer's Disease,2009-12-11,m36
-128_S_1088,2,Mild Cognitive Impairment,2007-01-05,bl
-128_S_1148,3,Alzheimer's Disease,2009-09-02,m24
-128_S_1242,1,Cognitively Normal,2007-02-16,bl
 128_S_1406,3,Alzheimer's Disease,2012-12-05,m60
 128_S_1407,3,Alzheimer's Disease,2012-01-04,m48
 128_S_1408,2,Mild Cognitive Impairment,2007-08-01,bl
-128_S_1409,3,Alzheimer's Disease,2007-07-30,bl
-128_S_1430,3,Alzheimer's Disease,2007-09-21,bl
 128_S_2002,2,Mild Cognitive Impairment,2010-06-16,bl
 128_S_2003,2,Mild Cognitive Impairment,2010-08-25,bl
-128_S_2011,2,Mild Cognitive Impairment,2010-07-21,bl
 128_S_2036,2,Mild Cognitive Impairment,2010-09-30,bl
 128_S_2045,2,Mild Cognitive Impairment,2010-10-15,bl
-128_S_2057,2,Mild Cognitive Impairment,2010-11-16,bl
 128_S_2123,2,Mild Cognitive Impairment,2010-11-09,bl
 128_S_2130,3,Alzheimer's Disease,2015-02-09,m48
 128_S_2151,2,Mild Cognitive Impairment,2011-01-20,bl
 128_S_2220,3,Alzheimer's Disease,2022-07-25,m138
 128_S_4553,2,Mild Cognitive Impairment,2012-02-16,sc
 128_S_4571,2,Mild Cognitive Impairment,2012-02-23,sc
-128_S_4581,2,Mild Cognitive Impairment,2012-03-15,sc
-128_S_4586,1,Cognitively Normal,2012-03-01,sc
-128_S_4599,1,Cognitively Normal,2012-03-07,sc
-128_S_4603,2,Mild Cognitive Impairment,2012-03-13,sc
 128_S_4607,2,Mild Cognitive Impairment,2012-11-14,m06
-128_S_4609,1,Cognitively Normal,2012-03-21,sc
 128_S_4636,2,Mild Cognitive Impairment,2012-03-21,sc
-128_S_4647,2,Mild Cognitive Impairment,2012-03-28,sc
-128_S_4653,2,Mild Cognitive Impairment,2012-03-29,sc
-128_S_4671,2,Mild Cognitive Impairment,2012-04-10,sc
-128_S_4724,2,Mild Cognitive Impairment,2012-05-04,sc
-128_S_4742,2,Mild Cognitive Impairment,2012-05-16,sc
-128_S_4745,2,Mild Cognitive Impairment,2012-05-17,sc
-128_S_4772,3,Alzheimer's Disease,2012-05-29,sc
-128_S_4774,3,Alzheimer's Disease,2012-01-04,m06
-128_S_4792,3,Alzheimer's Disease,2012-06-05,sc
-128_S_4832,1,Cognitively Normal,2012-06-27,sc
-128_S_4842,2,Mild Cognitive Impairment,2012-06-29,sc
-128_S_4890,2,Mild Cognitive Impairment,2012-07-30,sc
-128_S_4950,2,Mild Cognitive Impairment,2012-09-11,sc
-128_S_4969,2,Mild Cognitive Impairment,2012-09-26,sc
-128_S_5052,3,Alzheimer's Disease,2012-12-04,sc
-128_S_5066,2,Mild Cognitive Impairment,2012-12-12,sc
-128_S_5123,3,Alzheimer's Disease,2013-03-20,sc
-128_S_5217,1,Cognitively Normal,2013-06-24,sc
-129_S_0778,3,Alzheimer's Disease,2012-09-26,m72
-129_S_10151,2,Mild Cognitive Impairment,2024-06-28,sc
-129_S_10203,1,Cognitively Normal,2024-08-13,sc
-129_S_10498,1,Cognitively Normal,2025-02-19,sc
-129_S_10527,1,Cognitively Normal,2025-02-26,sc
-129_S_10537,1,Cognitively Normal,2025-02-26,sc
-129_S_1204,2,Mild Cognitive Impairment,2007-03-07,bl
 129_S_1246,2,Mild Cognitive Impairment,2007-03-12,bl
 129_S_2332,2,Mild Cognitive Impairment,2011-03-30,bl
-129_S_2347,2,Mild Cognitive Impairment,2011-05-16,bl
-129_S_4073,2,Mild Cognitive Impairment,2011-06-13,sc
 129_S_4220,2,Mild Cognitive Impairment,2011-09-02,sc
 129_S_4287,2,Mild Cognitive Impairment,2011-10-05,sc
-129_S_4314,2,Mild Cognitive Impairment,2011-10-19,sc
 129_S_4369,1,Cognitively Normal,2011-11-08,sc
 129_S_4371,1,Cognitively Normal,2011-11-10,sc
 129_S_4396,1,Cognitively Normal,2011-11-28,sc
-129_S_4409,3,Alzheimer's Disease,2011-11-30,sc
-129_S_4422,3,Alzheimer's Disease,2018-03-19,m72
-129_S_6082,1,Cognitively Normal,2017-09-26,sc
-129_S_6089,1,Cognitively Normal,2017-10-11,sc
-129_S_6090,1,Cognitively Normal,2017-10-11,sc
-129_S_6146,1,Cognitively Normal,2017-12-06,sc
-129_S_6228,1,Cognitively Normal,2018-02-15,sc
-129_S_6244,1,Cognitively Normal,2018-03-07,sc
-129_S_6288,1,Cognitively Normal,2018-03-28,sc
-129_S_6304,1,Cognitively Normal,2018-04-18,sc
-129_S_6452,1,Cognitively Normal,2018-06-18,sc
-129_S_6457,1,Cognitively Normal,2018-07-11,sc
-129_S_6459,1,Cognitively Normal,2018-07-11,sc
-129_S_6621,1,Cognitively Normal,2018-10-29,sc
-129_S_6666,2,Mild Cognitive Impairment,2019-01-08,sc
-129_S_6704,1,Cognitively Normal,2019-04-03,sc
-129_S_6763,3,Alzheimer's Disease,2019-07-17,sc
-129_S_6784,3,Alzheimer's Disease,2019-08-07,sc
-129_S_6830,2,Mild Cognitive Impairment,2019-11-04,sc
-129_S_6848,2,Mild Cognitive Impairment,2020-02-05,sc
-129_S_6852,3,Alzheimer's Disease,2022-03-21,m24
-129_S_6857,2,Mild Cognitive Impairment,2020-02-25,sc
-129_S_7042,1,Cognitively Normal,2022-02-28,sc
-130_S_0102,2,Mild Cognitive Impairment,2006-01-13,bl
 130_S_0232,2,Mild Cognitive Impairment,2009-03-26,m36
 130_S_0285,3,Alzheimer's Disease,2014-09-22,m84
 130_S_0289,3,Alzheimer's Disease,2008-04-09,m24
-130_S_0423,3,Alzheimer's Disease,2008-02-01,m18
-130_S_0449,2,Mild Cognitive Impairment,2006-06-28,bl
-130_S_0505,2,Mild Cognitive Impairment,2006-10-11,bl
-130_S_0783,2,Mild Cognitive Impairment,2006-08-29,bl
-130_S_0886,1,Cognitively Normal,2006-10-06,bl
-130_S_0956,3,Alzheimer's Disease,2006-10-24,bl
-130_S_0969,1,Cognitively Normal,2006-11-03,bl
-130_S_10129,1,Cognitively Normal,2024-05-28,sc
-130_S_10192,1,Cognitively Normal,2024-08-06,sc
-130_S_10214,2,Mild Cognitive Impairment,2024-08-20,sc
-130_S_10216,1,Cognitively Normal,2024-08-21,sc
-130_S_10226,2,Mild Cognitive Impairment,2024-08-28,sc
-130_S_10264,2,Mild Cognitive Impairment,2024-09-24,sc
-130_S_10337,1,Cognitively Normal,2024-11-07,sc
-130_S_10344,1,Cognitively Normal,2024-11-07,sc
-130_S_10433,1,Cognitively Normal,2025-01-09,sc
-130_S_10490,1,Cognitively Normal,2025-02-13,sc
-130_S_10533,2,Mild Cognitive Impairment,2025-02-25,sc
-130_S_10592,1,Cognitively Normal,2025-03-06,sc
-130_S_10682,2,Mild Cognitive Impairment,2025-04-15,sc
-130_S_10696,1,Cognitively Normal,2025-04-22,sc
-130_S_1200,2,Mild Cognitive Impairment,2010-09-20,m36
-130_S_1201,3,Alzheimer's Disease,2007-02-02,bl
-130_S_1290,3,Alzheimer's Disease,2007-02-27,bl
-130_S_1337,3,Alzheimer's Disease,2007-03-13,bl
-130_S_2373,3,Alzheimer's Disease,2016-07-29,m60
 130_S_2391,3,Alzheimer's Disease,2019-04-15,m60
 130_S_2403,3,Alzheimer's Disease,2014-10-17,m36
 130_S_4250,3,Alzheimer's Disease,2013-11-05,m24
 130_S_4294,3,Alzheimer's Disease,2017-11-15,m72
-130_S_4343,1,Cognitively Normal,2011-10-28,sc
 130_S_4352,1,Cognitively Normal,2011-11-01,sc
 130_S_4405,2,Mild Cognitive Impairment,2011-12-02,sc
 130_S_4415,3,Alzheimer's Disease,2014-02-07,m24
-130_S_4417,2,Mild Cognitive Impairment,2011-12-06,sc
 130_S_4468,2,Mild Cognitive Impairment,2012-01-11,sc
-130_S_4542,3,Alzheimer's Disease,2012-09-07,m06
 130_S_4589,3,Alzheimer's Disease,2012-03-05,sc
-130_S_4605,2,Mild Cognitive Impairment,2012-03-12,sc
-130_S_4641,3,Alzheimer's Disease,2012-03-23,sc
 130_S_4660,3,Alzheimer's Disease,2012-04-03,sc
-130_S_4730,3,Alzheimer's Disease,2012-05-08,sc
-130_S_4817,2,Mild Cognitive Impairment,2012-06-21,sc
-130_S_4883,2,Mild Cognitive Impairment,2012-07-24,sc
-130_S_4925,2,Mild Cognitive Impairment,2012-08-28,sc
-130_S_4971,3,Alzheimer's Disease,2012-09-25,sc
-130_S_4982,3,Alzheimer's Disease,2012-10-02,sc
-130_S_4984,3,Alzheimer's Disease,2012-10-03,sc
-130_S_4990,3,Alzheimer's Disease,2012-10-09,sc
-130_S_4997,3,Alzheimer's Disease,2012-10-15,sc
-130_S_5006,3,Alzheimer's Disease,2012-10-19,sc
-130_S_5011,2,Mild Cognitive Impairment,2012-10-23,sc
-130_S_5059,3,Alzheimer's Disease,2012-01-03,sc
-130_S_5115,1,Cognitively Normal,2013-03-08,sc
-130_S_5142,1,Cognitively Normal,2013-04-04,sc
-130_S_5175,1,Cognitively Normal,2013-05-03,sc
-130_S_5231,3,Alzheimer's Disease,2013-07-11,sc
-130_S_5258,2,Mild Cognitive Impairment,2021-06-28,m96
-130_S_6019,1,Cognitively Normal,2017-05-17,sc
-130_S_6023,1,Cognitively Normal,2017-05-19,sc
-130_S_6027,1,Cognitively Normal,2017-05-23,sc
-130_S_6028,1,Cognitively Normal,2017-05-23,sc
-130_S_6035,1,Cognitively Normal,2017-06-06,sc
-130_S_6037,1,Cognitively Normal,2017-06-12,sc
-130_S_6043,1,Cognitively Normal,2017-06-22,sc
-130_S_6047,2,Mild Cognitive Impairment,2017-06-28,sc
-130_S_6072,3,Alzheimer's Disease,2017-08-22,sc
-130_S_6105,1,Cognitively Normal,2017-10-23,sc
-130_S_6111,2,Mild Cognitive Impairment,2020-03-04,y1
-130_S_6114,1,Cognitively Normal,2017-10-30,sc
-130_S_6137,1,Cognitively Normal,2017-11-28,sc
-130_S_6161,1,Cognitively Normal,2017-12-21,sc
-130_S_6319,2,Mild Cognitive Impairment,2025-02-20,m78
-130_S_6329,2,Mild Cognitive Impairment,2018-04-20,sc
-130_S_6361,1,Cognitively Normal,2018-05-08,sc
-130_S_6372,1,Cognitively Normal,2018-05-09,sc
-130_S_6388,1,Cognitively Normal,2018-05-21,sc
-130_S_6390,1,Cognitively Normal,2018-05-23,sc
-130_S_6391,1,Cognitively Normal,2018-05-23,sc
-130_S_6431,2,Mild Cognitive Impairment,2018-06-08,sc
-130_S_6469,1,Cognitively Normal,2018-06-25,sc
-130_S_6481,2,Mild Cognitive Impairment,2018-06-28,sc
-130_S_6539,2,Mild Cognitive Impairment,2018-07-27,sc
-130_S_6558,1,Cognitively Normal,2018-08-10,sc
-130_S_6604,2,Mild Cognitive Impairment,2018-10-08,sc
-130_S_6611,2,Mild Cognitive Impairment,2018-10-16,sc
-130_S_6612,2,Mild Cognitive Impairment,2018-11-27,sc
-130_S_6614,2,Mild Cognitive Impairment,2018-10-22,sc
-130_S_6639,2,Mild Cognitive Impairment,2018-11-30,sc
-130_S_6646,2,Mild Cognitive Impairment,2018-12-03,sc
-130_S_6647,2,Mild Cognitive Impairment,2018-12-04,sc
-130_S_6688,2,Mild Cognitive Impairment,2019-02-07,sc
-130_S_6823,2,Mild Cognitive Impairment,2019-09-24,sc
 131_S_0123,3,Alzheimer's Disease,2014-03-10,m96
-131_S_0319,1,Cognitively Normal,2006-04-06,bl
 131_S_0384,2,Mild Cognitive Impairment,2006-04-25,bl
-131_S_0409,2,Mild Cognitive Impairment,2006-06-13,bl
-131_S_0436,1,Cognitively Normal,2006-06-15,bl
 131_S_0441,1,Cognitively Normal,2006-05-11,bl
-131_S_0457,3,Alzheimer's Disease,2006-05-17,bl
-131_S_0497,3,Alzheimer's Disease,2006-06-19,bl
-131_S_0691,3,Alzheimer's Disease,2006-07-25,bl
-131_S_10090,2,Mild Cognitive Impairment,2024-11-22,sc
-131_S_10318,2,Mild Cognitive Impairment,2024-10-28,sc
-131_S_10369,1,Cognitively Normal,2024-11-19,sc
-131_S_10436,2,Mild Cognitive Impairment,2025-01-13,sc
-131_S_10485,2,Mild Cognitive Impairment,2025-02-12,sc
-131_S_10627,2,Mild Cognitive Impairment,2025-03-19,sc
-131_S_1301,1,Cognitively Normal,2007-03-07,bl
-131_S_1389,3,Alzheimer's Disease,2008-10-30,m18
-131_S_5138,3,Alzheimer's Disease,2013-04-02,sc
-131_S_5148,1,Cognitively Normal,2013-04-08,sc
-131_S_5223,1,Cognitively Normal,2013-06-12,sc
-131_S_6143,2,Mild Cognitive Impairment,2017-12-06,sc
-131_S_6153,1,Cognitively Normal,2018-01-10,sc
-131_S_6154,1,Cognitively Normal,2018-01-10,sc
-131_S_6170,1,Cognitively Normal,2018-03-21,sc
-131_S_6519,1,Cognitively Normal,2018-07-18,sc
-131_S_6616,2,Mild Cognitive Impairment,2019-01-30,sc
-131_S_6692,1,Cognitively Normal,2019-02-28,sc
-131_S_6805,3,Alzheimer's Disease,2021-12-10,m24
-131_S_7032,3,Alzheimer's Disease,2025-02-03,m36
-132_S_0339,2,Mild Cognitive Impairment,2006-06-27,bl
-132_S_0987,3,Alzheimer's Disease,2008-05-08,m12
-133_S_0433,1,Cognitively Normal,2006-05-22,bl
-133_S_0488,1,Cognitively Normal,2006-06-05,bl
-133_S_0493,1,Cognitively Normal,2006-05-31,bl
-133_S_0525,1,Cognitively Normal,2006-06-26,bl
-133_S_0629,2,Mild Cognitive Impairment,2006-07-19,bl
-133_S_0638,3,Alzheimer's Disease,2007-09-05,m12
-133_S_0727,3,Alzheimer's Disease,2008-03-11,m18
-133_S_0771,2,Mild Cognitive Impairment,2006-10-04,bl
-133_S_0792,2,Mild Cognitive Impairment,2006-09-25,bl
-133_S_0912,2,Mild Cognitive Impairment,2006-10-24,bl
-133_S_0913,3,Alzheimer's Disease,2008-01-16,m12
-133_S_1031,2,Mild Cognitive Impairment,2006-11-21,bl
-133_S_1055,3,Alzheimer's Disease,2007-01-10,bl
-133_S_1170,3,Alzheimer's Disease,2007-01-16,bl
-135_S_10097,2,Mild Cognitive Impairment,2024-03-28,sc
-135_S_10204,2,Mild Cognitive Impairment,2024-08-20,sc
-135_S_10332,2,Mild Cognitive Impairment,2024-11-20,sc
-135_S_10459,2,Mild Cognitive Impairment,2025-02-11,sc
-135_S_10561,2,Mild Cognitive Impairment,2025-03-03,sc
-135_S_10667,1,Cognitively Normal,2025-04-10,sc
 135_S_4281,2,Mild Cognitive Impairment,2011-10-06,sc
 135_S_4309,2,Mild Cognitive Impairment,2011-10-18,sc
 135_S_4356,2,Mild Cognitive Impairment,2011-11-06,sc
 135_S_4406,3,Alzheimer's Disease,2013-12-05,m24
 135_S_4446,2,Mild Cognitive Impairment,2015-02-10,m36
 135_S_4489,2,Mild Cognitive Impairment,2012-01-25,sc
-135_S_4566,2,Mild Cognitive Impairment,2014-04-07,m24
 135_S_4598,1,Cognitively Normal,2012-03-13,sc
 135_S_4657,3,Alzheimer's Disease,2012-04-05,sc
-135_S_4658,2,Mild Cognitive Impairment,2012-04-06,sc
 135_S_4676,3,Alzheimer's Disease,2012-04-12,sc
-135_S_4689,3,Alzheimer's Disease,2012-11-16,m06
-135_S_4710,2,Mild Cognitive Impairment,2012-05-03,sc
-135_S_4722,2,Mild Cognitive Impairment,2012-05-09,sc
-135_S_4723,2,Mild Cognitive Impairment,2012-05-09,sc
-135_S_4863,3,Alzheimer's Disease,2012-07-27,sc
-135_S_4954,3,Alzheimer's Disease,2012-09-17,sc
-135_S_5015,3,Alzheimer's Disease,2012-10-30,sc
-135_S_5113,1,Cognitively Normal,2013-03-22,sc
-135_S_5145,1,Cognitively Normal,2013-04-11,sc
-135_S_5269,1,Cognitively Normal,2013-07-26,sc
-135_S_5273,2,Mild Cognitive Impairment,2014-02-19,m06
-135_S_5274,2,Mild Cognitive Impairment,2013-07-31,sc
-135_S_5275,3,Alzheimer's Disease,2013-07-30,sc
-135_S_6104,1,Cognitively Normal,2017-10-25,sc
-135_S_6110,2,Mild Cognitive Impairment,2017-10-30,sc
-135_S_6284,3,Alzheimer's Disease,2018-04-10,sc
-135_S_6302,1,Cognitively Normal,2018-04-16,sc
-135_S_6359,1,Cognitively Normal,2018-05-10,sc
-135_S_6360,1,Cognitively Normal,2018-05-10,sc
-135_S_6389,3,Alzheimer's Disease,2018-05-29,sc
-135_S_6411,3,Alzheimer's Disease,2022-06-17,m48
-135_S_6446,2,Mild Cognitive Impairment,2018-06-21,sc
-135_S_6473,1,Cognitively Normal,2018-06-29,sc
-135_S_6509,1,Cognitively Normal,2018-07-16,sc
-135_S_6510,1,Cognitively Normal,2018-07-19,sc
-135_S_6544,2,Mild Cognitive Impairment,2018-08-01,sc
-135_S_6545,3,Alzheimer's Disease,2018-08-21,sc
-135_S_6586,2,Mild Cognitive Impairment,2018-09-19,sc
-135_S_6622,2,Mild Cognitive Impairment,2018-11-02,sc
-135_S_6687,3,Alzheimer's Disease,2019-03-05,sc
-135_S_6703,2,Mild Cognitive Impairment,2019-03-22,sc
-135_S_6840,3,Alzheimer's Disease,2019-12-05,sc
-135_S_7003,3,Alzheimer's Disease,2021-09-20,sc
-135_S_7058,3,Alzheimer's Disease,2022-03-23,sc
-136_S_0086,1,Cognitively Normal,2006-05-08,bl
 136_S_0107,2,Mild Cognitive Impairment,2006-02-27,bl
-136_S_0184,1,Cognitively Normal,2006-03-27,bl
 136_S_0186,1,Cognitively Normal,2006-03-06,bl
-136_S_0194,3,Alzheimer's Disease,2006-04-24,bl
-136_S_0195,3,Alzheimer's Disease,2007-03-26,m12
-136_S_0196,1,Cognitively Normal,2006-05-01,bl
-136_S_0299,3,Alzheimer's Disease,2006-05-12,bl
-136_S_0300,3,Alzheimer's Disease,2006-05-22,bl
-136_S_0426,3,Alzheimer's Disease,2006-05-30,bl
-136_S_0429,3,Alzheimer's Disease,2007-06-19,m12
-136_S_0579,2,Mild Cognitive Impairment,2006-07-10,bl
-136_S_0695,3,Alzheimer's Disease,2007-09-19,m12
-136_S_0873,3,Alzheimer's Disease,2008-04-10,m18
-136_S_0874,3,Alzheimer's Disease,2009-01-12,m24
-136_S_1227,2,Mild Cognitive Impairment,2007-02-19,bl
 136_S_4189,3,Alzheimer's Disease,2012-08-02,m06
 136_S_4269,1,Cognitively Normal,2011-10-03,sc
 136_S_4408,2,Mild Cognitive Impairment,2011-12-02,sc
 136_S_4433,1,Cognitively Normal,2011-12-16,sc
-136_S_4517,2,Mild Cognitive Impairment,2012-03-13,sc
-136_S_4726,1,Cognitively Normal,2012-05-07,sc
-136_S_4727,1,Cognitively Normal,2012-05-07,sc
-136_S_4822,1,Cognitively Normal,2012-06-25,sc
-136_S_4836,2,Mild Cognitive Impairment,2012-06-28,sc
-136_S_4837,1,Cognitively Normal,2012-06-28,sc
-136_S_4847,1,Cognitively Normal,2012-07-05,sc
-136_S_4848,2,Mild Cognitive Impairment,2012-07-05,sc
-136_S_4860,1,Cognitively Normal,2012-07-12,sc
-136_S_4931,1,Cognitively Normal,2012-08-30,sc
-136_S_4932,2,Mild Cognitive Impairment,2012-08-30,sc
-136_S_4939,1,Cognitively Normal,2012-09-06,sc
-136_S_4956,2,Mild Cognitive Impairment,2012-09-13,sc
-136_S_4972,1,Cognitively Normal,2012-09-27,sc
-136_S_4993,3,Alzheimer's Disease,2012-10-11,sc
-136_S_5002,1,Cognitively Normal,2012-10-18,sc
-137_S_0158,2,Mild Cognitive Impairment,2006-03-20,bl
-137_S_0283,1,Cognitively Normal,2006-05-01,bl
 137_S_0301,1,Cognitively Normal,2006-05-01,bl
-137_S_0366,3,Alzheimer's Disease,2006-06-26,bl
-137_S_0438,3,Alzheimer's Disease,2006-05-18,bl
-137_S_0443,2,Mild Cognitive Impairment,2006-11-03,bl
 137_S_0459,2,Mild Cognitive Impairment,2010-09-17,m48
-137_S_0481,2,Mild Cognitive Impairment,2006-06-12,bl
-137_S_0631,3,Alzheimer's Disease,2007-02-07,m06
 137_S_0668,2,Mild Cognitive Impairment,2006-09-11,bl
-137_S_0669,2,Mild Cognitive Impairment,2006-08-23,bl
 137_S_0686,1,Cognitively Normal,2006-08-11,bl
 137_S_0722,2,Mild Cognitive Impairment,2006-09-12,bl
-137_S_0796,3,Alzheimer's Disease,2006-11-01,bl
 137_S_0800,2,Mild Cognitive Impairment,2006-09-01,bl
-137_S_0825,2,Mild Cognitive Impairment,2006-11-01,bl
-137_S_0841,3,Alzheimer's Disease,2006-10-27,bl
 137_S_0972,3,Alzheimer's Disease,2014-12-18,m96
 137_S_0973,3,Alzheimer's Disease,2010-03-07,m36
-137_S_0994,3,Alzheimer's Disease,2010-12-10,m48
-137_S_10057,2,Mild Cognitive Impairment,2024-04-01,sc
-137_S_10058,1,Cognitively Normal,2024-08-20,sc
-137_S_10077,1,Cognitively Normal,2024-05-06,sc
-137_S_10078,1,Cognitively Normal,2024-05-01,sc
-137_S_10079,1,Cognitively Normal,2024-04-03,sc
-137_S_10081,1,Cognitively Normal,2024-08-20,sc
-137_S_10250,2,Mild Cognitive Impairment,2024-10-21,sc
-137_S_10285,2,Mild Cognitive Impairment,2024-10-29,sc
-137_S_1041,3,Alzheimer's Disease,2006-12-20,bl
-137_S_10428,1,Cognitively Normal,2025-02-27,sc
-137_S_10447,1,Cognitively Normal,2025-02-05,sc
 137_S_1414,2,Mild Cognitive Impairment,2007-09-18,bl
-137_S_1426,2,Mild Cognitive Impairment,2007-10-19,bl
 137_S_4211,3,Alzheimer's Disease,2011-08-23,sc
-137_S_4227,2,Mild Cognitive Impairment,2011-09-06,sc
-137_S_4242,2,Mild Cognitive Impairment,2011-09-16,sc
 137_S_4258,3,Alzheimer's Disease,2011-09-20,sc
 137_S_4299,2,Mild Cognitive Impairment,2011-10-12,sc
-137_S_4303,3,Alzheimer's Disease,2014-10-13,m24
 137_S_4331,3,Alzheimer's Disease,2015-12-10,m48
 137_S_4351,2,Mild Cognitive Impairment,2011-11-01,sc
 137_S_4466,1,Cognitively Normal,2012-01-11,sc
 137_S_4482,1,Cognitively Normal,2012-01-12,sc
-137_S_4520,1,Cognitively Normal,2012-01-31,sc
-137_S_4529,2,Mild Cognitive Impairment,2012-02-06,sc
-137_S_4536,2,Mild Cognitive Impairment,2012-02-08,sc
-137_S_4587,1,Cognitively Normal,2012-03-02,sc
 137_S_4596,3,Alzheimer's Disease,2014-04-15,m24
-137_S_4623,3,Alzheimer's Disease,2015-05-14,m36
-137_S_4631,3,Alzheimer's Disease,2016-06-15,m48
-137_S_4632,1,Cognitively Normal,2012-03-21,sc
 137_S_4672,3,Alzheimer's Disease,2012-04-09,sc
-137_S_4678,2,Mild Cognitive Impairment,2012-04-11,sc
-137_S_4756,3,Alzheimer's Disease,2012-05-21,sc
-137_S_4815,3,Alzheimer's Disease,2014-09-02,m24
-137_S_4816,3,Alzheimer's Disease,2014-10-13,m24
-137_S_4852,2,Mild Cognitive Impairment,2012-07-09,sc
-137_S_4862,3,Alzheimer's Disease,2019-10-02,m72
-137_S_6060,1,Cognitively Normal,2017-08-02,sc
-137_S_6106,1,Cognitively Normal,2017-11-29,sc
-137_S_6135,1,Cognitively Normal,2017-12-05,sc
-137_S_6557,2,Mild Cognitive Impairment,2018-08-10,sc
-137_S_6576,2,Mild Cognitive Impairment,2018-08-28,sc
-137_S_6599,1,Cognitively Normal,2019-01-12,sc
-137_S_6628,1,Cognitively Normal,2019-01-12,sc
-137_S_6636,1,Cognitively Normal,2019-01-12,sc
-137_S_6637,2,Mild Cognitive Impairment,2018-11-27,sc
-137_S_6654,2,Mild Cognitive Impairment,2018-12-21,sc
-137_S_6659,2,Mild Cognitive Impairment,2019-01-18,sc
-137_S_6685,2,Mild Cognitive Impairment,2019-04-01,sc
-137_S_6693,3,Alzheimer's Disease,2024-10-18,m60
-137_S_6794,1,Cognitively Normal,2019-08-06,sc
-137_S_6812,3,Alzheimer's Disease,2019-10-01,sc
-137_S_6826,1,Cognitively Normal,2019-10-02,sc
-137_S_6880,2,Mild Cognitive Impairment,2020-09-02,sc
-137_S_6883,2,Mild Cognitive Impairment,2020-09-24,sc
-137_S_6893,2,Mild Cognitive Impairment,2021-01-04,sc
-137_S_6903,2,Mild Cognitive Impairment,2021-03-11,sc
-137_S_6906,2,Mild Cognitive Impairment,2021-04-27,sc
-137_S_6919,2,Mild Cognitive Impairment,2021-04-09,sc
-141_S_0696,3,Alzheimer's Disease,2006-09-11,bl
-141_S_0697,3,Alzheimer's Disease,2010-02-24,m36
 141_S_0717,2,Mild Cognitive Impairment,2009-10-15,m36
-141_S_0726,1,Cognitively Normal,2006-09-13,bl
-141_S_0767,1,Cognitively Normal,2006-09-07,bl
-141_S_0790,3,Alzheimer's Disease,2006-10-20,bl
-141_S_0810,1,Cognitively Normal,2006-11-02,bl
-141_S_0851,2,Mild Cognitive Impairment,2006-10-11,bl
-141_S_0852,3,Alzheimer's Disease,2006-10-04,bl
-141_S_0853,3,Alzheimer's Disease,2006-09-09,bl
-141_S_0915,3,Alzheimer's Disease,2008-05-01,m18
-141_S_0982,3,Alzheimer's Disease,2007-11-13,m12
 141_S_1004,3,Alzheimer's Disease,2007-05-11,m06
-141_S_1024,3,Alzheimer's Disease,2006-10-31,bl
-141_S_10451,1,Cognitively Normal,2025-01-14,sc
-141_S_10453,1,Cognitively Normal,2024-12-19,sc
-141_S_10458,1,Cognitively Normal,2025-01-24,sc
-141_S_1051,2,Mild Cognitive Impairment,2007-01-04,bl
 141_S_1052,2,Mild Cognitive Impairment,2006-11-30,bl
-141_S_10535,1,Cognitively Normal,2025-02-26,sc
-141_S_10602,2,Mild Cognitive Impairment,2025-03-12,sc
-141_S_10626,1,Cognitively Normal,2025-03-20,sc
-141_S_1094,1,Cognitively Normal,2006-12-15,bl
-141_S_1137,3,Alzheimer's Disease,2006-12-29,bl
-141_S_1152,3,Alzheimer's Disease,2007-01-08,bl
-141_S_1231,2,Mild Cognitive Impairment,2007-02-28,bl
-141_S_1244,3,Alzheimer's Disease,2007-08-20,m06
-141_S_1245,2,Mild Cognitive Impairment,2007-02-07,bl
 141_S_1255,3,Alzheimer's Disease,2011-04-11,m48
 141_S_1378,2,Mild Cognitive Impairment,2007-04-09,bl
 141_S_2210,3,Alzheimer's Disease,2014-05-05,m36
-141_S_2333,2,Mild Cognitive Impairment,2011-04-11,bl
 141_S_4053,2,Mild Cognitive Impairment,2011-05-16,sc
 141_S_4160,2,Mild Cognitive Impairment,2011-08-01,sc
-141_S_4182,2,Mild Cognitive Impairment,2011-08-30,sc
 141_S_4232,2,Mild Cognitive Impairment,2011-09-09,sc
-141_S_4423,2,Mild Cognitive Impairment,2011-12-12,sc
 141_S_4426,3,Alzheimer's Disease,2014-05-30,m24
-141_S_4438,2,Mild Cognitive Impairment,2011-12-22,sc
 141_S_4456,2,Mild Cognitive Impairment,2012-01-09,sc
-141_S_4711,2,Mild Cognitive Impairment,2012-05-05,sc
-141_S_4752,2,Mild Cognitive Impairment,2012-05-21,sc
-141_S_4803,2,Mild Cognitive Impairment,2012-06-12,sc
-141_S_4819,2,Mild Cognitive Impairment,2012-06-26,sc
-141_S_4907,2,Mild Cognitive Impairment,2012-05-12,sc
-141_S_4976,2,Mild Cognitive Impairment,2012-10-01,sc
-141_S_4983,2,Mild Cognitive Impairment,2012-10-19,sc
-141_S_6008,1,Cognitively Normal,2017-03-23,sc
-141_S_6015,1,Cognitively Normal,2017-04-28,sc
-141_S_6041,2,Mild Cognitive Impairment,2017-06-22,sc
-141_S_6042,1,Cognitively Normal,2017-07-12,sc
-141_S_6048,1,Cognitively Normal,2017-07-31,sc
-141_S_6061,2,Mild Cognitive Impairment,2019-01-17,m18
-141_S_6075,2,Mild Cognitive Impairment,2017-10-23,bl
-141_S_6116,1,Cognitively Normal,2017-11-27,sc
-141_S_6150,1,Cognitively Normal,2018-01-11,sc
-141_S_6171,1,Cognitively Normal,2018-01-11,sc
-141_S_6172,1,Cognitively Normal,2018-01-15,sc
-141_S_6176,1,Cognitively Normal,2018-01-29,sc
-141_S_6177,1,Cognitively Normal,2018-01-16,sc
-141_S_6178,1,Cognitively Normal,2018-01-16,sc
-141_S_6181,1,Cognitively Normal,2018-01-18,sc
-141_S_6198,1,Cognitively Normal,2018-01-29,sc
-141_S_6235,1,Cognitively Normal,2018-02-22,sc
-141_S_6240,2,Mild Cognitive Impairment,2024-08-15,m72
-141_S_6253,1,Cognitively Normal,2018-03-01,sc
-141_S_6416,1,Cognitively Normal,2018-06-01,sc
-141_S_6423,1,Cognitively Normal,2018-07-18,sc
-141_S_6520,1,Cognitively Normal,2018-07-20,sc
-141_S_6589,1,Cognitively Normal,2018-11-14,sc
-141_S_6779,2,Mild Cognitive Impairment,2019-07-24,sc
-141_S_6787,2,Mild Cognitive Impairment,2019-07-26,sc
-141_S_6872,1,Cognitively Normal,2020-02-06,sc
-141_S_6895,3,Alzheimer's Disease,2020-11-24,sc
-141_S_6964,3,Alzheimer's Disease,2025-01-08,m36
-141_S_7013,2,Mild Cognitive Impairment,2021-10-25,sc
-150_S_5080,3,Alzheimer's Disease,2013-01-30,sc
-150_S_5134,1,Cognitively Normal,2013-03-28,sc
-150_S_5276,1,Cognitively Normal,2013-07-26,sc
-153_S_10367,1,Cognitively Normal,2025-03-06,sc
-153_S_10407,1,Cognitively Normal,2025-03-27,sc
-153_S_10408,1,Cognitively Normal,2025-04-04,sc
 153_S_2109,2,Mild Cognitive Impairment,2010-10-18,bl
 153_S_2148,2,Mild Cognitive Impairment,2010-11-17,bl
-153_S_4077,2,Mild Cognitive Impairment,2011-06-08,sc
-153_S_4125,1,Cognitively Normal,2011-07-11,sc
-153_S_4133,2,Mild Cognitive Impairment,2011-07-12,sc
-153_S_4139,1,Cognitively Normal,2011-07-29,sc
-153_S_4151,1,Cognitively Normal,2011-07-29,sc
-153_S_4159,2,Mild Cognitive Impairment,2011-08-01,sc
-153_S_4165,2,Mild Cognitive Impairment,2011-08-04,sc
-153_S_4172,3,Alzheimer's Disease,2011-08-08,sc
 153_S_4297,2,Mild Cognitive Impairment,2011-10-11,sc
-153_S_4323,1,Cognitively Normal,2011-10-19,sc
 153_S_4372,1,Cognitively Normal,2011-11-10,sc
 153_S_4621,2,Mild Cognitive Impairment,2012-03-19,sc
-153_S_4838,2,Mild Cognitive Impairment,2012-07-02,sc
-153_S_5232,1,Cognitively Normal,2013-06-17,sc
-153_S_5261,1,Cognitively Normal,2013-07-11,sc
-153_S_5267,1,Cognitively Normal,2013-07-23,sc
-153_S_6237,1,Cognitively Normal,2018-02-15,sc
-153_S_6274,2,Mild Cognitive Impairment,2018-03-13,sc
-153_S_6336,2,Mild Cognitive Impairment,2018-04-25,sc
-153_S_6450,2,Mild Cognitive Impairment,2018-06-20,sc
-153_S_6451,2,Mild Cognitive Impairment,2018-06-28,sc
-153_S_6633,2,Mild Cognitive Impairment,2018-11-14,sc
-153_S_6665,3,Alzheimer's Disease,2019-01-10,sc
-153_S_6679,2,Mild Cognitive Impairment,2019-01-25,sc
-153_S_6694,3,Alzheimer's Disease,2019-02-27,sc
-153_S_6755,3,Alzheimer's Disease,2022-08-04,m36
-153_S_6781,2,Mild Cognitive Impairment,2019-07-23,sc
-153_S_7099,2,Mild Cognitive Impairment,2022-08-11,sc
-153_S_7104,1,Cognitively Normal,2022-08-22,sc
-153_S_7113,1,Cognitively Normal,2022-12-08,sc
-168_S_6049,1,Cognitively Normal,2017-10-13,sc
-168_S_6051,1,Cognitively Normal,2017-07-26,sc
-168_S_6059,1,Cognitively Normal,2017-10-03,sc
-168_S_6062,1,Cognitively Normal,2017-09-27,sc
-168_S_6064,1,Cognitively Normal,2017-09-26,sc
-168_S_6065,1,Cognitively Normal,2017-09-27,sc
-168_S_6085,1,Cognitively Normal,2017-10-13,sc
-168_S_6086,1,Cognitively Normal,2017-10-20,sc
-168_S_6098,1,Cognitively Normal,2017-11-17,sc
-168_S_6107,1,Cognitively Normal,2017-12-07,sc
-168_S_6108,1,Cognitively Normal,2017-12-07,sc
-168_S_6121,1,Cognitively Normal,2017-12-20,sc
-168_S_6128,1,Cognitively Normal,2017-12-20,sc
-168_S_6131,1,Cognitively Normal,2018-01-25,sc
-168_S_6142,3,Alzheimer's Disease,2017-12-20,sc
-168_S_6151,1,Cognitively Normal,2017-12-20,sc
-168_S_6180,2,Mild Cognitive Impairment,2018-02-23,sc
-168_S_6233,1,Cognitively Normal,2018-02-27,sc
-168_S_6281,1,Cognitively Normal,2018-04-13,sc
-168_S_6285,1,Cognitively Normal,2018-04-20,sc
-168_S_6318,1,Cognitively Normal,2018-04-25,sc
-168_S_6320,1,Cognitively Normal,2018-05-07,sc
-168_S_6321,1,Cognitively Normal,2018-05-07,sc
-168_S_6350,2,Mild Cognitive Impairment,2022-08-18,m48
-168_S_6371,2,Mild Cognitive Impairment,2020-10-29,m30
-168_S_6413,1,Cognitively Normal,2018-06-15,sc
-168_S_6426,2,Mild Cognitive Impairment,2018-07-03,sc
-168_S_6467,3,Alzheimer's Disease,2020-10-21,m24
-168_S_6492,1,Cognitively Normal,2018-08-13,sc
-168_S_6541,2,Mild Cognitive Impairment,2018-08-17,sc
-168_S_6561,1,Cognitively Normal,2018-08-27,sc
-168_S_6591,2,Mild Cognitive Impairment,2018-10-03,sc
-168_S_6619,2,Mild Cognitive Impairment,2018-11-08,sc
-168_S_6634,3,Alzheimer's Disease,2020-03-03,m12
-168_S_6735,3,Alzheimer's Disease,2019-07-05,sc
-168_S_6754,3,Alzheimer's Disease,2019-07-05,sc
-168_S_6815,2,Mild Cognitive Impairment,2019-10-07,sc
-168_S_6817,2,Mild Cognitive Impairment,2019-10-15,sc
-168_S_6821,2,Mild Cognitive Impairment,2019-10-28,sc
-168_S_6827,3,Alzheimer's Disease,2019-10-24,sc
-168_S_6828,3,Alzheimer's Disease,2019-10-24,sc
-168_S_6843,3,Alzheimer's Disease,2020-01-28,sc
-168_S_6851,2,Mild Cognitive Impairment,2020-03-03,sc
-168_S_6860,2,Mild Cognitive Impairment,2020-03-09,sc
-168_S_6873,2,Mild Cognitive Impairment,2020-06-29,sc
-168_S_6874,2,Mild Cognitive Impairment,2020-06-29,sc
-168_S_6875,2,Mild Cognitive Impairment,2020-07-06,sc
-168_S_6902,2,Mild Cognitive Impairment,2021-02-08,sc
-168_S_6908,3,Alzheimer's Disease,2023-07-11,m30
-168_S_6921,3,Alzheimer's Disease,2021-04-08,sc
-168_S_6938,3,Alzheimer's Disease,2021-05-20,sc
-177_S_6328,1,Cognitively Normal,2018-04-20,sc
-177_S_6335,1,Cognitively Normal,2018-04-25,sc
-177_S_6338,1,Cognitively Normal,2024-04-29,sc
-177_S_6408,1,Cognitively Normal,2018-06-01,sc
-177_S_6409,1,Cognitively Normal,2018-06-04,sc
-177_S_6420,1,Cognitively Normal,2018-06-05,sc
-177_S_6448,1,Cognitively Normal,2018-06-15,sc
-301_S_10123,2,Mild Cognitive Impairment,2024-05-21,sc
-301_S_10139,1,Cognitively Normal,2024-06-20,sc
-301_S_10194,3,Alzheimer's Disease,2024-08-06,sc
-301_S_10230,1,Cognitively Normal,2024-09-06,sc
-301_S_10247,2,Mild Cognitive Impairment,2024-10-15,sc
-301_S_10370,1,Cognitively Normal,2024-11-27,sc
-301_S_10389,2,Mild Cognitive Impairment,2024-12-09,sc
-301_S_10577,1,Cognitively Normal,2025-03-14,sc
-301_S_10623,2,Mild Cognitive Impairment,2025-03-27,sc
-301_S_6056,2,Mild Cognitive Impairment,2017-07-24,sc
-301_S_6224,1,Cognitively Normal,2018-02-09,sc
-301_S_6265,1,Cognitively Normal,2018-03-07,sc
-301_S_6297,2,Mild Cognitive Impairment,2018-04-04,sc
-301_S_6326,2,Mild Cognitive Impairment,2018-06-11,bl
-301_S_6501,1,Cognitively Normal,2018-07-10,sc
-301_S_6508,2,Mild Cognitive Impairment,2018-07-12,sc
-301_S_6530,1,Cognitively Normal,2018-07-20,sc
-301_S_6592,3,Alzheimer's Disease,2018-10-22,sc
-301_S_6615,2,Mild Cognitive Impairment,2018-10-23,sc
-301_S_6698,2,Mild Cognitive Impairment,2019-03-08,sc
-301_S_6753,2,Mild Cognitive Impairment,2019-06-10,sc
-301_S_6777,3,Alzheimer's Disease,2025-01-03,m60
-301_S_6811,2,Mild Cognitive Impairment,2019-09-10,sc
-305_S_10282,1,Cognitively Normal,2024-10-22,sc
-305_S_10311,1,Cognitively Normal,2024-11-05,sc
-305_S_10396,1,Cognitively Normal,2025-03-10,sc
-305_S_10404,1,Cognitively Normal,2025-01-24,sc
-305_S_6157,1,Cognitively Normal,2018-01-31,sc
-305_S_6188,1,Cognitively Normal,2018-02-27,sc
-305_S_6313,1,Cognitively Normal,2018-04-20,sc
-305_S_6378,2,Mild Cognitive Impairment,2018-05-18,sc
-305_S_6438,1,Cognitively Normal,2018-07-10,sc
-305_S_6498,2,Mild Cognitive Impairment,2018-07-20,sc
-305_S_6631,2,Mild Cognitive Impairment,2018-11-26,sc
-305_S_6742,2,Mild Cognitive Impairment,2019-06-21,sc
-305_S_6744,2,Mild Cognitive Impairment,2019-06-28,sc
-305_S_6810,3,Alzheimer's Disease,2019-10-30,sc
-305_S_6845,2,Mild Cognitive Impairment,2020-01-02,sc
-305_S_6850,3,Alzheimer's Disease,2020-01-27,sc
-305_S_6871,2,Mild Cognitive Impairment,2020-06-08,sc
-305_S_6877,2,Mild Cognitive Impairment,2020-07-23,sc
-305_S_6879,2,Mild Cognitive Impairment,2020-08-19,sc
-305_S_6881,3,Alzheimer's Disease,2020-08-24,sc
-305_S_6882,2,Mild Cognitive Impairment,2020-08-31,sc
-305_S_6899,2,Mild Cognitive Impairment,2021-02-08,sc
-341_S_6494,1,Cognitively Normal,2018-07-06,sc
-341_S_6605,2,Mild Cognitive Impairment,2018-10-10,sc
-341_S_6653,1,Cognitively Normal,2018-12-12,sc
-341_S_6686,2,Mild Cognitive Impairment,2019-02-06,sc
-341_S_6762,3,Alzheimer's Disease,2019-06-19,sc
-341_S_6764,2,Mild Cognitive Impairment,2019-06-24,sc
-341_S_6820,3,Alzheimer's Disease,2019-09-19,sc
-341_S_6960,1,Cognitively Normal,2021-06-16,sc
-341_S_6979,1,Cognitively Normal,2021-06-30,sc
-341_S_6981,1,Cognitively Normal,2021-07-10,sc
-341_S_7018,1,Cognitively Normal,2021-10-09,sc
-341_S_7026,2,Mild Cognitive Impairment,2021-11-11,sc
-341_S_7102,1,Cognitively Normal,2022-08-13,sc
-381_S_10486,2,Mild Cognitive Impairment,2025-02-12,sc
-381_S_10487,2,Mild Cognitive Impairment,2025-02-12,sc
-381_S_10488,1,Cognitively Normal,2025-02-13,sc
-381_S_10489,2,Mild Cognitive Impairment,2025-03-13,sc
-381_S_10492,2,Mild Cognitive Impairment,2025-02-14,sc
-381_S_10493,2,Mild Cognitive Impairment,2025-02-14,sc
-381_S_10495,2,Mild Cognitive Impairment,2025-02-17,sc
-381_S_10496,2,Mild Cognitive Impairment,2025-02-17,sc
-381_S_10499,2,Mild Cognitive Impairment,2025-02-18,sc
-381_S_10500,3,Alzheimer's Disease,2025-02-18,sc
-381_S_10502,2,Mild Cognitive Impairment,2025-02-18,sc
-381_S_10505,1,Cognitively Normal,2025-02-19,sc
-381_S_10506,2,Mild Cognitive Impairment,2025-02-19,sc
-381_S_10507,2,Mild Cognitive Impairment,2025-02-19,sc
-381_S_10509,2,Mild Cognitive Impairment,2025-02-19,sc
-381_S_10510,2,Mild Cognitive Impairment,2025-02-19,sc
-381_S_10511,3,Alzheimer's Disease,2025-02-20,sc
-381_S_10512,1,Cognitively Normal,2025-02-20,sc
-381_S_10513,2,Mild Cognitive Impairment,2025-02-20,sc
-381_S_10514,2,Mild Cognitive Impairment,2025-02-20,sc
-381_S_10515,2,Mild Cognitive Impairment,2025-02-20,sc
-381_S_10517,2,Mild Cognitive Impairment,2025-02-21,sc
-381_S_10519,3,Alzheimer's Disease,2025-02-24,sc
-381_S_10521,2,Mild Cognitive Impairment,2025-02-24,sc
-381_S_10524,2,Mild Cognitive Impairment,2025-02-24,sc
-381_S_10526,2,Mild Cognitive Impairment,2025-02-24,sc
-381_S_10528,2,Mild Cognitive Impairment,2025-02-24,sc
-381_S_10532,2,Mild Cognitive Impairment,2025-02-25,sc
-381_S_10536,1,Cognitively Normal,2025-02-25,sc
-381_S_10538,2,Mild Cognitive Impairment,2025-02-25,sc
-381_S_10540,2,Mild Cognitive Impairment,2025-02-25,sc
-381_S_10541,2,Mild Cognitive Impairment,2025-02-25,sc
-381_S_10546,3,Alzheimer's Disease,2025-02-26,sc
-381_S_10549,2,Mild Cognitive Impairment,2025-02-26,sc
-381_S_10550,3,Alzheimer's Disease,2025-02-26,sc
-381_S_10551,1,Cognitively Normal,2025-02-26,sc
-381_S_10552,2,Mild Cognitive Impairment,2025-03-26,sc
-381_S_10554,3,Alzheimer's Disease,2025-02-26,sc
-381_S_10555,3,Alzheimer's Disease,2025-03-26,sc
-381_S_10556,2,Mild Cognitive Impairment,2025-02-27,sc
-381_S_10558,2,Mild Cognitive Impairment,2025-02-27,sc
-381_S_10559,2,Mild Cognitive Impairment,2025-03-27,sc
-381_S_10560,2,Mild Cognitive Impairment,2025-02-27,sc
-381_S_10563,2,Mild Cognitive Impairment,2025-03-03,sc
-381_S_10564,2,Mild Cognitive Impairment,2025-03-03,sc
-381_S_10565,2,Mild Cognitive Impairment,2025-03-03,sc
-381_S_10566,2,Mild Cognitive Impairment,2025-03-03,sc
-381_S_10567,2,Mild Cognitive Impairment,2025-03-03,sc
-381_S_10571,2,Mild Cognitive Impairment,2025-03-04,sc
-381_S_10572,2,Mild Cognitive Impairment,2025-03-04,sc
-381_S_10573,2,Mild Cognitive Impairment,2025-03-04,sc
-381_S_10574,2,Mild Cognitive Impairment,2025-03-04,sc
-381_S_10575,2,Mild Cognitive Impairment,2025-03-04,sc
-381_S_10576,3,Alzheimer's Disease,2025-03-04,sc
-381_S_10578,2,Mild Cognitive Impairment,2025-03-04,sc
-381_S_10579,1,Cognitively Normal,2025-03-04,sc
-381_S_10581,3,Alzheimer's Disease,2025-03-04,sc
-381_S_10582,3,Alzheimer's Disease,2025-04-04,sc
-381_S_10584,2,Mild Cognitive Impairment,2025-03-05,sc
-381_S_10585,2,Mild Cognitive Impairment,2025-03-05,sc
-381_S_10589,2,Mild Cognitive Impairment,2025-03-06,sc
-381_S_10590,2,Mild Cognitive Impairment,2025-03-06,sc
-381_S_10594,1,Cognitively Normal,2025-03-07,sc
-381_S_10596,2,Mild Cognitive Impairment,2025-03-10,sc
-381_S_10598,2,Mild Cognitive Impairment,2025-03-11,sc
-381_S_10599,1,Cognitively Normal,2025-03-11,sc
-381_S_10600,2,Mild Cognitive Impairment,2025-03-11,sc
-381_S_10603,2,Mild Cognitive Impairment,2025-03-12,sc
-381_S_10604,2,Mild Cognitive Impairment,2025-03-12,sc
-381_S_10606,2,Mild Cognitive Impairment,2025-03-12,sc
-381_S_10607,1,Cognitively Normal,2025-03-13,sc
-381_S_10608,2,Mild Cognitive Impairment,2025-03-13,sc
-381_S_10609,2,Mild Cognitive Impairment,2025-03-13,sc
-381_S_10610,2,Mild Cognitive Impairment,2025-03-13,sc
-381_S_10613,2,Mild Cognitive Impairment,2025-03-14,sc
-381_S_10614,2,Mild Cognitive Impairment,2025-03-14,sc
-381_S_10616,2,Mild Cognitive Impairment,2025-03-14,sc
-381_S_10617,2,Mild Cognitive Impairment,2025-03-14,sc
-389_S_10070,2,Mild Cognitive Impairment,2024-04-16,sc
-389_S_10076,2,Mild Cognitive Impairment,2024-05-02,sc
-389_S_10115,2,Mild Cognitive Impairment,2024-09-12,sc
-389_S_10119,2,Mild Cognitive Impairment,2024-12-05,bl
-389_S_10122,1,Cognitively Normal,2025-04-17,sc
-389_S_10127,2,Mild Cognitive Impairment,2024-09-20,sc
-389_S_10140,2,Mild Cognitive Impairment,2024-12-05,bl
-389_S_10142,3,Alzheimer's Disease,2024-09-20,sc
-389_S_10156,2,Mild Cognitive Impairment,2024-10-07,sc
-389_S_10160,1,Cognitively Normal,2024-09-16,sc
-389_S_10162,3,Alzheimer's Disease,2024-09-20,sc
-389_S_10183,3,Alzheimer's Disease,2024-10-07,sc
-389_S_10191,3,Alzheimer's Disease,2024-09-20,sc
-389_S_10208,1,Cognitively Normal,2024-10-07,sc
-389_S_10251,3,Alzheimer's Disease,2024-11-04,sc
-389_S_10346,3,Alzheimer's Disease,2024-11-26,sc
-389_S_10378,2,Mild Cognitive Impairment,2024-09-20,sc
-405_S_10397,1,Cognitively Normal,2024-12-05,sc
-405_S_10444,1,Cognitively Normal,2025-01-16,sc
-405_S_10445,1,Cognitively Normal,2025-01-16,sc
-405_S_10516,1,Cognitively Normal,2025-03-04,sc
-405_S_10539,1,Cognitively Normal,2025-02-25,sc
-941_S_10001,3,Alzheimer's Disease,2023-07-25,sc
-941_S_10002,2,Mild Cognitive Impairment,2023-08-15,sc
-941_S_10003,2,Mild Cognitive Impairment,2023-08-25,sc
-941_S_10004,2,Mild Cognitive Impairment,2023-08-24,sc
-941_S_10010,1,Cognitively Normal,2023-09-14,sc
-941_S_10011,2,Mild Cognitive Impairment,2023-09-14,sc
-941_S_10012,2,Mild Cognitive Impairment,2023-09-20,sc
-941_S_10013,3,Alzheimer's Disease,2023-09-21,sc
-941_S_10015,2,Mild Cognitive Impairment,2023-09-28,sc
-941_S_10019,2,Mild Cognitive Impairment,2023-11-03,sc
-941_S_10020,2,Mild Cognitive Impairment,2023-11-08,sc
-941_S_10023,3,Alzheimer's Disease,2023-11-20,sc
-941_S_10024,3,Alzheimer's Disease,2023-12-04,sc
-941_S_10037,2,Mild Cognitive Impairment,2024-01-11,sc
-941_S_10038,2,Mild Cognitive Impairment,2024-01-22,sc
-941_S_10039,2,Mild Cognitive Impairment,2024-01-22,sc
-941_S_10051,3,Alzheimer's Disease,2024-02-06,sc
-941_S_10065,1,Cognitively Normal,2024-03-01,sc
-941_S_10085,3,Alzheimer's Disease,2024-03-26,sc
-941_S_10103,2,Mild Cognitive Impairment,2024-04-17,sc
-941_S_10111,2,Mild Cognitive Impairment,2024-04-25,sc
-941_S_10135,3,Alzheimer's Disease,2024-06-06,sc
-941_S_10148,3,Alzheimer's Disease,2024-06-24,sc
-941_S_10163,1,Cognitively Normal,2024-07-12,sc
-941_S_10169,3,Alzheimer's Disease,2024-07-16,sc
-941_S_10198,1,Cognitively Normal,2024-08-08,sc
-941_S_10212,2,Mild Cognitive Impairment,2024-08-19,sc
-941_S_10279,3,Alzheimer's Disease,2024-10-02,sc
-941_S_10304,1,Cognitively Normal,2024-10-18,sc
-941_S_10309,2,Mild Cognitive Impairment,2024-10-21,sc
-941_S_10470,3,Alzheimer's Disease,2025-02-03,sc
-941_S_10484,1,Cognitively Normal,2025-02-12,sc
-941_S_10534,1,Cognitively Normal,2025-02-25,sc
-941_S_10659,1,Cognitively Normal,2025-04-04,sc
-941_S_1194,2,Mild Cognitive Impairment,2010-02-16,m36
-941_S_1195,1,Cognitively Normal,2007-02-20,bl
-941_S_1197,1,Cognitively Normal,2007-02-16,bl
 941_S_1202,2,Mild Cognitive Impairment,2009-02-24,m24
-941_S_1203,2,Mild Cognitive Impairment,2010-05-12,m36
-941_S_1295,3,Alzheimer's Disease,2008-08-20,m18
-941_S_1311,3,Alzheimer's Disease,2008-04-23,m12
-941_S_1363,3,Alzheimer's Disease,2007-10-10,m06
 941_S_2060,2,Mild Cognitive Impairment,2010-11-01,bl
-941_S_4016,1,Cognitively Normal,2011-06-02,sc
-941_S_4023,1,Cognitively Normal,2011-05-06,sc
-941_S_4031,2,Mild Cognitive Impairment,2011-06-02,sc
 941_S_4036,2,Mild Cognitive Impairment,2011-05-06,sc
-941_S_4044,2,Mild Cognitive Impairment,2011-06-02,sc
-941_S_4066,1,Cognitively Normal,2011-06-02,sc
-941_S_4100,2,Mild Cognitive Impairment,2015-08-28,m48
 941_S_4187,2,Mild Cognitive Impairment,2011-08-15,sc
 941_S_4255,1,Cognitively Normal,2011-09-19,sc
 941_S_4292,1,Cognitively Normal,2011-11-15,sc
@@ -3538,46 +649,3 @@ donor_id,most_severe_diagnosis_code,most_severe_diagnosis,diagnosis_date,diagnos
 941_S_4376,1,Cognitively Normal,2011-11-22,sc
 941_S_4377,2,Mild Cognitive Impairment,2011-11-28,sc
 941_S_4420,3,Alzheimer's Disease,2023-01-20,y3
-941_S_4764,2,Mild Cognitive Impairment,2012-05-29,sc
-941_S_5124,1,Cognitively Normal,2013-03-26,sc
-941_S_5133,1,Cognitively Normal,2013-04-01,sc
-941_S_5193,1,Cognitively Normal,2013-05-21,sc
-941_S_6017,2,Mild Cognitive Impairment,2017-05-04,sc
-941_S_6044,3,Alzheimer's Disease,2023-11-03,m60
-941_S_6052,2,Mild Cognitive Impairment,2017-07-11,sc
-941_S_6054,1,Cognitively Normal,2017-07-17,sc
-941_S_6058,1,Cognitively Normal,2017-07-31,sc
-941_S_6068,3,Alzheimer's Disease,2021-08-18,m48
-941_S_6080,2,Mild Cognitive Impairment,2023-11-13,m72
-941_S_6094,1,Cognitively Normal,2017-10-13,sc
-941_S_6254,1,Cognitively Normal,2019-05-08,sc
-941_S_6333,2,Mild Cognitive Impairment,2022-08-17,m54
-941_S_6345,3,Alzheimer's Disease,2019-05-15,m12
-941_S_6384,1,Cognitively Normal,2018-05-21,sc
-941_S_6392,2,Mild Cognitive Impairment,2018-05-23,sc
-941_S_6422,1,Cognitively Normal,2018-06-06,sc
-941_S_6454,1,Cognitively Normal,2018-06-19,sc
-941_S_6471,1,Cognitively Normal,2018-06-26,sc
-941_S_6495,1,Cognitively Normal,2018-07-09,sc
-941_S_6496,1,Cognitively Normal,2018-07-09,sc
-941_S_6499,1,Cognitively Normal,2018-07-10,sc
-941_S_6514,1,Cognitively Normal,2018-07-16,sc
-941_S_6546,1,Cognitively Normal,2018-08-01,sc
-941_S_6570,1,Cognitively Normal,2018-08-24,sc
-941_S_6574,1,Cognitively Normal,2018-08-31,sc
-941_S_6575,2,Mild Cognitive Impairment,2023-11-02,m60
-941_S_6580,1,Cognitively Normal,2018-08-31,sc
-941_S_6581,1,Cognitively Normal,2018-09-05,sc
-941_S_6607,1,Cognitively Normal,2018-10-15,sc
-941_S_6803,2,Mild Cognitive Impairment,2019-08-27,sc
-941_S_6854,3,Alzheimer's Disease,2020-02-04,sc
-941_S_6962,3,Alzheimer's Disease,2021-06-09,sc
-941_S_6998,1,Cognitively Normal,2021-08-30,sc
-941_S_7041,2,Mild Cognitive Impairment,2022-02-09,sc
-941_S_7046,1,Cognitively Normal,2022-02-16,sc
-941_S_7051,2,Mild Cognitive Impairment,2024-05-29,m24
-941_S_7074,1,Cognitively Normal,2022-04-26,sc
-941_S_7085,2,Mild Cognitive Impairment,2022-06-13,sc
-941_S_7087,1,Cognitively Normal,2022-06-15,sc
-941_S_7091,1,Cognitively Normal,2022-06-22,sc
-941_S_7106,2,Mild Cognitive Impairment,2022-09-08,sc
