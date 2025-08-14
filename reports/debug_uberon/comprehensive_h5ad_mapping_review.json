@@ -1,0 +1,676 @@
+{
+  "timestamp": "2025-08-14T22:58:50.270887",
+  "mapping_comparison": {
+    "current_mapping_entries": 65,
+    "backup_mapping_entries": 67,
+    "changes_made": 11
+  },
+  "h5ad_analyses": [
+    {
+      "dataset": "GTEx",
+      "n_samples": 19616,
+      "tissue_columns": [
+        "broad_tissue",
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "mappings_analysis": {
+        "whole blood": {
+          "tissue_name": "whole blood",
+          "current_h5ad_ontology": "UBERON:0000178",
+          "correct_ontology": "UBERON:0000178",
+          "backup_ontology": "UBERON:0000178",
+          "n_samples": 803
+        },
+        "brain - frontal cortex (ba9)": {
+          "tissue_name": "brain - frontal cortex (ba9)",
+          "current_h5ad_ontology": "UBERON:0013529",
+          "correct_ontology": "UBERON:0001870",
+          "backup_ontology": "UBERON:0013529",
+          "n_samples": 269,
+          "correction_type": "correction_needed"
+        },
+        "brain - cerebellar hemisphere": {
+          "tissue_name": "brain - cerebellar hemisphere",
+          "current_h5ad_ontology": "UBERON:0002245",
+          "correct_ontology": "UBERON:0002245",
+          "backup_ontology": "UBERON:0002245",
+          "n_samples": 277
+        },
+        "brain - substantia nigra": {
+          "tissue_name": "brain - substantia nigra",
+          "current_h5ad_ontology": "UBERON:0002038",
+          "correct_ontology": "UBERON:0002038",
+          "backup_ontology": "UBERON:0002038",
+          "n_samples": 183
+        },
+        "brain - anterior cingulate cortex (ba24)": {
+          "tissue_name": "brain - anterior cingulate cortex (ba24)",
+          "current_h5ad_ontology": "UBERON:0009835",
+          "correct_ontology": "UBERON:0009835",
+          "backup_ontology": "UBERON:0009835",
+          "n_samples": 233
+        },
+        "brain - amygdala": {
+          "tissue_name": "brain - amygdala",
+          "current_h5ad_ontology": "UBERON:0001876",
+          "correct_ontology": "UBERON:0001876",
+          "backup_ontology": "UBERON:0001876",
+          "n_samples": 181
+        },
+        "brain - caudate (basal ganglia)": {
+          "tissue_name": "brain - caudate (basal ganglia)",
+          "current_h5ad_ontology": "UBERON:0001873",
+          "correct_ontology": "UBERON:0002420",
+          "backup_ontology": "UBERON:0001873",
+          "n_samples": 300,
+          "correction_type": "correction_needed"
+        },
+        "brain - nucleus accumbens (basal ganglia)": {
+          "tissue_name": "brain - nucleus accumbens (basal ganglia)",
+          "current_h5ad_ontology": "UBERON:0001882",
+          "correct_ontology": "UBERON:0001882",
+          "backup_ontology": "UBERON:0001882",
+          "n_samples": 285
+        },
+        "brain - putamen (basal ganglia)": {
+          "tissue_name": "brain - putamen (basal ganglia)",
+          "current_h5ad_ontology": "UBERON:0001874",
+          "correct_ontology": "UBERON:0001874",
+          "backup_ontology": "UBERON:0001874",
+          "n_samples": 254
+        },
+        "adipose - subcutaneous": {
+          "tissue_name": "adipose - subcutaneous",
+          "current_h5ad_ontology": "UBERON:0002190",
+          "correct_ontology": "UBERON:0002190",
+          "backup_ontology": "UBERON:0002190",
+          "n_samples": 714
+        },
+        "muscle - skeletal": {
+          "tissue_name": "muscle - skeletal",
+          "current_h5ad_ontology": "UBERON:0001134",
+          "correct_ontology": "UBERON:0001134",
+          "backup_ontology": "UBERON:0001134",
+          "n_samples": 818
+        },
+        "artery - tibial": {
+          "tissue_name": "artery - tibial",
+          "current_h5ad_ontology": "UBERON:0007610",
+          "correct_ontology": "UBERON:0007610",
+          "backup_ontology": "UBERON:0007610",
+          "n_samples": 691
+        },
+        "artery - coronary": {
+          "tissue_name": "artery - coronary",
+          "current_h5ad_ontology": "UBERON:0001621",
+          "correct_ontology": "UBERON:0001621",
+          "backup_ontology": "UBERON:0001621",
+          "n_samples": 268
+        },
+        "heart - atrial appendage": {
+          "tissue_name": "heart - atrial appendage",
+          "current_h5ad_ontology": "UBERON:0006631",
+          "correct_ontology": "UBERON:0006618",
+          "backup_ontology": "UBERON:0006631",
+          "n_samples": 461,
+          "correction_type": "correction_needed"
+        },
+        "thyroid": {
+          "tissue_name": "thyroid",
+          "current_h5ad_ontology": "UBERON:0002046",
+          "correct_ontology": "UBERON:0002046",
+          "backup_ontology": "UBERON:0002046",
+          "n_samples": 684
+        },
+        "kidney - cortex": {
+          "tissue_name": "kidney - cortex",
+          "current_h5ad_ontology": "UBERON:0001225",
+          "correct_ontology": "UBERON:0001225",
+          "backup_ontology": "UBERON:0001225",
+          "n_samples": 104
+        },
+        "uterus": {
+          "tissue_name": "uterus",
+          "current_h5ad_ontology": "UBERON:0000995",
+          "correct_ontology": "UBERON:0000995",
+          "backup_ontology": "UBERON:0000995",
+          "n_samples": 153
+        },
+        "vagina": {
+          "tissue_name": "vagina",
+          "current_h5ad_ontology": "UBERON:0000996",
+          "correct_ontology": "UBERON:0000996",
+          "backup_ontology": "UBERON:0000996",
+          "n_samples": 170
+        },
+        "breast - mammary tissue": {
+          "tissue_name": "breast - mammary tissue",
+          "current_h5ad_ontology": "UBERON:0001911",
+          "correct_ontology": "UBERON:0001911",
+          "backup_ontology": "UBERON:0001911",
+          "n_samples": 514
+        },
+        "skin - not sun exposed (suprapubic)": {
+          "tissue_name": "skin - not sun exposed (suprapubic)",
+          "current_h5ad_ontology": "UBERON:0036151",
+          "correct_ontology": "UBERON:0036149",
+          "backup_ontology": "UBERON:0036151",
+          "n_samples": 651,
+          "correction_type": "correction_needed"
+        },
+        "minor salivary gland": {
+          "tissue_name": "minor salivary gland",
+          "current_h5ad_ontology": "UBERON:0001830",
+          "correct_ontology": "UBERON:0001830",
+          "backup_ontology": "UBERON:0001830",
+          "n_samples": 181
+        },
+        "brain - cortex": {
+          "tissue_name": "brain - cortex",
+          "current_h5ad_ontology": "UBERON:0000956",
+          "correct_ontology": "UBERON:0000956",
+          "backup_ontology": "UBERON:0000956",
+          "n_samples": 270
+        },
+        "cells - ebv-transformed lymphocytes": {
+          "tissue_name": "cells - ebv-transformed lymphocytes",
+          "current_h5ad_ontology": "",
+          "correct_ontology": "CL:0000542",
+          "backup_ontology": "CL:0000542",
+          "n_samples": 327,
+          "correction_type": "mapping_needed"
+        },
+        "adrenal gland": {
+          "tissue_name": "adrenal gland",
+          "current_h5ad_ontology": "UBERON:0002369",
+          "correct_ontology": "UBERON:0002369",
+          "backup_ontology": "UBERON:0002369",
+          "n_samples": 295
+        },
+        "lung": {
+          "tissue_name": "lung",
+          "current_h5ad_ontology": "UBERON:0002048",
+          "correct_ontology": "UBERON:0002048",
+          "backup_ontology": "UBERON:0002048",
+          "n_samples": 604
+        },
+        "spleen": {
+          "tissue_name": "spleen",
+          "current_h5ad_ontology": "UBERON:0002106",
+          "correct_ontology": "UBERON:0002106",
+          "backup_ontology": "UBERON:0002106",
+          "n_samples": 277
+        },
+        "pancreas": {
+          "tissue_name": "pancreas",
+          "current_h5ad_ontology": "UBERON:0001264",
+          "correct_ontology": "UBERON:0001264",
+          "backup_ontology": "UBERON:0001264",
+          "n_samples": 362
+        },
+        "esophagus - muscularis": {
+          "tissue_name": "esophagus - muscularis",
+          "current_h5ad_ontology": "UBERON:0004648",
+          "correct_ontology": "UBERON:0003832",
+          "backup_ontology": "UBERON:0004648",
+          "n_samples": 561,
+          "correction_type": "correction_needed"
+        },
+        "esophagus - mucosa": {
+          "tissue_name": "esophagus - mucosa",
+          "current_h5ad_ontology": "UBERON:0002469",
+          "correct_ontology": "UBERON:0002469",
+          "backup_ontology": "UBERON:0002469",
+          "n_samples": 614
+        },
+        "esophagus - gastroesophageal junction": {
+          "tissue_name": "esophagus - gastroesophageal junction",
+          "current_h5ad_ontology": "UBERON:0007650",
+          "correct_ontology": "UBERON:0007650",
+          "backup_ontology": "UBERON:0007650",
+          "n_samples": 403
+        },
+        "stomach": {
+          "tissue_name": "stomach",
+          "current_h5ad_ontology": "UBERON:0000945",
+          "correct_ontology": "UBERON:0000945",
+          "backup_ontology": "UBERON:0000945",
+          "n_samples": 407
+        },
+        "adipose - visceral (omentum)": {
+          "tissue_name": "adipose - visceral (omentum)",
+          "current_h5ad_ontology": "UBERON:0016529",
+          "correct_ontology": "UBERON:0014454",
+          "backup_ontology": "UBERON:0016529",
+          "n_samples": 587,
+          "correction_type": "correction_needed"
+        },
+        "colon - sigmoid": {
+          "tissue_name": "colon - sigmoid",
+          "current_h5ad_ontology": "UBERON:0001159",
+          "correct_ontology": "UBERON:0001159",
+          "backup_ontology": "UBERON:0001159",
+          "n_samples": 419
+        },
+        "small intestine - terminal ileum": {
+          "tissue_name": "small intestine - terminal ileum",
+          "current_h5ad_ontology": "UBERON:0001211",
+          "correct_ontology": "UBERON:0002116",
+          "backup_ontology": "UBERON:0001211",
+          "n_samples": 207,
+          "correction_type": "correction_needed"
+        },
+        "colon - transverse": {
+          "tissue_name": "colon - transverse",
+          "current_h5ad_ontology": "UBERON:0001157",
+          "correct_ontology": "UBERON:0001157",
+          "backup_ontology": "UBERON:0001157",
+          "n_samples": 479
+        },
+        "prostate": {
+          "tissue_name": "prostate",
+          "current_h5ad_ontology": "UBERON:0002367",
+          "correct_ontology": "UBERON:0002367",
+          "backup_ontology": "UBERON:0002367",
+          "n_samples": 282
+        },
+        "testis": {
+          "tissue_name": "testis",
+          "current_h5ad_ontology": "UBERON:0000473",
+          "correct_ontology": "UBERON:0000473",
+          "backup_ontology": "UBERON:0000473",
+          "n_samples": 414
+        },
+        "skin - sun exposed (lower leg)": {
+          "tissue_name": "skin - sun exposed (lower leg)",
+          "current_h5ad_ontology": "UBERON:0036149",
+          "correct_ontology": "UBERON:0004264",
+          "backup_ontology": "UBERON:0036149",
+          "n_samples": 754,
+          "correction_type": "correction_needed"
+        },
+        "nerve - tibial": {
+          "tissue_name": "nerve - tibial",
+          "current_h5ad_ontology": "UBERON:0001323",
+          "correct_ontology": "UBERON:0001323",
+          "backup_ontology": "UBERON:0001323",
+          "n_samples": 670
+        },
+        "brain - hypothalamus": {
+          "tissue_name": "brain - hypothalamus",
+          "current_h5ad_ontology": "UBERON:0001898",
+          "correct_ontology": "UBERON:0001898",
+          "backup_ontology": "UBERON:0001898",
+          "n_samples": 257
+        },
+        "heart - left ventricle": {
+          "tissue_name": "heart - left ventricle",
+          "current_h5ad_ontology": "UBERON:0002084",
+          "correct_ontology": "UBERON:0002084",
+          "backup_ontology": "UBERON:0002084",
+          "n_samples": 452
+        },
+        "liver": {
+          "tissue_name": "liver",
+          "current_h5ad_ontology": "UBERON:0002107",
+          "correct_ontology": "UBERON:0002107",
+          "backup_ontology": "UBERON:0002107",
+          "n_samples": 262
+        },
+        "brain - cerebellum": {
+          "tissue_name": "brain - cerebellum",
+          "current_h5ad_ontology": "UBERON:0002037",
+          "correct_ontology": "UBERON:0002037",
+          "backup_ontology": "UBERON:0002037",
+          "n_samples": 266
+        },
+        "cells - cultured fibroblasts": {
+          "tissue_name": "cells - cultured fibroblasts",
+          "current_h5ad_ontology": "",
+          "correct_ontology": "CL:0000057",
+          "backup_ontology": "CL:0000057",
+          "n_samples": 652,
+          "correction_type": "mapping_needed"
+        },
+        "brain - spinal cord (cervical c-1)": {
+          "tissue_name": "brain - spinal cord (cervical c-1)",
+          "current_h5ad_ontology": "UBERON:0002726",
+          "correct_ontology": "UBERON:0002726",
+          "backup_ontology": "UBERON:0002726",
+          "n_samples": 204
+        },
+        "artery - aorta": {
+          "tissue_name": "artery - aorta",
+          "current_h5ad_ontology": "UBERON:0000947",
+          "correct_ontology": "UBERON:0000947",
+          "backup_ontology": "UBERON:0000947",
+          "n_samples": 472
+        },
+        "pituitary": {
+          "tissue_name": "pituitary",
+          "current_h5ad_ontology": "UBERON:0000007",
+          "correct_ontology": "UBERON:0000007",
+          "backup_ontology": "UBERON:0000007",
+          "n_samples": 313
+        },
+        "brain - hippocampus": {
+          "tissue_name": "brain - hippocampus",
+          "current_h5ad_ontology": "UBERON:0002310",
+          "correct_ontology": "UBERON:0002421",
+          "backup_ontology": "UBERON:0002310",
+          "n_samples": 255,
+          "correction_type": "correction_needed"
+        },
+        "ovary": {
+          "tissue_name": "ovary",
+          "current_h5ad_ontology": "UBERON:0000992",
+          "correct_ontology": "UBERON:0000992",
+          "backup_ontology": "UBERON:0000992",
+          "n_samples": 193
+        },
+        "kidney - medulla": {
+          "tissue_name": "kidney - medulla",
+          "current_h5ad_ontology": "UBERON:0000362",
+          "correct_ontology": "UBERON:0000362",
+          "backup_ontology": "UBERON:0000362",
+          "n_samples": 11
+        },
+        "bladder": {
+          "tissue_name": "bladder",
+          "current_h5ad_ontology": "UBERON:0001255",
+          "correct_ontology": "UBERON:0001255",
+          "backup_ontology": "UBERON:0001255",
+          "n_samples": 77
+        },
+        "cervix - ectocervix": {
+          "tissue_name": "cervix - ectocervix",
+          "current_h5ad_ontology": "UBERON:0012249",
+          "correct_ontology": "UBERON:0012249",
+          "backup_ontology": "UBERON:0012249",
+          "n_samples": 24
+        },
+        "cervix - endocervix": {
+          "tissue_name": "cervix - endocervix",
+          "current_h5ad_ontology": "UBERON:0000458",
+          "correct_ontology": "UBERON:0000458",
+          "backup_ontology": "UBERON:0000458",
+          "n_samples": 23
+        },
+        "fallopian tube": {
+          "tissue_name": "fallopian tube",
+          "current_h5ad_ontology": "UBERON:0003889",
+          "correct_ontology": "UBERON:0003889",
+          "backup_ontology": "UBERON:0003889",
+          "n_samples": 29
+        }
+      },
+      "corrections_needed": [
+        {
+          "tissue_name": "brain - frontal cortex (ba9)",
+          "current_h5ad_ontology": "UBERON:0013529",
+          "correct_ontology": "UBERON:0001870",
+          "backup_ontology": "UBERON:0013529",
+          "n_samples": 269,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "brain - caudate (basal ganglia)",
+          "current_h5ad_ontology": "UBERON:0001873",
+          "correct_ontology": "UBERON:0002420",
+          "backup_ontology": "UBERON:0001873",
+          "n_samples": 300,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "heart - atrial appendage",
+          "current_h5ad_ontology": "UBERON:0006631",
+          "correct_ontology": "UBERON:0006618",
+          "backup_ontology": "UBERON:0006631",
+          "n_samples": 461,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "skin - not sun exposed (suprapubic)",
+          "current_h5ad_ontology": "UBERON:0036151",
+          "correct_ontology": "UBERON:0036149",
+          "backup_ontology": "UBERON:0036151",
+          "n_samples": 651,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "cells - ebv-transformed lymphocytes",
+          "current_h5ad_ontology": "",
+          "correct_ontology": "CL:0000542",
+          "backup_ontology": "CL:0000542",
+          "n_samples": 327,
+          "correction_type": "mapping_needed"
+        },
+        {
+          "tissue_name": "esophagus - muscularis",
+          "current_h5ad_ontology": "UBERON:0004648",
+          "correct_ontology": "UBERON:0003832",
+          "backup_ontology": "UBERON:0004648",
+          "n_samples": 561,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "adipose - visceral (omentum)",
+          "current_h5ad_ontology": "UBERON:0016529",
+          "correct_ontology": "UBERON:0014454",
+          "backup_ontology": "UBERON:0016529",
+          "n_samples": 587,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "small intestine - terminal ileum",
+          "current_h5ad_ontology": "UBERON:0001211",
+          "correct_ontology": "UBERON:0002116",
+          "backup_ontology": "UBERON:0001211",
+          "n_samples": 207,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "skin - sun exposed (lower leg)",
+          "current_h5ad_ontology": "UBERON:0036149",
+          "correct_ontology": "UBERON:0004264",
+          "backup_ontology": "UBERON:0036149",
+          "n_samples": 754,
+          "correction_type": "correction_needed"
+        },
+        {
+          "tissue_name": "cells - cultured fibroblasts",
+          "current_h5ad_ontology": "",
+          "correct_ontology": "CL:0000057",
+          "backup_ontology": "CL:0000057",
+          "n_samples": 652,
+          "correction_type": "mapping_needed"
+        },
+        {
+          "tissue_name": "brain - hippocampus",
+          "current_h5ad_ontology": "UBERON:0002310",
+          "correct_ontology": "UBERON:0002421",
+          "backup_ontology": "UBERON:0002310",
+          "n_samples": 255,
+          "correction_type": "correction_needed"
+        }
+      ],
+      "unmapped_tissues": []
+    },
+    {
+      "dataset": "ADNI",
+      "n_samples": 650,
+      "tissue_columns": [
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "mappings_analysis": {
+        "blood": {
+          "tissue_name": "blood",
+          "current_h5ad_ontology": "UBERON:0000178",
+          "correct_ontology": "UBERON:0000178",
+          "backup_ontology": "UBERON:0000178",
+          "n_samples": 650
+        }
+      },
+      "corrections_needed": [],
+      "unmapped_tissues": []
+    },
+    {
+      "dataset": "ENCODE",
+      "n_samples": 7,
+      "tissue_columns": [
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "mappings_analysis": {
+        "lung": {
+          "tissue_name": "lung",
+          "current_h5ad_ontology": "UBERON:0002048",
+          "correct_ontology": "UBERON:0002048",
+          "backup_ontology": "UBERON:0002048",
+          "n_samples": 2
+        },
+        "kidney": {
+          "tissue_name": "kidney",
+          "current_h5ad_ontology": "UBERON:0002113",
+          "correct_ontology": "UBERON:0002113",
+          "backup_ontology": "UBERON:0002113",
+          "n_samples": 1
+        },
+        "skin": {
+          "tissue_name": "skin",
+          "current_h5ad_ontology": "UBERON:0002097",
+          "correct_ontology": "UBERON:0002097",
+          "backup_ontology": "UBERON:0002097",
+          "n_samples": 1
+        },
+        "liver": {
+          "tissue_name": "liver",
+          "current_h5ad_ontology": "UBERON:0002107",
+          "correct_ontology": "UBERON:0002107",
+          "backup_ontology": "UBERON:0002107",
+          "n_samples": 1
+        },
+        "bone marrow": {
+          "tissue_name": "bone marrow",
+          "current_h5ad_ontology": "UBERON:0002371",
+          "correct_ontology": "UBERON:0002371",
+          "backup_ontology": "UBERON:0002371",
+          "n_samples": 1
+        },
+        "pancreas": {
+          "tissue_name": "pancreas",
+          "current_h5ad_ontology": "UBERON:0001264",
+          "correct_ontology": "UBERON:0001264",
+          "backup_ontology": "UBERON:0001264",
+          "n_samples": 1
+        }
+      },
+      "corrections_needed": [],
+      "unmapped_tissues": []
+    },
+    {
+      "dataset": "MAGE",
+      "n_samples": 731,
+      "tissue_columns": [
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "mappings_analysis": {
+        "lymphoblast": {
+          "tissue_name": "lymphoblast",
+          "current_h5ad_ontology": "",
+          "correct_ontology": "CL:0017005",
+          "backup_ontology": "CL:0000542",
+          "n_samples": 731,
+          "correction_type": "mapping_needed"
+        }
+      },
+      "corrections_needed": [
+        {
+          "tissue_name": "lymphoblast",
+          "current_h5ad_ontology": "",
+          "correct_ontology": "CL:0017005",
+          "backup_ontology": "CL:0000542",
+          "n_samples": 731,
+          "correction_type": "mapping_needed"
+        }
+      ],
+      "unmapped_tissues": []
+    }
+  ],
+  "correction_summary": {
+    "total_corrections_needed": 12,
+    "correction_types": {
+      "UBERON:0013529 \u2192 UBERON:0001870": {
+        "count": 1,
+        "samples": 269,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0001873 \u2192 UBERON:0002420": {
+        "count": 1,
+        "samples": 300,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0006631 \u2192 UBERON:0006618": {
+        "count": 1,
+        "samples": 461,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0036151 \u2192 UBERON:0036149": {
+        "count": 1,
+        "samples": 651,
+        "datasets": "{'GTEx'}"
+      },
+      " \u2192 CL:0000542": {
+        "count": 1,
+        "samples": 327,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0004648 \u2192 UBERON:0003832": {
+        "count": 1,
+        "samples": 561,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0016529 \u2192 UBERON:0014454": {
+        "count": 1,
+        "samples": 587,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0001211 \u2192 UBERON:0002116": {
+        "count": 1,
+        "samples": 207,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0036149 \u2192 UBERON:0004264": {
+        "count": 1,
+        "samples": 754,
+        "datasets": "{'GTEx'}"
+      },
+      " \u2192 CL:0000057": {
+        "count": 1,
+        "samples": 652,
+        "datasets": "{'GTEx'}"
+      },
+      "UBERON:0002310 \u2192 UBERON:0002421": {
+        "count": 1,
+        "samples": 255,
+        "datasets": "{'GTEx'}"
+      },
+      " \u2192 CL:0017005": {
+        "count": 1,
+        "samples": 731,
+        "datasets": "{'MAGE'}"
+      }
+    }
+  }
+}

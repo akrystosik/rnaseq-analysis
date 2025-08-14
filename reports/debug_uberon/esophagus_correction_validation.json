@@ -1,0 +1,32 @@
+{
+  "recommendation": "CHANGE_RECOMMENDED",
+  "current": {
+    "valid": true,
+    "uberon_id": "UBERON:0004648",
+    "label": "esophagus muscularis mucosa",
+    "description": "A muscularis mucosa that is part of a esophagus.",
+    "synonyms": [
+      "esophagus muscularis mucosae",
+      "lamina muscularis mucosae (oesphagus)",
+      "lamina muscularis of esophageal mucous membrane",
+      "muscularis mucosae of esophagus",
+      "esophagus muscularis"
+    ]
+  },
+  "proposed": {
+    "valid": true,
+    "uberon_id": "UBERON:0003832",
+    "label": "esophagus muscle",
+    "description": "Any muscle organ that is part of a esophagus [Automatically generated definition].",
+    "synonyms": [
+      "esophageal muscle",
+      "esophagus muscle organ",
+      "gullet muscle organ",
+      "muscle organ of esophagus",
+      "muscle organ of gullet",
+      "muscle organ of oesophagus",
+      "oesophagus muscle organ"
+    ]
+  },
+  "rationale": "Current term too specific (only muscularis mucosa), proposed covers general esophageal muscle tissue"
+}

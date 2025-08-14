@@ -1,0 +1,75 @@
+{
+  "investigation_date": "2025-08-14",
+  "partner_concern": "UBERON:0016529 incorrectly used for visceral adipose tissue",
+  "tissue_name": "Adipose - Visceral (Omentum)",
+  "current_mapping": "UBERON:0014454",
+  "uberon_0016529": {
+    "valid": true,
+    "uberon_id": "UBERON:0016529",
+    "label": "cortex of cerebral lobe",
+    "description": "Grey matter neocortex region of a lobe of the cerebral hemisphere.",
+    "synonyms": [
+      "cortex of cerebral hemisphere lobe",
+      "cortex of lobe of cerebral hemisphere",
+      "gray matter of lobe of cerebral hemisphere",
+      "neocortical part of cerebral hemisphere"
+    ]
+  },
+  "uberon_0014454": {
+    "valid": true,
+    "uberon_id": "UBERON:0014454",
+    "label": "visceral abdominal adipose tissue",
+    "description": "Subcutaneous adipose tissue that is located in the peritoneal cavity.",
+    "synonyms": [
+      "abdominal fat",
+      "intra-abdominal adipose tissue",
+      "intra-abdominal fat",
+      "organ fat",
+      "visceral adipose tissue",
+      "visceral fat"
+    ]
+  },
+  "related_terms": {
+    "UBERON:0001013": {
+      "valid": true,
+      "uberon_id": "UBERON:0001013",
+      "label": "adipose tissue",
+      "description": "Portion of connective tissue composed of adipocytes enmeshed in areolar tissue.",
+      "synonyms": [
+        "fat",
+        "fat tissue",
+        "fatty tissue",
+        "adipose",
+        "bodyfat",
+        "fatty depot"
+      ]
+    },
+    "UBERON:0002190": {
+      "valid": true,
+      "uberon_id": "UBERON:0002190",
+      "label": "subcutaneous adipose tissue",
+      "description": "A portion of adipose tissue that is part of the hypodermis, beneath the dermis.",
+      "synonyms": [
+        "panniculus adiposus",
+        "fatty layer of subcutaneous tissue",
+        "hypodermis fat layer",
+        "panniculus adiposus (tela subcutanea)",
+        "panniculus adiposus telae subcutaneae",
+        "subcutaneous fat layer",
+        "fatty layer of superficial fascia",
+        "subcutaneous fat"
+      ]
+    },
+    "UBERON:0003427": {
+      "valid": true,
+      "uberon_id": "UBERON:0003427",
+      "label": "abdominal fat pad",
+      "description": "The encapsulated adipose tissue in the abdomen.",
+      "synonyms": [
+        "abdomen fat pad",
+        "abdominal fat depot",
+        "fat pad of abdomen"
+      ]
+    }
+  }
+}

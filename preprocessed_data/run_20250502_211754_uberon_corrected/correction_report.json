@@ -1,0 +1,99 @@
+{
+  "correction_timestamp": "2025-08-14T23:09:08.331233",
+  "original_directory": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754",
+  "output_directory": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754_uberon_corrected",
+  "total_corrections_planned": 12,
+  "corrections_by_dataset": {
+    "GTEx": {
+      "correction_count": 11,
+      "samples_affected": 5024,
+      "corrections": [
+        {
+          "tissue_name": "brain - frontal cortex (ba9)",
+          "old_ontology": "UBERON:0013529",
+          "new_ontology": "UBERON:0001870",
+          "samples": 269
+        },
+        {
+          "tissue_name": "brain - caudate (basal ganglia)",
+          "old_ontology": "UBERON:0001873",
+          "new_ontology": "UBERON:0002420",
+          "samples": 300
+        },
+        {
+          "tissue_name": "heart - atrial appendage",
+          "old_ontology": "UBERON:0006631",
+          "new_ontology": "UBERON:0006618",
+          "samples": 461
+        },
+        {
+          "tissue_name": "skin - not sun exposed (suprapubic)",
+          "old_ontology": "UBERON:0036151",
+          "new_ontology": "UBERON:0036149",
+          "samples": 651
+        },
+        {
+          "tissue_name": "cells - ebv-transformed lymphocytes",
+          "old_ontology": "",
+          "new_ontology": "CL:0000542",
+          "samples": 327
+        },
+        {
+          "tissue_name": "esophagus - muscularis",
+          "old_ontology": "UBERON:0004648",
+          "new_ontology": "UBERON:0003832",
+          "samples": 561
+        },
+        {
+          "tissue_name": "adipose - visceral (omentum)",
+          "old_ontology": "UBERON:0016529",
+          "new_ontology": "UBERON:0014454",
+          "samples": 587
+        },
+        {
+          "tissue_name": "small intestine - terminal ileum",
+          "old_ontology": "UBERON:0001211",
+          "new_ontology": "UBERON:0002116",
+          "samples": 207
+        },
+        {
+          "tissue_name": "skin - sun exposed (lower leg)",
+          "old_ontology": "UBERON:0036149",
+          "new_ontology": "UBERON:0004264",
+          "samples": 754
+        },
+        {
+          "tissue_name": "cells - cultured fibroblasts",
+          "old_ontology": "",
+          "new_ontology": "CL:0000057",
+          "samples": 652
+        },
+        {
+          "tissue_name": "brain - hippocampus",
+          "old_ontology": "UBERON:0002310",
+          "new_ontology": "UBERON:0002421",
+          "samples": 255
+        }
+      ]
+    },
+    "MAGE": {
+      "correction_count": 1,
+      "samples_affected": 731,
+      "corrections": [
+        {
+          "tissue_name": "lymphoblast",
+          "old_ontology": "",
+          "new_ontology": "CL:0017005",
+          "samples": 731
+        }
+      ]
+    }
+  },
+  "processing_results": [
+    {
+      "dataset": "GTEx",
+      "input_file": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754/gtex_standardized_preprocessed.h5ad",
+      "output_file": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754_uberon_corrected/gtex_standardized_preprocessed.h5ad",
+      "original_samples": 19616,
+      "corrections_applied": 11,
+      "samples_affected": 

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-08-14 19:23:13",
+  "total_terms": 60,
+  "valid_terms": 59,
+  "invalid_terms": 1,
+  "semantic_issues": 1,
+  "errors": [
+    {
+      "uberon_id": "UBERON:0001134",
+      "error": "Request failed for UBERON:0001134: HTTPSConnectionPool(host='www.ebi.ac.uk', port=443): Max retries exceeded with url: /ols4/api/ontologies/uberon/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FUBERON_0001134 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x731dbcb66ef0>, 'Connection to www.ebi.ac.uk timed out. (connect timeout=10)'))"
+    }
+  ],
+  "semantic_problems": [
+    "Caudate (basal ganglia) region 'Brain - Caudate (basal ganglia)' mapped to specific nucleus 'caudate nucleus' instead of broader striatal region"
+  ]
+}

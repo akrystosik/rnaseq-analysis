@@ -1,0 +1,414 @@
+{
+  "timestamp": "2025-08-14T22:54:15.360573",
+  "validated_corrections": {
+    "brain - caudate (basal ganglia)": {
+      "old": "UBERON:0005382",
+      "new": "UBERON:0002420"
+    },
+    "brain - hippocampus": {
+      "old": "UBERON:0002310",
+      "new": "UBERON:0002421"
+    },
+    "esophagus - muscularis": {
+      "old": "UBERON:0004648",
+      "new": "UBERON:0003832"
+    },
+    "heart - atrial appendage": {
+      "old": "UBERON:0006631",
+      "new": "UBERON:0006618"
+    },
+    "lymphoblast": {
+      "old": "CL:0000542",
+      "new": "CL:0017005"
+    },
+    "pbmc": {
+      "old": "UBERON:0000178",
+      "new": "CL:2000001"
+    }
+  },
+  "h5ad_investigation": [
+    {
+      "dataset": "GTEx",
+      "file_path": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754/gtex_standardized_preprocessed.h5ad",
+      "n_samples": 19616,
+      "tissue_columns": [
+        "broad_tissue",
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "tissue_annotations": {
+        "broad_tissue": {
+          "unique_count": 30,
+          "values": [
+            "Blood",
+            "Brain",
+            "Adipose Tissue",
+            "Muscle",
+            "Blood Vessel",
+            "Heart",
+            "Thyroid",
+            "Kidney",
+            "Uterus",
+            "Vagina",
+            "Breast",
+            "Skin",
+            "Salivary Gland",
+            "Adrenal Gland",
+            "Lung",
+            "Spleen",
+            "Pancreas",
+            "Esophagus",
+            "Stomach",
+            "Colon"
+          ],
+          "value_counts": {
+            "Brain": 3234,
+            "Skin": 2057,
+            "Esophagus": 1578,
+            "Blood Vessel": 1431,
+            "Adipose Tissue": 1301,
+            "Blood": 1130,
+            "Heart": 913,
+            "Colon": 898,
+            "Muscle": 818,
+            "Thyroid": 684
+          }
+        },
+        "tissue": {
+          "unique_count": 54,
+          "values": [
+            "whole blood",
+            "brain - frontal cortex (ba9)",
+            "brain - cerebellar hemisphere",
+            "brain - substantia nigra",
+            "brain - anterior cingulate cortex (ba24)",
+            "brain - amygdala",
+            "brain - caudate (basal ganglia)",
+            "brain - nucleus accumbens (basal ganglia)",
+            "brain - putamen (basal ganglia)",
+            "adipose - subcutaneous",
+            "muscle - skeletal",
+            "artery - tibial",
+            "artery - coronary",
+            "heart - atrial appendage",
+            "thyroid",
+            "kidney - cortex",
+            "uterus",
+            "vagina",
+            "breast - mammary tissue",
+            "skin - not sun exposed (suprapubic)"
+          ],
+          "value_counts": {
+            "muscle - skeletal": 818,
+            "whole blood": 803,
+            "skin - sun exposed (lower leg)": 754,
+            "adipose - subcutaneous": 714,
+            "artery - tibial": 691,
+            "thyroid": 684,
+            "nerve - tibial": 670,
+            "cells - cultured fibroblasts": 652,
+            "skin - not sun exposed (suprapubic)": 651,
+            "esophagus - mucosa": 614
+          }
+        },
+        "tissue_original": {
+          "unique_count": 54,
+          "values": [
+            "Whole Blood",
+            "Brain - Frontal Cortex (BA9)",
+            "Brain - Cerebellar Hemisphere",
+            "Brain - Substantia nigra",
+            "Brain - Anterior cingulate cortex (BA24)",
+            "Brain - Amygdala",
+            "Brain - Caudate (basal ganglia)",
+            "Brain - Nucleus accumbens (basal ganglia)",
+            "Brain - Putamen (basal ganglia)",
+            "Adipose - Subcutaneous",
+            "Muscle - Skeletal",
+            "Artery - Tibial",
+            "Artery - Coronary",
+            "Heart - Atrial Appendage",
+            "Thyroid",
+            "Kidney - Cortex",
+            "Uterus",
+            "Vagina",
+            "Breast - Mammary Tissue",
+            "Skin - Not Sun Exposed (Suprapubic)"
+          ],
+          "value_counts": {
+            "Muscle - Skeletal": 818,
+            "Whole Blood": 803,
+            "Skin - Sun Exposed (Lower leg)": 754,
+            "Adipose - Subcutaneous": 714,
+            "Artery - Tibial": 691,
+            "Thyroid": 684,
+            "Nerve - Tibial": 670,
+            "Cells - Cultured fibroblasts": 652,
+            "Skin - Not Sun Exposed (Suprapubic)": 651,
+            "Esophagus - Mucosa": 614
+          }
+        },
+        "tissue_ontology": {
+          "unique_count": 53,
+          "values": [
+            "UBERON:0000178",
+            "UBERON:0013529",
+            "UBERON:0002245",
+            "UBERON:0002038",
+            "UBERON:0009835",
+            "UBERON:0001876",
+            "UBERON:0001873",
+            "UBERON:0001882",
+            "UBERON:0001874",
+            "UBERON:0002190",
+            "UBERON:0001134",
+            "UBERON:0007610",
+            "UBERON:0001621",
+            "UBERON:0006631",
+            "UBERON:0002046",
+            "UBERON:0001225",
+            "UBERON:0000995",
+            "UBERON:0000996",
+            "UBERON:0001911",
+            "UBERON:0036151"
+          ],
+          "value_counts": {
+            "": 979,
+            "UBERON:0001134": 818,
+            "UBERON:0000178": 803,
+            "UBERON:0036149": 754,
+            "UBERON:0002190": 714,
+            "UBERON:0007610": 691,
+            "UBERON:0002046": 684,
+            "UBERON:0001323": 670,
+            "UBERON:0036151": 651,
+            "UBERON:0002469": 614
+          }
+        },
+        "tissue_ontology_confidence": {
+          "unique_count": 2,
+          "values": [
+            "medium",
+            "none"
+          ],
+          "value_counts": {
+            "medium": 18637,
+            "none": 979
+          }
+        }
+      },
+      "needs_correction": []
+    },
+    {
+      "dataset": "ADNI",
+      "file_path": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754/adni_standardized_preprocessed.h5ad",
+      "n_samples": 650,
+      "tissue_columns": [
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "tissue_annotations": {
+        "tissue": {
+          "unique_count": 1,
+          "values": [
+            "blood"
+          ],
+          "value_counts": {
+            "blood": 650,
+            "": 0
+          }
+        },
+        "tissue_original": {
+          "unique_count": 1,
+          "values": [
+            "blood"
+          ],
+          "value_counts": {
+            "blood": 650
+          }
+        },
+        "tissue_ontology": {
+          "unique_count": 1,
+          "values": [
+            "UBERON:0000178"
+          ],
+          "value_counts": {
+            "UBERON:0000178": 650
+          }
+        },
+        "tissue_ontology_confidence": {
+          "unique_count": 1,
+          "values": [
+            "medium"
+          ],
+          "value_counts": {
+            "medium": 650
+          }
+        }
+      },
+      "needs_correction": []
+    },
+    {
+      "dataset": "ENCODE",
+      "file_path": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754/encode_standardized_preprocessed.h5ad",
+      "n_samples": 7,
+      "tissue_columns": [
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "tissue_annotations": {
+        "tissue": {
+          "unique_count": 6,
+          "values": [
+            "lung",
+            "kidney",
+            "skin",
+            "liver",
+            "bone marrow",
+            "pancreas"
+          ],
+          "value_counts": {
+            "lung": 2,
+            "kidney": 1,
+            "bone marrow": 1,
+            "liver": 1,
+            "pancreas": 1,
+            "skin": 1,
+            "": 0
+          }
+        },
+        "tissue_original": {
+          "unique_count": 6,
+          "values": [
+            "lung",
+            "kidney",
+            "skin",
+            "liver",
+            "bone marrow",
+            "pancreas"
+          ],
+          "value_counts": {
+            "lung": 2,
+            "bone marrow": 1,
+            "kidney": 1,
+            "liver": 1,
+            "pancreas": 1,
+            "skin": 1
+          }
+        },
+        "tissue_ontology": {
+          "unique_count": 6,
+          "values": [
+            "UBERON:0002048",
+            "UBERON:0002113",
+            "UBERON:0002097",
+            "UBERON:0002107",
+            "UBERON:0002371",
+            "UBERON:0001264"
+          ],
+          "value_counts": {
+            "UBERON:0002048": 2,
+            "UBERON:0001264": 1,
+            "UBERON:0002097": 1,
+            "UBERON:0002107": 1,
+            "UBERON:0002113": 1,
+            "UBERON:0002371": 1
+          }
+        },
+        "tissue_ontology_confidence": {
+          "unique_count": 1,
+          "values": [
+            "medium"
+          ],
+          "value_counts": {
+            "medium": 7
+          }
+        }
+      },
+      "needs_correction": []
+    },
+    {
+      "dataset": "MAGE",
+      "file_path": "/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/preprocessed_data/run_20250502_211754/mage_standardized_preprocessed.h5ad",
+      "n_samples": 731,
+      "tissue_columns": [
+        "tissue",
+        "tissue_original",
+        "tissue_ontology",
+        "tissue_ontology_confidence"
+      ],
+      "tissue_annotations": {
+        "tissue": {
+          "unique_count": 1,
+          "values": [
+            "lymphoblast"
+          ],
+          "value_counts": {
+            "lymphoblast": 731,
+            "": 0
+          }
+        },
+        "tissue_original": {
+          "unique_count": 1,
+          "values": [
+            "lymphoblast"
+          ],
+          "value_counts": {
+            "lymphoblast": 731
+          }
+        },
+        "tissue_ontology": {
+          "unique_count": 1,
+          "values": [
+            ""
+          ],
+          "value_counts": {
+            "": 731
+          }
+        },
+        "tissue_ontology_confidence": {
+          "unique_count": 1,
+          "values": [
+            "none"
+          ],
+          "value_counts": {
+            "none": 731
+          }
+        }
+      },
+      "needs_correction": []
+    }
+  ],
+  "corrections_needed": [
+    {
+      "dataset": "GTEx",
+      "column": "tissue_ontology",
+      "tissue_name": "heart - atrial appendage",
+      "old_id": "UBERON:0006631",
+      "new_id": "UBERON:0006618",
+      "sample_count": 0
+    },
+    {
+      "dataset": "GTEx",
+      "column": "tissue_ontology",
+      "tissue_name": "pbmc",
+      "old_id": "UBERON:0000178",
+      "new_id": "CL:2000001",
+      "sample_count": 803
+    },
+    {
+      "dataset": "ADNI",
+      "column": "tissue_ontology",
+      "tissue_name": "pbmc",
+      "old_id": "UBERON:0000178",
+      "new_id": "CL:2000001",
+      "sample_count": 650
+    }
+  ]
+}

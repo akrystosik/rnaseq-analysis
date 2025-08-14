@@ -1,0 +1,631 @@
+{
+  "timestamp": "2025-08-14 19:46:23",
+  "total_tissues": 67,
+  "discrepancies": [
+    {
+      "tissue_name": "Artery - Coronary",
+      "current_mapping": {
+        "uberon_id": "UBERON:0001621",
+        "validation": {
+          "valid": true,
+          "label": "coronary artery",
+          "description": "An artery that supplies the myocardium."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0005985",
+        "label": "coronary vessel",
+        "description": "Any of the arteries or veins that supply blood to the heart or return blood from the heart muscles to the circulation.",
+        "search_variant": "coronary",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0005985",
+          "label": "coronary vessel",
+          "description": "Any of the arteries or veins that supply blood to the heart or return blood from the heart muscles to the circulation.",
+          "search_variant": "coronary",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0006966",
+          "label": "coronary capillary",
+          "description": "A capillary that is part of the coronary system.",
+          "search_variant": "coronary",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0005438",
+          "label": "coronary sinus",
+          "description": "The short trunk that recieves most of the cardiac veins carrying the blood from the myocardium and delivers it to the right atrium, with the sinoatrial connection occurring between the inferior vena cava and the atrioventricular orifice.",
+          "search_variant": "coronary",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Artery - Tibial",
+      "current_mapping": {
+        "uberon_id": "UBERON:0007610",
+        "validation": {
+          "valid": true,
+          "label": "tibial artery",
+          "description": "The anterior and posterior arteries created at the bifurcation of the popliteal artery. The anterior tibial artery begins at the lower border of the popliteus muscle and lies along the tibia at the distal part of the leg to surface superficially anterior to the ankle joint. Its branches are distributed throughout the leg, ankle, and pes. The posterior tibial artery begins at the lower border of the popliteus muscle, lies behind the tibia in the lower part of its course, and is found situated between the medial malleolus and the medial process of the calcaneal tuberosity. Its branches are distributed throughout the leg and foot."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:3000903",
+        "label": "tibial crest",
+        "description": "Ridge that arises from the dorso-masial side of the extensor surface of the tibia. It receives the insertion of the tendon of the extensor ilio-tibialis muscle.",
+        "search_variant": "tibial",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:3000903",
+          "label": "tibial crest",
+          "description": "Ridge that arises from the dorso-masial side of the extensor surface of the tibia. It receives the insertion of the tendon of the extensor ilio-tibialis muscle.",
+          "search_variant": "tibial",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:3010182",
+          "label": "tibial glands",
+          "description": "",
+          "search_variant": "tibial",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:3010190",
+          "label": "tibial protuberances",
+          "description": "",
+          "search_variant": "tibial",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Bladder",
+      "current_mapping": {
+        "uberon_id": "UBERON:0001255",
+        "validation": {
+          "valid": true,
+          "label": "urinary bladder",
+          "description": "Distensible musculomembranous organ situated in the anterior part of the pelvic cavity in which urine collects before excretion[MP]."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0018707",
+        "label": "bladder organ",
+        "description": "A membranous sac in animals that serves as the receptacle of a liquid or contains gas.",
+        "search_variant": "bladder",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0018707",
+          "label": "bladder organ",
+          "description": "A membranous sac in animals that serves as the receptacle of a liquid or contains gas.",
+          "search_variant": "bladder",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0001255",
+          "label": "urinary bladder",
+          "description": "Distensible musculomembranous organ situated in the anterior part of the pelvic cavity in which urine collects before excretion[MP].",
+          "search_variant": "bladder",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0006860",
+          "label": "swim bladder",
+          "description": "A thin membranous, sometimes alveolated sac in the dorsal portion of the abdominal cavity. Contains a varying mixture of gases, not identical to the composition of air. May be one, two or three chambered. May be connected to the gut by a tube, the ductus pneumaticus (then called physostomous) or unconnected (then called physoclistous).",
+          "search_variant": "bladder",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Brain - Caudate (basal ganglia)",
+      "current_mapping": {
+        "uberon_id": "UBERON:0002420",
+        "validation": {
+          "valid": true,
+          "label": "basal ganglion",
+          "description": "An individual member of a collection of basal ganglia. Basal ganglia are subcortical masses of gray matter in the forebrain and midbrain that are richly interconnected and so viewed as a functional system. The nuclei usually included are the caudate nucleus (caudoputamen in rodents), putamen, globus pallidus, substantia nigra (pars compacta and pars reticulata) and the subthalamic nucleus. Some also include the nucleus accumbens and ventral pallidum[NIF,modified]."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0010011",
+        "label": "collection of basal ganglia",
+        "description": "Subcortical masses of gray matter in the forebrain and midbrain that are richly interconnected and so viewed as a functional system. The nuclei usually included are the caudate nucleus (caudoputamen in rodents), putamen, globus pallidus, substantia nigra (pars compacta and pars reticulata) and the subthalamic nucleus. Some also include the nucleus accumbens and ventral pallidum.",
+        "search_variant": "caudate (basal ganglia)",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0010011",
+          "label": "collection of basal ganglia",
+          "description": "Subcortical masses of gray matter in the forebrain and midbrain that are richly interconnected and so viewed as a functional system. The nuclei usually included are the caudate nucleus (caudoputamen in rodents), putamen, globus pallidus, substantia nigra (pars compacta and pars reticulata) and the subthalamic nucleus. Some also include the nucleus accumbens and ventral pallidum.",
+          "search_variant": "caudate (basal ganglia)",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0023920",
+          "label": "basal ganglia of rodent",
+          "description": "The basal ganglia of the rodent.",
+          "search_variant": "caudate (basal ganglia)",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0002420",
+          "label": "basal ganglion",
+          "description": "An individual member of a collection of basal ganglia. Basal ganglia are subcortical masses of gray matter in the forebrain and midbrain that are richly interconnected and so viewed as a functional system. The nuclei usually included are the caudate nucleus (caudoputamen in rodents), putamen, globus pallidus, substantia nigra (pars compacta and pars reticulata) and the subthalamic nucleus. Some also include the nucleus accumbens and ventral pallidum[NIF,modified].",
+          "search_variant": "caudate (basal ganglia)",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Brain - Cortex",
+      "current_mapping": {
+        "uberon_id": "UBERON:0000956",
+        "validation": {
+          "valid": true,
+          "label": "cerebral cortex",
+          "description": "The thin layer of gray matter on the surface of the cerebral hemisphere that develops from the telencephalon. It consists of the neocortex (6 layered cortex or isocortex), the hippocampal formation and the olfactory cortex."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0001851",
+        "label": "cortex",
+        "description": "Outermost layer of an organ[WP].",
+        "search_variant": "cortex",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0001851",
+          "label": "cortex",
+          "description": "Outermost layer of an organ[WP].",
+          "search_variant": "cortex",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:8440075",
+          "label": "gustatory cortex",
+          "description": "The part of the cerebral cortex that is responsible for the perception of taste.",
+          "search_variant": "cortex",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0014537",
+          "label": "periamygdaloid cortex",
+          "description": "Is located ventral to the basal nucleus and has three subdivisions: the periamygdaloid cortex, the medial division, and the sulcal division.",
+          "search_variant": "cortex",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Brain - Hippocampus",
+      "current_mapping": {
+        "uberon_id": "UBERON:0002310",
+        "validation": {
+          "valid": true,
+          "label": "hippocampus fimbria",
+          "description": "Regional part of fornix consisting of a prominent white matter structure adjacent to the hippocampus on the ventricular side continuous with the alveus. Near the splenium the fimbria separates from the hippocampus as the crus of the fornix. [adapted from Wikipedia] (MM: 2006-10-26)."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0007639",
+        "label": "hippocampus alveus",
+        "description": "Regional part of fornix consisting of a thin layer of white matter on the surface of the hippocampal formation, bordering the wall of the lateral ventricle and composed of white, myelinated fibers. The alveus arises from cell bodies in the subiculum and hippocampus, and eventually merges with the fimbria of the hippocampus. The fimbria goes on to become the fornix (MM: 2006-10-26).",
+        "search_variant": "hippocampus",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0007639",
+          "label": "hippocampus alveus",
+          "description": "Regional part of fornix consisting of a thin layer of white matter on the surface of the hippocampal formation, bordering the wall of the lateral ventricle and composed of white, myelinated fibers. The alveus arises from cell bodies in the subiculum and hippocampus, and eventually merges with the fimbria of the hippocampus. The fimbria goes on to become the fornix (MM: 2006-10-26).",
+          "search_variant": "hippocampus",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0002310",
+          "label": "hippocampus fimbria",
+          "description": "Regional part of fornix consisting of a prominent white matter structure adjacent to the hippocampus on the ventricular side continuous with the alveus. Near the splenium the fimbria separates from the hippocampus as the crus of the fornix. [adapted from Wikipedia] (MM: 2006-10-26).",
+          "search_variant": "hippocampus",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0002421",
+          "label": "hippocampal formation",
+          "description": "Hippocampus (proper) plus dentate gyrus and subiculum[definition derived from NIF comments and ontology alignment].",
+          "search_variant": "hippocampus",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Brain - Putamen (basal ganglia)",
+      "current_mapping": {
+        "uberon_id": "UBERON:0001874",
+        "validation": {
+          "valid": true,
+          "label": "putamen",
+          "description": "Subcortical nucleus of telencephalic , which together with the caudate nucleus, forms the striatum. The putamen lies lateral to the internal capsule and medial to the external medullary lamina, and is separated from the caudate nucleus by the fibers of the internal capsule for most of its length, except at its anterior portion."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0010011",
+        "label": "collection of basal ganglia",
+        "description": "Subcortical masses of gray matter in the forebrain and midbrain that are richly interconnected and so viewed as a functional system. The nuclei usually included are the caudate nucleus (caudoputamen in rodents), putamen, globus pallidus, substantia nigra (pars compacta and pars reticulata) and the subthalamic nucleus. Some also include the nucleus accumbens and ventral pallidum.",
+        "search_variant": "putamen (basal ganglia)",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0010011",
+          "label": "collection of basal ganglia",
+          "description": "Subcortical masses of gray matter in the forebrain and midbrain that are richly interconnected and so viewed as a functional system. The nuclei usually included are the caudate nucleus (caudoputamen in rodents), putamen, globus pallidus, substantia nigra (pars compacta and pars reticulata) and the subthalamic nucleus. Some also include the nucleus accumbens and ventral pallidum.",
+          "search_variant": "putamen (basal ganglia)",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0023920",
+          "label": "basal ganglia of rodent",
+          "description": "The basal ganglia of the rodent.",
+          "search_variant": "putamen (basal ganglia)",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0001874",
+          "label": "putamen",
+          "description": "Subcortical nucleus of telencephalic , which together with the caudate nucleus, forms the striatum. The putamen lies lateral to the internal capsule and medial to the external medullary lamina, and is separated from the caudate nucleus by the fibers of the internal capsule for most of its length, except at its anterior portion.",
+          "search_variant": "putamen (basal ganglia)",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Brain - Spinal cord (cervical c-1)",
+      "current_mapping": {
+        "uberon_id": "UBERON:0002726",
+        "validation": {
+          "valid": true,
+          "label": "cervical spinal cord",
+          "description": "A spinal cord segment that adjacent_to a cervical region."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0002240",
+        "label": "spinal cord",
+        "description": "Part of the central nervous system located in the vertebral canal continuous with and caudal to the brain; demarcated from brain by plane of foramen magnum. It is composed of an inner core of gray matter in which nerve cells predominate, and an outer layer of white matter in which myelinated nerve fibers predominate, and surrounds the central canal. (CUMBO).",
+        "search_variant": "spinal cord",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0002240",
+          "label": "spinal cord",
+          "description": "Part of the central nervous system located in the vertebral canal continuous with and caudal to the brain; demarcated from brain by plane of foramen magnum. It is composed of an inner core of gray matter in which nerve cells predominate, and an outer layer of white matter in which myelinated nerve fibers predominate, and surrounds the central canal. (CUMBO).",
+          "search_variant": "spinal cord",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0016550",
+          "label": "spinal cord column",
+          "description": "",
+          "search_variant": "spinal cord",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0005843",
+          "label": "sacral spinal cord",
+          "description": "A spinal cord segment that adjacent_to a sacral region.",
+          "search_variant": "spinal cord",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Breast - Mammary Tissue",
+      "current_mapping": {
+        "uberon_id": "UBERON:0001911",
+        "validation": {
+          "valid": true,
+          "label": "mammary gland",
+          "description": "A specialized accessory gland of the skin of mammals that secretes milk. The gland is typically only developed in females, and regresses in males."
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0004180",
+        "label": "mammary gland fat",
+        "description": "The mammary fat is an adipose structure in the gland that is invaded by the mammary ducts.",
+        "search_variant": "breast - mammary tissue",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0004180",
+          "label": "mammary gland fat",
+          "description": "The mammary fat is an adipose structure in the gland that is invaded by the mammary ducts.",
+          "search_variant": "breast - mammary tissue",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0000310",
+          "label": "breast",
+          "description": "The upper ventral region of the torso of an organism.",
+          "search_variant": "breast - mammary tissue",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0003584",
+          "label": "mammary gland connective tissue",
+          "description": "The fibrous supportive tissue of the mammary gland.",
+          "search_variant": "breast - mammary tissue",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Cells - Cultured fibroblasts",
+      "current_mapping": {
+        "uberon_id": "CL:0000057",
+        "validation": {
+          "valid": true,
+          "label": "Cell Ontology term",
+          "note": "Skipping CL validation"
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:8480034",
+        "label": "intralobular stroma of mammary gland",
+        "description": "The intralobular stroma of the mammary gland lobule contains loosely connected fibroblasts. It is surrounded by the more compact interlobular stroma.",
+        "search_variant": "cultured fibroblasts",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:8480034",
+          "label": "intralobular stroma of mammary gland",
+          "description": "The intralobular stroma of the mammary gland lobule contains loosely connected fibroblasts. It is surrounded by the more compact interlobular stroma.",
+          "search_variant": "cultured fibroblasts",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0008870",
+          "label": "pulmonary alveolar parenchyma",
+          "description": "The distinguishing cell types of the lung alveolar tissue, including pulmonary epithelial cells (pneumocytes), alveolar capillary endothelial cells, interstitial cells (fibroblasts) and alveolar macrophages.",
+          "search_variant": "cultured fibroblasts",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0008305",
+          "label": "outer fibrous layer of perichondrium",
+          "description": "The perichondrium consists of two separate layers: an outer fibrous layer and inner chondrogenic layer. The fibrous layer contains fibroblasts, which produce collagenous fibers.",
+          "search_variant": "cultured fibroblasts",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "tissue_name": "Cells - EBV-transformed lymphocytes",
+      "current_mapping": {
+        "uberon_id": "CL:0000542",
+        "validation": {
+          "valid": true,
+          "label": "Cell Ontology term",
+          "note": "Skipping CL validation"
+        }
+      },
+      "suggested_mapping": {
+        "uberon_id": "UBERON:0006591",
+        "label": "transformed artery",
+        "description": "A remnant of embryonic structure that develops_from a artery.",
+        "search_variant": "ebv-transformed lymphocytes",
+        "score": 0
+      },
+      "all_search_results": [
+        {
+          "uberon_id": "UBERON:0006591",
+          "label": "transformed artery",
+          "description": "A remnant of embryonic structure that develops_from a artery.",
+          "search_variant": "ebv-transformed lymphocytes",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0006592",
+          "label": "transformed vein",
+          "description": "A remnant of embryonic structure that develops_from a vein.",
+          "search_variant": "ebv-transformed lymphocytes",
+          "score": 0
+        },
+        {
+          "uberon_id": "UBERON:0010387",
+          "label": "Peyer's patch T cell area",
+          "description": "The Peyer's patch area normally occupied by T lymphocytes.",
+          "search_variant": "ebv-transformed lymphocytes",
+          "score": 0
+        }
+      ]
+    }
+  ],
+  "validated_mappings": [
+    {
+      "tissue_name": "Adipose - Subcutaneous",
+      "uberon_id": "UBERON:0002190",
+      "validation": {
+        "valid": true,
+        "label": "subcutaneous adipose tissue",
+        "description": "A portion of adipose tissue that is part of the hypodermis, beneath the dermis."
+      }
+    },
+    {
+      "tissue_name": "Adipose - Visceral (Omentum)",
+      "uberon_id": "UBERON:0014454",
+      "validation": {
+        "valid": true,
+        "label": "visceral abdominal adipose tissue",
+        "description": "Subcutaneous adipose tissue that is located in the peritoneal cavity."
+      }
+    },
+    {
+      "tissue_name": "Adrenal",
+      "uberon_id": "UBERON:0002369",
+      "validation": {
+        "valid": true,
+        "label": "adrenal gland",
+        "description": "Either of a pair of complex endocrine organs near the anterior medial border of the kidney consisting of a mesodermal cortex that produces glucocorticoid, mineralocorticoid, and androgenic hormones and an ectodermal medulla that produces epinephrine and norepinephrine[BTO]."
+      }
+    },
+    {
+      "tissue_name": "Adrenal Gland",
+      "uberon_id": "UBERON:0002369",
+      "validation": {
+        "valid": true,
+        "label": "adrenal gland",
+        "description": "Either of a pair of complex endocrine organs near the anterior medial border of the kidney consisting of a mesodermal cortex that produces glucocorticoid, mineralocorticoid, and androgenic hormones and an ectodermal medulla that produces epinephrine and norepinephrine[BTO]."
+      }
+    },
+    {
+      "tissue_name": "Artery - Aorta",
+      "uberon_id": "UBERON:0000947",
+      "validation": {
+        "valid": true,
+        "label": "aorta",
+        "description": "The main trunk of the systemic arterial system that carries blood from the heart to all the organs and other structures of the body, bringing oxygenated blood to all parts of the body in the systemic circulation."
+      }
+    },
+    {
+      "tissue_name": "Blood",
+      "uberon_id": "UBERON:0000178",
+      "validation": {
+        "valid": true,
+        "label": "blood",
+        "description": "A fluid that is composed of blood plasma and erythrocytes."
+      }
+    },
+    {
+      "tissue_name": "Bone Marrow",
+      "uberon_id": "UBERON:0002371",
+      "validation": {
+        "valid": true,
+        "label": "bone marrow",
+        "description": "The soft tissue that fills the cavities of bones."
+      }
+    },
+    {
+      "tissue_name": "Brain",
+      "uberon_id": "UBERON:0000955",
+      "validation": {
+        "valid": true,
+        "label": "brain",
+        "description": "The brain is the center of the nervous system in all vertebrate, and most invertebrate, animals. Some primitive animals such as jellyfish and starfish have a decentralized nervous system without a brain, while sponges lack any nervous system at all. In vertebrates, the brain is located in the head, protected by the skull and close to the primary sensory apparatus of vision, hearing, balance, taste, and smell[WP]."
+      }
+    },
+    {
+      "tissue_name": "Brain - Amygdala",
+      "uberon_id": "UBERON:0001876",
+      "validation": {
+        "valid": true,
+        "label": "amygdala",
+        "description": "Subcortical brain region lying anterior to the hippocampal formation in the temporal lobe and anterior to the temporal horn of the lateral ventricle in some species. It is usually subdivided into several groups. Functionally, it is not considered a unitary structure (MM)."
+      }
+    },
+    {
+      "tissue_name": "Brain - Anterior cingulate cortex (BA24)",
+      "uberon_id": "UBERON:0009835",
+      "validation": {
+        "valid": true,
+        "label": "anterior cingulate cortex",
+        "description": "The frontal part of the cingulate cortex that resembles a collar form around the corpus callosum. It includes both the ventral and dorsal areas of the cingulate cortex. Wikipedia:File:Gray727.svg."
+      }
+    },
+    {
+      "tissue_name": "Brain - Cerebellar Hemisphere",
+      "uberon_id": "UBERON:0002245",
+      "validation": {
+        "valid": true,
+        "label": "cerebellar hemisphere",
+        "description": "A paired regions of the cerebellum that lie outside and lateral to the central vermis[MP]. The cerebellum consists of three parts, a median and two lateral, which are continuous with each other, and are substantially the same in structure. The median portion is constricted, and is called the vermis, from its annulated appearance which it owes to the transverse ridges and furrows upon it; the lateral expanded portions are named the hemispheres. The lateral hemisphere is considered the portion of the cerebellum to develop most recently. [WP,unvetted]."
+      }
+    },
+    {
+      "tissue_name": "Brain - Cerebellum",
+      "uberon_id": "UBERON:0002037",
+      "validation": {
+        "valid": true,
+        "label": "cerebellum",
+        "description": "Part of the metencephalon that lies in the posterior cranial fossa behind the brain stem. It is concerned with the coordination of movement[MESH]. A large dorsally projecting part of the brain concerned especially with the coordination of muscles and the maintenance of bodily equilibrium, situated between the brain stem and the back of the cerebrum , and formed in humans of two lateral lobes and a median lobe[BTO]. Brain structure derived from the anterior hindbrain, and perhaps including posterior midbrain. The cerebellum plays a role in somatic motor function, the control of muscle tone, and balance[ZFA]."
+      }
+    },
+    {
+      "tissue_name": "Brain - Frontal Cortex (BA9)",
+      "uberon_id": "UBERON:0001870",
+      "validation": {
+        "valid": true,
+        "label": "frontal cortex",
+        "description": "Anterior portion of the neocortex, lying anterior to the central sulcus in humans. It is bounded by the parietal cortex posteriorly and the temporal cortex laterally[NIFSTD,modified]."
+      }
+    },
+    {
+      "tissue_name": "Brain - Hypothalamus",
+      "uberon_id": "UBERON:0001898",
+      "validation": {
+        "valid": true,
+        "label": "hypothalamus",
+        "description": "A specialized brain region of the ventral diencephalon arising near the end of the segmentation period; the embryonic hypothalamic region will give rise to the posterior pituitary gland as well as a number of brain nuclei. [ZFA]. One of the most important functions of the hypothalamus is to link the nervous system to the endocrine system via the pituitary gland (hypophysis).[Wikipedia]."
+      }
+    },
+    {
+      "tissue_name": "Brain - Nucleus accumbens (basal ganglia)",
+      "uberon_id": "UBERON:0001882",
+      "validation": {
+        "valid": true,
+        "label": "nucleus accumbens",
+        "description": "A region of the brain consisting of a collection of neurons located in the forebrain ventral to the caudate and putamen. (caudoputamen in rodent) and continuous with these structures. There is no distinct boundary between the nucleus accumbens and the caudate/putamen, but in rodents, it can be identified by its lack of traversing fiber bundles in comparison to the dorsal striatum. Its principle neuron is the medium spiny neuron. Together with the neostriatum (caudate nucleus and putamen), the nucleus accumbens forms the striatum."
+      }
+    },
+    {
+      "tissue_name": "Brain - Substantia nigra",
+      "uberon_id": "UBERON:0002038",
+      "validation": {
+        "valid": true,
+        "label": "substantia nigra",
+        "description": "Predominantly gray matter midbrain structure lying dorsal to the crus cerebri and ventral to the midbrain tegmentum. It is divided into a dorsal, cellularly compact region known as the pars compacta and a more ventrally located, containing more loosely packed cells, the pars reticulata. The most lateral region of the reticulata is identified as the pars lateralis (MM)."
+      }
+    },
+    {
+      "tissue_name": "Cervix - Ectocervix",
+      "uberon_id": "UBERON:0012249",
+      "validation": {
+        "valid": true,
+        "label": "ectocervix",
+        "description": "The part of the cervix uteri that protrudes into the vagina and is lined with stratified squamous epithelium."
+      }
+    },
+    {
+      "tissue_name": "Cervix - Endocervix",
+      "uberon_id": "UBERON:0000458",
+      "validation": {
+        "valid": true,
+        "label": "endocervix",
+        "description": "The region of the opening of the uterine cervix into the uterine cavity."
+      }
+    },
+    {
+      "tissue_name": "Colon",
+      "uberon_id": "UBERON:0001155",
+      "validation": {
+        "valid": true,
+        "label": "colon",
+        "description": "A portion of the large intestine before it becomes the rectum. In mammals, the colon is the most part of the large intestine, excluding the vermiform appendix, the rectum and the anal canal."
+      }
+    }
+  ],
+  "search_failures": []
+}
