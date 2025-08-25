@@ -1,0 +1,1021 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://example.com/datasets/gtex_h5ad_20250825",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "GTEx (Genotype-Tissue Expression) - Standardized H5AD",
+  "description": "The Genotype-Tissue Expression (GTEx) project characterizes human transcriptomes within and across individuals for a wide variety of primary tissues and cell types. This dataset contains RNA-seq data from 838 individuals across 49 tissues. This dataset has been standardized and preprocessed for analysis, containing 19,616 samples and 58,988 genes.",
+  "url": "https://www.gtexportal.org/",
+  "license": "dbGaP Authorized Access",
+  "creator": {
+    "@type": "Organization",
+    "name": "The GTEx Consortium"
+  },
+  "citation": [
+    "Aguet, F. et al. The GTEx Consortium atlas of genetic regulatory effects across human tissues. Science 369, 1318-1330 (2020).",
+    "The GTEx Consortium. Genetic effects on gene expression across human tissues. Nature 550, 204-213 (2017)."
+  ],
+  "keywords": [
+    "gene expression",
+    "eQTL",
+    "tissue",
+    "RNA-seq",
+    "human",
+    "multi-tissue"
+  ],
+  "datePublished": "2025-08-25T19:42:18.552348",
+  "version": "1.0",
+  "identifier": "gtex_h5ad_20250825",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "RNA sequencing",
+  "sc:tissueType": "Multi-tissue (49 tissues)",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "gtex_standardized_preprocessed.h5ad",
+      "description": "H5AD file containing gene expression data for GTEX",
+      "contentUrl": "https://example.com/datasets/gtex_standardized_preprocessed.h5ad",
+      "encodingFormat": "application/x-hdf5",
+      "contentSize": 4923744432,
+      "sha256": null
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "gene_expression_matrix",
+      "description": "Gene expression matrix with samples as observations and genes as variables",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "sample_id",
+          "description": "Unique identifier for each sample",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_expression",
+          "description": "Gene expression values ()",
+          "dataType": "sc:Float"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "sample_metadata",
+      "description": "Sample-level metadata including tissue type, demographics, and experimental conditions",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "SMATSSCR",
+          "description": "Metadata field: SMATSSCR",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMCENTER",
+          "description": "Metadata field: SMCENTER",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMPTHNTS",
+          "description": "Metadata field: SMPTHNTS",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "rna_integrity_number",
+          "description": "Metadata field: rna_integrity_number",
+          "dataType": "sc:Float"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "broad_tissue",
+          "description": "Metadata field: broad_tissue",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue",
+          "description": "Tissue or cell type",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMUBRID",
+          "description": "Metadata field: SMUBRID",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ischemic_time",
+          "description": "Metadata field: ischemic_time",
+          "dataType": "sc:Float"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMTSPAX",
+          "description": "Metadata field: SMTSPAX",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "array_batch",
+          "description": "Metadata field: array_batch",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNABTCHT",
+          "description": "Metadata field: SMNABTCHT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNABTCHD",
+          "description": "Metadata field: SMNABTCHD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "batch",
+          "description": "Metadata field: batch",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMGEBTCHD",
+          "description": "Metadata field: SMGEBTCHD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMGEBTCHT",
+          "description": "Metadata field: SMGEBTCHT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ANALYTE_TYPE",
+          "description": "Metadata field: ANALYTE_TYPE",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMAFRZE",
+          "description": "Metadata field: SMAFRZE",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMGTC",
+          "description": "Metadata field: SMGTC",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRDTTL",
+          "description": "Metadata field: SMRDTTL",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMALTTL",
+          "description": "Metadata field: SMALTTL",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMALTALG",
+          "description": "Metadata field: SMALTALG",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSUPALG",
+          "description": "Metadata field: SMSUPALG",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRDLGTH",
+          "description": "Metadata field: SMRDLGTH",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMVQCFL",
+          "description": "Metadata field: SMVQCFL",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMLMAPQ",
+          "description": "Metadata field: SMLMAPQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMUMPRD",
+          "description": "Metadata field: SMUMPRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMUNPDRD",
+          "description": "Metadata field: SMUNPDRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPPD",
+          "description": "Metadata field: SMMPPD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMAPRT",
+          "description": "Metadata field: SMMAPRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPPDUN",
+          "description": "Metadata field: SMMPPDUN",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMUNMPRT",
+          "description": "Metadata field: SMUNMPRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPDP",
+          "description": "Metadata field: SMMPDP",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMDPMPRT",
+          "description": "Metadata field: SMDPMPRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPPDXG",
+          "description": "Metadata field: SMMPPDXG",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPDPXG",
+          "description": "Metadata field: SMMPDPXG",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMDPRTXG",
+          "description": "Metadata field: SMDPRTXG",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMCHMRD",
+          "description": "Metadata field: SMCHMRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMCHMRT",
+          "description": "Metadata field: SMCHMRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPPDPR",
+          "description": "Metadata field: SMMPPDPR",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPHQRD",
+          "description": "Metadata field: SMMPHQRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPHQRT",
+          "description": "Metadata field: SMMPHQRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMPLQRD",
+          "description": "Metadata field: SMMPLQRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSPLTRT",
+          "description": "Metadata field: SMSPLTRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1MPRD",
+          "description": "Metadata field: SME1MPRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2MPRD",
+          "description": "Metadata field: SME2MPRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1MPRT",
+          "description": "Metadata field: SME1MPRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2MPRT",
+          "description": "Metadata field: SME2MPRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1MMB",
+          "description": "Metadata field: SME1MMB",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2MMB",
+          "description": "Metadata field: SME2MMB",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1TTLB",
+          "description": "Metadata field: SME1TTLB",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2TTLB",
+          "description": "Metadata field: SME2TTLB",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1MMRT",
+          "description": "Metadata field: SME1MMRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2MMRT",
+          "description": "Metadata field: SME2MMRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMTTLMM",
+          "description": "Metadata field: SMTTLMM",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMTTLB",
+          "description": "Metadata field: SMTTLB",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMBSMMRT",
+          "description": "Metadata field: SMBSMMRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMESTLBS",
+          "description": "Metadata field: SMESTLBS",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMEXNCRD",
+          "description": "Metadata field: SMEXNCRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMEXNCRT",
+          "description": "Metadata field: SMEXNCRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMEXPEFF",
+          "description": "Metadata field: SMEXPEFF",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTRNRD",
+          "description": "Metadata field: SMNTRNRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTRNRT",
+          "description": "Metadata field: SMNTRNRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTRARD",
+          "description": "Metadata field: SMNTRARD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTRART",
+          "description": "Metadata field: SMNTRART",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTERRD",
+          "description": "Metadata field: SMNTERRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTERRT",
+          "description": "Metadata field: SMNTERRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMAMBRD",
+          "description": "Metadata field: SMAMBRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMAMBRT",
+          "description": "Metadata field: SMAMBRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTEXC",
+          "description": "Metadata field: SMNTEXC",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMDSCRT",
+          "description": "Metadata field: SMDSCRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMEXNCRTHQ",
+          "description": "Metadata field: SMEXNCRTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTRNRTHQ",
+          "description": "Metadata field: SMNTRNRTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTRARTHQ",
+          "description": "Metadata field: SMNTRARTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMNTERRTHQ",
+          "description": "Metadata field: SMNTERRTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMAMBRTHQ",
+          "description": "Metadata field: SMAMBRTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1SNSE",
+          "description": "Metadata field: SME1SNSE",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2SNSE",
+          "description": "Metadata field: SME2SNSE",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1ANTI",
+          "description": "Metadata field: SME1ANTI",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2ANTI",
+          "description": "Metadata field: SME2ANTI",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME1PCTS",
+          "description": "Metadata field: SME1PCTS",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SME2PCTS",
+          "description": "Metadata field: SME2PCTS",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMGNSDTC",
+          "description": "Metadata field: SMGNSDTC",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRRNARD",
+          "description": "Metadata field: SMRRNARD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRRNART",
+          "description": "Metadata field: SMRRNART",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMFLGTH",
+          "description": "Metadata field: SMMFLGTH",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSFLGTH",
+          "description": "Metadata field: SMSFLGTH",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMDFLGTH",
+          "description": "Metadata field: SMMDFLGTH",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSMFLGTH",
+          "description": "Metadata field: SMSMFLGTH",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMFGCMN",
+          "description": "Metadata field: SMFGCMN",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMFGCSD",
+          "description": "Metadata field: SMFGCSD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMFGCSK",
+          "description": "Metadata field: SMFGCSK",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMFGCKT",
+          "description": "Metadata field: SMFGCKT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PBMN",
+          "description": "Metadata field: SM3PBMN",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PBSD",
+          "description": "Metadata field: SM3PBSD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PBMD",
+          "description": "Metadata field: SM3PBMD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PB25P",
+          "description": "Metadata field: SM3PB25P",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PB75P",
+          "description": "Metadata field: SM3PB75P",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PBSDM",
+          "description": "Metadata field: SM3PBSDM",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SM3PBGN",
+          "description": "Metadata field: SM3PBGN",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMDMNCV",
+          "description": "Metadata field: SMMDMNCV",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMDCVSD",
+          "description": "Metadata field: SMMDCVSD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMDCVCV",
+          "description": "Metadata field: SMMDCVCV",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMEXCVMD",
+          "description": "Metadata field: SMEXCVMD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMEXCVMAD",
+          "description": "Metadata field: SMEXCVMAD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMMNCV",
+          "description": "Metadata field: SMMNCV",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMUVCRD",
+          "description": "Metadata field: SMUVCRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMUVCRT",
+          "description": "Metadata field: SMUVCRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSHRTRD",
+          "description": "Metadata field: SMSHRTRD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSHRTRT",
+          "description": "Metadata field: SMSHRTRT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSMRDHQ",
+          "description": "Metadata field: SMSMRDHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSMRTHQ",
+          "description": "Metadata field: SMSMRTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMPRERDHQ",
+          "description": "Metadata field: SMPRERDHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMPRERTHQ",
+          "description": "Metadata field: SMPRERTHQ",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMSMGNDT",
+          "description": "Metadata field: SMSMGNDT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMPREGNDT",
+          "description": "Metadata field: SMPREGNDT",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRDLNMN",
+          "description": "Metadata field: SMRDLNMN",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRDLNMD",
+          "description": "Metadata field: SMRDLNMD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "SMRDLNSD",
+          "description": "Metadata field: SMRDLNSD",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "subject_id",
+          "description": "Unique subject identifier",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "sex",
+          "description": "Biological sex",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "age",
+          "description": "Age or age range",
+          "dataType": "sc:Float"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "DTHHRDY",
+          "description": "Metadata field: DTHHRDY",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "dataset",
+          "description": "Source dataset name",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_sample_id",
+          "description": "Metadata field: original_sample_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data_type",
+          "description": "Data type (e.g., RNA-seq, microarray)",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "expression_unit",
+          "description": "Units of expression measurement",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "species",
+          "description": "Metadata field: species",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "species_ontology",
+          "description": "Metadata field: species_ontology",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_original",
+          "description": "Metadata field: tissue_original",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_ontology",
+          "description": "Tissue ontology term ID",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data_type_original",
+          "description": "Metadata field: data_type_original",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "assay_ontology",
+          "description": "Metadata field: assay_ontology",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "age_original",
+          "description": "Metadata field: age_original",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "developmental_stage_ontology",
+          "description": "Metadata field: developmental_stage_ontology",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_obs_sample_id",
+          "description": "Metadata field: original_obs_sample_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_ontology_confidence",
+          "description": "Metadata field: tissue_ontology_confidence",
+          "dataType": "sc:Text"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "gene_metadata",
+      "description": "Gene-level metadata including gene names, types, and chromosomal locations",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "gene_id",
+          "description": "Unique gene identifier",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_ids",
+          "description": "Metadata field: original_ids",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_name",
+          "description": "Gene symbol or name",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_type",
+          "description": "Gene biotype classification",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "chromosome",
+          "description": "Chromosomal location",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mapping_source",
+          "description": "Metadata field: mapping_source",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_gene_id",
+          "description": "Metadata field: original_gene_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ensembl_id",
+          "description": "Metadata field: ensembl_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mapping_confidence",
+          "description": "Metadata field: mapping_confidence",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "sc:processingInformation": {
+    "standardization": "Cell by Gene schema v3.0.0",
+    "preprocessing": "Standardized and corrected for tissue ontology mappings",
+    "processing_date": "2025-05-02",
+    "reference_genome": "hg38",
+    "gencode_version": "39"
+  },
+  "sc:datasetStatistics": {
+    "numberOfSamples": 19616,
+    "numberOfGenes": 58988,
+    "dataShape": [
+      19616,
+      58988
+    ],
+    "tissueTypes": [
+      "whole blood",
+      "brain - frontal cortex (ba9)",
+      "brain - cerebellar hemisphere",
+      "brain - substantia nigra",
+      "brain - anterior cingulate cortex (ba24)",
+      "brain - amygdala",
+      "brain - caudate (basal ganglia)",
+      "brain - nucleus accumbens (basal ganglia)",
+      "brain - putamen (basal ganglia)",
+      "adipose - subcutaneous"
+    ],
+    "subjectDemographics": "Adults aged 20-79, predominantly male (67%)"
+  }
+}

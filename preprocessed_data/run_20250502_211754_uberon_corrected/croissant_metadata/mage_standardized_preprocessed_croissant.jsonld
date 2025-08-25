@@ -1,0 +1,314 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://example.com/datasets/mage_h5ad_20250825",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "MAGE (Multi-ancestry Analysis of Gene Expression) - Standardized H5AD",
+  "description": "RNA-seq data from lymphoblastoid cell lines derived from 731 individuals from the 1000 Genomes Project, representing 26 globally-distributed populations across five continental groups. This dataset provides a large, geographically diverse resource for studying human transcriptome variation. This dataset has been standardized and preprocessed for analysis, containing 731 samples and 19,428 genes.",
+  "url": "https://github.com/mccoy-lab/MAGE",
+  "license": "CC0",
+  "creator": {
+    "@type": "Organization",
+    "name": "McCoy Lab, Johns Hopkins University"
+  },
+  "citation": [
+    "Taylor DJ, et al. Sources of gene expression variation in a globally diverse human cohort. Nature (2024). DOI: 10.1038/s41586-024-07708-2"
+  ],
+  "keywords": [
+    "gene expression",
+    "population genetics",
+    "diversity",
+    "lymphoblastoid cell lines",
+    "RNA-seq"
+  ],
+  "datePublished": "2025-08-25T19:42:18.706158",
+  "version": "1.0",
+  "identifier": "mage_h5ad_20250825",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "RNA sequencing",
+  "sc:tissueType": "Lymphoblastoid cell lines",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "name": "mage_standardized_preprocessed.h5ad",
+      "description": "H5AD file containing gene expression data for MAGE",
+      "contentUrl": "https://example.com/datasets/mage_standardized_preprocessed.h5ad",
+      "encodingFormat": "application/x-hdf5",
+      "contentSize": 62882400,
+      "sha256": null
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "gene_expression_matrix",
+      "description": "Gene expression matrix with samples as observations and genes as variables",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "sample_id",
+          "description": "Unique identifier for each sample",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_expression",
+          "description": "Gene expression values (TPM)",
+          "dataType": "sc:Float"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "sample_metadata",
+      "description": "Sample-level metadata including tissue type, demographics, and experimental conditions",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "sample_id",
+          "description": "Unique sample identifier",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "donor_id",
+          "description": "Metadata field: donor_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "subject_id",
+          "description": "Unique subject identifier",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue",
+          "description": "Tissue or cell type",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "dataset",
+          "description": "Source dataset name",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data_type",
+          "description": "Data type (e.g., RNA-seq, microarray)",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "expression_unit",
+          "description": "Units of expression measurement",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "is_gencode",
+          "description": "Metadata field: is_gencode",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "is_ensembl",
+          "description": "Metadata field: is_ensembl",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "sex",
+          "description": "Biological sex",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "age",
+          "description": "Age or age range",
+          "dataType": "sc:Float"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "species",
+          "description": "Metadata field: species",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "species_ontology",
+          "description": "Metadata field: species_ontology",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_original",
+          "description": "Metadata field: tissue_original",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_ontology",
+          "description": "Tissue ontology term ID",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data_type_original",
+          "description": "Metadata field: data_type_original",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "assay_ontology",
+          "description": "Metadata field: assay_ontology",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "age_original",
+          "description": "Metadata field: age_original",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "developmental_stage_ontology",
+          "description": "Metadata field: developmental_stage_ontology",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_ontology_confidence",
+          "description": "Metadata field: tissue_ontology_confidence",
+          "dataType": "sc:Text"
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "gene_metadata",
+      "description": "Gene-level metadata including gene names, types, and chromosomal locations",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "gene_id",
+          "description": "Unique gene identifier",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_ids",
+          "description": "Metadata field: original_ids",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_name",
+          "description": "Gene symbol or name",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_type",
+          "description": "Gene biotype classification",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "chromosome",
+          "description": "Chromosomal location",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mapping_source",
+          "description": "Metadata field: mapping_source",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_gene_id",
+          "description": "Metadata field: original_gene_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ensembl_id",
+          "description": "Metadata field: ensembl_id",
+          "dataType": "sc:Text"
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mapping_confidence",
+          "description": "Metadata field: mapping_confidence",
+          "dataType": "sc:Text"
+        }
+      ]
+    }
+  ],
+  "sc:processingInformation": {
+    "standardization": "Cell by Gene schema v3.0.0",
+    "preprocessing": "Standardized and corrected for tissue ontology mappings",
+    "processing_date": "2025-05-02",
+    "reference_genome": "GRCh38",
+    "gencode_version": "v38"
+  },
+  "sc:datasetStatistics": {
+    "numberOfSamples": 731,
+    "numberOfGenes": 19428,
+    "dataShape": [
+      731,
+      19428
+    ],
+    "tissueTypes": [
+      "lymphoblast"
+    ],
+    "subjectDemographics": "731 individuals from 26 populations across 5 continental groups"
+  }
+}
