@@ -1,0 +1,549 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "wd": "https://www.wikidata.org/wiki/"
+  },
+  "@type": "sc:Dataset",
+  "@id": "https://example.com/datasets/adni_h5ad_20250826",
+  "dct:conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "ADNI (Alzheimer's Disease Neuroimaging Initiative) - Standardized H5AD",
+  "description": "The Alzheimer's Disease Neuroimaging Initiative is a longitudinal multicenter study designed to develop clinical, imaging, genetic, and biochemical biomarkers for the early detection and tracking of Alzheimer's disease. This dataset contains microarray gene expression data from brain tissue. This dataset has been standardized and preprocessed for analysis, containing 650 samples and 17,991 genes.",
+  "url": "https://adni.loni.usc.edu/",
+  "license": "ADNI Data Use Agreement",
+  "creator": {
+    "@type": "Organization",
+    "name": "Alzheimer's Disease Neuroimaging Initiative"
+  },
+  "citation": [
+    "Petersen RC, et al. Alzheimer's Disease Neuroimaging Initiative (ADNI): Clinical characterization. Neurology 74, 201-209 (2010)."
+  ],
+  "keywords": [
+    "Alzheimer disease",
+    "neuroimaging",
+    "microarray",
+    "brain",
+    "neurodegenerative"
+  ],
+  "datePublished": "2025-08-26T21:52:39.907906",
+  "version": "1.0",
+  "identifier": "adni_h5ad_20250826",
+  "sc:organism": "Homo sapiens",
+  "sc:assayType": "Microarray",
+  "sc:tissueType": "Brain tissue",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "adni_standardized_preprocessed.h5ad",
+      "name": "adni_standardized_preprocessed.h5ad",
+      "description": "H5AD file containing gene expression data for ADNI",
+      "contentUrl": "https://example.com/datasets/adni_standardized_preprocessed.h5ad",
+      "encodingFormat": "application/x-hdf5",
+      "contentSize": "66359514",
+      "sha256": "1a190a4b28771fb42051179a1fa0b5633ebe5ed912576a8860febc0da8cd54a3"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "gene_expression_matrix",
+      "description": "Gene expression matrix with samples as observations and genes as variables",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "sample_id",
+          "description": "Unique identifier for each sample",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "sample_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_expression",
+          "description": "Gene expression values (Normalized intensity)",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "gene_expression"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "sample_metadata",
+      "description": "Sample-level metadata including tissue type, demographics, and experimental conditions",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "sample_id",
+          "description": "Unique sample identifier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "sample_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "subject_id",
+          "description": "Unique subject identifier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "subject_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "dataset",
+          "description": "Source dataset name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "dataset"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data_type",
+          "description": "Data type (e.g., RNA-seq, microarray)",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "data_type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "expression_unit",
+          "description": "Units of expression measurement",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "expression_unit"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue",
+          "description": "Tissue or cell type",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "tissue"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "platform",
+          "description": "Metadata field: platform",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "platform"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "processing",
+          "description": "Metadata field: processing",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "processing"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "sex",
+          "description": "Biological sex",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "sex"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "age",
+          "description": "Age or age range",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "age"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "species",
+          "description": "Metadata field: species",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "species"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "species_ontology",
+          "description": "Metadata field: species_ontology",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "species_ontology"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_original",
+          "description": "Metadata field: tissue_original",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "tissue_original"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_ontology",
+          "description": "Tissue ontology term ID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "tissue_ontology"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "data_type_original",
+          "description": "Metadata field: data_type_original",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "data_type_original"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "assay_ontology",
+          "description": "Metadata field: assay_ontology",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "assay_ontology"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "age_original",
+          "description": "Metadata field: age_original",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "age_original"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "developmental_stage_ontology",
+          "description": "Metadata field: developmental_stage_ontology",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "developmental_stage_ontology"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "tissue_ontology_confidence",
+          "description": "Metadata field: tissue_ontology_confidence",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "tissue_ontology_confidence"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "gene_metadata",
+      "description": "Gene-level metadata including gene names, types, and chromosomal locations",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "gene_id",
+          "description": "Unique gene identifier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "gene_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_ids",
+          "description": "Metadata field: original_ids",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "original_ids"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_name",
+          "description": "Gene symbol or name",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "gene_name"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "gene_type",
+          "description": "Gene biotype classification",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "gene_type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "chromosome",
+          "description": "Chromosomal location",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "chromosome"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mapping_source",
+          "description": "Metadata field: mapping_source",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "mapping_source"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "original_gene_id",
+          "description": "Metadata field: original_gene_id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "original_gene_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "ensembl_id",
+          "description": "Metadata field: ensembl_id",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "ensembl_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "mapping_confidence",
+          "description": "Metadata field: mapping_confidence",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "adni_standardized_preprocessed.h5ad"
+            },
+            "extract": {
+              "column": "mapping_confidence"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sc:processingInformation": {
+    "standardization": "Cell by Gene schema v3.0.0",
+    "preprocessing": "Standardized and corrected for tissue ontology mappings",
+    "processing_date": "2025-05-02",
+    "reference_genome": "hg38",
+    "gencode_version": 24
+  },
+  "sc:datasetStatistics": {
+    "numberOfSamples": 650,
+    "numberOfGenes": 17991,
+    "dataShape": [
+      650,
+      17991
+    ],
+    "tissueTypes": [
+      "blood"
+    ],
+    "subjectDemographics": "Adults aged 55-90, cognitively normal, MCI, and AD patients"
+  }
+}

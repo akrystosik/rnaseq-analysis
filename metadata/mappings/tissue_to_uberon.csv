@@ -61,3 +61,23 @@ thyroid,UBERON:0002046,high,built-in
 uterus,UBERON:0000995,high,built-in
 vagina,UBERON:0000996,high,built-in
 whole blood,UBERON:0000178,high,built-in
+ascending_aorta,UBERON:0001496,high,entex_extension
+body_of_pancreas,UBERON:0001150,high,entex_extension
+breast_epithelium,UBERON:0008356,high,entex_extension
+coronary_artery,UBERON:0001621,high,entex_extension
+esophagus_muscularis_mucosa,UBERON:0004648,high,entex_extension
+esophagus_squamous_epithelium,UBERON:0006920,high,entex_extension
+gastrocnemius_medialis,UBERON:0001388,high,entex_extension
+gastroesophageal_sphincter,UBERON:0004550,high,entex_extension
+heart,UBERON:0000948,high,entex_extension
+omental_fat_pad,UBERON:0003688,high,entex_extension
+peyer's_patch,UBERON:0001211,high,entex_extension
+prostate_gland,UBERON:0002367,high,entex_extension
+right_atrium_auricular_region,UBERON:0006631,high,entex_extension
+sigmoid_colon,UBERON:0001159,high,entex_extension
+subcutaneous_adipose_tissue,UBERON:0002190,high,entex_extension
+thoracic_aorta,UBERON:0001285,high,entex_extension
+thyroid_gland,UBERON:0002046,high,entex_extension
+tibial_artery,UBERON:0007610,high,entex_extension
+tibial_nerve,UBERON:0001323,high,entex_extension
+transverse_colon,UBERON:0001157,high,entex_extension

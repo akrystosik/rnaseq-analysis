@@ -1,21 +1,145 @@
-# Large data files
+# RNA-seq Analysis Pipeline - .gitignore (STRICT)
+# ================================================
+
+# EXCLUDE ALL LARGE DATA FILES
+# ===========================
+
+# Large processed datasets - EXCLUDE ALL
+data/
 *.h5ad
+*.h5
+*.hdf5
+*.zarr/
 *.gct.gz
-*.tsv
 *.csv.gz
+*.txt.gz
+*.tsv
+*.csv
 
-# Log files
-logs/*
+# Single cell data and reference files
+rnaseq_singlecell/
+gtex/
+encode/processed_data/
+encode/raw_data/
 
-# Temporary directories
-/temp/
+# Processing logs and outputs - EXCLUDE ALL
+logs/
+pipeline_runs/
+*.log
+*.out
+*.err
+*.stdout
+*.stderr
+screen_session_*.log
+
+# Gene mapping and reference files - EXCLUDE ALL
+*.gtf
+*.gtf.gz
+*.gff
+*.gff.gz
+gencode*
+Homo_sapiens.gene_info.gz
+gene2ensembl.gz
+metadata/gene_mapping/
+metadata/gene_mapping_generated/
+
+# Analysis outputs and reports - EXCLUDE ALL
+reports/
+results/
+*.html
+*.json
+*.png
+*.pdf
+*.svg
+
+# Large metadata backups - EXCLUDE ALL
+metadata/json_backup_*/
+metadata/metadataADNI/
+encode/metadata/
+gtex/metadata/
+
+# Archive directories - EXCLUDE ALL
+archive/
+dev_archive/
+*_backup_*/
+encode/archive/
+
+# Tool downloads and binaries - EXCLUDE ALL
+gatk*/
+gh_*/
+*.tar.gz
+*.zip
+
+# Temporary files and cache
+temp/
+tmp/
+cache/
+*.tmp
+*.temp
+*.cache
+
+# Python environments and cache
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.env
 
-# Jupyter notebook checkpoints
+# Jupyter
 .ipynb_checkpoints/
 
-# OS specific files
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
-Thumbs.db
+
+# INCLUDE ONLY ESSENTIAL FILES
+# ============================
+
+# Keep essential code and documentation ONLY
+!README.md
+!LICENSE
+!requirements.txt
+!*.py
+!*.sh
+!*.md
+!*.yaml
+!*.yml
+
+# Keep only core metadata files (small JSON only)
+!metadata/json/assay_to_efo.json
+!metadata/json/celltype_to_cl.json  
+!metadata/json/ethnicity_to_hancestro.json
+!metadata/json/sex_standardization.json
+!metadata/json/species_to_taxon.json
+!metadata/json/tissue_to_uberon.json
+!metadata/mappings/tissue_to_uberon.csv
+
+# Keep essential scripts directories
+!scripts/
+!docs/

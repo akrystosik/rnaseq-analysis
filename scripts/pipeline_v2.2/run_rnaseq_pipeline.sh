@@ -22,8 +22,8 @@ ENTEX_RAW_DATA_DIR="${INPUT_BASE_DIR}/encode/entex"
 ENTEX_METADATA_FILE_INPUT="${INPUT_BASE_DIR}/encode/metadata/entex_metadata.json"
 MAGE_RAW_DATA_DIR="${INPUT_BASE_DIR}/mage"
 ADNI_RAW_DATA_DIR="${INPUT_BASE_DIR}/adni_microarray"
-ADNI_DEMOGRAPHICS_FILE_INPUT="${INPUT_BASE_DIR}/metadataADNI/subject_demographics/PTDEMOG_25Apr2025.csv"
-ADNI_DIAGNOSIS_FILE_INPUT="${INPUT_BASE_DIR}/metadataADNI/subject_demographics/DXSUM_30Apr2025.csv"
+ADNI_DEMOGRAPHICS_FILE_INPUT="/mnt/czi-sci-ai/intrinsic-variation-gene-ex/AutoSync/subject_demographics/PTDEMOG_25Apr2025.csv"
+ADNI_DIAGNOSIS_FILE_INPUT="/mnt/czi-sci-ai/intrinsic-variation-gene-ex/AutoSync/subject_demographics/DXSUM_30Apr2025.csv"
 GTEX_RAW_FILE_INPUT="${INPUT_BASE_DIR}/gtex/raw_data/gene_tpm/GTEx_Analysis_v10_RNASeQCv2.4.2_gene_tpm.gct.gz"
 MAGE_1000G_PED_FILE_INPUT="${INPUT_BASE_DIR}/project_gene_regulation/data/MAGE/WGS/20130606_g1k_3202_samples_ped_population.txt"
 
@@ -111,6 +111,7 @@ while [[ $# -gt 0 ]]; do
             echo "  2.6   : Placeholder ID fixes"
             echo "  2.7   : ENCODE mapping analysis"
             echo "  2.8   : Controlled-access metadata integration"
+            echo "  2.85  : WGS ancestry integration (distinguish from ethnicity)"
             echo "  2.9   : Developmental stage mapping"
             echo "  3     : Combined dataset creation"
             echo "  3.5   : MAGE technical metadata integration"
@@ -435,6 +436,35 @@ if [ "$SKIP_METADATA_ENHANCEMENT" != "true" ]; then
         log_message "INFO: GTEx controlled-access file not found at $GTEX_PHENOTYPES_FILE. Skipping controlled-access metadata integration."
     fi
 
+    # --- Stage 2.85: Integrate WGS Ancestry Data ---
+    log_message "--- Stage 2.85: Integrating WGS Ancestry Data (Distinguish from Self-Reported Ethnicity) ---"
+    WGS_ANCESTRY_FILE="${INPUT_BASE_DIR}/../wgs/pca/hybrid-ancestry-inference-pipeline/results/knn_analysis/knn_ancestry_results.csv"
+    ANCESTRY_INTEGRATION_SUMMARY="${OUTPUT_DIR_H5ADS}/wgs_ancestry_integration_summary.json"
+
+    if [ -f "$WGS_ANCESTRY_FILE" ]; then
+        log_message "WGS ancestry file found. Integrating genetic ancestry data..."
+        run_command "python \"${SCRIPTS_DIR}/integrate_wgs_ancestry.py\" \
+            --preprocessed-dir \"$PREPROCESSED_DIR_H5ADS\" \
+            --wgs-ancestry-file \"$WGS_ANCESTRY_FILE\" \
+            --output-summary \"$ANCESTRY_INTEGRATION_SUMMARY\" \
+            ${FORCE_FLAG}"
+        if [ $? -eq 0 ]; then
+            log_message "Stage 2.85 completed. WGS ancestry data integrated."
+            if [ -f "$ANCESTRY_INTEGRATION_SUMMARY" ]; then
+                ANCESTRY_MATCHED=$(grep -o '"total_matched": [0-9]*' "$ANCESTRY_INTEGRATION_SUMMARY" | sed 's/"total_matched": //')
+                ANCESTRY_TOTAL=$(grep -o '"total_samples": [0-9]*' "$ANCESTRY_INTEGRATION_SUMMARY" | sed 's/"total_samples": //')
+                if [ ! -z "$ANCESTRY_MATCHED" ] && [ ! -z "$ANCESTRY_TOTAL" ]; then
+                    log_message "Ancestry integration: ${ANCESTRY_MATCHED}/${ANCESTRY_TOTAL} samples matched with WGS ancestry data"
+                fi
+            fi
+        else
+            log_message "WARNING: Stage 2.85 (WGS ancestry integration) had issues."
+        fi
+    else
+        log_message "INFO: WGS ancestry file not found at $WGS_ANCESTRY_FILE. Skipping ancestry integration."
+        log_message "INFO: Only self-reported ethnicity data will be available in final datasets."
+    fi
+
     # --- Stage 2.9: Map Developmental Stages ---
     log_message "--- Stage 2.9: Mapping Age Data to Developmental Stage Ontology ---"
     run_command "python \"${SCRIPTS_DIR}/map_developmental_stages.py\" \
@@ -525,7 +555,8 @@ log_message "=== RNA-seq Pipeline Processing Complete (Stages 0-4.2) ==="
 log_message ""
 log_message "🎯 **PIPELINE v2.2 COMPREHENSIVE RESULTS**:"
 log_message "  ✅ Core Pipeline: Stages 0-4 (gene mapping, standardization, validation)"
-log_message "  ✅ Metadata Enhancement: Stages 2.8-3.5 (demographics, ontology, technical)"
+log_message "  ✅ Metadata Enhancement: Stages 2.8-3.5 (demographics, ancestry, ontology, technical)"
+log_message "  ✅ WGS Integration: Stage 2.85 (genetic ancestry vs self-reported ethnicity)"
 log_message "  ✅ Advanced Analysis: Stages 4.1-4.2 (gene overlap, partner deliverables)"
 log_message ""
 log_message "📁 **OUTPUT DIRECTORIES**:"

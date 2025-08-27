@@ -1,0 +1,59 @@
+#/mnt/czi-sci-ai/intrinsic-variation-gene-ex/rnaseq/metadata/json/encode_metadata.json
+{
+    "data_type": "rna-seq",
+    "platform": "Illumina",
+    "reference_genome": "GRCh38",
+    "harmonized_reference_genome": "hg38",
+    "gencode_version": "v29",
+    "harmonized_gencode_version": "v24",
+    "genome_info": {
+      "genome_version": "GRCh38",
+      "confidence": "high",
+      "notes": "Set from ENCODE data standards"
+    },
+    "rna_seq_protocol": {
+      "protocol_type": "RNA-seq mixed",
+      "protocol_confidence": "medium",
+      "selection_method": "Variable - includes polyA plus RNA-seq and total RNA-seq",
+      "sequencing_platform": "Illumina (various models including HiSeq 2000 and Genome Analyzer IIx)",
+      "read_configuration": "paired-end",
+      "strand_specificity": "Strand-specific (reverse)"
+    },
+    "microarray_info": null,
+    "assay_ontology": "EFO:0009922",
+    "obs_columns": {
+      "data_type": "rna-seq",
+      "assay_ontology": "EFO:0009922"
+    },
+    "metadata_source": {
+      "citation": "ENCODE Project Consortium",
+      "url": "https://www.encodeproject.org/data-standards/reference-sequences/",
+      "notes": "ENCODE project uses GRCh38 with GENCODE v29 annotations. Sample data includes various cell lines with differing RNA-seq protocols."
+    },
+    "dataset_info": {
+      "project": "ENCODE",
+      "cell_lines": {
+        "A549": {
+          "description": "Human lung carcinoma cell line",
+          "nucleic_acid_type": "polyadenylated mRNA",
+          "depletion": "rRNA",
+          "size_range": ">200",
+          "strand_specificity": "Strand-specific (reverse)"
+        },
+        "Caki2": {
+          "description": "Human renal cell carcinoma cell line",
+          "nucleic_acid_type": "RNA",
+          "assay": "RNA-seq (total RNA-seq)",
+          "depletion": "rRNA",
+          "size_range": ">200",
+          "strand_specificity": "Strand-specific (reverse)"
+        }
+      },
+      "data_repository": [
+        {
+          "name": "ENCODE Project",
+          "url": "https://www.encodeproject.org/"
+        }
+      ]
+    }
+  }

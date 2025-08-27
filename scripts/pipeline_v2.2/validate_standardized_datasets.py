@@ -146,6 +146,36 @@ def validate_dataset(file_path):
                 'ontology_field': 'cell_type_ontology_term_id',
                 'ontology_prefix': 'CL:',
                 'importance': 'important'
+            },
+            # Self-reported ethnicity fields (preserved from existing metadata)
+            'self_reported_ethnicity': {
+                'ontology_field': 'self_reported_ethnicity_ontology_term_id',
+                'ontology_prefix': 'HANCESTRO:',
+                'importance': 'important'
+            },
+            'race': {
+                'importance': 'optional'  # NIH race categories
+            },
+            'is_hispanic_or_latino': {
+                'values': ['yes', 'no', 'unknown', 'not applicable'],
+                'importance': 'optional'
+            },
+            # Genetically inferred ancestry fields (added for ethnicity vs ancestry distinction)
+            'inferred_ancestry': {
+                'values': ['EUR', 'AFR', 'EAS', 'SAS', 'AMR', 'unknown'],
+                'importance': 'optional'  # Optional since not all samples have WGS data
+            },
+            'inferred_ancestry_method': {
+                'values': ['KNN_PCA', '1000G_Classification', 'unknown'],
+                'importance': 'optional'
+            },
+            'inferred_ancestry_ontology_term_id': {
+                'ontology_prefix': 'HANCESTRO:',
+                'importance': 'optional'
+            },
+            'has_genetic_ancestry_data': {
+                'values': [True, False],
+                'importance': 'optional'
             }
         }
 

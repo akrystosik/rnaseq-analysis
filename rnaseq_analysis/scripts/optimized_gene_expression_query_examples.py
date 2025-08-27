@@ -1,0 +1,269 @@
+#!/usr/bin/env python3
+"""
+Gene Expression Query Examples
+
+This script demonstrates how to use the optimized gene expression functions
+for various common use cases.
+"""
+
+import time
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from optimized_gene_expression import (
+    load_expression_data,
+    get_gene_expression,
+    get_gene_expression_matrix,
+    get_available_tissues,
+    get_available_donors,
+    get_all_tissues_gene_expression
+)
+
+def example_1_basic_query():
+    """Basic gene expression query example."""
+    print("\n=== Example 1: Basic Gene Expression Query ===")
+    
+    # Initialize the data loader (only need to do this once)
+    loader = load_expression_data()
+    
+    # Query TP53 expression in ENTEx dataset
+    start_time = time.time()
+    expr = get_gene_expression("entex", "TP53",sample_selection_method='first')# 'first' is the default
+    query_time = time.time() - start_time
+    
+    print(f"TP53 expression in ENTEx dataset:")
+    print(f"  Mean TPM: {expr.get('mean_expression', 'N/A'):.4f}")
+    print(f"  Median TPM: {expr.get('median_expression', 'N/A'):.4f}")
+    print(f"  Sample count: {expr.get('sample_count', 'N/A')}")
+    print(f"  Query time: {query_time:.4f} seconds")
+    
+    # Query with tissue filter
+    start_time = time.time()
+    expr = get_gene_expression("entex", "TP53", tissue="lung",sample_selection_method='first')
+    query_time = time.time() - start_time
+    
+    print(f"\nTP53 expression in lung tissue (ENTEx):")
+    print(f"  Mean TPM: {expr.get('mean_expression', 'N/A'):.4f}")
+    print(f"  Median TPM: {expr.get('median_expression', 'N/A'):.4f}")
+    print(f"  Sample count: {expr.get('sample_count', 'N/A')}")
+    print(f"  Query time: {query_time:.4f} seconds")
+    
+    # Query with donor filter
+    donors = get_available_donors("entex")
+    if donors:
+        start_time = time.time()
+        expr = get_gene_expression("entex", "TP53", donor=donors[0])# 'first' is the default
+        query_time = time.time() - start_time
+        
+        print(f"\nTP53 expression for donor {donors[0]} (ENTEx):")
+        print(f"  Mean TPM: {expr.get('mean_expression', 'N/A'):.4f}")
+        print(f"  Median TPM: {expr.get('median_expression', 'N/A'):.4f}")
+        print(f"  Sample count: {expr.get('sample_count', 'N/A')}")
+        print(f"  Query time: {query_time:.4f} seconds")
+
+def example_2_expression_matrix():
+    """Expression matrix query example."""
+    print("\n=== Example 2: Expression Matrix Query ===")
+    
+    # Query for multiple genes
+    genes = ("TP53", "BRCA1", "BRCA2")
+    
+    # First query (cold cache)
+    start_time = time.time()
+    matrix, gene_ids, sample_ids = get_gene_expression_matrix("entex", genes)# 'first' is the default
+    query_time = time.time() - start_time
+    
+    print(f"Expression matrix for {', '.join(genes)}:")
+    print(f"  Matrix shape: {matrix.shape}")
+    print(f"  Genes found: {', '.join(gene_ids)}")
+    print(f"  Number of samples: {len(sample_ids)}")
+    print(f"  Query time (cold cache): {query_time:.4f} seconds")
+    
+    # Second query (warm cache)
+    start_time = time.time()
+    matrix, gene_ids, sample_ids = get_gene_expression_matrix("entex", genes)# 'first' is the default
+    query_time = time.time() - start_time
+    
+    print(f"\nQuery time (warm cache): {query_time:.4f} seconds")
+    
+    # Query with tissue filter
+    tissues = get_available_tissues("entex")
+    if tissues and len(tissues) >= 2:
+        tissue_tuple = (tissues[0], tissues[1])
+        
+        start_time = time.time()
+        matrix, gene_ids, sample_ids = get_gene_expression_matrix("entex", genes, tissues=tissue_tuple)# 'first' is the default
+        query_time = time.time() - start_time
+        
+        print(f"\nExpression matrix for {', '.join(genes)} in {', '.join(tissue_tuple)}:")
+        print(f"  Matrix shape: {matrix.shape}")
+        print(f"  Number of samples: {len(sample_ids)}")
+        print(f"  Query time: {query_time:.4f} seconds")
+        
+        # Calculate mean expression per gene
+        if matrix.size > 0:
+            means = np.mean(matrix, axis=0)
+            for i, gene_id in enumerate(gene_ids):
+                print(f"  Mean {gene_id} expression: {means[i]:.4f}")
+
+def example_3_cross_tissue_analysis():
+    """Cross-tissue gene expression analysis."""
+    print("\n=== Example 3: Cross-Tissue Gene Expression Analysis ===")
+    
+    # Get tissues
+    tissues = get_available_tissues("entex")
+    if not tissues:
+        print("No tissues found in ENTEx dataset")
+        return
+    
+    # Query gene across all tissues
+    gene = "TP53"
+    results = []
+    
+    print(f"Querying {gene} expression across {len(tissues)} tissues...")
+    start_time = time.time()
+    
+    for tissue in tissues:
+        expr = get_gene_expression("entex", gene, tissue=tissue)# 'first' is the default
+        if expr and expr.get('sample_count', 0) > 0:
+            results.append({
+                'tissue': tissue,
+                'mean_expression': expr['mean_expression'],
+                'median_expression': expr['median_expression'],
+                'sample_count': expr['sample_count']
+            })
+    
+    query_time = time.time() - start_time
+    print(f"Query time for all tissues: {query_time:.4f} seconds")
+    
+    # Alternative using bulk query function
+    start_time = time.time()
+    all_tissues = get_all_tissues_gene_expression(gene, ["entex"])
+    bulk_query_time = time.time() - start_time
+    
+    print(f"Bulk query time: {bulk_query_time:.4f} seconds")
+    
+    # Sort by expression level
+    if results:
+        results.sort(key=lambda x: x['mean_expression'], reverse=True)
+        
+        print(f"\nTop 5 tissues by {gene} expression:")
+        for result in results[:5]:
+            print(f"  {result['tissue']}: {result['mean_expression']:.4f} TPM ({result['sample_count']} samples)")
+        
+        print(f"\nBottom 5 tissues by {gene} expression:")
+        for result in results[-5:]:
+            print(f"  {result['tissue']}: {result['mean_expression']:.4f} TPM ({result['sample_count']} samples)")
+
+def example_4_performance_benchmark():
+    """Performance benchmark for repeated queries."""
+    print("\n=== Example 4: Performance Benchmark ===")
+    
+    # Initialize loader
+    loader = load_expression_data()
+    
+    # Get all tissues and a list of genes
+    tissues = get_available_tissues("entex")
+    if not tissues:
+        print("No tissues found in ENTEx dataset")
+        return
+    
+    # List of genes to query
+    genes = ["TP53", "BRCA1", "BRCA2", "EGFR", "MYC", "PTEN", "RB1", "KRAS", "HRAS", "NRAS"]
+    
+    # Benchmark: Run 100 individual queries
+    num_queries = 100
+    print(f"Running {num_queries} individual queries...")
+    
+    start_time = time.time()
+    for _ in range(num_queries // len(genes)):
+        for gene in genes:
+            # Randomly select a tissue
+            tissue = tissues[np.random.randint(0, len(tissues))]
+            _ = get_gene_expression("entex", gene, tissue=tissue)# 'first' is the default
+    
+    individual_time = time.time() - start_time
+    print(f"Individual queries time: {individual_time:.4f} seconds")
+    print(f"Average time per query: {individual_time / num_queries:.6f} seconds")
+    
+    # Benchmark: Matrix queries
+    num_matrix_queries = 10
+    print(f"\nRunning {num_matrix_queries} matrix queries...")
+    
+    start_time = time.time()
+    for _ in range(num_matrix_queries):
+        # Randomly select 3 tissues
+        tissue_indices = np.random.choice(len(tissues), 3, replace=False)
+        tissue_tuple = tuple(tissues[i] for i in tissue_indices)
+        
+        # Query all genes at once
+        _, _, _ = get_gene_expression_matrix("entex", tuple(genes), tissues=tissue_tuple)# 'first' is the default
+    
+    matrix_time = time.time() - start_time
+    print(f"Matrix queries time: {matrix_time:.4f} seconds")
+    print(f"Average time per matrix query: {matrix_time / num_matrix_queries:.6f} seconds")
+
+def example_5_visualization():
+    """Visualization example."""
+    print("\n=== Example 5: Visualization ===")
+    
+    # Get gene expression across tissues
+    gene = "TP53"
+    all_tissues = get_all_tissues_gene_expression(gene, ["entex"])
+    
+    if not all_tissues or "entex" not in all_tissues:
+        print(f"No expression data found for {gene}")
+        return
+    
+    # Extract tissue expression data
+    tissues = []
+    expressions = []
+    
+    for tissue, expr in all_tissues["entex"].items():
+        tissues.append(tissue)
+        expressions.append(expr['mean_expression'])
+    
+    # Sort by expression level
+    sorted_indices = np.argsort(expressions)[::-1]
+    tissues = [tissues[i] for i in sorted_indices]
+    expressions = [expressions[i] for i in sorted_indices]
+    
+    # Create bar chart
+    plt.figure(figsize=(12, 8))
+    plt.bar(range(len(tissues)), expressions)
+    plt.xticks(range(len(tissues)), tissues, rotation=90)
+    plt.xlabel('Tissue')
+    plt.ylabel('Mean Expression (TPM)')
+    plt.title(f'{gene} Expression Across Tissues (ENTEx)')
+    plt.tight_layout()
+    
+    # Save figure
+    plt.savefig(f'{gene}_tissue_expression.png')
+    print(f"Saved visualization to {gene}_tissue_expression.png")
+    
+    # Print top 5 tissues
+    print(f"\nTop 5 tissues by {gene} expression:")
+    for i in range(min(5, len(tissues))):
+        print(f"  {tissues[i]}: {expressions[i]:.4f} TPM")
+
+def main():
+    """Run all examples."""
+    print("=== Gene Expression Query Examples ===")
+    
+    # Basic example
+    example_1_basic_query()
+    
+    # Expression matrix example
+    example_2_expression_matrix()
+    
+    # Cross-tissue analysis example
+    example_3_cross_tissue_analysis()
+    
+    # Performance benchmark
+    example_4_performance_benchmark()
+    
+    # Visualization example
+    example_5_visualization()
+
+if __name__ == "__main__":
+    main()

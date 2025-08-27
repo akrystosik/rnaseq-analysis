@@ -1,0 +1,116 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# RNA-seq specific
+# Raw data files
+/raw_data/gene_quantification/**/*.tsv
+/raw_data/gene_quantification/**/*.csv
+/raw_data/gene_quantification/**/*.txt
+/raw_data/gene_quantification/**/*.fastq
+/raw_data/gene_quantification/**/*.fastq.gz
+/raw_data/gene_quantification/**/*.fq
+/raw_data/gene_quantification/**/*.fq.gz
+/raw_data/gene_quantification/**/*.bam
+/raw_data/gene_quantification/**/*.sam
+/raw_data/gene_quantification/**/*.bigWig
+/raw_data/gene_quantification/**/*.gtf
+/raw_data/gene_quantification/**/*.gff
+/raw_data/gene_quantification/**/*.bed
+
+# GTEx specific
+/rnaseq_analysis/gtex_analysis/raw_data/**/*.gct
+/rnaseq_analysis/gtex_analysis/raw_data/**/*.gct.gz
+/rnaseq_analysis/gtex_analysis/raw_data/**/*.tar.gz
+/rnaseq_analysis/gtex_analysis/metadata/**/*.txt
+/rnaseq_analysis/gtex_analysis/metadata/**/*.xlsx
+/rnaseq_analysis/gtex_analysis/analysis/processed_data/**/*.h5ad
+/rnaseq_analysis/gtex_analysis/analysis/processed_data/**/*.csv
+/rnaseq_analysis/gtex_analysis/analysis/processed_data/**/*.parquet
+
+# Large analysis results
+/analysis/**/*.tsv
+/analysis/**/*.csv
+/analysis/**/*.txt
+/analysis/**/*.xlsx
+/analysis/**/*.h5
+/analysis/**/*.hdf5
+/analysis/**/*.h5ad
+/analysis/**/*.zarr
+/analysis/**/*.parquet
+
+# Keep visualization outputs in git
+!/analysis/**/visualizations/*.png
+!/analysis/**/visualizations/*.svg
+!/analysis/**/visualizations/*.pdf
+!/rnaseq_analysis/gtex_analysis/analysis/visualizations/*.png
+!/rnaseq_analysis/gtex_analysis/analysis/visualizations/*.svg
+!/rnaseq_analysis/gtex_analysis/analysis/visualizations/*.pdf
+
+# Keep analysis summary markdown files
+!/analysis/**/visualizations/*.md
+!/rnaseq_analysis/gtex_analysis/analysis/visualizations/*.md
+
+# Logs
+/logs/**
+*.log
+/rnaseq_analysis/gtex_analysis/logs/**
+
+# Temporary files
+tmp/
+temp/
+.temp/
+
+# Environment files and configuration with sensitive info
+.env
+credentials.json
+*_credentials.*
+auth_tokens.json
+config/sensitive_settings.json
+
+# Specific large JSON files
+/analysis/**/results/raw_results.json
+
+# R specific
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# VSCode
+.vscode/
+
+# Caches
+__pycache__/
+.cache/
